@@ -1,0 +1,21 @@
+mixin Stage(count, stage, color)     
+    div.stage
+        div.stage__inner
+            svg
+                - var n = 0;
+                -var end_line = (stage - 1) * 100 / (count - 1)
+                if end_line < 2
+                   - end_line = 2
+                if end_line > 98
+                    - end_line = 98
+                line(x1="2%" y1="50%" x2="98%" y2="50%" stroke="#e5e5e5" stroke-width="1%"  )
+                line(x1="2%" y1="50%" x2!=end_line+"%"  y2="50%" stroke="#e75735" stroke-width="1%"  )
+                while n < count
+                    if n < stage
+                        g
+                            circle( cx!=94/(count - 1)*n +3+"%"  cy="50%" r="3.5%" fill="#e75735")
+                            text(x!=94/(count - 1)*n++ +3+"%" y="50%" text-anchor="middle" dy=".3em" fill="white")= n
+                    else
+                        g
+                            circle( cx!=94/(count - 1)*n +3+"%"  cy="50%" r="3.5%" fill="#e5e5e5")
+                            text(x!=94/(count - 1)*n++ +3+"%" y="50%" text-anchor="middle" dy=".3em" fill="#888888")= n

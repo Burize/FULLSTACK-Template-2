@@ -1,0 +1,103 @@
+<!DOCTYPE !html>
+<html>
+  <head></head>
+  <meta charset="utf-8"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <title>Webpack app</title>
+  <body>
+    <div class="container">
+      <article class="standart-buttons">
+        <h2 class="title">standart buttons</h2>
+        <section class="standart-buttons__row">
+          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button" style="font-size: 25px; background-color: #e75735;">button</button>
+          <button class="ripple-button" style="font-size: 18px; background-color: #e75735;">button</button>
+        </section>
+        <section class="standart-buttons__row">
+          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button border_bottom" style="font-size: 25px; background-color: #e75735;">button</button>
+          <button class="ripple-button border_bottom" style="font-size: 18px; background-color: #e75735;">button</button>
+        </section>
+        <section class="standart-buttons__row">
+          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
+          <button class="ripple-button border_bottom" style="font-size: 25px; background-color: #e75735;">button</button>
+          <button class="ripple-button border_bottom" style="font-size: 18px; background-color: #e75735;">button</button>
+        </section>
+      </article>
+      <article class="arrow-buttons">
+        <h2 class="title">arrow buttons</h2>
+        <section class="arrow-buttons__row">
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="white"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke="#4eb7a8" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="white"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke="#4eb7a8" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#e5e5e5" stroke-width="5%" fill="#e5e5e5"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#e5e5e5" stroke-width="5%" fill="#e5e5e5"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="#4eb7a8"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button" style="width: 95px;">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="#4eb7a8"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="pie-charts">
+        <h2 class="title">percentages / pie chart</h2>
+        <section class="pie-charts__row">
+          <div class="pie-chart" data-percent="0">
+            <div class="pie-chart__value"><span></span></div>
+          </div>
+          <div class="pie-chart" data-percent="38">
+            <div class="pie-chart__value"><span></span></div>
+          </div>
+          <div class="pie-chart" data-percent="62">
+            <div class="pie-chart__value"><span></span></div>
+          </div>
+          <div class="pie-chart" data-percent="89">
+            <div class="pie-chart__value"><span></span></div>
+          </div>
+          <div class="exp"></div>
+        </section>
+      </article>
+    </div>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>

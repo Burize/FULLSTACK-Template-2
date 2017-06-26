@@ -1,0 +1,74 @@
+@import"./font-awesome.css";
+
+@font-face{
+    
+    font-family SourceSansProRegular;
+    src url("./SourceSansProRegular.ttf");
+}
+
+
+.message-form{
+    
+    .message-form_form-control{
+        
+        background-color #e5e5e5;
+        color #888888;
+        border none;
+        border-radius 0.2em;
+        font-family SourceSansProRegular;
+        font-size 1em;
+        &:focus{
+
+                outline none ;
+            }
+    }
+   
+    .message-form__input-text{
+
+        padding 0.4em 1em;
+    }
+    
+    .message-form__textarea{
+        
+        resize none;
+        padding 1em 0.9em;
+    }
+    
+    
+    .message-form__input-search{
+        
+        position relative;
+        
+         .message-form_form-control{
+                            
+            width 100%;
+            padding 0.4em 1em;
+            overflow hidden;
+        }
+        
+        &:after{
+            
+            font-family: "FontAwesome";
+            content: "\f002";
+            display block;
+            position absolute;
+            height 100%;
+            top 0;
+            right 0px;
+            background-color #e75735;
+            border-bottom-right-radius 0.2em;
+            border-top-right-radius 0.2em;
+            
+            padding 0.4em 0.6em 0 ;
+            color white;
+            box-sizing border-box;
+        }    
+    }
+    
+    .message-form__input-search_not-found .message-form_form-control{
+        
+         background-color #e75735; 
+         color white;
+    }
+    
+}

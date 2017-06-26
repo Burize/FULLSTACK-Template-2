@@ -1,0 +1,90 @@
+include ./Elements/Button/button.pug
+include ./Elements/Arrow-button/arrow-button.pug
+include ./Elements/Pie-chart/pie-chart.pug
+include ./Elements/Slider/Slider.pug
+include ./Elements/stage/stage.pug
+include ./Elements/toggle/toggle.pug
+include ./Elements/tick-box/tick-box.pug
+
+
+doctype !html
+html
+    head
+    meta(charset = 'utf-8')
+    script( src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" )
+    title Webpack app
+    body
+        div.container
+            article.standart-buttons
+                h2.title standart buttons
+                section.standart-buttons__row
+                    +ripple-button('button', '#4eb7a8')(style="font-size: 18px;")
+                    +ripple-button('button', '#4eb7a8')(style="font-size: 25px;")
+                    +ripple-button('button', '#e75735')(style="font-size: 25px;" )
+                    +ripple-button('button', '#e75735')(style="font-size: 18px;")
+                section.standart-buttons__row
+                    +ripple-button('button', '#4eb7a8', '#28a290')(style="font-size: 18px;" )
+                    +ripple-button('button', '#4eb7a8', '#28a290')(style="font-size: 25px;")
+                    +ripple-button('button', '#e75735', '#bf3e1f')(style="font-size: 25px;")
+                    +ripple-button('button', '#e75735', '#bf3e1f')(style="font-size: 18px;")
+                section.standart-buttons__row
+                    +ripple-button('button', 'white', '#4eb7a8', '#4eb7a8')(style="font-size: 18px; color: #4eb7a8" )
+                    +ripple-button('button', 'white', '#4eb7a8', '#4eb7a8')(style="font-size: 25px; color: #4eb7a8")
+                    +ripple-button('button', 'white', '#e75735', '#e75735')(style="font-size: 25px; color: #e75735")
+                    +ripple-button('button', 'white', '#e75735', '#e75735')(style="font-size: 18px; color: #e75735")
+            article.arrow-buttons
+                h2.title arrow buttons
+                section.arrow-buttons__row
+                    +arrow-button('left','#4eb7a8','white','#4eb7a8')(style="width: 95px;")
+                    +arrow-button('right','#4eb7a8','white','#4eb7a8')(style="width: 95px;") 
+                    +arrow-button('left','#e5e5e5','#e5e5e5','white')(style="width: 95px;")
+                    +arrow-button('right','#e5e5e5','#e5e5e5','white')(style="width: 95px;")
+                    +arrow-button('left','#4eb7a8','#4eb7a8','white')(style="width: 95px;")
+                    +arrow-button('right','#4eb7a8','#4eb7a8','white')(style="width: 95px;")
+            article.pie-charts
+                h2.title percentages / pie chart
+                section.pie-charts__row
+                    +Pie-chart('0')
+                    +Pie-chart('38')
+                    +Pie-chart('62')
+                    +Pie-chart('89')
+                    div.donut-chart
+            article.sliders
+                h2.title sliders
+                section.slider__row
+                   +Slider('#e5e5e5', '#e75735', false, true, '#e75735')
+                   +Slider('#e5e5e5', '#4eb7a8', true, false)
+            article.stages
+                h2.title stages
+                +Stage(5, 3, '#e5e5e5')
+            article.form-elements
+                h2.title form elements
+                section.form-elements__row
+                    form.message-form
+                        div.hint-control#message-form-name
+                            input(type="text" placeholder="Your Name" ).message-form_form-control.message-form__input-text
+                        br
+                        div.hint-control#message-form-email
+                            input(type="text" placeholder="Your Email").message-form_form-control.message-form__input-text
+                        br
+                        textarea( placeholder="Your Message" rows="4").message-form_form-control.message-form__textarea
+                        br
+                        +ripple-button('button', '#4eb7a8', '#28a290')
+                    div.form-elements__control
+                        h2.title toggles
+                        section.toggles
+                            +Toggle('toggle1',"#4eb7a8")
+                            +Toggle('toggle2',"#4eb7a8")(checked)
+                        h2.title tick boxes
+                        section.tick-boxes
+                            +tick-box('tick-box1','#4eb7a8','white')(style="width: 45px;")
+                            +tick-box('tick-box2','#4eb7a8','white')(style="width: 45px;" checked)
+            article.one-more-article
+                div.search
+                    h2.title search / drop down
+                    form.message-form
+                        div.message-form__input-search
+                            input(type="search" placeholder="Search").message-form_form-control
+                        div.message-form__input-search.message-form__input-search_not-found
+                            input(type="search" placeholder="Search").message-form_form-control
+                        
