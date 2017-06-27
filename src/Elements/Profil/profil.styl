@@ -1,0 +1,88 @@
+@import"./font-awesome.css";
+@font-face{
+    
+    font-family LatoBlack;
+    src url("./Lato-Black.ttf");
+}
+
+@font-face{
+    
+    font-family LatoRegular;
+    src url("./Lato-Regular.ttf");
+}
+
+
+.profil{
+    
+    display flex;
+    justify-content space-between;
+    width 32.5em;
+    color white;
+    .profil__portrait{
+    
+        width 10.5em;
+        height 10.5em;
+        background-position center;
+        background-size cover;
+        border-radius 100%;
+        border solid 0.5em #e5e5e5;
+        margin-right 1em;
+    
+    }
+
+
+    .profil__data{
+
+            position relative
+            background-color #e5e5e5;
+            margin-top 0.4em;
+            width 19.7em;
+            height 11em;
+            border-radius 0.8em;
+            padding-top 1em;  
+            text-align center;
+            box-sizing border-box;
+            
+            .profil__data-arrow {
+                position: absolute;
+                border-width: 0.6em;
+                border-style: solid;
+                border-color: transparent #e5e5e5 transparent transparent ;
+                top: 50%;
+                right: 100%;
+                margin-top: -0.6em;
+            }
+            p{
+               
+                margin 0;     
+            }
+
+            .profil__name{
+                
+                font-size 2.1em;
+                font-family LatoRegular;
+                margin-bottom 0.1em
+            }
+            
+            .profil__profession{
+                
+                font-size 1.4em;
+                font-family LatoBlack;
+                text-transform uppercase;
+                margin-bottom 0.9em;
+            }
+            
+            .profil__links{
+                
+                font-size 3em;
+            
+                a{
+                    
+                    margin 0 0.35em;
+                    color white;
+                }
+            }
+        }
+
+
+}

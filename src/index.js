@@ -5,10 +5,12 @@ import "./Elements/pie-chart/pie-chart.js";
 import "./Elements/donut-chart/donut-chart.js";
 import "./Elements/slider/slider.js"
 import "./Elements/stage/stage.styl"
-import "./Elements/message-form/message-form.styl"
+import "./Elements/message-form/message-form.js"
 import "./Elements/hint/hint.js"
 import "./Elements/toggle/toggle.js"
 import "./Elements/tick-box/tick-box.js"
+import "./Elements/Drop-down/drop-down.js"
+import "./Elements/Profil/profil.js"
 
  $(document).ready(function () {
            
@@ -31,7 +33,20 @@ import "./Elements/tick-box/tick-box.js"
      $('#message-form-email').Hint('right', 'thanks!', '#4eb7a8');
 
      
-        $(' .message-form__input-search_not-found .message-form_form-control').attr('value',"I've not found what i'm looking for ...");
+        $('.message-form__input-search').eq(1).Notfound();
+     
+        $('#myselect').Dropdown("option_name",[{ value:"1", text: "option1"},
+                                { value:"2", text: "option2"},
+                                { value:"3", text: "option3"}]);
+     
+     
+     $("#profil1").Profil('public/profil1.jpg','John Smith','ux designer',[{href: '/#', class: 'fa fa-facebook'},
+                                                    {href: '/#', class: 'fa fa-twitter'},
+                                                    {href: '/#', class: 'fa fa-dribbble'},]);
+     
+     $("#profil2").Profil('public/profil2.jpg','Sarah Brown','developer',[{href: '/#', class: 'fa fa-facebook'},
+                                                    {href: '/#', class: 'fa fa-twitter'},
+                                                    {href: '/#', class: 'fa fa-dribbble'},]);
      
    
         });

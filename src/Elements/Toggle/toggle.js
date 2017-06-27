@@ -10,12 +10,12 @@ $(function(){
          
          $(this).toggleClass("toggle_off");
          
-     }).each( function(index, element){
+     }).each( function(){
            
         $(this).toggleClass("toggle_off");
           
-           if( $(element).attr('checked') )  
-                    $(element).click();
+           if( $(this).attr('checked') )  
+                    $(this).click();
                           
        });
     

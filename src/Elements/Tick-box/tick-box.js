@@ -26,12 +26,10 @@ $(function(){
              
             
           
-     }).each( function(index, element){
+     }).each( function(){
            
-       
-          
-           if( $(element).attr('checked') )  
-                    $(element).click();
+           if( $(this).attr('checked') )  
+                    $(this).click();
                           
        });
     

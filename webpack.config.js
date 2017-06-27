@@ -13,6 +13,7 @@ module.exports = {
         path: paths.build,
         filename: "[name].js"
     },
+  
     plugins:[
         new HtmlWebpackPlugin({
             template: paths.source + 'index.pug'

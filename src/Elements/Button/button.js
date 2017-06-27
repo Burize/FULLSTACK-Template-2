@@ -33,13 +33,13 @@ import "./button.styl"
       }, 2000);
     });
     
-     $('.ripple-button').each( function(index, element){
+     $('.ripple-button').each( function(){
          
-        if( $(element).data("border-color") )
-                 $(element).css("border", "solid 0.1em "+$(element).data("border-color"))
+        if( $(this).data("border-color") )
+                 $(this).css("border", "solid 0.1em "+$(this).data("border-color"))
                  
-        if( $(element).data("border-bottom-color") )
-                 $(element).css("border-bottom", "solid 0.3em "+$(element).data("border-bottom-color"))
+        if( $(this).data("border-bottom-color") )
+                 $(this).css("border-bottom", "solid 0.3em "+$(this).data("border-bottom-color"))
             
      })
   });

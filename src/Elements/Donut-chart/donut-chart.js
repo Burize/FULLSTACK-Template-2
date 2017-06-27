@@ -25,13 +25,13 @@ var d3 = require('d3');
 		this.svg.append("g")
 			.attr("class", "slices");
 		
-		this.pie = d3.layout.pie()
+		this.pie = d3.pie()
 			.sort(null)
 			.value(function(d){
 				return d.hvalue;
 			});
 
-		this.arc = d3.svg.arc()
+		this.arc = d3.arc()
 		  .outerRadius(radius * (1 - this.settings.linewidth) )
 		  .innerRadius(radius);
 

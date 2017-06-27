@@ -201,10 +201,10 @@
         .one-more-article{
             
             display flex;
+            justify-content space-between;
             padding-left 2%;
             .search{
                 
-                text-align center;
                 width 47.4%;
                 
                 .title{
@@ -219,10 +219,59 @@
 
                         width 100%;
                         font-size 1.8em;
-                        margin-bottom 0.9em;
+                        margin-bottom 1em;
                     }
                 }
             }
+            
+            .user-profiles {
+                    width: 52%;
+                      padding-left 10%;
+                   .title{
+                       margin-bottom 8.3%;
+                       padding-right 10%;
+                   }
+                   
+                   
+                   #profil1 {
+                       
+                       margin-bottom 9%;
+                   }
+                   
+                   #profil1 .profil__data{
+                       
+                       .profil__name{
+                           color #e75735;
+                       }
+                       
+                       .profil__profession{
+                           
+                          color #747474;
+                       }
+                       
+                       .profil__links a{
+
+                           &:nth-child(1),
+                           &:nth-child(3){
+                               color #747474;
+                           }
+                           
+                            &:nth-child(2){
+                           
+                           color #e75735;
+                           }
+                       }
+                   }
+                   
+                   #profil2 .profil__data{
+                       
+                       background-color #4eb7a8;
+                       
+                       .profil__data-arrow{
+                           border-color transparent #4eb7a8 transparent transparent ;
+                       }
+                   }
+                }
         }
     
   

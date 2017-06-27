@@ -2,29 +2,28 @@
 <html>
   <head></head>
   <meta charset="utf-8"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <title>Webpack app</title>
   <body>
     <div class="container">
       <article class="standart-buttons">
         <h2 class="title">standart buttons</h2>
         <section class="standart-buttons__row">
-          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button" style="font-size: 25px; background-color: #e75735;">button</button>
-          <button class="ripple-button" style="font-size: 18px; background-color: #e75735;">button</button>
+          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 18px;">button</button>
+          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 25px;">button</button>
+          <button class="ripple-button" style="background-color: #e75735;font-size: 25px;">button</button>
+          <button class="ripple-button" style="background-color: #e75735;font-size: 18px;">button</button>
         </section>
         <section class="standart-buttons__row">
-          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button border_bottom" style="font-size: 25px; background-color: #e75735;">button</button>
-          <button class="ripple-button border_bottom" style="font-size: 18px; background-color: #e75735;">button</button>
+          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 18px;" data-border-bottom-color="#28a290">button</button>
+          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 25px;" data-border-bottom-color="#28a290">button</button>
+          <button class="ripple-button" style="background-color: #e75735;font-size: 25px;" data-border-bottom-color="#bf3e1f">button</button>
+          <button class="ripple-button" style="background-color: #e75735;font-size: 18px;" data-border-bottom-color="#bf3e1f">button</button>
         </section>
         <section class="standart-buttons__row">
-          <button class="ripple-button" style="font-size: 18px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button" style="font-size: 25px; background-color: #4eb7a8;">button</button>
-          <button class="ripple-button border_bottom" style="font-size: 25px; background-color: #e75735;">button</button>
-          <button class="ripple-button border_bottom" style="font-size: 18px; background-color: #e75735;">button</button>
+          <button class="ripple-button" style="background-color: white;font-size: 18px; color: #4eb7a8;" data-border-color="#4eb7a8" data-border-bottom-color="#4eb7a8">button</button>
+          <button class="ripple-button" style="background-color: white;font-size: 25px; color: #4eb7a8;" data-border-color="#4eb7a8" data-border-bottom-color="#4eb7a8">button</button>
+          <button class="ripple-button" style="background-color: white;font-size: 25px; color: #e75735;" data-border-color="#e75735" data-border-bottom-color="#e75735">button</button>
+          <button class="ripple-button" style="background-color: white;font-size: 18px; color: #e75735;" data-border-color="#e75735" data-border-bottom-color="#e75735">button</button>
         </section>
       </article>
       <article class="arrow-buttons">
@@ -84,19 +83,151 @@
         <h2 class="title">percentages / pie chart</h2>
         <section class="pie-charts__row">
           <div class="pie-chart" data-percent="0">
-            <div class="pie-chart__value"><span></span></div>
+            <div class="pie-chart__inner">
+              <div class="pie-chart__value"><span></span></div>
+            </div>
           </div>
           <div class="pie-chart" data-percent="38">
-            <div class="pie-chart__value"><span></span></div>
+            <div class="pie-chart__inner">
+              <div class="pie-chart__value"><span></span></div>
+            </div>
           </div>
           <div class="pie-chart" data-percent="62">
-            <div class="pie-chart__value"><span></span></div>
+            <div class="pie-chart__inner">
+              <div class="pie-chart__value"><span></span></div>
+            </div>
           </div>
           <div class="pie-chart" data-percent="89">
-            <div class="pie-chart__value"><span></span></div>
+            <div class="pie-chart__inner">
+              <div class="pie-chart__value"><span></span></div>
+            </div>
           </div>
-          <div class="exp"></div>
+          <div class="donut-chart"></div>
         </section>
+      </article>
+      <article class="sliders">
+        <h2 class="title">sliders</h2>
+        <section class="slider__row">
+          <div class="slider">
+            <div class="slider-hint" style="background-color: #e75735;"><span>0</span>
+              <div class="hint__arrow" style="border-color:#e75735 transparent transparent transparent;"></div>
+            </div>
+            <div class="slider__inner">
+              <svg>
+                <line x1="5%" y1="50%" x2="95%" y2="50%" stroke="#e5e5e5" stroke-width="2%" stroke-linecap="round"></line>
+                <circle cx="5%" cy="50%" r="5%" fill="#e75735"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="slider">
+            <div class="slider__inner">
+              <svg>
+                <line x1="5%" y1="50%" x2="95%" y2="50%" stroke="#e5e5e5" stroke-width="2%" stroke-linecap="round"></line>
+                <circle cx="5%" cy="50%" r="5%" fill="#4eb7a8"></circle>
+              </svg>
+            </div>
+            <div class="slider-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100         </span></div>
+          </div>
+        </section>
+      </article>
+      <article class="stages">
+        <h2 class="title">stages</h2>
+        <div class="stage">
+          <div class="stage__inner">
+            <svg>
+              <line x1="2%" y1="50%" x2="98%" y2="50%" stroke="#e5e5e5" stroke-width="1%"></line>
+              <line x1="2%" y1="50%" x2="50%" y2="50%" stroke="#e75735" stroke-width="1%"></line>
+              <g>
+                <circle cx="3%" cy="50%" r="3.5%" fill="#e75735"></circle>
+                <text x="3%" y="50%" text-anchor="middle" dy=".3em" fill="white">1</text>
+              </g>
+              <g>
+                <circle cx="26.5%" cy="50%" r="3.5%" fill="#e75735"></circle>
+                <text x="26.5%" y="50%" text-anchor="middle" dy=".3em" fill="white">2</text>
+              </g>
+              <g>
+                <circle cx="50%" cy="50%" r="3.5%" fill="#e75735"></circle>
+                <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="white">3</text>
+              </g>
+              <g>
+                <circle cx="73.5%" cy="50%" r="3.5%" fill="#e5e5e5"></circle>
+                <text x="73.5%" y="50%" text-anchor="middle" dy=".3em" fill="#888888">4</text>
+              </g>
+              <g>
+                <circle cx="97%" cy="50%" r="3.5%" fill="#e5e5e5"></circle>
+                <text x="97%" y="50%" text-anchor="middle" dy=".3em" fill="#888888">5</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </article>
+      <article class="form-elements">
+        <h2 class="title">form elements</h2>
+        <section class="form-elements__row">
+          <form class="message-form">
+            <div class="hint-control" id="message-form-name">
+              <input class="message-form_form-control message-form__input-text" type="text" placeholder="Your Name"/>
+            </div><br/>
+            <div class="hint-control" id="message-form-email">
+              <input class="message-form_form-control message-form__input-text" type="text" placeholder="Your Email"/>
+            </div><br/>
+            <textarea class="message-form_form-control message-form__textarea" placeholder="Your Message" rows="4"></textarea><br/>
+            <button class="ripple-button" style="background-color: #4eb7a8;" data-border-bottom-color="#28a290">button</button>
+          </form>
+          <div class="form-elements__control">
+            <h2 class="title">toggles</h2>
+            <section class="toggles">
+              <label class="toggle toggle_on" style="background-color:#4eb7a8;">
+                <div class="toggle__circle"></div>
+                <input type="checkbox" name="toggle1" style="display: none;">
+              </label>
+              <label class="toggle toggle_on" style="background-color:#4eb7a8;" checked>
+                <div class="toggle__circle"></div>
+                <input type="checkbox" name="toggle2" style="display: none;">
+              </label>
+            </section>
+            <h2 class="title">tick boxes</h2>
+            <section class="tick-boxes">
+              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" style="width: 45px;">
+                <input type="checkbox" style="display: none;" name="tick-box1">
+                <div class="tick-box__inner">
+                  <svg class="tick-box-svg" viewbox=" 0 0 100 100">
+                    <circle cx="50%" cy="50%" r="46%" fill="#e5e5e5"></circle>
+                    <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
+                  </svg>
+                </div>
+              </label>
+              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" style="width: 45px;" checked>
+                <input type="checkbox" style="display: none;" name="tick-box2">
+                <div class="tick-box__inner">
+                  <svg class="tick-box-svg" viewbox=" 0 0 100 100">
+                    <circle cx="50%" cy="50%" r="46%" fill="#e5e5e5"></circle>
+                    <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
+                  </svg>
+                </div>
+              </label>
+            </section>
+          </div>
+        </section>
+      </article>
+      <article class="one-more-article">
+        <div class="search">
+          <h2 class="title">search / drop down</h2>
+          <form class="message-form">
+            <div class="message-form__input-search">
+              <input class="message-form_form-control" type="search" placeholder="Search"/>
+            </div>
+            <div class="message-form__input-search">
+              <input class="message-form_form-control" type="search" placeholder="Search"/>
+            </div>
+            <div id="myselect"> </div>
+          </form>
+        </div>
+        <article class="user-profiles">
+          <h2 class="title">user profile</h2>
+          <section id="profil1"></section>
+          <section id="profil2"></section>
+        </article>
       </article>
     </div>
   <script type="text/javascript" src="main.js"></script></body>
