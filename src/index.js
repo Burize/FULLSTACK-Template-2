@@ -16,6 +16,7 @@ import "./Elements/event/event.js"
 import "./Elements/location/location.js"
 import './Elements/calendar/calendar.js'
 import './Elements/messaging/messaging.js'
+import './Elements/video/video.js'
 
  $(document).ready(function () {
            

@@ -290,9 +290,61 @@
       </article>
       <article class="video">
         <h2 class="title">video</h2>
-        <video width="100%" height="670px" controls="controls" poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&amp;mh=654">
-          <source src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498691280&amp;token=0771d63dca366e29379f1" type="video/mp4"/>
-        </video>
+        <div class="player">
+          <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
+            <source src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82">
+          </video>
+          <div class="player__controls">
+            <div class="player__controls-inner">
+              <div class="player__controls-play">
+                <svg class="svg-play" viewBox="0 0 16 16">
+                  <path fill="white" d="M1,14c0,0.547,0.461,1,1,1c0.336,0,0.672-0.227,1-0.375L14.258,9C14.531,8.867,15,8.594,15,8s-0.469-0.867-0.742-1L3,1.375  C2.672,1.227,2.336,1,2,1C1.461,1,1,1.453,1,2V14z"></path>
+                </svg>
+                <svg class="svg-pause" viewBox="0 0 512 512">
+                  <path fill="white" d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z"></path>
+                  <path fill="white" d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z"></path>
+                </svg>
+              </div>
+              <progress id="progress-bar" min="0" max="100" value="0"></progress>
+              <div class="player__controls-fullscreen">
+                <svg x="0px" y="0px" viewBox="0 0 32 32">
+                  <polygon style="fill:white;" points="29.414,26.586 22.828,20 20,22.828 26.586,29.414 24,32 32,32 32,24 "></polygon>
+                  <polygon style="fill:white;" points="2.586,5.414 9.172,12 12,9.172 5.414,2.586 8,0 0,0 0,8 "></polygon>
+                  <polygon style="fill:white;" points="26.586,2.586 20,9.172 22.828,12 29.414,5.414 32,8 32,0 24,0 "></polygon>
+                  <polygon style="fill:white;" points="12,22.828 9.172,20 2.586,26.586 0,24 0,32 8,32 5.414,29.414 "></polygon>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player">
+          <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg">
+          </video>
+          <div class="player__controls">
+            <div class="player__controls-inner">
+              <div class="player__controls-play">
+                <svg class="svg-play" viewBox="0 0 16 16">
+                  <path fill="white" d="M1,14c0,0.547,0.461,1,1,1c0.336,0,0.672-0.227,1-0.375L14.258,9C14.531,8.867,15,8.594,15,8s-0.469-0.867-0.742-1L3,1.375  C2.672,1.227,2.336,1,2,1C1.461,1,1,1.453,1,2V14z"></path>
+                </svg>
+                <svg class="svg-pause" viewBox="0 0 512 512">
+                  <path fill="white" d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z"></path>
+                  <path fill="white" d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z"></path>
+                </svg>
+              </div>
+              <progress id="progress-bar" min="0" max="100" value="0"></progress>
+              <div class="player__controls-fullscreen">
+                <svg x="0px" y="0px" viewBox="0 0 32 32">
+                  <polygon style="fill:white;" points="29.414,26.586 22.828,20 20,22.828 26.586,29.414 24,32 32,32 32,24 "></polygon>
+                  <polygon style="fill:white;" points="2.586,5.414 9.172,12 12,9.172 5.414,2.586 8,0 0,0 0,8 "></polygon>
+                  <polygon style="fill:white;" points="26.586,2.586 20,9.172 22.828,12 29.414,5.414 32,8 32,0 24,0 "></polygon>
+                  <polygon style="fill:white;" points="12,22.828 9.172,20 2.586,26.586 0,24 0,32 8,32 5.414,29.414 "></polygon>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </article>
     </div>
   <script type="text/javascript" src="main.js"></script></body>

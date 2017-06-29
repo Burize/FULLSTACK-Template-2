@@ -1,0 +1,100 @@
+.player {
+
+    
+      border-radius: 0.5em;
+      overflow hidden;
+      position relative;
+    
+        video {
+            width 100%;
+            background:black;
+            
+            &[poster]{
+            
+            object-fit: cover;
+            }
+        }
+        
+       
+        
+        .player__controls {
+         
+        position absolute;
+        bottom 0;
+        width 100%;
+        background-color rgba(0, 0, 0, 0.6);
+        padding-top  8%;
+        
+        
+
+            .player__controls-inner{
+
+                position absolute;
+                top 0;
+                width 100%;
+                left 0;
+                height 100%;
+                display flex;
+                align-items center;
+                justify-content space-between;
+            
+                        
+                    .player__controls-play{
+                            height 100%;
+                            width 8%;
+
+                        svg{
+                            height 30%;
+                            width 30%;
+                            margin 35%;
+                            }
+                            
+                            .svg-pause{
+                                
+                                display none;
+                            }
+                        }
+
+                    .player__controls-fullscreen {
+                        
+                        background-color #e75735;
+                        height 100%;
+                        width 8%;
+                        
+                       
+                        svg{
+                            height 50%;
+                            width 50%;
+                            margin 25%;
+                        }
+                    }
+
+
+                    progress {
+                      color: #e75735;
+                      margin-left -5%;
+                      width: 80%;
+                      height 0.5em;
+                      border: none;
+                        overflow hidden;
+                      background: #e5e5e5;
+                      border-radius: 0.9em;
+                      vertical-align: middle;
+                    }
+                    progress::-moz-progress-bar { 
+                      color: #e75735;
+                      background:#e5e5e5;; 
+                    }
+
+                    progress[value]::-webkit-progress-bar {
+                      background-color: #e5e5e5;
+                      border-radius: 0.9em;
+                      
+                    }
+
+                    progress[value]::-webkit-progress-value {
+                      background-color: #e75735;
+                    }
+         }
+    }
+ }
