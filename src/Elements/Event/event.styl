@@ -1,0 +1,78 @@
+@font-face{
+    
+    font-family LatoBlack;
+    src url(./Lato-Black.ttf)
+}
+
+@font-face{
+    
+    font-family LatoLight;
+    src url(./Lato-Light.ttf)
+}
+
+
+@font-face{
+    
+    font-family LatoRegular;
+    src url(./Lato-Regular.ttf)
+}
+
+
+
+.event{
+    
+    box-sizing border-box;
+    background-position 50% 0%;
+    background-size cover;
+    background-repeat no-repeat;
+    border-radius 0.3em;
+    overflow hidden;
+    
+    .event__inner{
+
+        background-color #4eb7a8;
+        margin-left 33%;
+        padding 4.2em 2.4em 2.75em;
+       
+        color white;
+        
+        .event__date{
+            
+            margin 0;
+            margin-bottom 0.75em;
+            font-family LatoLight;
+            font-size 3.6em;
+            line-height 1em;
+            
+            span{
+                
+                font-size 2.2em;
+                margin-right 0.2em;
+            }
+        }
+        
+          .event__title{
+            
+            
+            font-family LatoBlack;
+            text-transform uppercase;
+            font-size 1.5em;
+            margin-bottom 0.2em;
+        }
+        
+        .event__text{
+            
+            margin 0;
+             font-family LatoRegular;
+             font-size 1.4em;
+             line-height 1.2em;
+             margin-bottom 1.7em;
+        }
+        
+        button{
+            
+            margin auto;
+            display block;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+mixin Messaging( name, portrait_src, request, response)
+    section.messaging
+        div.messaging__header
+            p.messaging__header-title!= name
+            div.messaging__header-bottom
+        div(style=" background-image:url( "+portrait_src+")").messagin__portrait
+        div.messaging__body
+            div.messaging__body-icons
+                svg(x="0px" y="0px" viewBox="0 0 100 125"  )
+                    path( fill="#8e8d8d" d="M94.892,10.896c0-0.008,0-0.016,0-0.023c-0.023-4.271-3.492-7.729-7.772-7.729  c-0.016,0-0.031,0.004-0.055,0.004c0,0-0.008-0.004-0.016-0.004H12.971c-0.008,0-0.02,0.004-0.027,0.004  c-0.023,0-0.043-0.004-0.066-0.004c-4.289,0-7.769,3.48-7.769,7.772v59.484c0,0,0,0.004,0,0.012c0,4.273,3.457,7.741,7.726,7.765  c0.008,0,0.02,0,0.027,0h46.917L81.12,96.856V78.176h5.991c0.008,0,0.008,0,0.008,0c4.28-0.008,7.749-3.468,7.765-7.749  c0-0.008,0.008-0.016,0.008-0.016V10.896z")
+                i(class="fa fa-camera" aria-hidden="true")
+            div.messaging__body-request!= request
+            textarea( placeholder!=response  rows=4).messaging__body-response
+            +ripple-button('reply', '#4eb7a8', '#28a290')

@@ -1,0 +1,123 @@
+
+@font-face{
+    
+    font-family LatoBold;
+    src url('./Lato-Bold.ttf');
+}
+
+@font-face{
+    
+    font-family SourceSansProLight;
+    src url(./SourceSansProLight.ttf);
+}
+
+.messaging{
+    
+    background-color #f2f2f2;
+    border-radius 0.5em;
+    overflow hidden;
+    .messaging__header{
+        z-index 1;
+        padding-top 40%;
+        background-color #4eb7a8;
+        position relative;
+        
+        .messaging__header-title{
+            
+            position absolute;
+            width 100%;
+            top 15%;
+            margin 0;
+            text-align center;
+            font-family SourceSansProLight;
+            font-size 4em;
+            color white;
+        }
+        
+        .messaging__header-bottom{
+            
+            position absolute;
+            width 100%;
+            bottom 0;
+            height 30%;
+            background-color #46ab9d;
+        }
+        
+        
+       
+    }
+    
+     .messagin__portrait{
+    
+            position relative;
+            width 29%;
+            padding-top 29%;
+            background-position center;
+            background-size cover;
+            border-radius 100%;
+            border solid 0.5em #e5e5e5; 
+            margin -16% auto;
+            z-index 10;
+        }
+        
+        .messaging__body{
+            
+            width 84%;
+             margin 8% auto;
+             
+            .messaging__body-icons {
+                
+               
+                display flex;
+                justify-content space-between;
+                margin-bottom 6%;
+                svg{
+                    
+                     width: 3em;
+                    height : 3em;
+              
+                }
+                
+                i{
+                    
+                    font-size 2.5em;
+                    color #8e8d8d;
+                }
+               
+            }
+            
+            .messaging__body-request{
+                
+                
+                font-family LatoBold;
+                font-size 1.6em;
+                color #868686;
+                background-color white;
+                border-radius 0.3em;
+                padding 1.3em 1.7em 1.5em 1.4em;
+                margin-bottom 8%;
+            }
+            
+            .messaging__body-response{
+                
+                width 100%;
+                font-family LatoBold;
+                font-size 1.6em;
+                color #777777;
+                background-color #e5e5e5;
+                border solid 0.2em white;
+                border-radius 0.3em;
+                padding 1em 1.7em 0.5em 1.4em;
+                resize none;
+                margin-bottom 5%;
+            }
+            
+            .ripple-button{
+                
+                width 100%;
+                font-size 1.5em;
+                margin-bottom 2.5%;
+            }
+        }
+}
+

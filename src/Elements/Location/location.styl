@@ -1,0 +1,68 @@
+@import './font-awesome.css'
+
+@font-face{
+    
+    font-family LatoBlack;
+    src url(./Lato-Black.ttf)
+}
+
+@font-face{
+    
+    font-family LatoLight;
+    src url(./Lato-Light.ttf)
+}
+
+.map{
+
+        position relative;
+        border-radius 0.5em;
+        overflow hidden;
+       
+            .map__body{
+                
+                padding-top 46%;
+            }
+            
+            .map__footer{
+                
+                position absolute;
+                width 100%;
+                height 25%;
+                bottom 0;
+                background-color: #e75735;
+                display flex;
+                justify-content space-between;
+                align-items center;
+                color white;
+                padding-left 4.2%;
+                padding-right 4.9%;
+                box-sizing border-box;
+                z-index 1;
+                
+                .map__footer-title{
+                    
+                     font-family LatoLight;
+                     font-size 3.6em;
+                }
+                
+                .map__footer-place{
+                    
+                    width 25%;
+                    font-family LatoBlack;
+                    font-size 1.6em;
+                    text-transform uppercase;
+                }
+                
+                .map__footer-icons{
+                    
+                    font-size 3em;
+                    width 11.5%;
+                    margin-left 33%;
+                    
+                    
+                    display flex;
+                    justify-content space-between;
+                }
+            }
+                
+    }

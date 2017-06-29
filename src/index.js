@@ -11,6 +11,11 @@ import "./Elements/toggle/toggle.js"
 import "./Elements/tick-box/tick-box.js"
 import "./Elements/Drop-down/drop-down.js"
 import "./Elements/Profil/profil.js"
+import "./Elements/news/news.js"
+import "./Elements/event/event.js"
+import "./Elements/location/location.js"
+import './Elements/calendar/calendar.js'
+import './Elements/messaging/messaging.js'
 
  $(document).ready(function () {
            
@@ -47,6 +52,10 @@ import "./Elements/Profil/profil.js"
      $("#profil2").Profil('public/profil2.jpg','Sarah Brown','developer',[{href: '/#', class: 'fa fa-facebook'},
                                                     {href: '/#', class: 'fa fa-twitter'},
                                                     {href: '/#', class: 'fa fa-dribbble'},]);
+     
+     $('#my_map').Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'/public/marker.png');
+     
+     $('#mycalendar').glDatePicker();
      
    
         });

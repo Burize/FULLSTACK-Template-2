@@ -1,0 +1,9 @@
+mixin Event( day, month, title, text, src)
+    section(style="background-image: url("+src+")").event
+        div.event__inner
+            p.event__date  
+                span!= day 
+                | Aug
+            p.event__title!= title 
+            p.event__text!= text
+            +ripple-button('ADD  TO  CALENDAR', 'white','#379285')(style="font-size: 18px; color: #4eb7a8" )

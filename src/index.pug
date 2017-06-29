@@ -5,12 +5,16 @@ include ./Elements/Slider/Slider.pug
 include ./Elements/stage/stage.pug
 include ./Elements/toggle/toggle.pug
 include ./Elements/tick-box/tick-box.pug
-
+include ./Elements/news/news.pug
+include ./Elements/Event/event.pug
+include ./Elements/messaging/messaging.pug
+include ./Elements/message-form/search.pug
 
 doctype !html
 html
     head
     meta(charset = 'utf-8')
+    script( defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&libraries=places&language=ru' )
     title Webpack app
     body
         div.container
@@ -82,12 +86,29 @@ html
                 div.search
                     h2.title search / drop down
                     form.message-form
-                        div.message-form__input-search
-                            input(type="search" placeholder="Search").message-form_form-control
-                        div.message-form__input-search
-                            input(type="search" placeholder="Search").message-form_form-control
+                        +Search('search1')
+                        +Search('search2')
                         div#myselect 
                 article.user-profiles
                     h2.title user profile
                     section#profil1
                     section#profil2
+            article.news-events
+                h2.title news & events
+                secton.news-events__row
+                    +News("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', './public/news.jpg' )
+                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', './public/event.jpg')
+            article.location
+                h2.title location
+                div#my_map
+            article.calendar_messaging
+                section.calendar_section
+                    h2.title calendar
+                    div(type="text" id="mycalendar")
+                section.messaging_section
+                    h2.title messaging
+                    +Messaging('Sarah Brown', 'public/profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.')
+            article.video
+                h2.title video
+                video(width="100%" height="670px" controls="controls" poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654")
+                    source( src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498691280&token=0771d63dca366e29379f1" type="video/mp4") 

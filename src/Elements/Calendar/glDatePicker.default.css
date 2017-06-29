@@ -1,0 +1,173 @@
+@import './font-awesome.css'
+
+@font-face{
+    
+    font-family: LatoBlack;
+    src: url(./Lato-Black.ttf);
+}
+
+@font-face{
+    
+    font-family: LatoLight;
+    src: url(./Lato-Light.ttf);
+}
+
+
+@font-face{
+    
+    font-family: SourceSansProRegular;
+    src: url(./SourceSansProRegular.ttf);
+}
+
+.big_number{
+    
+    width: 100%;
+    text-align: center;
+    background-color: #e75735;
+    font-family: LatoLight;
+    font-size: 10em;
+    color: white;
+    padding-bottom: 0.125em; 
+}
+
+
+.calendar__footer{
+    
+    font-family: LatoBlack;
+    font-size: 1.8em;
+    color: #868686;
+    text-transform: uppercase;
+    padding: 1.1em;
+    background-color: #e5e5e5;
+}
+.gldp-default {
+	position: absolute;
+	border-radius: 0.5em;
+    overflow: hidden;
+}
+
+/* Core style for every cell */
+.gldp-default .core {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0;
+
+	text-align: center;
+	cursor: pointer;
+	color: #868686;
+	background: #f2f2f2;
+    font-family: SourceSansProRegular;
+}
+
+.cell-container:after{
+    
+    content: '';
+    display: block;
+    clear: both;
+}
+.gldp-default .core:nth-child(7n+1) {
+    
+ border-left: none !important;   
+}
+
+.gldp-default .core:nth-child(7n) {
+    
+ border-right: none !important;   
+}
+
+/* Cell border */
+.gldp-default .border {
+	border-style: solid;
+	border-width: 0;
+	border-color: white;
+}
+
+/* Month/Year text and select */
+.gldp-default .monyear,
+.gldp-default .monyear select {
+	
+	
+    font-family: LatoLight;
+    font-size: 3em;
+    background-color: #d54c2c ;
+    color: white;
+  
+}
+
+/* Month/Year text */
+.gldp-default .monyear i{
+    margin-top: 0.27em;;
+}
+/* Prev/Next arrows */
+.gldp-default .prev-arrow,
+.gldp-default .next-arrow {
+	color: white;
+	
+}
+
+.gldp-default .prev-arrow:active,
+.gldp-default .next-arrow:active {
+	color: #9d9d9d;
+   
+}
+
+.gldp-default .prev-arrow-off,
+.gldp-default .next-arrow-off {
+	color: #222;
+	opacity: 0.15;
+}
+
+/* Days of the week */
+.gldp-default .dow {
+	color: #fff;
+	font-family: LatoBlack;
+    text-transform: uppercase;
+	background: #e75735;
+	padding: 1em 0; 
+}
+
+/* Weekdays */
+.gldp-default .mon,
+.gldp-default .tue,
+.gldp-default .wed,
+.gldp-default .thu,
+.gldp-default .fri,
+.gldp-default .sat,
+.gldp-default .sun{
+	font-size: 2.1em;
+}
+
+
+
+/* Selectable days that are outside of current month being shown */
+.gldp-default .outday {
+	color: white !important;
+}
+
+
+
+
+
+/* Currently selected day */
+.gldp-default .selected {
+	color: #fff;
+	
+	
+	background: #d54c2c;
+font-size: 2.1em;
+}
+
+/* Today */
+.gldp-default .today {
+	color: #fff;
+	
+	background: #88bfe8;
+font-size: 2.1em;
+}
+
+/* Special */
+

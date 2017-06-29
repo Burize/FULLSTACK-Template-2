@@ -2,6 +2,7 @@
 <html>
   <head></head>
   <meta charset="utf-8"/>
+  <script defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&amp;libraries=places&amp;language=ru"></script>
   <title>Webpack app</title>
   <body>
     <div class="container">
@@ -215,10 +216,18 @@
           <h2 class="title">search / drop down</h2>
           <form class="message-form">
             <div class="message-form__input-search">
-              <input class="message-form_form-control" type="search" placeholder="Search"/>
+              <input class="message-form_form-control" type="search" placeholder="Search">
+              <svg viewbox="0 0 100 100">
+                <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
+                <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
+              </svg>
             </div>
             <div class="message-form__input-search">
-              <input class="message-form_form-control" type="search" placeholder="Search"/>
+              <input class="message-form_form-control" type="search" placeholder="Search">
+              <svg viewbox="0 0 100 100">
+                <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
+                <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
+              </svg>
             </div>
             <div id="myselect"> </div>
           </form>
@@ -228,6 +237,62 @@
           <section id="profil1"></section>
           <section id="profil2"></section>
         </article>
+      </article>
+      <article class="news-events">
+        <h2 class="title">news & events</h2>
+        <secton class="news-events__row">
+          <section class="news" style="background-image: url(./public/news.jpg);">
+            <div class="news__inner">
+              <p class="news__title">It's all going downhill</p>
+              <p class="news__date">24 august 2013</p>
+              <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </section>
+          <section class="event" style="background-image: url(./public/event.jpg);">
+            <div class="event__inner">
+              <p class="event__date"> <span>24</span>Aug</p>
+              <p class="event__title">THIS IS THE TITLE</p>
+              <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="ripple-button" style="background-color: white;font-size: 18px; color: #4eb7a8;" data-border-bottom-color="#379285">ADD  TO  CALENDAR</button>
+            </div>
+          </section>
+        </secton>
+      </article>
+      <article class="location">
+        <h2 class="title">location</h2>
+        <div id="my_map"></div>
+      </article>
+      <article class="calendar_messaging">
+        <section class="calendar_section">
+          <h2 class="title">calendar</h2>
+          <div type="text" id="mycalendar"></div>
+        </section>
+        <section class="messaging_section">
+          <h2 class="title">messaging</h2>
+          <section class="messaging">
+            <div class="messaging__header">
+              <p class="messaging__header-title">Sarah Brown</p>
+              <div class="messaging__header-bottom"></div>
+            </div>
+            <div class="messagin__portrait" style=" background-image:url( public/profil2.jpg);"></div>
+            <div class="messaging__body">
+              <div class="messaging__body-icons">
+                <svg x="0px" y="0px" viewBox="0 0 100 125">
+                  <path fill="#8e8d8d" d="M94.892,10.896c0-0.008,0-0.016,0-0.023c-0.023-4.271-3.492-7.729-7.772-7.729  c-0.016,0-0.031,0.004-0.055,0.004c0,0-0.008-0.004-0.016-0.004H12.971c-0.008,0-0.02,0.004-0.027,0.004  c-0.023,0-0.043-0.004-0.066-0.004c-4.289,0-7.769,3.48-7.769,7.772v59.484c0,0,0,0.004,0,0.012c0,4.273,3.457,7.741,7.726,7.765  c0.008,0,0.02,0,0.027,0h46.917L81.12,96.856V78.176h5.991c0.008,0,0.008,0,0.008,0c4.28-0.008,7.749-3.468,7.765-7.749  c0-0.008,0.008-0.016,0.008-0.016V10.896z"></path>
+                </svg><i class="fa fa-camera" aria-hidden="true"></i>
+              </div>
+              <div class="messaging__body-request">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
+              <textarea class="messaging__body-response" placeholder="Yeah that sounds great. See you then." rows="4"></textarea>
+              <button class="ripple-button" style="background-color: #4eb7a8;" data-border-bottom-color="#28a290">reply</button>
+            </div>
+          </section>
+        </section>
+      </article>
+      <article class="video">
+        <h2 class="title">video</h2>
+        <video width="100%" height="670px" controls="controls" poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&amp;mh=654">
+          <source src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498691280&amp;token=0771d63dca366e29379f1" type="video/mp4"/>
+        </video>
       </article>
     </div>
   <script type="text/javascript" src="main.js"></script></body>
