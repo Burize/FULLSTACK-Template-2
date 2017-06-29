@@ -97,8 +97,8 @@ html
             article.news-events
                 h2.title news & events
                 secton.news-events__row
-                    +News("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', 'news.jpg' )
-                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'event.jpg')
+                    +News("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', './public/news.jpg' )
+                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', './public/event.jpg')
             article.location
                 h2.title location
                 div#my_map
@@ -108,7 +108,7 @@ html
                     div(type="text" id="mycalendar")
                 section.messaging_section
                     h2.title messaging
-                    +Messaging('Sarah Brown', 'profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.')
+                    +Messaging('Sarah Brown', './public/profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.')
             article.video
                 h2.title video
                 +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', 'https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82')
