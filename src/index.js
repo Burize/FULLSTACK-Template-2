@@ -46,15 +46,15 @@ import './Elements/video/video.js'
                                 { value:"3", text: "option3"}]);
      
      
-     $("#profil1").Profil('./public/profil1.jpg','John Smith','ux designer',[{href: '/#', class: 'fa fa-facebook'},
+     $("#profil1").Profil('./profil1.jpg','John Smith','ux designer',[{href: '/#', class: 'fa fa-facebook'},
                                                     {href: '/#', class: 'fa fa-twitter'},
                                                     {href: '/#', class: 'fa fa-dribbble'},]);
      
-     $("#profil2").Profil('./public/profil2.jpg','Sarah Brown','developer',[{href: '/#', class: 'fa fa-facebook'},
+     $("#profil2").Profil('./profil2.jpg','Sarah Brown','developer',[{href: '/#', class: 'fa fa-facebook'},
                                                     {href: '/#', class: 'fa fa-twitter'},
                                                     {href: '/#', class: 'fa fa-dribbble'},]);
      
-     $('#my_map').Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'./public/marker.png');
+     $('#my_map').Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'./marker.png');
      
      $('#mycalendar').glDatePicker();
      
