@@ -11,4 +11,4 @@ mixin Messaging( name, portrait_src, request, response)
                 i(class="fa fa-camera" aria-hidden="true")
             div.messaging__body-request!= request
             textarea( placeholder!=response  rows=4).messaging__body-response
-            +ripple-button('reply', '#4eb7a8', '#28a290')
+            +ripple-button('reply', 'border-bottom-blue')

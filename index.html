@@ -2,79 +2,79 @@
 <html>
   <head></head>
   <meta charset="utf-8"/>
-  <script defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&amp;libraries=places&amp;language=ru"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&amp;libraries=places&amp;language=ru"></script>
   <title>Webpack app</title>
   <body>
     <div class="container">
-      <article class="standart-buttons">
-        <h2 class="title">standart buttons</h2>
-        <section class="standart-buttons__row">
-          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 18px;">button</button>
-          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 25px;">button</button>
-          <button class="ripple-button" style="background-color: #e75735;font-size: 25px;">button</button>
-          <button class="ripple-button" style="background-color: #e75735;font-size: 18px;">button</button>
+      <article class="standard-buttons">
+        <h2 class="title">standard buttons</h2>
+        <section class="standard-buttons__row">
+          <button class="ripple-button_simple-blue ripple-button" style="font-size: 18px; width: 16%;">button</button>
+          <button class="ripple-button_simple-blue ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
+          <button class="ripple-button_simple-red ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
+          <button class="ripple-button_simple-red ripple-button" style="font-size: 18px; width: 16%;">button</button>
         </section>
-        <section class="standart-buttons__row">
-          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 18px;" data-border-bottom-color="#28a290">button</button>
-          <button class="ripple-button" style="background-color: #4eb7a8;font-size: 25px;" data-border-bottom-color="#28a290">button</button>
-          <button class="ripple-button" style="background-color: #e75735;font-size: 25px;" data-border-bottom-color="#bf3e1f">button</button>
-          <button class="ripple-button" style="background-color: #e75735;font-size: 18px;" data-border-bottom-color="#bf3e1f">button</button>
+        <section class="standard-buttons__row">
+          <button class="ripple-button_border-bottom-blue ripple-button" style="font-size: 18px; width: 16%;">button</button>
+          <button class="ripple-button_border-bottom-blue ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
+          <button class="ripple-button_border-bottom-red ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
+          <button class="ripple-button_border-bottom-red ripple-button" style="font-size: 18px; width: 16%;">button</button>
         </section>
-        <section class="standart-buttons__row">
-          <button class="ripple-button" style="background-color: white;font-size: 18px; color: #4eb7a8;" data-border-color="#4eb7a8" data-border-bottom-color="#4eb7a8">button</button>
-          <button class="ripple-button" style="background-color: white;font-size: 25px; color: #4eb7a8;" data-border-color="#4eb7a8" data-border-bottom-color="#4eb7a8">button</button>
-          <button class="ripple-button" style="background-color: white;font-size: 25px; color: #e75735;" data-border-color="#e75735" data-border-bottom-color="#e75735">button</button>
-          <button class="ripple-button" style="background-color: white;font-size: 18px; color: #e75735;" data-border-color="#e75735" data-border-bottom-color="#e75735">button</button>
+        <section class="standard-buttons__row">
+          <button class="ripple-button_white-blue ripple-button" style="font-size: 18px; color: #4eb7a8; width: 16%;">button</button>
+          <button class="ripple-button_white-blue ripple-button" style="font-size: 25px; color: #4eb7a8; width: 25.5%;">button</button>
+          <button class="ripple-button_white-red ripple-button" style="font-size: 25px; color: #e75735; width: 25.5%;">button</button>
+          <button class="ripple-button_white-red ripple-button" style="font-size: 18px; color: #e75735; width: 16%;">button</button>
         </section>
       </article>
       <article class="arrow-buttons">
         <h2 class="title">arrow buttons</h2>
         <section class="arrow-buttons__row">
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_white-blue">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="white"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke="#4eb7a8" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_white-blue">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="white"></circle>
-                <polyline points="40,29 62,50 40,71" fill="none" stroke="#4eb7a8" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_gray">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#e5e5e5" stroke-width="5%" fill="#e5e5e5"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_gray">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#e5e5e5" stroke-width="5%" fill="#e5e5e5"></circle>
-                <polyline points="40,29 62,50 40,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_blue-white">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="#4eb7a8"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button" style="width: 95px;">
-            <div class="arrow-button__inner">
+          <div class="arrow-button">
+            <div class="arrow-button__inner arrow-button_blue-white">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" stroke="#4eb7a8" stroke-width="5%" fill="#4eb7a8"></circle>
-                <polyline points="40,29 62,50 40,71" fill="none" stroke="white" stroke-width="7%"></polyline>
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
@@ -83,27 +83,27 @@
       <article class="pie-charts">
         <h2 class="title">percentages / pie chart</h2>
         <section class="pie-charts__row">
-          <div class="pie-chart" data-percent="0">
+          <div class="pie-chart" data-percent="0" data-linewidth="5" data-barcolor="#e75735">
             <div class="pie-chart__inner">
               <div class="pie-chart__value"><span></span></div>
             </div>
           </div>
-          <div class="pie-chart" data-percent="38">
+          <div class="pie-chart" data-percent="38" data-linewidth="5" data-barcolor="#e75735">
             <div class="pie-chart__inner">
               <div class="pie-chart__value"><span></span></div>
             </div>
           </div>
-          <div class="pie-chart" data-percent="62">
+          <div class="pie-chart" data-percent="62" data-linewidth="5" data-barcolor="#e75735">
             <div class="pie-chart__inner">
               <div class="pie-chart__value"><span></span></div>
             </div>
           </div>
-          <div class="pie-chart" data-percent="89">
+          <div class="pie-chart" data-percent="89" data-linewidth="5" data-barcolor="#e75735">
             <div class="pie-chart__inner">
               <div class="pie-chart__value"><span></span></div>
             </div>
           </div>
-          <div class="donut-chart"></div>
+          <div class="donut-chart" data-linewidth="0.33" data-pies='[{"color":"#747474","value":11},{"color":"#e75735","value":26},{"color":"#4eb7a8","value":30},{"color":"#e5e5e5","value":33}]'></div>
         </section>
       </article>
       <article class="sliders">
@@ -111,7 +111,7 @@
         <section class="slider__row">
           <div class="slider">
             <div class="slider-hint" style="background-color: #e75735;"><span>0</span>
-              <div class="hint__arrow" style="border-color:#e75735 transparent transparent transparent;"></div>
+              <div class="hint__arrow" style="border-color:undefined transparent transparent transparent;"></div>
             </div>
             <div class="slider__inner">
               <svg>
@@ -173,7 +173,7 @@
               <input class="message-form_form-control message-form__input-text" type="text" placeholder="Your Email"/>
             </div><br/>
             <textarea class="message-form_form-control message-form__textarea" placeholder="Your Message" rows="4"></textarea><br/>
-            <button class="ripple-button" style="background-color: #4eb7a8;" data-border-bottom-color="#28a290">button</button>
+            <button class="ripple-button_border-bottom-blue ripple-button">submit</button>
           </form>
           <div class="form-elements__control">
             <h2 class="title">toggles</h2>
@@ -189,7 +189,7 @@
             </section>
             <h2 class="title">tick boxes</h2>
             <section class="tick-boxes">
-              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" style="width: 45px;">
+              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white">
                 <input type="checkbox" style="display: none;" name="tick-box1">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
@@ -198,7 +198,7 @@
                   </svg>
                 </div>
               </label>
-              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" style="width: 45px;" checked>
+              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" checked>
                 <input type="checkbox" style="display: none;" name="tick-box2">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
@@ -229,13 +229,53 @@
                 <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
               </svg>
             </div>
-            <div id="myselect"> </div>
+            <div class="dropdown">
+              <div class="dropdown__inner">
+                <select name="option_name">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </select>
+                <div class="dropdown__selected-option">Choose An Option
+                  <div class="dropdown__icon">
+                    <svg viewBox="0, 0, 100, 100">
+                      <polyline points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%"></polyline>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown__ul">
+                  <ul>
+                    <li value="1">option1</li>
+                    <li value="2">option2</li>
+                    <li value="3">option3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
         <article class="user-profiles">
           <h2 class="title">user profile</h2>
-          <section id="profil1"></section>
-          <section id="profil2"></section>
+          <section class="profil" id="profil1">
+            <div class="profil__portrait" style="background-image: url(./public/profil1.jpg);"></div>
+            <div class="profil__data">
+              <div class="profil__data-arrow"></div>
+              <p class="profil__name">John Smith</p>
+              <p class="profil__profession">ux designer</p>
+              <div class="profil__links"><a href="/#"><i class="fa fa-facebook"></i></a><a href="/#"><i class="fa fa-twitter"></i></a><a href="/#"><i class="fa fa-dribbble"></i></a>
+              </div>
+            </div>
+          </section>
+          <section class="profil" id="profil2">
+            <div class="profil__portrait" style="background-image: url(./public/profil2.jpg);"></div>
+            <div class="profil__data">
+              <div class="profil__data-arrow"></div>
+              <p class="profil__name">Sarah Brown</p>
+              <p class="profil__profession">developer</p>
+              <div class="profil__links"><a href="/#"><i class="fa fa-facebook"></i></a><a href="/#"><i class="fa fa-twitter"></i></a><a href="/#"><i class="fa fa-dribbble"></i></a>
+              </div>
+            </div>
+          </section>
         </article>
       </article>
       <article class="news-events">
@@ -253,19 +293,26 @@
               <p class="event__date"> <span>24</span>Aug</p>
               <p class="event__title">THIS IS THE TITLE</p>
               <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button class="ripple-button" style="background-color: white;font-size: 18px; color: #4eb7a8;" data-border-bottom-color="#379285">ADD  TO  CALENDAR</button>
+              <button class="ripple-button_border-bottom-white-blue ripple-button" style="font-size: 18px; ;">ADD  TO  CALENDAR</button>
             </div>
           </section>
         </secton>
       </article>
       <article class="location">
         <h2 class="title">location</h2>
-        <div id="my_map"></div>
+        <div class="map" data-lat="37.795712" data-lng="-122.414756" data-marker="./public/marker.png">
+          <div class="map__body"></div>
+          <div class="map__footer">
+            <div class="map__footer-title">Meet us!</div>
+            <div class="map__footer-place">1259  CALIFORNIA ST San Francisco, CA </div>
+            <div class="map__footer-icons"><i class="fa fa-crosshairs" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+          </div>
+        </div>
       </article>
       <article class="calendar_messaging">
         <section class="calendar_section">
           <h2 class="title">calendar</h2>
-          <div type="text" id="mycalendar"></div>
+          <div class="calendar" type="text"></div>
         </section>
         <section class="messaging_section">
           <h2 class="title">messaging</h2>
@@ -274,7 +321,7 @@
               <p class="messaging__header-title">Sarah Brown</p>
               <div class="messaging__header-bottom"></div>
             </div>
-            <div class="messagin__portrait" style=" background-image:url( public/profil2.jpg);"></div>
+            <div class="messagin__portrait" style=" background-image:url( ./public/profil2.jpg);"></div>
             <div class="messaging__body">
               <div class="messaging__body-icons">
                 <svg x="0px" y="0px" viewBox="0 0 100 125">
@@ -283,7 +330,7 @@
               </div>
               <div class="messaging__body-request">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
               <textarea class="messaging__body-response" placeholder="Yeah that sounds great. See you then." rows="4"></textarea>
-              <button class="ripple-button" style="background-color: #4eb7a8;" data-border-bottom-color="#28a290">reply</button>
+              <button class="ripple-button_border-bottom-blue ripple-button">reply</button>
             </div>
           </section>
         </section>

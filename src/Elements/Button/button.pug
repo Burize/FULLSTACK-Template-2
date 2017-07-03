@@ -1,2 +1,2 @@
-mixin ripple-button( text, background_color, bottom_border_color, border_color)
-    button&attributes(attributes)(style="background-color: "+ background_color+";" data-border-color!=border_color data-border-bottom-color!= bottom_border_color).ripple-button= text
+mixin ripple-button( text, theme)
+    button&attributes(attributes)( class="ripple-button_"+theme).ripple-button= text

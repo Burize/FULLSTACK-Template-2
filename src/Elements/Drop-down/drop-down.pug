@@ -1,0 +1,16 @@
+mixin Dropdown(name, ...options)
+    div&attributes(attributes).dropdown
+        div.dropdown__inner
+            select( name!=name)
+                each option in options
+                    option(value!=option.value)
+            div.dropdown__selected-option
+                | Choose An Option
+                div.dropdown__icon
+                    svg( viewBox = '0, 0, 100, 100')
+                        polyline( points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%")
+            div.dropdown__ul
+                ul
+                    each option in options
+                        li( value!=option.value)!= option.text
+        

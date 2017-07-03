@@ -1,0 +1,11 @@
+mixin Profil(portrait_src, name, profession, ...links)
+    section&attributes(attributes).profil
+        div(style="background-image: url("+portrait_src+");").profil__portrait
+        div.profil__data
+            div.profil__data-arrow
+            p.profil__name!=name
+            p.profil__profession!= profession
+            div.profil__links
+                each link in links
+                    a(href!=link.href)
+                        i(class="fa fa-"+link.icon)

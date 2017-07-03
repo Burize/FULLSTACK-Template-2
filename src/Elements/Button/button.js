@@ -33,14 +33,6 @@ import "./button.styl"
       }, 2000);
     });
     
-     $('.ripple-button').each( function(){
-         
-        if( $(this).data("border-color") )
-                 $(this).css("border", "solid 0.1em "+$(this).data("border-color"))
-                 
-        if( $(this).data("border-bottom-color") )
-                 $(this).css("border-bottom", "solid 0.3em "+$(this).data("border-bottom-color"))
-            
-     })
+
   });
   

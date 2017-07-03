@@ -1,9 +1,9 @@
-mixin arrow-button(direction, border_color, background_color, arrow_color)
+mixin arrow-button(direction, theme)
     div&attributes(attributes).arrow-button
-        div.arrow-button__inner
+        div.arrow-button__inner(class="arrow-button_"+theme)
             svg( viewbox=" 0 0 100 100").arrow-button-svg
-                circle( cx="50%" cy="50%" r="46%" stroke!=border_color stroke-width="5%" fill!=background_color)
+                circle( cx="50%" cy="50%" r="46%" s stroke-width="5%" )
                 if direction == 'right'
-                    polyline( points="40,29 62,50 40,71" fill="none" stroke!=arrow_color stroke-width="7%" )
+                    polyline( points="40,29 62,50 40,71" fill="none"  stroke-width="7%" )
                 else
-                    polyline( points="60,29 38,50 60,71" fill="none" stroke!=arrow_color stroke-width="7%" )
+                    polyline( points="60,29 38,50 60,71" fill="none"  stroke-width="7%" )

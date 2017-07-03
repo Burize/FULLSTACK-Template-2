@@ -520,7 +520,8 @@ import './glDatePicker.default.css'
 								});
 
 				// Add cells for prev/title/next
-                var big_number = $('<div/>').addClass('big_number').text(24);
+             
+                var big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
                 
 				calendar
                     .append(big_number)
@@ -698,7 +699,14 @@ import './glDatePicker.default.css'
 
                 
                 
-				 calendar.append( $('<div/>').addClass('calendar__footer').text('today') );
+				 calendar.append( $('<div/>').addClass('calendar__footer').click(function(e) {
+									
+										e.stopPropagation();
+                                        options.selectedDate= new Date();
+										setFirstDate(new Date());
+                     
+									
+								}).text('today') );
 
 				// Helper function for toggling select and text
 				var toggleYearMonthSelect = function(showYear) {
@@ -834,5 +842,8 @@ import './glDatePicker.default.css'
 		Array.prototype._indexOf = function(value) {
 			return $.inArray(value, this);
 		}
+        
+        
+        $('.calendar').glDatePicker();
 	})();
 })(jQuery);

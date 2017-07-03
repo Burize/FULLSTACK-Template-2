@@ -34,11 +34,12 @@
 .calendar__footer{
     
     font-family: LatoBlack;
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: #868686;
     text-transform: uppercase;
-    padding: 1.1em;
+    padding: 1.3em ;
     background-color: #e5e5e5;
+    cursor: pointer;
 }
 .gldp-default {
 	position: absolute;
@@ -127,7 +128,7 @@
 	font-family: LatoBlack;
     text-transform: uppercase;
 	background: #e75735;
-	padding: 1em 0; 
+	padding: 1.1em 0; 
 }
 
 /* Weekdays */

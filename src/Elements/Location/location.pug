@@ -1,0 +1,9 @@
+mixin Location(title, place, lat, lng, marker_src)
+    div&attributes(attributes)(data-lat!=lat data-lng!=lng data-marker!=marker_src).map
+        div.map__body
+        div.map__footer
+            div.map__footer-title!=title
+            div.map__footer-place!=place
+            div.map__footer-icons
+                i(aria-hidden='true').fa.fa-crosshairs
+                i(aria-hidden='true').fa.fa-map-marker

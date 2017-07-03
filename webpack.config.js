@@ -11,12 +11,14 @@ module.exports = {
     entry: paths.source + 'index.js',
     output: {
         path: paths.build,
+        publicPath: './public/',
         filename: "[name].js"
     },
   
     plugins:[
         new HtmlWebpackPlugin({
-            template: paths.source + 'index.pug'
+            template: paths.source + 'index.pug',
+            filename: '../index.html'
         }),
         new webpack.ProvidePlugin({
             $: "jquery",

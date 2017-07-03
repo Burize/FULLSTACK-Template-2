@@ -1,12 +1,12 @@
-mixin Slider(bar_color, circle_color, scale, hint, hint_color)
+mixin Slider( circle_color, scale, hint, hint_color)
     div&attributes(attributes).slider
         if(hint)
-            div(style="background-color: "+hint_color+";").slider-hint
+            div(style="background-color: "+circle_color+";").slider-hint
                 span 0
                 div(style="border-color:"+ hint_color +" transparent transparent transparent;").hint__arrow
         div.slider__inner
             svg
-                line(x1="5%" y1="50%" x2="95%" y2="50%" stroke!=bar_color stroke-width="2%" stroke-linecap="round" )
+                line(x1="5%" y1="50%" x2="95%" y2="50%" stroke='#e5e5e5' stroke-width="2%" stroke-linecap="round" )
                 circle( cx="5%" cy="50%" r="5%" fill!=circle_color)
         if(scale)    
             div.slider-scale

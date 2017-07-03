@@ -1,5 +1,3 @@
-
-
 var d3 = require('d3');
 
 (function ( $ ) {
@@ -7,19 +5,15 @@ var d3 = require('d3');
 	class DonutPie {
         
         
-     constructor($self, options) {
-		this.$self = $self;
-		this.settings =  options;
-	}
+     constructor(self, width, linewidth, pies) {
+		this.self = self;
+		this.width = $(this.self).outerWidth();
+        this.linewidth =  linewidth;
+         this.data = pies
+        var radius = this.width / 2;
 
-	Display(data){
-		
-		var radius = this.settings.width / 2;
-
-		this.svg = d3.select(this.$self)
+		this.svg = d3.select(this.self)
 			.append("svg")
-			.attr("width", radius * 2)
-			.attr("height", radius * 2)
 			.append("g");
 
 		this.svg.append("g")
@@ -28,39 +22,61 @@ var d3 = require('d3');
 		this.pie = d3.pie()
 			.sort(null)
 			.value(function(d){
-				return d.hvalue;
+				return d.value;
 			});
 
+	
+		this.slice = this.svg.select(".slices").selectAll("path.slice")
+		    .data(this.pie(this.data));
+         
+        this.Display();
+	}
+
+	Display(){
+		var radius = $(this.self).outerWidth() / 2;
+
+		$(this.self).children('svg')
+			.attr("width", radius * 2)
+			.attr("height", radius * 2)
+            .find(".slices").first().html("");
+			
+
+
+		
 		this.arc = d3.arc()
-		  .outerRadius(radius * (1 - this.settings.linewidth) )
+		  .outerRadius(radius * (1 - this.linewidth) )
 		  .innerRadius(radius);
 
 	
 		this.svg.attr("transform", "translate(" + radius + "," + radius + ")");
 
 	
-		var slice = this.svg.select(".slices").selectAll("path.slice")
-		    .data(this.pie(data));
 
-		slice.enter()
+		this.slice.enter()
 		    .insert("path")
 		    .style("fill", function(d) { return d.data.color; })
 		    .attr("class", "slice")
 		    .attr("d", this.arc);  
 
-		slice.exit()
+		this.slice.exit()
 		    .remove();
 
 	};
     }
 
-	
-    $.fn.donutpie = function(option, pies) {
-	  
-     return this.each(function () {
-            var $donutpie   = new DonutPie(this, option);
-            $donutpie.Display.call( $donutpie,pies);
+    
+    
+     $('.donut-chart').each(function () {
+       
+            var $donutpie   = new DonutPie(this, $(this).outerWidth(), $(this).data('linewidth'), $(this).data('pies') );
+           
+         
+         $(window).resize( function(){
+                
+                $donutpie.Display.call( $donutpie);
+            });
         });		
-	};
+	
+
 
 }( jQuery ));
