@@ -1,0 +1,16 @@
+mixin Search(name, color, found)
+    if(found=="false")
+        div&attributes(attributes).message-form__input-search.notFound
+            input(type="search" placeholder="Search").message-form__form-control
+            svg(viewbox="0 0 100 100" style="background-color: "+color)
+                circle( cx="43%" cy="47%" r="12%" fill!=color stroke="white" stroke-width="8%")
+                line( x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%")
+    else
+        div&attributes(attributes).message-form__input-search
+            input(type="search" placeholder="Search").message-form__form-control
+            svg(viewbox="0 0 100 100" style="background-color: "+color)
+                circle( cx="43%" cy="47%" r="12%" fill!=color stroke="white" stroke-width="8%")
+                line( x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%")
+mixin HintControl( hintTtype, type, name, placeholder)
+    div(data-hint!=hintTtype).hint-control
+        input(type!=type name!=name placeholder!=placeholder).message-form__form-control.message-form__input-text

@@ -22,9 +22,7 @@
 .news{
     
     box-sizing border-box;
-    background-position 50% 0%;
     background-size cover;
-    background-repeat no-repeat;
     border-radius 0.3em;
     overflow hidden;
     
@@ -35,6 +33,8 @@
         padding 2.7em;
         padding-bottom 4em;
         color white;
+        height 100%;
+        box-sizing border-box;
         
         .news__title{
             
@@ -59,4 +59,23 @@
              line-height 1.2em;
         }
     }
+}
+
+
+.news_red .news__inner{
+    
+    background-color #e23402;
+    
+}
+
+.news_orange .news__inner{
+    
+    background-color #FA6900;
+    
+}
+
+.news_blue .news__inner{
+    
+    background-color #005bac;
+    
 }

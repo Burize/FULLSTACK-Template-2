@@ -14,6 +14,8 @@
 
 .map{
 
+    div[id^=map_canvas] div {overflow: auto;}
+    
         position relative;
         border-radius 0.5em;
         overflow hidden;
@@ -43,6 +45,7 @@
                     
                      font-family LatoLight;
                      font-size 3.6em;
+                     line-height 0.9em;
                 }
                 
                 .map__footer-place{
@@ -66,3 +69,21 @@
             }
                 
     }
+    
+
+    
+.map_green{
+    
+    .map__footer{
+        
+        background-color #138808 ;
+    }
+}
+
+.map_red{
+    
+    .map__footer{
+        
+        background-color #e75735 ;
+    }
+}

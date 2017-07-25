@@ -88,8 +88,7 @@
 }
 
 /* Month/Year text and select */
-.gldp-default .monyear,
-.gldp-default .monyear select {
+.gldp-default .monyear{
 	
 	
     font-family: LatoLight;
@@ -132,14 +131,11 @@
 }
 
 /* Weekdays */
-.gldp-default .mon,
-.gldp-default .tue,
-.gldp-default .wed,
-.gldp-default .thu,
-.gldp-default .fri,
-.gldp-default .sat,
-.gldp-default .sun{
-	font-size: 2.1em;
+.gldp-default{ 
+    
+    .mon, .tue, .wed, .thu, .fri, .sat, .sun{
+	   font-size: 2.1em;
+    }
 }
 
 
@@ -170,5 +166,41 @@ font-size: 2.1em;
 font-size: 2.1em;
 }
 
-/* Special */
+.gldp_dark-blue{
+    
+    .big_number, .dow, .selected{
+        
+        background-color #00416A;
+    }
+    
+    .monyear{
+        
+        background-color darken(#00416A , 20%);
+    } 
+}
 
+.gldp_purple{
+    
+    .big_number, .dow, .selected{
+        
+        background-color #8B00FF;
+    }
+    
+    .monyear{
+        
+        background-color darken(#8B00FF , 20%);
+    } 
+}
+
+.gldp_red{
+    
+    .big_number, .dow, .selected{
+        
+        background-color #e75735;
+    }
+    
+    .monyear{
+        
+        background-color darken(#e75735 , 20%);
+    } 
+}

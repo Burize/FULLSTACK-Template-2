@@ -1,12 +1,12 @@
-mixin Dropdown(name, ...options)
-    div&attributes(attributes).dropdown
+mixin Dropdown(title, name, options, color)
+    div&attributes(attributes)(class="dropdown_"+theme).dropdown
         div.dropdown__inner
             select( name!=name)
                 each option in options
                     option(value!=option.value)
             div.dropdown__selected-option
-                | Choose An Option
-                div.dropdown__icon
+                !=title
+                div.dropdown__icon(style="background-color: "+color)
                     svg( viewBox = '0, 0, 100, 100')
                         polyline( points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%")
             div.dropdown__ul

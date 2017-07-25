@@ -7,8 +7,9 @@ include ./Elements/toggle/toggle.pug
 include ./Elements/tick-box/tick-box.pug
 include ./Elements/news/news.pug
 include ./Elements/Event/event.pug
+include ./Elements/calendar/calendar.pug
 include ./Elements/messaging/messaging.pug
-include ./Elements/message-form/search.pug
+include ./Elements/message-form/message-form.pug
 include ./Elements/video/video.pug
 include ./Elements/donut-chart/donut-chart.pug
 include ./Elements/drop-down/drop-down.pug
@@ -44,12 +45,12 @@ html
             article.arrow-buttons
                 h2.title arrow buttons
                 section.arrow-buttons__row
-                    +arrow-button('left', 'white-blue')
-                    +arrow-button('right', 'white-blue') 
-                    +arrow-button('left', 'gray')
-                    +arrow-button('right', 'gray')
-                    +arrow-button('left', 'blue-white')
-                    +arrow-button('right', 'blue-white')
+                    +arrow-button(180, 'white-blue')
+                    +arrow-button(0, 'white-blue') 
+                    +arrow-button(180, 'white-blue').arrow-button_disabled
+                    +arrow-button(0, 'white-blue').arrow-button_disabled
+                    +arrow-button(180, 'blue-white')
+                    +arrow-button(0, 'blue-white')
             article.pie-charts
                 h2.title percentages / pie chart
                 section.pie-charts__row
@@ -69,18 +70,16 @@ html
                    +Slider( '#4eb7a8', true, false)
             article.stages
                 h2.title stages
-                +Stage(5, 3, '#e5e5e5')
+                +Stage(5, 3, '#e75735')
             article.form-elements
                 h2.title form elements
                 section.form-elements__row
                     form.message-form
-                        div.hint-control#message-form-name
-                            input(type="text" placeholder="Your Name" ).message-form_form-control.message-form__input-text
+                        +HintControl('error','text', 'inputname','Your Name')
                         br
-                        div.hint-control#message-form-email
-                            input(type="text" placeholder="Your Email").message-form_form-control.message-form__input-text
+                        +HintControl('thanks','text', 'inputname','Your Email')
                         br
-                        textarea( placeholder="Your Message" rows="4").message-form_form-control.message-form__textarea
+                        textarea( placeholder="Your Message" rows="4").message-form__form-control.message-form__textarea
                         br
                         +ripple-button('submit', 'border-bottom-blue')
                     div.form-elements__control
@@ -90,41 +89,39 @@ html
                             +Toggle('toggle2',"#4eb7a8")(checked)
                         h2.title tick boxes
                         section.tick-boxes
-                            +tick-box('tick-box1','#4eb7a8','white')
-                            +tick-box('tick-box2','#4eb7a8','white')(checked)
+                            +tick-box('tick-box1','#4eb7a8', 'checked')
+                            +tick-box('tick-box2','#4eb7a8')
             article.one-more-article
                 div.search
                     h2.title search / drop down
                     form.message-form
-                        +Search('search1')
-                        +Search('search2')
-                        +Dropdown("option_name",{ value:"1", text: "option1"},
-                                                { value:"2", text: "option2"},
-                                                { value:"3", text: "option3"})
+                        +Search('search1', '#e75735')
+                        +Search('search2', '#e75735','false')
+                        +Dropdown('Choose an option','inputname',[{value: 'option1', text: "option1"},{value: 'option2', text: "option2"},{value: 'option3', text: "option3"}],'#4eb7a8')
                 article.user-profiles
                     h2.title user profile
-                    +Profil('./public/profil1.jpg','John Smith','ux designer',{href: '/#', icon: 'facebook'},
+                    +Profil('./public/profil1.jpg','John Smith','ux designer',[{href: '/#', icon: 'facebook'},
                                                     {href: '/#', icon: 'twitter'},
-                                                    {href: '/#', icon: 'dribbble'})(id='profil1')
-                    +Profil('./public/profil2.jpg','Sarah Brown','developer',{href: '/#', icon: 'facebook'},
+                                                    {href: '/#', icon: 'dribbble'}], 'red-name')
+                    +Profil('./public/profil2.jpg','Sarah Brown','developer',[{href: '/#', icon: 'facebook'},
                                                     {href: '/#', icon: 'twitter'},
-                                                    {href: '/#', icon: 'dribbble'})(id='profil2')
+                                                    {href: '/#', icon: 'dribbble'}], 'green')
             article.news-events
                 h2.title news & events
                 secton.news-events__row
                     +News("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', './public/news.jpg' )
-                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', './public/event.jpg')
+                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', './public/event.jpg', 'Подтвердить участие', 'green')
             article.location
                 h2.title location
-                +Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'./public/marker.png')
+                +Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'./public/marker.png','red')
             article.calendar_messaging
                 section.calendar_section
                     h2.title calendar
-                    div(type="text").calendar
+                    +Calendar('input_name', 'red')
                 section.messaging_section
                     h2.title messaging
-                    +Messaging('Sarah Brown', './public/profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.')
+                    +Messaging('Sarah Brown', './public/profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.','Replay','default')
             article.video
                 h2.title video
-                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', 'https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82')
-                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', 'https://www.w3schools.com/html/mov_bbb.mp4', 'https://www.w3schools.com/html/mov_bbb.ogg')
+                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', ['https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82'], 'default')
+                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', ['https://www.w3schools.com/html/mov_bbb.mp4', 'https://www.w3schools.com/html/mov_bbb.ogg'], 'red')

@@ -1,5 +1,5 @@
-mixin Messaging( name, portrait_src, request, response)
-    section.messaging
+mixin Messaging( name, portrait_src, request, response, button, theme)
+    section.messaging&attributes(attributes)(class="messaging_"+theme)
         div.messaging__header
             p.messaging__header-title!= name
             div.messaging__header-bottom
@@ -11,4 +11,4 @@ mixin Messaging( name, portrait_src, request, response)
                 i(class="fa fa-camera" aria-hidden="true")
             div.messaging__body-request!= request
             textarea( placeholder!=response  rows=4).messaging__body-response
-            +ripple-button('reply', 'border-bottom-blue')
+            +ripple-button(button, 'border-bottom-blue')

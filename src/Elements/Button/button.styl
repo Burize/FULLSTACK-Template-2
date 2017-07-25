@@ -7,13 +7,14 @@
 
 .ripple-button{
     
+    display block;
     background-color #e75735;
     color white;
     padding 0.6em;
     font-family LatoBlack;
     border none;
     border-radius 0.3em;
-    font-size: 18px;
+    font-size: 1em;
     text-transform uppercase;
     cursor pointer;
     position: relative;
@@ -39,6 +40,12 @@
     border-bottom  solid 0.25em #28a290;
 }
 
+.ripple-button_border-bottom-bluuue{
+    
+    background-color #005bac;
+    border-bottom  solid 0.25em darken(#005bac, 25%);
+}
+
 .ripple-button_border-bottom-white-blue{
     
     color #4eb7a8
@@ -52,6 +59,18 @@
     border-bottom  solid 0.25em #bf3e1f;
 }
 
+.ripple-button_border-bottom-purple{ 
+ 
+    background-color #8B00FF;
+    border-bottom  solid 0.25em darken(#8B00FF, 25%);
+}
+
+.ripple-button_border-bottom-orange{ 
+ 
+    background-color #FF6800;
+    border-bottom  solid 0.25em darken(#FF6800, 25%);
+}
+
 .ripple-button_white-blue{
     
     background-color white;
@@ -59,6 +78,15 @@
     padding 0.5em;
     border solid 0.1em #4eb7a8;
     border-bottom  solid 0.3em #4eb7a8;
+}
+
+.ripple-button_border-bottom-white-green{
+    
+    background-color white;
+    color #138808;
+    padding 0.5em;
+    border solid 0.1em #138808;
+    border-bottom  solid 0.3em #138808;
 }
 
 .ripple-button_white-red{
@@ -69,6 +97,8 @@
     border solid 0.1em #e75735;
     border-bottom  solid 0.3em #e75735;
 }
+    
+    
 .ripple{
     
      position: absolute;

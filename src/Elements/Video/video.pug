@@ -1,12 +1,8 @@
-mixin Video(poster, source1, source2, source3)    
-    div.player
+mixin Video(poster, sources, theme)    
+    div.player&attributes(attributes)(class="player_"+theme)
         video( muted poster!=poster)
-            if(source1)
-                source( src!=source1)
-            if(source2)
-                source( src!=source2)
-            if(source3)
-                source( src!=source3)
+            each _source in sources
+                source( src!=_source)
         div.player__controls
             div.player__controls-inner
                 div.player__controls-play
@@ -15,7 +11,7 @@ mixin Video(poster, source1, source2, source3)
                     svg( viewBox="0 0 512 512").svg-pause
                         path( fill="white" d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z" )
                         path( fill="white" d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z" )
-                progress(id='progress-bar' min='0' max='100' value='0')
+                progress(class='player__controls-progress' min='0' max='100' value='0')
                 div.player__controls-fullscreen
                     svg( x="0px" y="0px" viewBox="0 0 32 32")
                         polygon( style="fill:white;" points="29.414,26.586 22.828,20 20,22.828 26.586,29.414 24,32 32,32 32,24 ")

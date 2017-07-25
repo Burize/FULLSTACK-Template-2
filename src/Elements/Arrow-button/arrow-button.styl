@@ -19,7 +19,7 @@
     }
     
     
-   .arrow-button_white-blue{
+  &.arrow-button_white-blue{
        
        circle{
            stroke #4eb7a8;
@@ -32,11 +32,11 @@
        }
    }
    
-     .arrow-button_gray{
+   &.arrow-button_disabled{
        
        circle{
-           stroke #e5e5e5;
-           fill #e5e5e5;
+           stroke #e5e5e5 !important;
+           fill #e5e5e5 !important;
        }
        
        polyline{
@@ -45,7 +45,7 @@
        }
    }
    
-      .arrow-button_blue-white{
+   &.arrow-button_blue-white{
        
        circle{
            stroke #4eb7a8;
@@ -55,6 +55,33 @@
        polyline{
            
            stroke  white;
+       }
+   }
+   
+   &.arrow-button_bluuue-white{
+           
+        circle{
+           stroke #005bac;
+           fill #005bac;
+       }
+       
+       polyline{
+           
+           stroke  white;
+       } 
+     
+   }
+   
+   &.arrow-button_orange{
+           
+       circle{
+           stroke #FA6900;
+           fill none;
+       }
+       
+       polyline{
+           
+           stroke  #FA6900;
        }
    }
 }

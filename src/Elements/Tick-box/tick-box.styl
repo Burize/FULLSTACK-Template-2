@@ -1,11 +1,13 @@
 .tick-box{
 
     cursor: pointer;
+    width 1.5em;
     
     .tick-box__inner{
 
         padding-top 100%;
         position relative;
+        width 100%;
         
         .tick-box-svg{
             
@@ -14,7 +16,28 @@
             position absolute;
             top: 0;
             left 0; 
+            
+
+            
+            polyline{
+                
+                stroke white;
+            }
         }
         
+    }
+    
+    
+    
+    &.tick-box_off{
+        circle{
+            
+            fill #e5e5e5 !important;
+        }
+        
+        polyline{
+            
+            stroke #c0c0c0 !important;
+        }
     }
 }

@@ -8,20 +8,32 @@
 
 .message-form{
     
-    .message-form_form-control{
+    .message-form__form-control{
         
         background-color #e5e5e5;
         color #888888;
-        border none;
+        border none !important;
+        outline none !important;
         border-radius 0.2em;
         font-family SourceSansProRegular;
         font-size 1em;
+        width 100%;
+       
         &:focus{
 
                 outline none ;
+
             }
     }
    
+    .message-form__row{
+        
+        display flex;
+        justify-content space-between;
+        align-items center;
+        
+    }
+    
     .message-form__input-text{
 
         padding 0.4em 1em;
@@ -40,7 +52,8 @@
         overflow hidden;
         border-radius 0.2em;
         
-         .message-form_form-control{
+        
+         .message-form__form-control{
                             
             width 100%;
             padding 0.35em 1em;
@@ -49,14 +62,29 @@
         
         svg{
             height 100%;
-            width 2.2em;
+            width 2.3em;
             position absolute;
             top 0;
             right 0;
             background-color #e75735;
             cursor pointer;
         }
+        
     }
     
+    
+    
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
+
+
+
+    
+}
+
+
 

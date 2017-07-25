@@ -30,48 +30,48 @@
       <article class="arrow-buttons">
         <h2 class="title">arrow buttons</h2>
         <section class="arrow-buttons__row">
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_white-blue">
-              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
-              </svg>
-            </div>
-          </div>
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_white-blue">
+          <div class="arrow-button arrow-button_white-blue" style="transform: rotate(180deg);">
+            <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
                 <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_gray">
-              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
-                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
-              </svg>
-            </div>
-          </div>
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_gray">
+          <div class="arrow-button arrow-button_white-blue" style="transform: rotate(0deg);">
+            <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
                 <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_blue-white">
+          <div class="arrow-button arrow-button_white-blue arrow-button_disabled" style="transform: rotate(180deg);">
+            <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
-                <polyline points="60,29 38,50 60,71" fill="none" stroke-width="7%"></polyline>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
               </svg>
             </div>
           </div>
-          <div class="arrow-button">
-            <div class="arrow-button__inner arrow-button_blue-white">
+          <div class="arrow-button arrow-button_white-blue arrow-button_disabled" style="transform: rotate(0deg);">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button arrow-button_blue-white" style="transform: rotate(180deg);">
+            <div class="arrow-button__inner">
+              <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
+                <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
+                <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="arrow-button arrow-button_blue-white" style="transform: rotate(0deg);">
+            <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
                 <polyline points="40,29 62,50 40,71" fill="none" stroke-width="7%"></polyline>
@@ -111,7 +111,7 @@
         <section class="slider__row">
           <div class="slider">
             <div class="slider-hint" style="background-color: #e75735;"><span>0</span>
-              <div class="hint__arrow" style="border-color:undefined transparent transparent transparent;"></div>
+              <div class="hint__arrow" style="border-color:#e75735 transparent transparent transparent;"></div>
             </div>
             <div class="slider__inner">
               <svg>
@@ -166,13 +166,13 @@
         <h2 class="title">form elements</h2>
         <section class="form-elements__row">
           <form class="message-form">
-            <div class="hint-control" id="message-form-name">
-              <input class="message-form_form-control message-form__input-text" type="text" placeholder="Your Name"/>
+            <div class="hint-control" data-hint="error">
+              <input class="message-form__form-control message-form__input-text" type="text" name="inputname" placeholder="Your Name">
             </div><br/>
-            <div class="hint-control" id="message-form-email">
-              <input class="message-form_form-control message-form__input-text" type="text" placeholder="Your Email"/>
+            <div class="hint-control" data-hint="thanks">
+              <input class="message-form__form-control message-form__input-text" type="text" name="inputname" placeholder="Your Email">
             </div><br/>
-            <textarea class="message-form_form-control message-form__textarea" placeholder="Your Message" rows="4"></textarea><br/>
+            <textarea class="message-form__form-control message-form__textarea" placeholder="Your Message" rows="4"></textarea><br/>
             <button class="ripple-button_border-bottom-blue ripple-button">submit</button>
           </form>
           <div class="form-elements__control">
@@ -189,20 +189,20 @@
             </section>
             <h2 class="title">tick boxes</h2>
             <section class="tick-boxes">
-              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white">
+              <label class="tick-box" data-background-color="#4eb7a8" checked="checked">
                 <input type="checkbox" style="display: none;" name="tick-box1">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
-                    <circle cx="50%" cy="50%" r="46%" fill="#e5e5e5"></circle>
+                    <circle cx="50%" cy="50%" r="46%" style=" fill: #4eb7a8;"></circle>
                     <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
                   </svg>
                 </div>
               </label>
-              <label class="tick-box" data-background-color="#4eb7a8" data-arrow-color="white" checked>
+              <label class="tick-box" data-background-color="#4eb7a8">
                 <input type="checkbox" style="display: none;" name="tick-box2">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
-                    <circle cx="50%" cy="50%" r="46%" fill="#e5e5e5"></circle>
+                    <circle cx="50%" cy="50%" r="46%" style=" fill: #4eb7a8;"></circle>
                     <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
                   </svg>
                 </div>
@@ -216,28 +216,28 @@
           <h2 class="title">search / drop down</h2>
           <form class="message-form">
             <div class="message-form__input-search">
-              <input class="message-form_form-control" type="search" placeholder="Search">
-              <svg viewbox="0 0 100 100">
+              <input class="message-form__form-control" type="search" placeholder="Search">
+              <svg viewbox="0 0 100 100" style="background-color: #e75735;">
                 <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
                 <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
               </svg>
             </div>
-            <div class="message-form__input-search">
-              <input class="message-form_form-control" type="search" placeholder="Search">
-              <svg viewbox="0 0 100 100">
+            <div class="message-form__input-search notFound">
+              <input class="message-form__form-control" type="search" placeholder="Search">
+              <svg viewbox="0 0 100 100" style="background-color: #e75735;">
                 <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
                 <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
               </svg>
             </div>
-            <div class="dropdown">
+            <div class="dropdown_undefined dropdown">
               <div class="dropdown__inner">
-                <select name="option_name">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
+                <select name="inputname">
+                  <option value="option1"></option>
+                  <option value="option2"></option>
+                  <option value="option3"></option>
                 </select>
-                <div class="dropdown__selected-option">Choose An Option
-                  <div class="dropdown__icon">
+                <div class="dropdown__selected-option">Choose an option
+                  <div class="dropdown__icon" style="background-color: #4eb7a8;">
                     <svg viewBox="0, 0, 100, 100">
                       <polyline points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%"></polyline>
                     </svg>
@@ -245,9 +245,9 @@
                 </div>
                 <div class="dropdown__ul">
                   <ul>
-                    <li value="1">option1</li>
-                    <li value="2">option2</li>
-                    <li value="3">option3</li>
+                    <li value="option1">option1</li>
+                    <li value="option2">option2</li>
+                    <li value="option3">option3</li>
                   </ul>
                 </div>
               </div>
@@ -256,7 +256,7 @@
         </div>
         <article class="user-profiles">
           <h2 class="title">user profile</h2>
-          <section class="profil" id="profil1">
+          <section class="profil profil_red-name">
             <div class="profil__portrait" style="background-image: url(./public/profil1.jpg);"></div>
             <div class="profil__data">
               <div class="profil__data-arrow"></div>
@@ -266,7 +266,7 @@
               </div>
             </div>
           </section>
-          <section class="profil" id="profil2">
+          <section class="profil profil_green">
             <div class="profil__portrait" style="background-image: url(./public/profil2.jpg);"></div>
             <div class="profil__data">
               <div class="profil__data-arrow"></div>
@@ -288,19 +288,21 @@
               <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
             </div>
           </section>
-          <section class="event" style="background-image: url(./public/event.jpg);">
+          <section class="event_green event" style="background-image: url(./public/event.jpg);">
             <div class="event__inner">
               <p class="event__date"> <span>24</span>Aug</p>
               <p class="event__title">THIS IS THE TITLE</p>
               <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button class="ripple-button_border-bottom-white-blue ripple-button" style="font-size: 18px; ;">ADD  TO  CALENDAR</button>
+              <div class="event__button">
+                <button class="ripple-button_undefined ripple-button">Подтвердить участие</button>
+              </div>
             </div>
           </section>
         </secton>
       </article>
       <article class="location">
         <h2 class="title">location</h2>
-        <div class="map" data-lat="37.795712" data-lng="-122.414756" data-marker="./public/marker.png">
+        <div class="map_red map" data-lat="37.795712" data-lng="-122.414756" data-marker="./public/marker.png">
           <div class="map__body"></div>
           <div class="map__footer">
             <div class="map__footer-title">Meet us!</div>
@@ -312,11 +314,13 @@
       <article class="calendar_messaging">
         <section class="calendar_section">
           <h2 class="title">calendar</h2>
-          <div class="calendar" type="text"></div>
+          <div class="calendar gldp-el gldp_red">
+            <input type="text" style="display:none;" name="input_name">
+          </div>
         </section>
         <section class="messaging_section">
           <h2 class="title">messaging</h2>
-          <section class="messaging">
+          <section class="messaging messaging_default">
             <div class="messaging__header">
               <p class="messaging__header-title">Sarah Brown</p>
               <div class="messaging__header-bottom"></div>
@@ -330,14 +334,14 @@
               </div>
               <div class="messaging__body-request">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
               <textarea class="messaging__body-response" placeholder="Yeah that sounds great. See you then." rows="4"></textarea>
-              <button class="ripple-button_border-bottom-blue ripple-button">reply</button>
+              <button class="ripple-button_border-bottom-blue ripple-button">Replay</button>
             </div>
           </section>
         </section>
       </article>
       <article class="video">
         <h2 class="title">video</h2>
-        <div class="player">
+        <div class="player player_default">
           <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
             <source src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82">
           </video>
@@ -352,7 +356,7 @@
                   <path fill="white" d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z"></path>
                 </svg>
               </div>
-              <progress id="progress-bar" min="0" max="100" value="0"></progress>
+              <progress class="player__controls-progress" min="0" max="100" value="0"></progress>
               <div class="player__controls-fullscreen">
                 <svg x="0px" y="0px" viewBox="0 0 32 32">
                   <polygon style="fill:white;" points="29.414,26.586 22.828,20 20,22.828 26.586,29.414 24,32 32,32 32,24 "></polygon>
@@ -364,7 +368,7 @@
             </div>
           </div>
         </div>
-        <div class="player">
+        <div class="player player_red">
           <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4">
             <source src="https://www.w3schools.com/html/mov_bbb.ogg">
@@ -380,7 +384,7 @@
                   <path fill="white" d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z"></path>
                 </svg>
               </div>
-              <progress id="progress-bar" min="0" max="100" value="0"></progress>
+              <progress class="player__controls-progress" min="0" max="100" value="0"></progress>
               <div class="player__controls-fullscreen">
                 <svg x="0px" y="0px" viewBox="0 0 32 32">
                   <polygon style="fill:white;" points="29.414,26.586 22.828,20 20,22.828 26.586,29.414 24,32 32,32 32,24 "></polygon>

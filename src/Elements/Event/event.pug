@@ -1,9 +1,10 @@
-mixin Event( day, month, title, text, src)
-    section&attributes(attributes)(style="background-image: url("+src+")").event
+mixin Event( day, month, title, text, src, button_text ,theme)
+    section&attributes(attributes)(style="background-image: url("+src+")" class="event_"+theme).event
         div.event__inner
             p.event__date  
                 span!= day 
                 | Aug
             p.event__title!= title 
             p.event__text!= text
-            +ripple-button('ADD  TO  CALENDAR','border-bottom-white-blue')(style="font-size: 18px; ")
+            div.event__button
+                +ripple-button(button_text)

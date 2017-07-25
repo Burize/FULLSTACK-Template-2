@@ -7,7 +7,7 @@
  *
  * Date: Tue Jan 1 2013
  */
-import './glDatePicker.default.css'
+import './glDatePicker.default.styl'
 
  (function($) {
 	$.fn.glDatePicker = function(options) {
@@ -522,7 +522,7 @@ import './glDatePicker.default.css'
 				// Add cells for prev/title/next
              
                 var big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
-                
+                 calendar.prev('input').val( options.selectedDate.toISOString().slice(0, 10));
 				calendar
                     .append(big_number)
 					.append(prevCell)
@@ -668,8 +668,8 @@ import './glDatePicker.default.css'
 												self.hide();
 											}
 										});
-
                                         calendar.children('.big_number').text($(this).html());
+                                        calendar.prev('input').val( clickedData.date.toISOString().slice(0, 10));
 										// Call callback
 										options.onClick(el, $(this), clickedData.date, clickedData.data);
 									});

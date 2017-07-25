@@ -33,8 +33,10 @@
         background-color #4eb7a8;
         margin-left 33%;
         padding 4.2em 2.4em 2.75em;
-       
+        height 100%;
         color white;
+        position relative;
+        box-sizing border-box;
         
         .event__date{
             
@@ -69,11 +71,74 @@
              margin-bottom 1.6em;
         }
         
-        button{
+        .event__button{
             
-            margin auto;
-            display block;
-            width 13.5em;
+            position absolute;
+            bottom 2.75em;
+            width 70%;
+            
+             button{
+            
+                margin auto;
+                display block;
+            }
+        }
+       
+    }
+    
+    
+    
+    &.event_orange{
+        
+        .event__inner{
+         
+            background-color #FA6900;
+            
+            
+            button{
+                
+                background-color white;
+                color #FA6900;
+                padding 0.5em;
+                
+                border-bottom  solid 0.3em darken(#FA6900, 25%);
+            }
+        }
+    }
+    
+        &.event_dark-blue{
+        
+        .event__inner{
+         
+            background-color #00416A;
+            
+            
+            button{
+                
+                background-color white;
+                color #00416A;
+                padding 0.5em;
+                
+                border-bottom  solid 0.3em darken(#00416A, 25%);
+            }
+        }
+    }
+    
+    &.event_green{
+        
+        .event__inner{
+         
+            background-color #4eb7a8;
+            
+            
+            button{
+                
+                background-color white;
+                color #4eb7a8;
+                padding 0.5em;
+                
+                border-bottom  solid 0.3em darken(#4eb7a8, 25%);
+            }
         }
     }
 }

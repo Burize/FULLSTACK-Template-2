@@ -8,7 +8,7 @@ $( function(){
         
         var player = this.children[0];
 	    var btnPlayPause = $(this).find('.player__controls-play').first();
-	    var progressBar  = $(this).find('#progress-bar').first();
+	    var progressBar  = $(this).find('.player__controls-progress').first();
         var expand = $(this).find('.player__controls-fullscreen').first();
         
      
@@ -67,7 +67,7 @@ $( function(){
   	
   	var percentage = Math.floor( player.currentTime /  player.duration * 100 );
   	
-  	progressBar[0].value = percentage; console.log(percentage);
+  	progressBar[0].value = percentage;
   
   }
   

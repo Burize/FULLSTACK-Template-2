@@ -1,14 +1,11 @@
 import "./message-form.styl";
-
+import "./Hint/hint.js"
 
 (function($){
 
-    $.fn.Notfound = function(){
-        
-        return this.each( function(){
-            
-           
-            
+       
+     $(".message-form__input-search.notFound").each( function(){         
+         
             $(this).children("input").css('background-color',$(this).children('svg').css('background-color')).css('color', 'white').attr('value',"I've not found what i'm looking for ...");
             
             $(this).children('input').focus(function(){
@@ -18,5 +15,7 @@ import "./message-form.styl";
                 $(this).unbind('focus');
             });
         });
-    }
+       
+        
 })(jQuery)
+

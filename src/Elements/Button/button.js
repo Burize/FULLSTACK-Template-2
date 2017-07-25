@@ -6,7 +6,7 @@ import "./button.styl"
     
     
     $('.ripple-button').on('click', function (event) {
-      event.preventDefault();
+     
       
       var $div = $('<div/>'),
           btnOffset = $(this).offset(),
@@ -30,7 +30,7 @@ import "./button.styl"
 
       window.setTimeout(function(){
         $div.remove();
-      }, 2000);
+      }, 1500);
     });
     
 

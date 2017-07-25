@@ -1,4 +1,4 @@
-mixin Toggle(name, color)
-    label(style="background-color:"+color+";")&attributes(attributes).toggle.toggle_on
+mixin Toggle(name, color, checked)
+    label(style="background-color:"+color+";" checked!=checked )&attributes(attributes).toggle.toggle_on
         div.toggle__circle
         input(type="checkbox" name!= name style="display: none")

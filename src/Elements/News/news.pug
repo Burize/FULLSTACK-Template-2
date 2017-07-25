@@ -1,5 +1,5 @@
 mixin News(title, date, text, src)    
-    section(style="background-image: url("+src+")").news
+    section&attributes(attributes)(style="background-image: url("+src+");" ).news
                         div.news__inner
                             p.news__title!= title 
                             p.news__date!= date 

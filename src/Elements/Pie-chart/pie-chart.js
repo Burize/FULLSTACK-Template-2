@@ -70,9 +70,12 @@ import "./pie-chart.styl";
           
         renderer.draw();
             
+        var _this = $(this);
         $(window).resize(function(){
             
+            _this.children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',_this.outerWidth()/2.4 )
             renderer.draw();
+            
         });
       
     });

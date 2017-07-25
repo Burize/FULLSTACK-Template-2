@@ -1,5 +1,5 @@
-mixin Profil(portrait_src, name, profession, ...links)
-    section&attributes(attributes).profil
+mixin Profil(portrait_src, name, profession, links, theme)
+    section&attributes(attributes).profil(class="profil_"+theme)
         div(style="background-image: url("+portrait_src+");").profil__portrait
         div.profil__data
             div.profil__data-arrow

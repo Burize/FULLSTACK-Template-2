@@ -9,11 +9,11 @@ mixin Stage(count, stage, color)
                 if end_line > 98
                     - end_line = 98
                 line(x1="2%" y1="50%" x2="98%" y2="50%" stroke="#e5e5e5" stroke-width="1%"  )
-                line(x1="2%" y1="50%" x2!=end_line+"%"  y2="50%" stroke="#e75735" stroke-width="1%"  )
+                line(x1="2%" y1="50%" x2!=end_line+"%"  y2="50%" stroke!=color stroke-width="1%"  )
                 while n < count
                     if n < stage
                         g
-                            circle( cx!=94/(count - 1)*n +3+"%"  cy="50%" r="3.5%" fill="#e75735")
+                            circle( cx!=94/(count - 1)*n +3+"%"  cy="50%" r="3.5%" fill!=color)
                             text(x!=94/(count - 1)*n++ +3+"%" y="50%" text-anchor="middle" dy=".3em" fill="white")= n
                     else
                         g

@@ -10769,7 +10769,7 @@ return jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+
 
 __webpack_require__(4);
 
@@ -10787,8 +10787,6 @@ __webpack_require__(26);
 
 __webpack_require__(29);
 
-__webpack_require__(33);
-
 __webpack_require__(36);
 
 __webpack_require__(40);
@@ -10805,19 +10803,9 @@ __webpack_require__(66);
 
 __webpack_require__(73);
 
-__webpack_require__(80);
+__webpack_require__(81);
 
-__webpack_require__(85);
-
-$(document).ready(function () {
-
-  $('#message-form-name').Hint('right', 'error', '#e75735');
-
-  $('#message-form-email').Hint('right', 'thanks!', '#4eb7a8');
-
-  $('.message-form__input-search').eq(1).Notfound();
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+__webpack_require__(86);
 
 /***/ }),
 /* 4 */
@@ -10859,7 +10847,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(6) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(7) + ");\n}\n.container {\n  margin: auto;\n  width: 1200px;\n  padding-top: 9%;\n}\n.container .title {\n  font-family: LatoBlack;\n  text-align: center;\n  font-size: 2.2em;\n  text-transform: uppercase;\n  color: #4f4f4f;\n}\n.container .standard-buttons {\n  width: 74%;\n  margin: auto;\n  margin-bottom: 8.5%;\n}\n.container .standard-buttons .standard-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin-bottom: 4.5%;\n}\n.container .standard-buttons .title {\n  margin-bottom: 15%;\n}\n.container .arrow-buttons {\n  width: 68%;\n  margin: auto;\n  margin-bottom: 7%;\n}\n.container .arrow-buttons .title {\n  margin-bottom: 8.5%;\n}\n.container .arrow-buttons .arrow-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .arrow-buttons .arrow-buttons__row .arrow-button {\n  width: 11.5%;\n}\n.container .pie-charts {\n  width: 100%;\n  margin: auto;\n  margin-bottom: 5%;\n}\n.container .pie-charts .title {\n  margin-bottom: 4.2%;\n}\n.container .pie-charts .pie-charts__row {\n  padding-right: 45px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.container .pie-charts .pie-charts__row .pie-chart {\n  color: #9d9d9d;\n  font-family: LatoLight;\n  width: 16%;\n}\n.container .pie-charts .pie-charts__row .donut-chart {\n  width: 16%;\n}\n.container .sliders {\n  margin-bottom: 5.2%;\n}\n.container .sliders .title {\n  margin-bottom: 5.8%;\n}\n.container .sliders .slider__row {\n  padding: 0 1.5% 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .sliders .slider__row .slider {\n  width: 47%;\n}\n.container .stages {\n  margin-bottom: 8.2%;\n}\n.container .stages .title {\n  margin-bottom: 4.6%;\n}\n.container .stages .stage {\n  width: 97%;\n  margin: auto;\n}\n.container .form-elements {\n  margin-bottom: 6.2%;\n}\n.container .form-elements .title {\n  margin-bottom: 8%;\n}\n.container .form-elements .form-elements__row {\n  padding-left: 2.6%;\n  padding-right: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .form-elements .form-elements__row .message-form .hint-control {\n  width: 24.8em;\n  margin-bottom: 0.4em;\n}\n.container .form-elements .form-elements__row .message-form input {\n  font-size: 1.5em;\n  width: 100%;\n}\n.container .form-elements .form-elements__row .message-form textarea {\n  font-size: 1.5em;\n  width: 23em;\n  margin-bottom: 3.6%;\n}\n.container .form-elements .form-elements__row .message-form button {\n  font-size: 1.6em;\n  float: right;\n  width: 9em;\n}\n.container .form-elements .form-elements__row .form-elements__control {\n  width: 25%;\n  text-align: center;\n}\n.container .form-elements .form-elements__row .form-elements__control .title:first-child {\n  margin-top: -4.7%;\n  margin-bottom: 24%;\n}\n.container .form-elements .form-elements__row .form-elements__control .title:nth-child(3) {\n  margin-top: 28%;\n  margin-bottom: 1.65em;\n}\n.container .form-elements .form-elements__row .form-elements__control .toggles {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 4em;\n}\n.container .form-elements .form-elements__row .form-elements__control .tick-boxes {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 30% 0 20%;\n}\n.container .form-elements .form-elements__row .form-elements__control .tick-boxes .tick-box {\n  width: 40%;\n}\n.container .one-more-article {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2%;\n  margin-bottom: 14.8%;\n  padding-right: 5%;\n}\n.container .one-more-article .search {\n  width: 50%;\n}\n.container .one-more-article .search .title {\n  font-size: 2.2em;\n  margin-bottom: 1.1em;\n}\n.container .one-more-article .search .message-form {\n  width: 100%;\n}\n.container .one-more-article .search .message-form .message-form__input-search {\n  width: 100%;\n  font-size: 1.8em;\n  margin-bottom: 1em;\n}\n.container .one-more-article .user-profiles {\n  width: 44%;\n}\n.container .one-more-article .user-profiles .title {\n  margin-bottom: 11.5%;\n}\n.container .one-more-article .user-profiles #profil1 {\n  margin-bottom: 10%;\n}\n.container .one-more-article .user-profiles #profil1 .profil__data .profil__name {\n  color: #e75735;\n}\n.container .one-more-article .user-profiles #profil1 .profil__data .profil__profession {\n  color: #747474;\n}\n.container .one-more-article .user-profiles #profil1 .profil__data .profil__links a:nth-child(1),\n.container .one-more-article .user-profiles #profil1 .profil__data .profil__links a:nth-child(3) {\n  color: #747474;\n}\n.container .one-more-article .user-profiles #profil1 .profil__data .profil__links a:nth-child(2) {\n  color: #e75735;\n}\n.container .one-more-article .user-profiles #profil2 .profil__data {\n  background-color: #4eb7a8;\n}\n.container .one-more-article .user-profiles #profil2 .profil__data .profil__data-arrow {\n  border-color: transparent #4eb7a8 transparent transparent;\n}\n.container .news-events {\n  margin-bottom: 7.5%;\n}\n.container .news-events .title {\n  margin-bottom: 5%;\n}\n.container .news-events .news-events__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  padding-left: 2.2%;\n  padding-right: 2.6%;\n}\n.container .news-events .news-events__row .news,\n.container .news-events .news-events__row .event {\n  width: 48.5%;\n}\n.container .location {\n  margin-bottom: 5.25%;\n}\n.container .location .title {\n  margin-bottom: 4.8%;\n}\n.container .location #my_map {\n  width: 95%;\n  margin: auto;\n}\n.container .calendar_messaging {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2.4%;\n  padding-right: 2.6%;\n  margin-bottom: 8.2%;\n}\n.container .calendar_messaging .title {\n  margin-bottom: 10%;\n}\n.container .calendar_messaging .calendar_section {\n  width: 46%;\n}\n.container .calendar_messaging .calendar_section #mycalendar {\n  position: relative;\n}\n.container .calendar_messaging .messaging_section {\n  width: 48.5%;\n}\n.container .video {\n  width: 95%;\n  margin: auto;\n}\n.container .video .title {\n  margin-bottom: 4%;\n}\n.container .video .player {\n  margin-bottom: 5%;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(6) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(7) + ");\n}\n.container {\n  margin: auto;\n  width: 1200px;\n  padding-top: 9%;\n}\n.container .title {\n  font-family: LatoBlack;\n  text-align: center;\n  font-size: 2.2em;\n  text-transform: uppercase;\n  color: #4f4f4f;\n}\n.container .standard-buttons {\n  width: 74%;\n  margin: auto;\n  margin-bottom: 8.5%;\n}\n.container .standard-buttons .standard-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin-bottom: 4.5%;\n}\n.container .standard-buttons .title {\n  margin-bottom: 15%;\n}\n.container .arrow-buttons {\n  width: 68%;\n  margin: auto;\n  margin-bottom: 7%;\n}\n.container .arrow-buttons .title {\n  margin-bottom: 8.5%;\n}\n.container .arrow-buttons .arrow-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .arrow-buttons .arrow-buttons__row .arrow-button {\n  width: 11.5%;\n}\n.container .pie-charts {\n  width: 100%;\n  margin: auto;\n  margin-bottom: 5%;\n}\n.container .pie-charts .title {\n  margin-bottom: 4.2%;\n}\n.container .pie-charts .pie-charts__row {\n  padding-right: 45px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.container .pie-charts .pie-charts__row .pie-chart {\n  color: #9d9d9d;\n  font-family: LatoLight;\n  width: 16%;\n}\n.container .pie-charts .pie-charts__row .donut-chart {\n  width: 16%;\n}\n.container .sliders {\n  margin-bottom: 5.2%;\n}\n.container .sliders .title {\n  margin-bottom: 5.8%;\n}\n.container .sliders .slider__row {\n  padding: 0 1.5% 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .sliders .slider__row .slider {\n  width: 47%;\n  font-size: 1.6rem;\n}\n.container .stages {\n  margin-bottom: 8.2%;\n}\n.container .stages .title {\n  margin-bottom: 4.6%;\n}\n.container .stages .stage {\n  width: 97%;\n  margin: auto;\n}\n.container .form-elements {\n  margin-bottom: 6.5%;\n}\n.container .form-elements .title {\n  margin-bottom: 8%;\n}\n.container .form-elements .form-elements__row {\n  padding-left: 2.3%;\n  padding-right: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .form-elements .form-elements__row .message-form {\n  width: 56%;\n}\n.container .form-elements .form-elements__row .message-form .hint-control {\n  width: 72%;\n  font-size: 1.6rem;\n  margin-bottom: 0.35em;\n}\n.container .form-elements .form-elements__row .message-form textarea {\n  font-size: 1.5em;\n  width: 100%;\n  margin-bottom: 3.6%;\n}\n.container .form-elements .form-elements__row .message-form button {\n  font-size: 1.6em;\n  float: right;\n  width: 9em;\n}\n.container .form-elements .form-elements__row .form-elements__control {\n  width: 25%;\n  text-align: center;\n}\n.container .form-elements .form-elements__row .form-elements__control .title:first-child {\n  margin-top: -4.7%;\n  margin-bottom: 24%;\n}\n.container .form-elements .form-elements__row .form-elements__control .title:nth-child(3) {\n  margin-top: 28%;\n  margin-bottom: 1.65em;\n}\n.container .form-elements .form-elements__row .form-elements__control .toggles {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 2em;\n  font-size: 2rem;\n}\n.container .form-elements .form-elements__row .form-elements__control .tick-boxes {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 30% 0 20%;\n}\n.container .form-elements .form-elements__row .form-elements__control .tick-boxes .tick-box {\n  width: 40%;\n  font-size: 2rem;\n}\n.container .one-more-article {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2%;\n  margin-bottom: 10.8%;\n  padding-right: 5%;\n}\n.container .one-more-article .search {\n  width: 50%;\n}\n.container .one-more-article .search .title {\n  font-size: 2.2em;\n  margin-bottom: 1.1em;\n}\n.container .one-more-article .search .message-form {\n  width: 100%;\n}\n.container .one-more-article .search .message-form .message-form__input-search {\n  width: 100%;\n  font-size: 1.8em;\n  margin-bottom: 1em;\n}\n.container .one-more-article .search .message-form .dropdown {\n  width: 100%;\n  font-size: 1.8em;\n  margin-bottom: 1em;\n}\n.container .one-more-article .user-profiles {\n  width: 44%;\n}\n.container .one-more-article .user-profiles .title {\n  margin-bottom: 11.5%;\n}\n.container .one-more-article .user-profiles .profil {\n  margin-bottom: 10%;\n}\n.container .news-events {\n  margin-bottom: 7.5%;\n}\n.container .news-events .title {\n  margin-bottom: 5%;\n}\n.container .news-events .news-events__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  padding-left: 2.2%;\n  padding-right: 2.6%;\n  height: 25.5rem;\n}\n.container .news-events .news-events__row .news,\n.container .news-events .news-events__row .event {\n  width: 48.5%;\n}\n.container .location {\n  margin-bottom: 5.25%;\n}\n.container .location .title {\n  margin-bottom: 4.8%;\n}\n.container .location .map {\n  width: 95%;\n  margin: auto;\n}\n.container .calendar_messaging {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2.4%;\n  padding-right: 2.6%;\n  margin-bottom: 9.2%;\n}\n.container .calendar_messaging .title {\n  margin-bottom: 10%;\n}\n.container .calendar_messaging .calendar_section {\n  width: 46%;\n}\n.container .calendar_messaging .calendar_section #mycalendar {\n  position: relative;\n}\n.container .calendar_messaging .messaging_section {\n  width: 48.5%;\n}\n.container .video {\n  width: 95%;\n  margin: auto;\n}\n.container .video .title {\n  margin-bottom: 4%;\n}\n.container .video .player {\n  margin-bottom: 5%;\n}\n", ""]);
 
 // exports
 
@@ -10983,7 +10971,6 @@ __webpack_require__(10);
 $(function () {
 
   $('.ripple-button').on('click', function (event) {
-    event.preventDefault();
 
     var $div = $('<div/>'),
         btnOffset = $(this).offset(),
@@ -11003,7 +10990,7 @@ $(function () {
 
     window.setTimeout(function () {
       $div.remove();
-    }, 2000);
+    }, 1500);
   });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
@@ -11048,7 +11035,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(12) + ");\n}\n.ripple-button {\n  background-color: #e75735;\n  color: #fff;\n  padding: 0.6em;\n  font-family: LatoBlack;\n  border: none;\n  border-radius: 0.3em;\n  font-size: 18px;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative;\n  overflow: hidden;\n  border: none;\n  outline: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.ripple-button_simple-blue {\n  background-color: #4eb7a8;\n}\n.ripple-button_simple-red {\n  background-color: #e75735;\n}\n.ripple-button_border-bottom-blue {\n  background-color: #4eb7a8;\n  border-bottom: solid 0.25em #28a290;\n}\n.ripple-button_border-bottom-white-blue {\n  color: #4eb7a8;\n  background-color: #fff;\n  border-bottom: solid 0.25em #28a290;\n}\n.ripple-button_border-bottom-red {\n  background-color: #e75735;\n  border-bottom: solid 0.25em #bf3e1f;\n}\n.ripple-button_white-blue {\n  background-color: #fff;\n  color: #4eb7a8;\n  padding: 0.5em;\n  border: solid 0.1em #4eb7a8;\n  border-bottom: solid 0.3em #4eb7a8;\n}\n.ripple-button_white-red {\n  background-color: #fff;\n  color: #e75735;\n  padding: 0.5em;\n  border: solid 0.1em #e75735;\n  border-bottom: solid 0.3em #e75735;\n}\n.ripple {\n  position: absolute;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  background: #fff;\n  -webkit-animation: ripple-animation 2s;\n          animation: ripple-animation 2s;\n}\n@-webkit-keyframes ripple-animation {\n  from {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.4;\n  }\n  to {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0;\n  }\n}\n@keyframes ripple-animation {\n  from {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.4;\n  }\n  to {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0;\n  }\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(12) + ");\n}\n.ripple-button {\n  display: block;\n  background-color: #e75735;\n  color: #fff;\n  padding: 0.6em;\n  font-family: LatoBlack;\n  border: none;\n  border-radius: 0.3em;\n  font-size: 1em;\n  text-transform: uppercase;\n  cursor: pointer;\n  position: relative;\n  overflow: hidden;\n  border: none;\n  outline: none;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.ripple-button_simple-blue {\n  background-color: #4eb7a8;\n}\n.ripple-button_simple-red {\n  background-color: #e75735;\n}\n.ripple-button_border-bottom-blue {\n  background-color: #4eb7a8;\n  border-bottom: solid 0.25em #28a290;\n}\n.ripple-button_border-bottom-bluuue {\n  background-color: #005bac;\n  border-bottom: solid 0.25em #004481;\n}\n.ripple-button_border-bottom-white-blue {\n  color: #4eb7a8;\n  background-color: #fff;\n  border-bottom: solid 0.25em #28a290;\n}\n.ripple-button_border-bottom-red {\n  background-color: #e75735;\n  border-bottom: solid 0.25em #bf3e1f;\n}\n.ripple-button_border-bottom-purple {\n  background-color: #8b00ff;\n  border-bottom: solid 0.25em #6800bf;\n}\n.ripple-button_border-bottom-orange {\n  background-color: #ff6800;\n  border-bottom: solid 0.25em #bf4e00;\n}\n.ripple-button_white-blue {\n  background-color: #fff;\n  color: #4eb7a8;\n  padding: 0.5em;\n  border: solid 0.1em #4eb7a8;\n  border-bottom: solid 0.3em #4eb7a8;\n}\n.ripple-button_border-bottom-white-green {\n  background-color: #fff;\n  color: #138808;\n  padding: 0.5em;\n  border: solid 0.1em #138808;\n  border-bottom: solid 0.3em #138808;\n}\n.ripple-button_white-red {\n  background-color: #fff;\n  color: #e75735;\n  padding: 0.5em;\n  border: solid 0.1em #e75735;\n  border-bottom: solid 0.3em #e75735;\n}\n.ripple {\n  position: absolute;\n  border-radius: 50%;\n  width: 50px;\n  height: 50px;\n  background: #fff;\n  -webkit-animation: ripple-animation 2s;\n          animation: ripple-animation 2s;\n}\n@-webkit-keyframes ripple-animation {\n  from {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.4;\n  }\n  to {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0;\n  }\n}\n@keyframes ripple-animation {\n  from {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0.4;\n  }\n  to {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0;\n  }\n}\n", ""]);
 
 // exports
 
@@ -11108,7 +11095,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".arrow-button {\n  cursor: pointer;\n}\n.arrow-button .arrow-button__inner {\n  padding-top: 100%;\n  position: relative;\n}\n.arrow-button .arrow-button__inner .arrow-button-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.arrow-button .arrow-button_white-blue circle {\n  stroke: #4eb7a8;\n  fill: #fff;\n}\n.arrow-button .arrow-button_white-blue polyline {\n  stroke: #4eb7a8;\n}\n.arrow-button .arrow-button_gray circle {\n  stroke: #e5e5e5;\n  fill: #e5e5e5;\n}\n.arrow-button .arrow-button_gray polyline {\n  stroke: #fff;\n}\n.arrow-button .arrow-button_blue-white circle {\n  stroke: #4eb7a8;\n  fill: #4eb7a8;\n}\n.arrow-button .arrow-button_blue-white polyline {\n  stroke: #fff;\n}\n", ""]);
+exports.push([module.i, ".arrow-button {\n  cursor: pointer;\n}\n.arrow-button .arrow-button__inner {\n  padding-top: 100%;\n  position: relative;\n}\n.arrow-button .arrow-button__inner .arrow-button-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.arrow-button.arrow-button_white-blue circle {\n  stroke: #4eb7a8;\n  fill: #fff;\n}\n.arrow-button.arrow-button_white-blue polyline {\n  stroke: #4eb7a8;\n}\n.arrow-button.arrow-button_disabled circle {\n  stroke: #e5e5e5 !important;\n  fill: #e5e5e5 !important;\n}\n.arrow-button.arrow-button_disabled polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_blue-white circle {\n  stroke: #4eb7a8;\n  fill: #4eb7a8;\n}\n.arrow-button.arrow-button_blue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_bluuue-white circle {\n  stroke: #005bac;\n  fill: #005bac;\n}\n.arrow-button.arrow-button_bluuue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_orange circle {\n  stroke: #fa6900;\n  fill: none;\n}\n.arrow-button.arrow-button_orange polyline {\n  stroke: #fa6900;\n}\n", ""]);
 
 // exports
 
@@ -11192,8 +11179,10 @@ __webpack_require__(17);
 
         renderer.draw();
 
+        var _this = $(this);
         $(window).resize(function () {
 
+            _this.children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size', _this.outerWidth() / 2.4);
             renderer.draw();
         });
     });
@@ -28280,7 +28269,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(25) + ");\n}\n.slider {\n  position: relative;\n  font-size: 1.5em;\n}\n.slider .slider__inner {\n  width: 100%;\n  padding-top: 11%;\n  position: relative;\n}\n.slider .slider__inner svg {\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n.slider .slider__inner svg circle {\n  cursor: pointer;\n}\n.slider .slider-hint {\n  width: 12%;\n  background-color: #e75735;\n  color: #fff;\n  text-align: center;\n  border-radius: 0.4em;\n  padding: 0.3em 0;\n  position: absolute;\n  left: -1%;\n  z-index: 1;\n  bottom: 110%;\n  font-family: LatoBlack;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n.slider .slider-hint .hint__arrow {\n  content: \"\";\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  margin-left: -0.3em;\n  border-width: 0.3em;\n  border-style: solid;\n  border-color: #e75735 transparent transparent transparent;\n}\n.slider .slider-scale {\n  font-size: 0.9em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 3%;\n  margin-top: -0.4em;\n  box-sizing: border-box;\n  font-family: LatoBlack;\n  color: #d1d1d1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(25) + ");\n}\n.slider {\n  position: relative;\n}\n.slider .slider__inner {\n  width: 100%;\n  padding-top: 11%;\n  position: relative;\n}\n.slider .slider__inner svg {\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  top: 0;\n}\n.slider .slider__inner svg circle {\n  cursor: pointer;\n}\n.slider .slider-hint {\n  width: 12%;\n  background-color: #e75735;\n  color: #fff;\n  text-align: center;\n  border-radius: 0.4em;\n  padding: 0.3em 0;\n  position: absolute;\n  left: -1%;\n  z-index: 1;\n  bottom: 105%;\n  font-family: LatoBlack;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n.slider .slider-hint .hint__arrow {\n  content: \"\";\n  position: absolute;\n  top: 100%;\n  left: 50%;\n  margin-left: -0.3em;\n  border-width: 0.3em;\n  border-style: solid;\n  border-color: #e75735 transparent transparent transparent;\n}\n.slider .slider-scale {\n  font-size: 0.9em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 3%;\n  margin-top: -0.4em;\n  box-sizing: border-box;\n  font-family: LatoBlack;\n  color: #d1d1d1;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n", ""]);
 
 // exports
 
@@ -28351,22 +28340,21 @@ module.exports = __webpack_require__.p + "Lato-Black.ttf";
 
 __webpack_require__(30);
 
+__webpack_require__(33);
+
 (function ($) {
 
-    $.fn.Notfound = function () {
+    $(".message-form__input-search.notFound").each(function () {
 
-        return this.each(function () {
+        $(this).children("input").css('background-color', $(this).children('svg').css('background-color')).css('color', 'white').attr('value', "I've not found what i'm looking for ...");
 
-            $(this).children("input").css('background-color', $(this).children('svg').css('background-color')).css('color', 'white').attr('value', "I've not found what i'm looking for ...");
+        $(this).children('input').focus(function () {
 
-            $(this).children('input').focus(function () {
+            $(this).css("background-color", "").css('color', "").attr('value', '');
 
-                $(this).css("background-color", "").css('color', "").attr('value', '');
-
-                $(this).unbind('focus');
-            });
+            $(this).unbind('focus');
         });
-    };
+    });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -28410,7 +28398,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(32) + ");\n}\n.message-form .message-form_form-control {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none;\n  border-radius: 0.2em;\n  font-family: SourceSansProRegular;\n  font-size: 1em;\n}\n.message-form .message-form_form-control:focus {\n  outline: none;\n}\n.message-form .message-form__input-text {\n  padding: 0.4em 1em;\n}\n.message-form .message-form__textarea {\n  resize: none;\n  padding: 1em 0.9em;\n}\n.message-form .message-form__input-search {\n  position: relative;\n  overflow: hidden;\n  border-radius: 0.2em;\n}\n.message-form .message-form__input-search .message-form_form-control {\n  width: 100%;\n  padding: 0.35em 1em;\n}\n.message-form .message-form__input-search svg {\n  height: 100%;\n  width: 2.2em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-color: #e75735;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(32) + ");\n}\n.message-form .message-form__form-control {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none !important;\n  outline: none !important;\n  border-radius: 0.2em;\n  font-family: SourceSansProRegular;\n  font-size: 1em;\n  width: 100%;\n}\n.message-form .message-form__form-control:focus {\n  outline: none;\n}\n.message-form .message-form__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.message-form .message-form__input-text {\n  padding: 0.4em 1em;\n}\n.message-form .message-form__textarea {\n  resize: none;\n  padding: 1em 0.9em;\n}\n.message-form .message-form__input-search {\n  position: relative;\n  overflow: hidden;\n  border-radius: 0.2em;\n}\n.message-form .message-form__input-search .message-form__form-control {\n  width: 100%;\n  padding: 0.35em 1em;\n}\n.message-form .message-form__input-search svg {\n  height: 100%;\n  width: 2.3em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-color: #e75735;\n  cursor: pointer;\n}\n.message-form input[type=\"search\"]::-webkit-search-decoration,\n.message-form input[type=\"search\"]::-webkit-search-cancel-button,\n.message-form input[type=\"search\"]::-webkit-search-results-button,\n.message-form input[type=\"search\"]::-webkit-search-results-decoration {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -28426,44 +28414,114 @@ module.exports = __webpack_require__.p + "SourceSansProRegular.ttf";
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
+/* WEBPACK VAR INJECTION */(function($) {
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
 __webpack_require__(34);
 
-(function ($) {
+$(function () {
 
-    $.fn.Hint = function (side, text, color) {
+    $('.message-form').each(function () {
 
-        this.children().remove(".hint");
+        $(this).submit(function (e) {
 
-        var hint = $("<div/>").addClass("hint").css("background-color", color);
-        var hint_text = $("<span/>").text(text);
-        var hint_arrow = $("<div/>").addClass("hint__arrow");
+            $(this).find('.hint-control').each(function () {
 
-        switch (side) {
-            case 'left':
+                Hint.Hide(this);
 
-                hint.addClass("hint_left");
-                hint_arrow.css("border-color", "transparent transparent transparent " + color);
-                break;
+                switch ($(this).data('hint')) {
+                    case 'text':
 
-            case 'right':
+                        if (!/[a-zа-я]{2,}/i.test($(this).children('input').val())) {
+                            Hint.Show(this, 'right', 'Только буквы!', '#e75735');
 
-                hint.addClass("hint_right");
-                hint_arrow.css("border-color", "transparent " + color + " transparent transparent");
-                break;
+                            e.preventDefault();
+                        }
+
+                        break;
+
+                    case 'email':
+
+                        if (!/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i.test($(this).children('input').val())) {
+                            Hint.Show(this, 'right', 'Некорректный адрес!', '#e75735');
+                            e.preventDefault();
+                        }
+
+                        break;
+
+                    case 'phone':
+
+                        if (!/[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/i.test($(this).children('input').val())) {
+                            Hint.Show(this, 'right', 'Неправильный номер!', '#e75735');
+                            e.preventDefault();
+                        }
+
+                        break;
+                    case 'thanks':
+
+                        Hint.Show(this, 'right', 'thanks!', '#4eb7a8');
+                        e.preventDefault();
+                        break;
+
+                    case 'error':
+
+                        Hint.Show(this, 'right', 'error!', '#e75735');
+                        e.preventDefault();
+                        break;
+                }
+            });
+        });
+    });
+});
+
+var Hint = (function () {
+    function Hint() {
+        _classCallCheck(this, Hint);
+    }
+
+    _createClass(Hint, null, [{
+        key: 'Show',
+        value: function Show(element, side, text, color) {
+
+            element = $(element);
+            element.children().remove(".hint");
+
+            var hint = $("<div/>").addClass("hint").css("background-color", color);
+            var hint_text = $("<span/>").text(text);
+            var hint_arrow = $("<div/>").addClass("hint__arrow");
+
+            switch (side) {
+                case 'left':
+
+                    hint.addClass("hint_left");
+                    hint_arrow.css("border-color", "transparent transparent transparent " + color);
+                    break;
+
+                case 'right':
+
+                    hint.addClass("hint_right");
+                    hint_arrow.css("border-color", "transparent " + color + " transparent transparent");
+                    break;
+            }
+
+            hint.append(hint_text).append(hint_arrow);
+
+            element.append(hint);
         }
+    }, {
+        key: 'Hide',
+        value: function Hide(element) {
 
-        hint.append(hint_text).append(hint_arrow);
+            element = $(element);
+            element.children().remove(".hint");
+        }
+    }]);
 
-        this.append(hint);
-    };
-
-    $.fn.Hint_hide = function () {
-
-        this.children().remove(".hint");
-    };
-})(jQuery);
+    return Hint;
+})();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
@@ -28487,8 +28545,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./hint.styl", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./hint.styl");
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/autoprefixer-loader/index.js!../../../../node_modules/stylus-loader/index.js!./hint.styl", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/autoprefixer-loader/index.js!../../../../node_modules/stylus-loader/index.js!./hint.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -28506,7 +28564,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".hint-control {\n  position: relative;\n  box-sizing: content-box;\n}\n.hint-control .hint {\n  text-transform: uppercase;\n  background-color: #e75735;\n  color: #fff;\n  text-align: center;\n  border-radius: 0.4em;\n  padding: 1em 1em;\n  position: absolute;\n  height: 100%;\n  box-sizing: border-box;\n  z-index: 1;\n  font-family: LatoBlack;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n.hint-control .hint .hint__arrow {\n  position: absolute;\n  border-width: 0.3em;\n  border-style: solid;\n}\n.hint-control .hint_left {\n  top: 0%;\n  right: calc(100% + 1em);\n}\n.hint-control .hint_left .hint__arrow {\n  border-color: transparent transparent transparent #e75735;\n  top: 50%;\n  left: 100%;\n  margin-top: -0.3em;\n}\n.hint-control .hint_right {\n  top: 0%;\n  left: calc(100% + 1em);\n}\n.hint-control .hint_right .hint__arrow {\n  border-color: transparent #e75735 transparent transparent;\n  top: 50%;\n  right: 100%;\n  margin-top: -0.3em;\n}\n", ""]);
+exports.push([module.i, ".hint-form input {\n  position: static;\n}\n.hint-control {\n  position: relative;\n  box-sizing: content-box;\n}\n.hint-control .hint {\n  text-transform: uppercase;\n  background-color: #e75735;\n  color: #fff;\n  text-align: center;\n  border-radius: 0.4em;\n  padding: 0em 1.6em;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  position: absolute;\n  min-height: 100%;\n  z-index: 1;\n  font-size: 0.7em;\n  font-family: LatoBlack;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  cursor: default;\n}\n.hint-control .hint span {\n  margin: auto;\n}\n.hint-control .hint .hint__arrow {\n  position: absolute;\n  border-width: 0.3em;\n  border-style: solid;\n}\n.hint-control .hint_left {\n  top: 0%;\n  right: calc(100% + 1em);\n}\n.hint-control .hint_left .hint__arrow {\n  border-color: transparent transparent transparent #e75735;\n  top: 50%;\n  left: 100%;\n  margin-top: -0.3em;\n}\n.hint-control .hint_right {\n  top: 0%;\n  left: calc(100% + 0.6em);\n}\n.hint-control .hint_right .hint__arrow {\n  border-color: transparent #e75735 transparent transparent;\n  top: 50%;\n  right: 100%;\n  margin-top: -0.3em;\n}\n", ""]);
 
 // exports
 
@@ -28578,7 +28636,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(39) + ");\n}\n.toggle {\n  position: relative;\n  width: 7em;\n  height: 3em;\n  border-radius: 3em;\n  cursor: pointer;\n  transition: all 0.5s ease;\n}\n.toggle .toggle__circle {\n  background-color: #fff;\n  position: absolute;\n  top: 0.4em;\n  width: 2.2em;\n  height: 2.2em;\n  border-radius: 100%;\n}\n.toggle_on {\n  text-align: left;\n}\n.toggle_on .toggle__circle {\n  left: auto;\n  right: 5%;\n}\n.toggle_on:after {\n  content: \"on\" !important;\n  display: block;\n  position: absolute;\n  left: 0.5em;\n  top: 0.35em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 1.5em;\n}\n.toggle_off {\n  background-color: #e5e5e5 !important;\n  text-align: right;\n}\n.toggle_off .toggle__circle {\n  left: 5% !important;\n}\n.toggle_off:after {\n  content: \"off\" !important;\n  display: block;\n  position: absolute;\n  right: 0.5em !important;\n  top: 0.35em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 1.5em;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(39) + ");\n}\n.toggle {\n  position: relative;\n  display: block;\n  width: 3.5em;\n  height: 1.5em;\n  border-radius: 1.5em;\n  cursor: pointer;\n  transition: background 0.5s ease;\n}\n.toggle .toggle__circle {\n  background-color: #fff;\n  position: absolute;\n  top: 0.2em;\n  width: 1.1em;\n  height: 1.1em;\n  border-radius: 100%;\n}\n.toggle_on {\n  text-align: left;\n}\n.toggle_on .toggle__circle {\n  left: auto;\n  right: 5%;\n}\n.toggle_on:after {\n  content: \"on\" !important;\n  display: block;\n  position: absolute;\n  left: 0.5em;\n  top: 0.35em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 0.75em;\n}\n.toggle_off {\n  background-color: #e5e5e5 !important;\n  text-align: right;\n}\n.toggle_off .toggle__circle {\n  left: 5% !important;\n}\n.toggle_off:after {\n  content: \"off\" !important;\n  display: block;\n  position: absolute;\n  right: 0.5em !important;\n  top: 0.35em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 0.75em;\n}\n", ""]);
 
 // exports
 
@@ -28606,21 +28664,33 @@ $(function () {
 
     $(".tick-box").click(function () {
 
-        var svg = $(this).find("svg");
-
-        if ($(this).data('checked') != 'true') {
-            svg.children("circle").attr('fill', $(this).data('background-color'));
-            svg.children("polyline").attr('stroke', $(this).data('arrow-color'));
-            $(this).data('checked', 'true');
-        } else {
-            svg.children("circle").attr('fill', '#e5e5e5');
-            svg.children("polyline").attr('stroke', '#c0c0c0');
-            $(this).data('checked', 'false');
-        }
+        $(this).toggleClass("tick-box_off");
     }).each(function () {
+
+        $(this).toggleClass("tick-box_off");
 
         if ($(this).attr('checked')) $(this).click();
     });
+
+    //       $(".tick-box").click( function(){
+    //        
+    //           var svg = $(this).find("svg");
+    //         
+    //        if( $(this).data('checked') != 'true' )
+    //            {
+    //                svg.children("circle").attr('fill', $(this).data('background-color'))
+    //                svg.children("polyline").attr('stroke', '')
+    //                $(this).data('checked','true');
+    //            }
+    //        else
+    //            {
+    //                svg.children("circle").attr('fill', '#e5e5e5')
+    //                svg.children("polyline").attr('stroke', '#c0c0c0')
+    //                $(this).data('checked','false');
+    //            }
+}).each(function () {
+
+    if ($(this).attr('checked')) $(this).click();
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -28664,7 +28734,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".tick-box {\n  cursor: pointer;\n}\n.tick-box .tick-box__inner {\n  padding-top: 100%;\n  position: relative;\n}\n.tick-box .tick-box__inner .tick-box-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n", ""]);
+exports.push([module.i, ".tick-box {\n  cursor: pointer;\n  width: 1.5em;\n}\n.tick-box .tick-box__inner {\n  padding-top: 100%;\n  position: relative;\n  width: 100%;\n}\n.tick-box .tick-box__inner .tick-box-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.tick-box .tick-box__inner .tick-box-svg polyline {\n  stroke: #fff;\n}\n.tick-box.tick-box_off circle {\n  fill: #e5e5e5 !important;\n}\n.tick-box.tick-box_off polyline {\n  stroke: #c0c0c0 !important;\n}\n", ""]);
 
 // exports
 
@@ -28773,7 +28843,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(46) + ");\n}\n.dropdown__inner {\n  position: relative;\n  float: left;\n  width: 100%;\n  font-family: SourceSansProRegular;\n  font-size: 1.6em;\n}\n.dropdown__inner select {\n  display: none;\n}\n.dropdown__inner .dropdown__icon {\n  position: absolute;\n  top: 0;\n  right: 0;\n  height: 100%;\n  width: 2.5em;\n  border-bottom-right-radius: 0.2em;\n  border-top-right-radius: 0.2em;\n  background-color: #4eb7a8;\n}\n.dropdown__inner .dropdown__icon svg {\n  height: 100%;\n  width: 100%;\n  transition: all 275ms;\n}\n.dropdown__inner .dropdown__selected-option {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none;\n  border-radius: 0.2em;\n  text-align: left;\n  cursor: pointer;\n  padding: 0.4em 1em;\n}\n.dropdown__inner .dropdown__ul {\n  position: relative;\n  float: left;\n  width: 100%;\n}\n.dropdown__inner .dropdown__ul ul {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: 999;\n  overflow: hidden;\n  height: 0px;\n  width: 100%;\n  background-color: #e5e5e5;\n  padding: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n  border-radius: 0.2em;\n}\n.dropdown__inner .dropdown__ul ul li {\n  position: relative;\n  float: left;\n  width: 96%;\n  border-top: 0.05em solid #acacac;\n  color: #888;\n  list-style-type: none;\n  padding: 0.4em 1em;\n  margin: 0px;\n  transition: all 0.15s ease-in-out;\n  display: block;\n  cursor: pointer;\n}\n.dropdown__inner .dropdown__ul ul li:hover {\n  background-color: #c3c3c3;\n}\n.dropdown_open .dropdown__inner ul {\n  height: auto !important;\n}\n.dropdown_open .dropdown__inner .dropdown__icon svg {\n  -webkit-transform: rotate(180deg) !important;\n          transform: rotate(180deg) !important;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(46) + ");\n}\n.dropdown__inner {\n  position: relative;\n  width: 100%;\n  font-family: SourceSansProRegular;\n}\n.dropdown__inner select {\n  display: none;\n}\n.dropdown__inner .dropdown__icon {\n  position: absolute;\n  top: 0;\n  right: 0;\n  height: 100%;\n  width: 2.5em;\n  border-bottom-right-radius: 0.2em;\n  border-top-right-radius: 0.2em;\n  background-color: #4eb7a8;\n}\n.dropdown__inner .dropdown__icon svg {\n  height: 100%;\n  width: 100%;\n  transition: all 275ms;\n}\n.dropdown__inner .dropdown__selected-option {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none;\n  border-radius: 0.2em;\n  text-align: left;\n  cursor: pointer;\n  padding: 0.4em 1em;\n}\n.dropdown__inner .dropdown__ul {\n  position: relative;\n  float: left;\n  width: 100%;\n}\n.dropdown__inner .dropdown__ul ul {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: 999;\n  overflow: hidden;\n  height: 0px;\n  width: 100%;\n  background-color: #e5e5e5;\n  padding: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n  border-radius: 0.2em;\n}\n.dropdown__inner .dropdown__ul ul li {\n  position: relative;\n  float: left;\n  width: 96%;\n  border-top: 0.05em solid #acacac;\n  color: #888;\n  list-style-type: none;\n  padding: 0.4em 1em;\n  margin: 0px;\n  transition: all 0.15s ease-in-out;\n  display: block;\n  cursor: pointer;\n}\n.dropdown__inner .dropdown__ul ul li:hover {\n  background-color: #c3c3c3;\n}\n.dropdown_open .dropdown__inner ul {\n  height: auto !important;\n}\n.dropdown_open .dropdown__inner .dropdown__icon svg {\n  -webkit-transform: rotate(180deg) !important;\n          transform: rotate(180deg) !important;\n}\n", ""]);
 
 // exports
 
@@ -28833,7 +28903,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(50), "");
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(52) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(53) + ");\n}\n.profil {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 32.5em;\n  color: #fff;\n}\n.profil .profil__portrait {\n  width: 10.5em;\n  height: 10.5em;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n  border: solid 0.5em #e5e5e5;\n  margin-right: 1em;\n}\n.profil .profil__data {\n  position: relative;\n  background-color: #e5e5e5;\n  margin-top: 0.4em;\n  width: 19.7em;\n  height: 11em;\n  border-radius: 0.8em;\n  padding-top: 1em;\n  text-align: center;\n  box-sizing: border-box;\n}\n.profil .profil__data .profil__data-arrow {\n  position: absolute;\n  border-width: 0.6em;\n  border-style: solid;\n  border-color: transparent #e5e5e5 transparent transparent;\n  top: 50%;\n  right: 100%;\n  margin-top: -0.6em;\n}\n.profil .profil__data p {\n  margin: 0;\n}\n.profil .profil__data .profil__name {\n  font-size: 2.1em;\n  font-family: LatoRegular;\n  margin-bottom: 0.1em;\n}\n.profil .profil__data .profil__profession {\n  font-size: 1.4em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  margin-bottom: 0.9em;\n}\n.profil .profil__data .profil__links {\n  font-size: 3em;\n}\n.profil .profil__data .profil__links a {\n  margin: 0 0.35em;\n  color: #fff;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(52) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(53) + ");\n}\n.profil {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  width: 32.5em;\n  color: #fff;\n}\n.profil .profil__portrait {\n  width: 10.5em;\n  height: 10.5em;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n  border: solid 0.5em #e5e5e5;\n  margin-right: 1em;\n}\n.profil .profil__data {\n  position: relative;\n  background-color: #e5e5e5;\n  margin-top: 0.4em;\n  width: 19.7em;\n  height: 11em;\n  border-radius: 0.8em;\n  padding-top: 1em;\n  text-align: center;\n  box-sizing: border-box;\n}\n.profil .profil__data .profil__data-arrow {\n  position: absolute;\n  border-width: 0.6em;\n  border-style: solid;\n  border-color: transparent #e5e5e5 transparent transparent;\n  top: 50%;\n  right: 100%;\n  margin-top: -0.6em;\n}\n.profil .profil__data p {\n  margin: 0;\n}\n.profil .profil__data .profil__name {\n  font-size: 2.1em;\n  font-family: LatoRegular;\n  margin-bottom: 0.1em;\n}\n.profil .profil__data .profil__profession {\n  font-size: 1.4em;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  margin-bottom: 0.9em;\n}\n.profil .profil__data .profil__links {\n  font-size: 3em;\n}\n.profil .profil__data .profil__links a {\n  margin: 0 0.35em;\n  color: #fff;\n}\n.profil_red .profil__portrait {\n  border-color: #e23402;\n}\n.profil_red .profil__data {\n  background-color: #e23402;\n}\n.profil_red .profil__data .profil__data-arrow {\n  border-color: transparent #e23402 transparent transparent;\n}\n.profil_orange .profil__portrait {\n  border-color: #fa6900;\n}\n.profil_orange .profil__data {\n  background-color: #fa6900;\n}\n.profil_orange .profil__data .profil__data-arrow {\n  border-color: transparent #fa6900 transparent transparent;\n}\n.profil_blue .profil__portrait {\n  border-color: #005bac;\n}\n.profil_blue .profil__data {\n  background-color: #005bac;\n}\n.profil_blue .profil__data .profil__data-arrow {\n  border-color: transparent #005bac transparent transparent;\n}\n.profil_green .profil__data {\n  background-color: #4eb7a8;\n}\n.profil_green .profil__data .profil__data-arrow {\n  border-color: transparent #4eb7a8 transparent transparent;\n}\n.profil_red-name .profil__data .profil__name {\n  color: #e75735;\n}\n.profil_red-name .profil__data .profil__profession {\n  color: #747474;\n}\n.profil_red-name .profil__data .profil__links :nth-child(n) i {\n  color: #747474;\n}\n.profil_red-name .profil__data .profil__links :nth-child(2n) i {\n  color: #e75735;\n}\n.profil_dark-blue .profil__portrait {\n  border-color: #00416a;\n}\n.profil_dark-blue .profil__data {\n  background-color: #00416a;\n}\n.profil_dark-blue .profil__data .profil__data-arrow {\n  border-color: transparent #00416a transparent transparent;\n}\n.profil_dark-blue .profil__data .profil__links :nth-child(2n) i {\n  color: #ff7514;\n}\n", ""]);
 
 // exports
 
@@ -28919,7 +28989,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(57) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(58) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(59) + ");\n}\n.news {\n  box-sizing: border-box;\n  background-position: 50% 0%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  border-radius: 0.3em;\n  overflow: hidden;\n}\n.news .news__inner {\n  background-color: #e75735;\n  margin-left: 33%;\n  padding: 2.7em;\n  padding-bottom: 4em;\n  color: #fff;\n}\n.news .news__inner .news__title {\n  margin: 0;\n  font-family: LatoLight;\n  font-size: 3.2em;\n  line-height: 1em;\n}\n.news .news__inner .news__date {\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  font-size: 1.3em;\n}\n.news .news__inner .news__text {\n  margin-bottom: 0;\n  font-family: LatoRegular;\n  font-size: 1.4em;\n  line-height: 1.2em;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(57) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(58) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(59) + ");\n}\n.news {\n  box-sizing: border-box;\n  background-size: cover;\n  border-radius: 0.3em;\n  overflow: hidden;\n}\n.news .news__inner {\n  background-color: #e75735;\n  margin-left: 33%;\n  padding: 2.7em;\n  padding-bottom: 4em;\n  color: #fff;\n  height: 100%;\n  box-sizing: border-box;\n}\n.news .news__inner .news__title {\n  margin: 0;\n  font-family: LatoLight;\n  font-size: 3.2em;\n  line-height: 1em;\n}\n.news .news__inner .news__date {\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  font-size: 1.3em;\n}\n.news .news__inner .news__text {\n  margin-bottom: 0;\n  font-family: LatoRegular;\n  font-size: 1.4em;\n  line-height: 1.2em;\n}\n.news_red .news__inner {\n  background-color: #e23402;\n}\n.news_orange .news__inner {\n  background-color: #fa6900;\n}\n.news_blue .news__inner {\n  background-color: #005bac;\n}\n", ""]);
 
 // exports
 
@@ -28991,7 +29061,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(63) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(64) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(65) + ");\n}\n.event {\n  box-sizing: border-box;\n  background-position: 50% 0%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  border-radius: 0.3em;\n  overflow: hidden;\n}\n.event .event__inner {\n  background-color: #4eb7a8;\n  margin-left: 33%;\n  padding: 4.2em 2.4em 2.75em;\n  color: #fff;\n}\n.event .event__inner .event__date {\n  margin: 0;\n  margin-bottom: 0.75em;\n  font-family: LatoLight;\n  font-size: 3.6em;\n  line-height: 1em;\n}\n.event .event__inner .event__date span {\n  font-size: 2.2em;\n  margin-right: 0.2em;\n}\n.event .event__inner .event__title {\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  font-size: 1.5em;\n  margin-bottom: 0.2em;\n}\n.event .event__inner .event__text {\n  margin: 0;\n  font-family: LatoRegular;\n  font-size: 1.4em;\n  line-height: 1.2em;\n  margin-bottom: 1.6em;\n}\n.event .event__inner button {\n  margin: auto;\n  display: block;\n  width: 13.5em;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(63) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(64) + ");\n}\n@font-face {\n  font-family: LatoRegular;\n  src: url(" + __webpack_require__(65) + ");\n}\n.event {\n  box-sizing: border-box;\n  background-position: 50% 0%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  border-radius: 0.3em;\n  overflow: hidden;\n}\n.event .event__inner {\n  background-color: #4eb7a8;\n  margin-left: 33%;\n  padding: 4.2em 2.4em 2.75em;\n  height: 100%;\n  color: #fff;\n  position: relative;\n  box-sizing: border-box;\n}\n.event .event__inner .event__date {\n  margin: 0;\n  margin-bottom: 0.75em;\n  font-family: LatoLight;\n  font-size: 3.6em;\n  line-height: 1em;\n}\n.event .event__inner .event__date span {\n  font-size: 2.2em;\n  margin-right: 0.2em;\n}\n.event .event__inner .event__title {\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  font-size: 1.5em;\n  margin-bottom: 0.2em;\n}\n.event .event__inner .event__text {\n  margin: 0;\n  font-family: LatoRegular;\n  font-size: 1.4em;\n  line-height: 1.2em;\n  margin-bottom: 1.6em;\n}\n.event .event__inner .event__button {\n  position: absolute;\n  bottom: 2.75em;\n  width: 70%;\n}\n.event .event__inner .event__button button {\n  margin: auto;\n  display: block;\n}\n.event.event_orange .event__inner {\n  background-color: #fa6900;\n}\n.event.event_orange .event__inner button {\n  background-color: #fff;\n  color: #fa6900;\n  padding: 0.5em;\n  border-bottom: solid 0.3em #bc4f00;\n}\n.event.event_dark-blue .event__inner {\n  background-color: #00416a;\n}\n.event.event_dark-blue .event__inner button {\n  background-color: #fff;\n  color: #00416a;\n  padding: 0.5em;\n  border-bottom: solid 0.3em #003150;\n}\n.event.event_green .event__inner {\n  background-color: #4eb7a8;\n}\n.event.event_green .event__inner button {\n  background-color: #fff;\n  color: #4eb7a8;\n  padding: 0.5em;\n  border-bottom: solid 0.3em #398b7f;\n}\n", ""]);
 
 // exports
 
@@ -29092,7 +29162,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 exports.i(__webpack_require__(69), "");
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(71) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(72) + ");\n}\n.map {\n  position: relative;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n.map .map__body {\n  padding-top: 46%;\n}\n.map .map__footer {\n  position: absolute;\n  width: 100%;\n  height: 25%;\n  bottom: 0;\n  background-color: #e75735;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #fff;\n  padding-left: 4.2%;\n  padding-right: 4.9%;\n  box-sizing: border-box;\n  z-index: 1;\n}\n.map .map__footer .map__footer-title {\n  font-family: LatoLight;\n  font-size: 3.6em;\n}\n.map .map__footer .map__footer-place {\n  width: 25%;\n  font-family: LatoBlack;\n  font-size: 1.6em;\n  text-transform: uppercase;\n}\n.map .map__footer .map__footer-icons {\n  font-size: 3em;\n  width: 11.5%;\n  margin-left: 33%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(71) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(72) + ");\n}\n.map {\n  position: relative;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n.map div[id^=map_canvas] div {\n  overflow: auto;\n}\n.map .map__body {\n  padding-top: 46%;\n}\n.map .map__footer {\n  position: absolute;\n  width: 100%;\n  height: 25%;\n  bottom: 0;\n  background-color: #e75735;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  color: #fff;\n  padding-left: 4.2%;\n  padding-right: 4.9%;\n  box-sizing: border-box;\n  z-index: 1;\n}\n.map .map__footer .map__footer-title {\n  font-family: LatoLight;\n  font-size: 3.6em;\n  line-height: 0.9em;\n}\n.map .map__footer .map__footer-place {\n  width: 25%;\n  font-family: LatoBlack;\n  font-size: 1.6em;\n  text-transform: uppercase;\n}\n.map .map__footer .map__footer-icons {\n  font-size: 3em;\n  width: 11.5%;\n  margin-left: 33%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.map_green .map__footer {\n  background-color: #138808;\n}\n.map_red .map__footer {\n  background-color: #e75735;\n}\n", ""]);
 
 // exports
 
@@ -29626,7 +29696,7 @@ __webpack_require__(74);
 				// Add cells for prev/title/next
 
 				var big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
-
+				calendar.prev('input').val(options.selectedDate.toISOString().slice(0, 10));
 				calendar.append(big_number).append(prevCell).append(titleCell).append(nextCell).append($('<div/>').addClass('cell-container'));
 
 				// Add all the cells to the calendar
@@ -29768,8 +29838,8 @@ __webpack_require__(74);
 											self.hide();
 										}
 									});
-
 									calendar.children('.big_number').text($(this).html());
+									calendar.prev('input').val(clickedData.date.toISOString().slice(0, 10));
 									// Call callback
 									options.onClick(el, $(this), clickedData.date, clickedData.data);
 								});
@@ -29957,8 +30027,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!./glDatePicker.default.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!./glDatePicker.default.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./glDatePicker.default.styl", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./glDatePicker.default.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -29973,10 +30043,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
 // imports
-exports.i(__webpack_require__(76), "@font-face");
+exports.i(__webpack_require__(76), "");
 
 // module
-exports.push([module.i, "@font-face{\n    \n    font-family: LatoLight;\n    src: url(" + __webpack_require__(78) + ");\n}\n\n\n@font-face{\n    \n    font-family: SourceSansProRegular;\n    src: url(" + __webpack_require__(79) + ");\n}\n\n.big_number{\n    \n    width: 100%;\n    text-align: center;\n    background-color: #e75735;\n    font-family: LatoLight;\n    font-size: 10em;\n    color: white;\n    padding-bottom: 0.125em; \n}\n\n\n.calendar__footer{\n    \n    font-family: LatoBlack;\n    font-size: 1.7em;\n    color: #868686;\n    text-transform: uppercase;\n    padding: 1.3em ;\n    background-color: #e5e5e5;\n    cursor: pointer;\n}\n.gldp-default {\n\tposition: absolute;\n\tborder-radius: 0.5em;\n    overflow: hidden;\n}\n\n/* Core style for every cell */\n.gldp-default .core {\n\tbox-sizing: border-box;\n\t-webkit-box-sizing: border-box;\n\t-moz-box-sizing: border-box;\n\tposition: relative;\n\tfloat: left;\n\tpadding: 0;\n\tmargin: 0;\n\n\ttext-align: center;\n\tcursor: pointer;\n\tcolor: #868686;\n\tbackground: #f2f2f2;\n    font-family: SourceSansProRegular;\n}\n\n.cell-container:after{\n    \n    content: '';\n    display: block;\n    clear: both;\n}\n.gldp-default .core:nth-child(7n+1) {\n    \n border-left: none !important;   \n}\n\n.gldp-default .core:nth-child(7n) {\n    \n border-right: none !important;   \n}\n\n/* Cell border */\n.gldp-default .border {\n\tborder-style: solid;\n\tborder-width: 0;\n\tborder-color: white;\n}\n\n/* Month/Year text and select */\n.gldp-default .monyear,\n.gldp-default .monyear select {\n\t\n\t\n    font-family: LatoLight;\n    font-size: 3em;\n    background-color: #d54c2c ;\n    color: white;\n  \n}\n\n/* Month/Year text */\n.gldp-default .monyear i{\n    margin-top: 0.27em;;\n}\n/* Prev/Next arrows */\n.gldp-default .prev-arrow,\n.gldp-default .next-arrow {\n\tcolor: white;\n\t\n}\n\n.gldp-default .prev-arrow:active,\n.gldp-default .next-arrow:active {\n\tcolor: #9d9d9d;\n   \n}\n\n.gldp-default .prev-arrow-off,\n.gldp-default .next-arrow-off {\n\tcolor: #222;\n\topacity: 0.15;\n}\n\n/* Days of the week */\n.gldp-default .dow {\n\tcolor: #fff;\n\tfont-family: LatoBlack;\n    text-transform: uppercase;\n\tbackground: #e75735;\n\tpadding: 1.1em 0; \n}\n\n/* Weekdays */\n.gldp-default .mon,\n.gldp-default .tue,\n.gldp-default .wed,\n.gldp-default .thu,\n.gldp-default .fri,\n.gldp-default .sat,\n.gldp-default .sun{\n\tfont-size: 2.1em;\n}\n\n\n\n/* Selectable days that are outside of current month being shown */\n.gldp-default .outday {\n\tcolor: white !important;\n}\n\n\n\n\n\n/* Currently selected day */\n.gldp-default .selected {\n\tcolor: #fff;\n\t\n\t\n\tbackground: #d54c2c;\nfont-size: 2.1em;\n}\n\n/* Today */\n.gldp-default .today {\n\tcolor: #fff;\n\t\n\tbackground: #88bfe8;\nfont-size: 2.1em;\n}\n\n/* Special */\n\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(78) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(79) + ");\n}\n@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(80) + ");\n}\n.big_number {\n  width: 100%;\n  text-align: center;\n  background-color: #e75735;\n  font-family: LatoLight;\n  font-size: 10em;\n  color: #fff;\n  padding-bottom: 0.125em;\n}\n.calendar__footer {\n  font-family: LatoBlack;\n  font-size: 1.7em;\n  color: #868686;\n  text-transform: uppercase;\n  padding: 1.3em;\n  background-color: #e5e5e5;\n  cursor: pointer;\n}\n.gldp-default {\n  position: absolute;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n/* Core style for every cell */\n.gldp-default .core {\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  position: relative;\n  float: left;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  cursor: pointer;\n  color: #868686;\n  background: #f2f2f2;\n  font-family: SourceSansProRegular;\n}\n.cell-container:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n.gldp-default .core:nth-child(7n+1) {\n  border-left: none !important;\n}\n.gldp-default .core:nth-child(7n) {\n  border-right: none !important;\n}\n/* Cell border */\n.gldp-default .border {\n  border-style: solid;\n  border-width: 0;\n  border-color: #fff;\n}\n/* Month/Year text and select */\n.gldp-default .monyear {\n  font-family: LatoLight;\n  font-size: 3em;\n  background-color: #d54c2c;\n  color: #fff;\n}\n/* Month/Year text */\n.gldp-default .monyear i {\n  margin-top: 0.27em;\n}\n/* Prev/Next arrows */\n.gldp-default .prev-arrow,\n.gldp-default .next-arrow {\n  color: #fff;\n}\n.gldp-default .prev-arrow:active,\n.gldp-default .next-arrow:active {\n  color: #9d9d9d;\n}\n.gldp-default .prev-arrow-off,\n.gldp-default .next-arrow-off {\n  color: #222;\n  opacity: 0.15;\n}\n/* Days of the week */\n.gldp-default .dow {\n  color: #fff;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  background: #e75735;\n  padding: 1.1em 0;\n}\n/* Weekdays */\n.gldp-default .mon,\n.gldp-default .tue,\n.gldp-default .wed,\n.gldp-default .thu,\n.gldp-default .fri,\n.gldp-default .sat,\n.gldp-default .sun {\n  font-size: 2.1em;\n}\n/* Selectable days that are outside of current month being shown */\n.gldp-default .outday {\n  color: #fff !important;\n}\n/* Currently selected day */\n.gldp-default .selected {\n  color: #fff;\n  background: #d54c2c;\n  font-size: 2.1em;\n}\n/* Today */\n.gldp-default .today {\n  color: #fff;\n  background: #88bfe8;\n  font-size: 2.1em;\n}\n.gldp_dark-blue .big_number,\n.gldp_dark-blue .dow,\n.gldp_dark-blue .selected {\n  background-color: #00416a;\n}\n.gldp_dark-blue .monyear {\n  background-color: #003455;\n}\n.gldp_purple .big_number,\n.gldp_purple .dow,\n.gldp_purple .selected {\n  background-color: #8b00ff;\n}\n.gldp_purple .monyear {\n  background-color: #6f00cc;\n}\n.gldp_red .big_number,\n.gldp_red .dow,\n.gldp_red .selected {\n  background-color: #e75735;\n}\n.gldp_red .monyear {\n  background-color: #cb3a18;\n}\n", ""]);
 
 // exports
 
@@ -30005,31 +30075,37 @@ module.exports = __webpack_require__.p + "fontawesome-webfont.ttf";
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "Lato-Light.ttf";
+module.exports = __webpack_require__.p + "Lato-Black.ttf";
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "SourceSansProRegular.ttf";
+module.exports = __webpack_require__.p + "Lato-Light.ttf";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-__webpack_require__(81);
+module.exports = __webpack_require__.p + "SourceSansProRegular.ttf";
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+__webpack_require__(82);
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(82);
+var content = __webpack_require__(83);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -30054,7 +30130,7 @@ if(false) {
 }
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -30062,31 +30138,31 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBold;\n  src: url(" + __webpack_require__(83) + ");\n}\n@font-face {\n  font-family: SourceSansProLight;\n  src: url(" + __webpack_require__(84) + ");\n}\n.messaging {\n  background-color: #f2f2f2;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n.messaging .messaging__header {\n  z-index: 1;\n  padding-top: 40%;\n  background-color: #4eb7a8;\n  position: relative;\n}\n.messaging .messaging__header .messaging__header-title {\n  position: absolute;\n  width: 100%;\n  top: 15%;\n  margin: 0;\n  text-align: center;\n  font-family: SourceSansProLight;\n  font-size: 4em;\n  color: #fff;\n}\n.messaging .messaging__header .messaging__header-bottom {\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  height: 30%;\n  background-color: #46ab9d;\n}\n.messaging .messagin__portrait {\n  position: relative;\n  width: 29%;\n  padding-top: 29%;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n  border: solid 0.5em #e5e5e5;\n  margin: -16% auto;\n  z-index: 10;\n}\n.messaging .messaging__body {\n  width: 84%;\n  margin: 8% auto;\n}\n.messaging .messaging__body .messaging__body-icons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 6%;\n}\n.messaging .messaging__body .messaging__body-icons svg {\n  width: 3em;\n  height: 3em;\n}\n.messaging .messaging__body .messaging__body-icons i {\n  font-size: 2.5em;\n  color: #8e8d8d;\n}\n.messaging .messaging__body .messaging__body-request {\n  font-family: LatoBold;\n  font-size: 1.6em;\n  color: #868686;\n  background-color: #fff;\n  border-radius: 0.3em;\n  padding: 1.3em 1.7em 1.5em 1.4em;\n  margin-bottom: 8%;\n}\n.messaging .messaging__body .messaging__body-response {\n  width: 100%;\n  font-family: LatoBold;\n  font-size: 1.6em;\n  color: #777;\n  background-color: #e5e5e5;\n  border: solid 0.2em #fff;\n  border-radius: 0.3em;\n  padding: 1em 1.7em 0.5em 1.4em;\n  resize: none;\n  margin-bottom: 5%;\n}\n.messaging .messaging__body .ripple-button {\n  width: 100%;\n  font-size: 1.5em;\n  margin-bottom: 2.5%;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBold;\n  src: url(" + __webpack_require__(84) + ");\n}\n@font-face {\n  font-family: SourceSansProLight;\n  src: url(" + __webpack_require__(85) + ");\n}\n.messaging {\n  background-color: #f2f2f2;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n.messaging .messaging__header {\n  z-index: 1;\n  padding-top: 40%;\n  background-color: #4eb7a8;\n  position: relative;\n}\n.messaging .messaging__header .messaging__header-title {\n  position: absolute;\n  width: 100%;\n  top: 15%;\n  margin: 0;\n  text-align: center;\n  font-family: SourceSansProLight;\n  font-size: 4em;\n  color: #fff;\n}\n.messaging .messaging__header .messaging__header-bottom {\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  height: 30%;\n  background-color: #46ab9d;\n}\n.messaging .messagin__portrait {\n  position: relative;\n  width: 29%;\n  padding-top: 29%;\n  background-position: center;\n  background-size: cover;\n  border-radius: 100%;\n  border: solid 0.5em #e5e5e5;\n  margin: -16% auto;\n  z-index: 10;\n}\n.messaging .messaging__body {\n  width: 84%;\n  margin: 8% auto;\n}\n.messaging .messaging__body .messaging__body-icons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 6%;\n}\n.messaging .messaging__body .messaging__body-icons svg {\n  width: 3em;\n  height: 3em;\n}\n.messaging .messaging__body .messaging__body-icons i {\n  font-size: 2.5em;\n  color: #8e8d8d;\n}\n.messaging .messaging__body .messaging__body-request {\n  font-family: LatoBold;\n  font-size: 1.6em;\n  color: #868686;\n  background-color: #fff;\n  border-radius: 0.3em;\n  padding: 1.3em 1.7em 1.5em 1.4em;\n  margin-bottom: 8%;\n}\n.messaging .messaging__body .messaging__body-response {\n  width: 100%;\n  font-family: LatoBold;\n  font-size: 1.6em;\n  color: #777;\n  background-color: #e5e5e5;\n  border: solid 0.2em #fff;\n  border-radius: 0.3em;\n  padding: 1em 1.7em 0.5em 1.4em;\n  resize: none;\n  margin-bottom: 5%;\n}\n.messaging .messaging__body .ripple-button {\n  width: 100%;\n  font-size: 1.5em;\n  margin-bottom: 2.5%;\n}\n.messaging_orange .messaging__header {\n  background-color: #ff6800;\n}\n.messaging_orange .messaging__header .messaging__header-bottom {\n  background-color: #d95800;\n}\n.messaging_orange .ripple-button {\n  background-color: #ff6800;\n  border-bottom: solid 0.25em #bf4e00;\n}\n.messaging_green .messaging__header {\n  background-color: #138808;\n}\n.messaging_green .messaging__header .messaging__header-bottom {\n  background-color: #107407;\n}\n.messaging_green .ripple-button {\n  background-color: #138808;\n  border-bottom: solid 0.25em #0e6606;\n}\n.messaging_default .messaging__header {\n  background-color: #4eb7a8;\n}\n.messaging_default .messaging__header .messaging__header-bottom {\n  background-color: #409e90;\n}\n.messaging_default .ripple-button {\n  background-color: #4eb7a8;\n  border-bottom: solid 0.25em #398b7f;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "Lato-Bold.ttf";
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "SourceSansProLight.ttf";
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(86);
+__webpack_require__(87);
 
 $(function () {
 
@@ -30094,7 +30170,7 @@ $(function () {
 
         var player = this.children[0];
         var btnPlayPause = $(this).find('.player__controls-play').first();
-        var progressBar = $(this).find('#progress-bar').first();
+        var progressBar = $(this).find('.player__controls-progress').first();
         var expand = $(this).find('.player__controls-fullscreen').first();
 
         expand.click(function () {
@@ -30147,7 +30223,7 @@ $(function () {
 
             var percentage = Math.floor(player.currentTime / player.duration * 100);
 
-            progressBar[0].value = percentage;console.log(percentage);
+            progressBar[0].value = percentage;
         }
 
         function toggleFullScreen() {
@@ -30177,13 +30253,13 @@ $(function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(87);
+var content = __webpack_require__(88);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -30208,7 +30284,7 @@ if(false) {
 }
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -30216,7 +30292,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".player {\n  border-radius: 0.5em;\n  overflow: hidden;\n  position: relative;\n}\n.player video {\n  width: 100%;\n  background: #000;\n}\n.player video[poster] {\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.player .player__controls {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background-color: rgba(0,0,0,0.6);\n  padding-top: 8%;\n}\n.player .player__controls .player__controls-inner {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  left: 0;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.player .player__controls .player__controls-inner .player__controls-play {\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-play svg {\n  height: 30%;\n  width: 30%;\n  margin: 35%;\n}\n.player .player__controls .player__controls-inner .player__controls-play .svg-pause {\n  display: none;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen {\n  background-color: #e75735;\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen svg {\n  height: 50%;\n  width: 50%;\n  margin: 25%;\n}\n.player .player__controls .player__controls-inner progress {\n  color: #e75735;\n  margin-left: -5%;\n  width: 80%;\n  height: 0.5em;\n  border: none;\n  overflow: hidden;\n  background: #e5e5e5;\n  border-radius: 0.9em;\n  vertical-align: middle;\n}\n.player .player__controls .player__controls-inner progress::-moz-progress-bar {\n  color: #e75735;\n  background: #e5e5e5;\n}\n.player .player__controls .player__controls-inner progress[value]::-webkit-progress-bar {\n  background-color: #e5e5e5;\n  border-radius: 0.9em;\n}\n.player .player__controls .player__controls-inner progress[value]::-webkit-progress-value {\n  background-color: #e75735;\n}\n", ""]);
+exports.push([module.i, ".player {\n  border-radius: 0.5em;\n  overflow: hidden;\n  position: relative;\n}\n.player video {\n  width: 100%;\n  background: #000;\n}\n.player video[poster] {\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.player .player__controls {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background-color: rgba(0,0,0,0.6);\n  padding-top: 8%;\n}\n.player .player__controls .player__controls-inner {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  left: 0;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.player .player__controls .player__controls-inner .player__controls-play {\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-play svg {\n  height: 30%;\n  width: 30%;\n  margin: 35%;\n}\n.player .player__controls .player__controls-inner .player__controls-play .svg-pause {\n  display: none;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen {\n  background-color: #e75735;\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen svg {\n  height: 50%;\n  width: 50%;\n  margin: 25%;\n}\n.player .player__controls .player__controls-inner .player__controls-progress {\n  color: #e75735;\n  margin-left: -5%;\n  width: 80%;\n  height: 0.5em;\n  border: none;\n  overflow: hidden;\n  background: #e5e5e5;\n  border-radius: 0.9em;\n  vertical-align: middle;\n}\n.player .player__controls .player__controls-inner .player__controls-progress::-moz-progress-bar {\n  color: #e75735;\n  background: #e5e5e5;\n}\n.player .player__controls .player__controls-inner .player__controls-progress[value]::-webkit-progress-bar {\n  background-color: #e5e5e5;\n  border-radius: 0.9em;\n}\n.player .player__controls .player__controls-inner .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e75735;\n}\n.player.player_red .player__controls-fullscreen {\n  background-color: #e23402 !important;\n}\n.player.player_red .player__controls-progress {\n  background-color: #e23402 !important;\n}\n.player.player_red .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e23402 !important;\n}\n.player.player_default .player__controls-fullscreen {\n  background-color: #e75735 !important;\n}\n.player.player_default .player__controls-progress {\n  background-color: #e75735 !important;\n}\n.player.player_default .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e75735 !important;\n}\n", ""]);
 
 // exports
 

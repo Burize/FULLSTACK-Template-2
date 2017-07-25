@@ -70,7 +70,7 @@
                     }
 
 
-                    progress {
+                    .player__controls-progress {
                       color: #e75735;
                       margin-left -5%;
                       width: 80%;
@@ -81,20 +81,56 @@
                       border-radius: 0.9em;
                       vertical-align: middle;
                     }
-                    progress::-moz-progress-bar { 
+                    .player__controls-progress::-moz-progress-bar { 
                       color: #e75735;
                       background:#e5e5e5;; 
                     }
 
-                    progress[value]::-webkit-progress-bar {
+                    .player__controls-progress[value]::-webkit-progress-bar {
                       background-color: #e5e5e5;
                       border-radius: 0.9em;
                       
                     }
 
-                    progress[value]::-webkit-progress-value {
+                    .player__controls-progress[value]::-webkit-progress-value {
                       background-color: #e75735;
                     }
          }
     }
+    
+    
+    
+        &.player_red{
+                    
+                    .player__controls-fullscreen {
+                        
+                        background-color #e23402 !important;
+                    }
+                    
+                    .player__controls-progress{
+                        
+                        background-color: #e23402 !important;;
+                    }
+                    
+                    .player__controls-progress[value]::-webkit-progress-value {
+                      background-color: #e23402 !important;;
+                    }
+                }
+                
+       &.player_default{
+                    
+                    .player__controls-fullscreen {
+                        
+                        background-color #e75735 !important;;
+                    }
+                    
+                    .player__controls-progress{
+                        
+                        background-color: #e75735 !important;;
+                    }
+                    
+                    .player__controls-progress[value]::-webkit-progress-value {
+                      background-color: #e75735 !important;;
+                    }
+                }         
  }
