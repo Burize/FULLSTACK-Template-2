@@ -1,19 +1,9 @@
 @import './font-awesome.css'
 
-@font-face{
-    
-    font-family LatoBlack;
-    src url(./Lato-Black.ttf)
-}
-
-@font-face{
-    
-    font-family LatoLight;
-    src url(./Lato-Light.ttf)
-}
-
 .map{
 
+    font-family Arial, sans-serif;
+     
     div[id^=map_canvas] div {overflow: auto;}
     
         position relative;
@@ -43,7 +33,6 @@
                 
                 .map__footer-title{
                     
-                     font-family LatoLight;
                      font-size 3.6em;
                      line-height 0.9em;
                 }
@@ -51,7 +40,6 @@
                 .map__footer-place{
                     
                     width 25%;
-                    font-family LatoBlack;
                     font-size 1.6em;
                     text-transform uppercase;
                 }
@@ -70,20 +58,3 @@
                 
     }
     
-
-    
-.map_green{
-    
-    .map__footer{
-        
-        background-color #138808 ;
-    }
-}
-
-.map_red{
-    
-    .map__footer{
-        
-        background-color #e75735 ;
-    }
-}

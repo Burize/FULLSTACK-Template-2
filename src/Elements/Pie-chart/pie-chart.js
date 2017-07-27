@@ -61,16 +61,16 @@ import "./pie-chart.styl";
 
     $('.pie-chart').each(function () {
         
-        var renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
+        let renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
 
     
-        var Value = $(this).data('percent');
+        let value = $(this).data('percent');
           
-       $(this).children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',$(this).outerWidth()/2.4 ).html(Value);
+       $(this).children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',$(this).outerWidth()/2.4 ).html(value);
           
         renderer.draw();
             
-        var _this = $(this);
+        let _this = $(this);
         $(window).resize(function(){
             
             _this.children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',_this.outerWidth()/2.4 )

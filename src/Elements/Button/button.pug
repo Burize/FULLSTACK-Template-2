@@ -1,2 +1,2 @@
-mixin ripple-button( text, theme)
-    button&attributes(attributes)( class="ripple-button_"+theme).ripple-button= text
+mixin ripple-button( options)
+    button&attributes(attributes)( class= options.theme ? "ripple-button_"+options.theme : "").ripple-button= options.text

@@ -1,8 +1,8 @@
-mixin tick-box( name, background_color, checked)
-    label(data-background-color!=background_color   checked!=checked)&attributes(attributes).tick-box
-        input(type="checkbox" style="display: none" name!= name)
+mixin tick-box( options)
+    label( checked!=options.checked)&attributes(attributes).tick-box
+        input(type="checkbox" style="display: none" name!= options.name)
         div.tick-box__inner
             svg( viewbox=" 0 0 100 100").tick-box-svg
-                circle( cx="50%" cy="50%" r="46%" style=" fill: "+background_color+";" )
+                circle( cx="50%" cy="50%" r="46%" fill!= options.color )
                 polyline( points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%" )
                 

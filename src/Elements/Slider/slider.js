@@ -6,43 +6,39 @@ $(function(){
     
     $(".slider").each(function(index, _slider){
     
-        var slider = $(_slider).children(".slider__inner").children("svg");
-         var thumbElem = slider.children("circle");
+        let slider = $(_slider).children(".slider__inner").children("svg");
+        let thumbElem = slider.children("circle");
+        let hint = $(_slider).children(".slider-hint");
         
-         thumbElem.mousedown( function(e) {
-      
-        thumbElem.attr("cx");
+        thumbElem.on('mousedown.slider', function(e) {
       
 
-      var sliderleft = slider.offset().left ;
+            let sliderleft = slider.offset().left ;
         
-      $(document).mousemove( function(e) {
-       
-        var newLeft = (e.pageX  - sliderleft) * 100.0 / slider.outerWidth() ;
-      
-         
-          
-        if (newLeft < 5) 
-          newLeft = 5;
         
-     
-        if (newLeft > 95.1) 
-          newLeft = 95.1;
+            $(document).on( 'mousemove.slider',function(e) {
 
-    
-        thumbElem.attr('cx', newLeft + '%'); 
-          
-         $(_slider).children(".slider-hint").css("left",  newLeft - 6 + '%').children("span").text( Math.round(newLeft * 1.099999 ) -5);
-          
-      })
+                let newLeft = (e.pageX  - sliderleft) * 100.0 / slider.outerWidth() ;
 
-      $(document).mouseup( function() {
-        $(document).unbind('mousemove')
-        $(document).unbind('mouseup')
-      });
+                if (newLeft < 5) 
+                  newLeft = 5;
+
+                if (newLeft > 95.1) 
+                  newLeft = 95.1;
+
+                thumbElem.attr('cx', newLeft + '%'); 
+
+                hint.css("left",  newLeft - 6 + '%').children("span").text( Math.round(newLeft * 1.099999 ) -5);
+
+            }) 
+
+            $(document).on('mouseup.slider', function() {
+              $(document).off('mousemove.slider')
+              $(document).off('mouseup.slider')
+            });
 
       return false; 
-    });
+        });
 
     });
 

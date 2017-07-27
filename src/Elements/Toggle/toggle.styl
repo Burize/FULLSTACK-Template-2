@@ -1,9 +1,4 @@
-@font-face{
-    
-    font-family LatoBlack;
-    src url("./Lato-Black.ttf");
-}
- .toggle{
+.toggle{
                         
         position relative;
         display block;
@@ -12,6 +7,7 @@
         border-radius 1.5em;
         cursor pointer;
         transition background 0.5s ease;
+        font-family Arial, sans-serif;
         
         .toggle__circle{
             
@@ -31,7 +27,7 @@
         
         .toggle__circle{
             left auto;
-             right 5%; 
+            right 5%; 
         }
      &:after{
             
@@ -39,11 +35,10 @@
             display block;
             position absolute;
             left 0.5em ; 
-            top 0.35em;
-            font-family LatoBlack;
-             text-transform uppercase;
-             color white;
-              font-size 0.75em;
+            top 0.42em;
+            text-transform uppercase;
+            color white;
+            font-size 0.75em;
         }
     }
 
@@ -60,13 +55,6 @@
            &:after{
             
             content "off" !important;
-            display block;
-            position absolute;
             right 0.5em !important;
-            top 0.35em;
-            font-family LatoBlack;
-             text-transform uppercase;
-             color white;
-              font-size 0.75em;
         }
   }

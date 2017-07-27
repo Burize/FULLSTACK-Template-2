@@ -1,16 +1,23 @@
-mixin Search(name, color, found)
-    if(found=="false")
-        div&attributes(attributes).message-form__input-search.notFound
-            input(type="search" placeholder="Search").message-form__form-control
-            svg(viewbox="0 0 100 100" style="background-color: "+color)
-                circle( cx="43%" cy="47%" r="12%" fill!=color stroke="white" stroke-width="8%")
-                line( x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%")
-    else
-        div&attributes(attributes).message-form__input-search
-            input(type="search" placeholder="Search").message-form__form-control
-            svg(viewbox="0 0 100 100" style="background-color: "+color)
-                circle( cx="43%" cy="47%" r="12%" fill!=color stroke="white" stroke-width="8%")
-                line( x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%")
-mixin HintControl( hintTtype, type, name, placeholder)
-    div(data-hint!=hintTtype).hint-control
-        input(type!=type name!=name placeholder!=placeholder).message-form__form-control.message-form__input-text
+mixin Search(options)
+    div&attributes(attributes)(class= options.notfound ? "notFound" : "").message-form__input-search
+        input(type="search" name!=options.name placeholder!= options.placeholder).message-form__form-control
+        svg(viewbox="0 0 100 100" style= options.color ? "background-color: "+options.color : "")
+            circle( cx="43%" cy="47%" r="12%" fill!=options.color stroke="white" stroke-width="8%")
+            line( x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%")
+mixin HintControl( options )
+    div(data-hint!=options.hint).hint-control
+        input(type!=options.input name!=options.name placeholder!=options.placeholder).message-form__form-control.message-form__input-text
+mixin Dropdown( options )
+    div&attributes(attributes).dropdown
+        select( name!=options.name)
+            each option in options.options
+                option(value!=option.value)
+        div.message-form__form-control.message-form__dropdown
+            !=options.placeholder
+            div.dropdown__icon(style= options.color ? "background-color: " + options.color : "")
+                svg( viewBox = '0, 0, 100, 100')
+                    polyline( points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%")
+        div.dropdown__ul
+            ul
+                each option in options.options
+                    li( value!=option.value)!= option.text

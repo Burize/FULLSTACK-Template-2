@@ -9,8 +9,7 @@ var d3 = require('d3');
 		this.self = self;
 		this.width = $(this.self).outerWidth();
         this.linewidth =  linewidth;
-         this.data = pies
-        var radius = this.width / 2;
+        this.data = pies
 
 		this.svg = d3.select(this.self)
 			.append("svg")
@@ -33,7 +32,7 @@ var d3 = require('d3');
 	}
 
 	Display(){
-		var radius = $(this.self).outerWidth() / 2;
+		let radius = $(this.self).outerWidth() / 2;
 
 		$(this.self).children('svg')
 			.attr("width", radius * 2)
@@ -73,7 +72,7 @@ var d3 = require('d3');
          
          $(window).resize( function(){
                 
-                $donutpie.Display.call( $donutpie);
+                $donutpie.Display();
             });
         });		
 	

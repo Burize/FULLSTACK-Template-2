@@ -1,9 +1,9 @@
-mixin Location(title, place, lat, lng, marker_src, theme)
-    div&attributes(attributes)(data-lat!=lat data-lng!=lng data-marker!=marker_src class="map_"+theme).map
+mixin Location( options )
+    div&attributes(attributes)(data-lat!=options.lat data-lng!=options.lng data-marker!=options.marker).map
         div.map__body
-        div.map__footer
-            div.map__footer-title!=title
-            div.map__footer-place!=place
+        div( style= options.color ? "background-color: "+ options.color : "").map__footer
+            div.map__footer-title!=options.title
+            div.map__footer-place!=options.address
             div.map__footer-icons
                 i(aria-hidden='true').fa.fa-crosshairs
                 i(aria-hidden='true').fa.fa-map-marker

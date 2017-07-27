@@ -1,10 +1,10 @@
-mixin Event( day, month, title, text, src, button_text ,theme)
-    section&attributes(attributes)(style="background-image: url("+src+")" class="event_"+theme).event
+mixin Event( options )
+    section&attributes(attributes)(style="background-image: url("+options.fon+")" class= options.theme ? "event_"+options.theme : "").event
         div.event__inner
             p.event__date  
-                span!= day 
-                | Aug
-            p.event__title!= title 
-            p.event__text!= text
+                span!= options.day 
+                != options.month
+            p.event__title!= options.title 
+            p.event__text!= options.text
             div.event__button
-                +ripple-button(button_text)
+                +ripple-button({text: options.button})

@@ -1,7 +1,7 @@
-mixin Video(poster, sources, theme)    
-    div.player&attributes(attributes)(class="player_"+theme)
-        video( muted poster!=poster)
-            each _source in sources
+mixin Video(options)   
+    div.player&attributes(attributes)( class= options.theme ? "player_"+options.theme : "")
+        video( muted poster!= options.poster)
+            each _source in options.sources
                 source( src!=_source)
         div.player__controls
             div.player__controls-inner

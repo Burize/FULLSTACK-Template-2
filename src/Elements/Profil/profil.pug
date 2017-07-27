@@ -1,11 +1,11 @@
-mixin Profil(portrait_src, name, profession, links, theme)
-    section&attributes(attributes).profil(class="profil_"+theme)
-        div(style="background-image: url("+portrait_src+");").profil__portrait
+mixin Profil( options)
+    section&attributes(attributes).profil(class= options.theme ? "profil_"+options.theme : "")
+        div(style="background-image: url("+options.photo+");").profil__portrait
         div.profil__data
             div.profil__data-arrow
-            p.profil__name!=name
-            p.profil__profession!= profession
+            p.profil__name!= options.name
+            p.profil__profession!= options.profession
             div.profil__links
-                each link in links
-                    a(href!=link.href)
+                each link in options.links
+                    a(href!=link.href target="_blank" rel="noopener noreferrer")
                         i(class="fa fa-"+link.icon)
