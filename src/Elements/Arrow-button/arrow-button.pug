@@ -1,5 +1,5 @@
-mixin arrow-button(angle, theme)
-    div&attributes(attributes).arrow-button(class="arrow-button_"+theme  style="transform: rotate("+angle+"deg);")
+mixin arrow-button(options)
+    div&attributes(attributes).arrow-button(class= options.theme ? "arrow-button_"+options.theme : "" class= options.disabled ? "arrow-button_disabled" : "" style= options.angle ? "transform: rotate("+options.angle+"deg);" : "")
         div.arrow-button__inner
             svg( viewbox=" 0 0 100 100").arrow-button-svg
                 circle( cx="50%" cy="50%" r="46%" s stroke-width="5%" )

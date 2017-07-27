@@ -1,34 +1,41 @@
 <!DOCTYPE !html>
 <html>
-  <head></head>
-  <meta charset="utf-8"/>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&amp;libraries=places&amp;language=ru"></script>
-  <title>Webpack app</title>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="Keywords" content="fsd, fullstackdevelopment, template2"/>
+    <meta name="description" content="Template 2"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <link rel="icon" href="favicon.ico" type="image/-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/-icon"/>
+    <link rel="mask-icon" href="favicon.svg" color="#FFC618"/>
+    <title>FullStack-Template2</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&amp;libraries=places&amp;language=ru"></script>
+  </head>
   <body>
     <div class="container">
       <article class="standard-buttons">
-        <h2 class="title">standard buttons</h2>
-        <section class="standard-buttons__row">
-          <button class="ripple-button_simple-blue ripple-button" style="font-size: 18px; width: 16%;">button</button>
-          <button class="ripple-button_simple-blue ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
-          <button class="ripple-button_simple-red ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
-          <button class="ripple-button_simple-red ripple-button" style="font-size: 18px; width: 16%;">button</button>
+        <header class="title">standard buttons</header>
+        <section class="standard-buttons__row"> 
+          <button class="ripple-button_simple-blue ripple-button">button</button>
+          <button class="ripple-button_simple-blue ripple-button">button</button>
+          <button class="ripple-button_simple-red ripple-button">button</button>
+          <button class="ripple-button_simple-red ripple-button">button</button>
         </section>
         <section class="standard-buttons__row">
-          <button class="ripple-button_border-bottom-blue ripple-button" style="font-size: 18px; width: 16%;">button</button>
-          <button class="ripple-button_border-bottom-blue ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
-          <button class="ripple-button_border-bottom-red ripple-button" style="font-size: 25px; width: 25.5%;">button</button>
-          <button class="ripple-button_border-bottom-red ripple-button" style="font-size: 18px; width: 16%;">button</button>
+          <button class="ripple-button_border-bottom-blue ripple-button">button</button>
+          <button class="ripple-button_border-bottom-blue ripple-button">button</button>
+          <button class="ripple-button_border-bottom-red ripple-button">button</button>
+          <button class="ripple-button_border-bottom-red ripple-button">button</button>
         </section>
         <section class="standard-buttons__row">
-          <button class="ripple-button_white-blue ripple-button" style="font-size: 18px; color: #4eb7a8; width: 16%;">button</button>
-          <button class="ripple-button_white-blue ripple-button" style="font-size: 25px; color: #4eb7a8; width: 25.5%;">button</button>
-          <button class="ripple-button_white-red ripple-button" style="font-size: 25px; color: #e75735; width: 25.5%;">button</button>
-          <button class="ripple-button_white-red ripple-button" style="font-size: 18px; color: #e75735; width: 16%;">button</button>
+          <button class="ripple-button_white-blue ripple-button">button</button>
+          <button class="ripple-button_white-blue ripple-button">button</button>
+          <button class="ripple-button_white-red ripple-button">button</button>
+          <button class="ripple-button_white-red ripple-button">button</button>
         </section>
       </article>
       <article class="arrow-buttons">
-        <h2 class="title">arrow buttons</h2>
+        <header class="title">arrow buttons</header>
         <section class="arrow-buttons__row">
           <div class="arrow-button arrow-button_white-blue" style="transform: rotate(180deg);">
             <div class="arrow-button__inner">
@@ -38,7 +45,7 @@
               </svg>
             </div>
           </div>
-          <div class="arrow-button arrow-button_white-blue" style="transform: rotate(0deg);">
+          <div class="arrow-button arrow-button_white-blue">
             <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
@@ -54,7 +61,7 @@
               </svg>
             </div>
           </div>
-          <div class="arrow-button arrow-button_white-blue arrow-button_disabled" style="transform: rotate(0deg);">
+          <div class="arrow-button arrow-button_white-blue arrow-button_disabled">
             <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
@@ -70,7 +77,7 @@
               </svg>
             </div>
           </div>
-          <div class="arrow-button arrow-button_blue-white" style="transform: rotate(0deg);">
+          <div class="arrow-button arrow-button_blue-white">
             <div class="arrow-button__inner">
               <svg class="arrow-button-svg" viewbox=" 0 0 100 100">
                 <circle cx="50%" cy="50%" r="46%" s stroke-width="5%"></circle>
@@ -81,9 +88,9 @@
         </section>
       </article>
       <article class="pie-charts">
-        <h2 class="title">percentages / pie chart</h2>
+        <header class="title">percentages / pie chart</header>
         <section class="pie-charts__row">
-          <div class="pie-chart" data-percent="0" data-linewidth="5" data-barcolor="#e75735">
+          <div class="pie-chart" data-percent="0">
             <div class="pie-chart__inner">
               <div class="pie-chart__value"><span></span></div>
             </div>
@@ -107,7 +114,7 @@
         </section>
       </article>
       <article class="sliders">
-        <h2 class="title">sliders</h2>
+        <header class="title">sliders</header>
         <section class="slider__row">
           <div class="slider">
             <div class="slider-hint" style="background-color: #e75735;"><span>0</span>
@@ -132,7 +139,7 @@
         </section>
       </article>
       <article class="stages">
-        <h2 class="title">stages</h2>
+        <header class="title">stages</header>
         <div class="stage">
           <div class="stage__inner">
             <svg>
@@ -163,7 +170,7 @@
         </div>
       </article>
       <article class="form-elements">
-        <h2 class="title">form elements</h2>
+        <header class="title">form elements</header>
         <section class="form-elements__row">
           <form class="message-form">
             <div class="hint-control" data-hint="error">
@@ -175,9 +182,9 @@
             <textarea class="message-form__form-control message-form__textarea" placeholder="Your Message" rows="4"></textarea><br/>
             <button class="ripple-button_border-bottom-blue ripple-button">submit</button>
           </form>
-          <div class="form-elements__control">
+          <div class="checkboxes">
             <h2 class="title">toggles</h2>
-            <section class="toggles">
+            <section class="checkboxes__toggles">
               <label class="toggle toggle_on" style="background-color:#4eb7a8;">
                 <div class="toggle__circle"></div>
                 <input type="checkbox" name="toggle1" style="display: none;">
@@ -188,21 +195,21 @@
               </label>
             </section>
             <h2 class="title">tick boxes</h2>
-            <section class="tick-boxes">
-              <label class="tick-box" data-background-color="#4eb7a8" checked="checked">
+            <section class="checkboxes__tick-boxes">
+              <label class="tick-box" checked>
                 <input type="checkbox" style="display: none;" name="tick-box1">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
-                    <circle cx="50%" cy="50%" r="46%" style=" fill: #4eb7a8;"></circle>
+                    <circle cx="50%" cy="50%" r="46%" fill="#4eb7a8"></circle>
                     <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
                   </svg>
                 </div>
               </label>
-              <label class="tick-box" data-background-color="#4eb7a8">
+              <label class="tick-box">
                 <input type="checkbox" style="display: none;" name="tick-box2">
                 <div class="tick-box__inner">
                   <svg class="tick-box-svg" viewbox=" 0 0 100 100">
-                    <circle cx="50%" cy="50%" r="46%" style=" fill: #4eb7a8;"></circle>
+                    <circle cx="50%" cy="50%" r="46%" fill="#4eb7a8"></circle>
                     <polyline points="32,52 48,68 77,38" fill="none" stroke="#c0c0c0" stroke-width="10%"></polyline>
                   </svg>
                 </div>
@@ -213,98 +220,97 @@
       </article>
       <article class="one-more-article">
         <div class="search">
-          <h2 class="title">search / drop down</h2>
+          <header class="title">search / drop down</header>
           <form class="message-form">
             <div class="message-form__input-search">
-              <input class="message-form__form-control" type="search" placeholder="Search">
+              <input class="message-form__form-control" type="search" name="search1" placeholder="Search">
               <svg viewbox="0 0 100 100" style="background-color: #e75735;">
                 <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
                 <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
               </svg>
             </div>
-            <div class="message-form__input-search notFound">
-              <input class="message-form__form-control" type="search" placeholder="Search">
+            <div class="notFound message-form__input-search">
+              <input class="message-form__form-control" type="search" name="search2" placeholder="Search">
               <svg viewbox="0 0 100 100" style="background-color: #e75735;">
                 <circle cx="43%" cy="47%" r="12%" fill="#e75735" stroke="white" stroke-width="8%"></circle>
                 <line x1="54" y1="56" x2="71" y2="71" stroke="white" stroke-width="8%"></line>
               </svg>
             </div>
-            <div class="dropdown_undefined dropdown">
-              <div class="dropdown__inner">
-                <select name="inputname">
-                  <option value="option1"></option>
-                  <option value="option2"></option>
-                  <option value="option3"></option>
-                </select>
-                <div class="dropdown__selected-option">Choose an option
-                  <div class="dropdown__icon" style="background-color: #4eb7a8;">
-                    <svg viewBox="0, 0, 100, 100">
-                      <polyline points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%"></polyline>
-                    </svg>
-                  </div>
+            <div class="dropdown">
+              <select name="inputname">
+                <option value="option1"></option>
+                <option value="option2"></option>
+                <option value="option3"></option>
+              </select>
+              <div class="message-form__form-control message-form__dropdown">Choose an option
+                <div class="dropdown__icon" style="background-color: #4eb7a8;">
+                  <svg viewBox="0, 0, 100, 100">
+                    <polyline points="30,45 50,65 70,45" fill="none" stroke="white" stroke-width="8%"></polyline>
+                  </svg>
                 </div>
-                <div class="dropdown__ul">
-                  <ul>
-                    <li value="option1">option1</li>
-                    <li value="option2">option2</li>
-                    <li value="option3">option3</li>
-                  </ul>
-                </div>
+              </div>
+              <div class="dropdown__ul">
+                <ul>
+                  <li value="option1">option1</li>
+                  <li value="option2">option2</li>
+                  <li value="option3">option3</li>
+                </ul>
               </div>
             </div>
           </form>
         </div>
         <article class="user-profiles">
-          <h2 class="title">user profile</h2>
+          <header class="title">user profile</header>
           <section class="profil profil_red-name">
             <div class="profil__portrait" style="background-image: url(./public/profil1.jpg);"></div>
             <div class="profil__data">
               <div class="profil__data-arrow"></div>
               <p class="profil__name">John Smith</p>
               <p class="profil__profession">ux designer</p>
-              <div class="profil__links"><a href="/#"><i class="fa fa-facebook"></i></a><a href="/#"><i class="fa fa-twitter"></i></a><a href="/#"><i class="fa fa-dribbble"></i></a>
+              <div class="profil__links"><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-dribbble"></i></a>
               </div>
             </div>
           </section>
-          <section class="profil profil_green">
+          <section class="profil profil_light-blue">
             <div class="profil__portrait" style="background-image: url(./public/profil2.jpg);"></div>
             <div class="profil__data">
               <div class="profil__data-arrow"></div>
               <p class="profil__name">Sarah Brown</p>
               <p class="profil__profession">developer</p>
-              <div class="profil__links"><a href="/#"><i class="fa fa-facebook"></i></a><a href="/#"><i class="fa fa-twitter"></i></a><a href="/#"><i class="fa fa-dribbble"></i></a>
+              <div class="profil__links"><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><i class="fa fa-dribbble"></i></a>
               </div>
             </div>
           </section>
         </article>
       </article>
       <article class="news-events">
-        <h2 class="title">news & events</h2>
+        <header class="title">news & events</header>
         <secton class="news-events__row">
           <section class="news" style="background-image: url(./public/news.jpg);">
-            <div class="news__inner">
+            <div class="news__inner" style="background-color: #e75735;">
               <p class="news__title">It's all going downhill</p>
               <p class="news__date">24 august 2013</p>
               <p class="news__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
             </div>
           </section>
-          <section class="event_green event" style="background-image: url(./public/event.jpg);">
+          <section class="event_blue event" style="background-image: url(./public/event.jpg);">
             <div class="event__inner">
-              <p class="event__date"> <span>24</span>Aug</p>
+              <p class="event__date"> <span>24</span>Aug
+              </p>
               <p class="event__title">THIS IS THE TITLE</p>
               <p class="event__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div class="event__button">
-                <button class="ripple-button_undefined ripple-button">Подтвердить участие</button>
+                <button class="ripple-button">add to calendar</button>
               </div>
             </div>
           </section>
         </secton>
       </article>
       <article class="location">
-        <h2 class="title">location</h2>
-        <div class="map_red map" data-lat="37.795712" data-lng="-122.414756" data-marker="./public/marker.png">
+        <header class="title">location</header>
+        <div class="map" data-lat="37.795712" data-lng="-122.414756" data-marker="./public/marker.png">
           <div class="map__body"></div>
-          <div class="map__footer">
+          <div class="map__footer" style="background-color: #e75735;">
             <div class="map__footer-title">Meet us!</div>
             <div class="map__footer-place">1259  CALIFORNIA ST San Francisco, CA </div>
             <div class="map__footer-icons"><i class="fa fa-crosshairs" aria-hidden="true"></i><i class="fa fa-map-marker" aria-hidden="true"></i></div>
@@ -313,13 +319,13 @@
       </article>
       <article class="calendar_messaging">
         <section class="calendar_section">
-          <h2 class="title">calendar</h2>
+          <header class="title">calendar</header>
           <div class="calendar gldp-el gldp_red">
             <input type="text" style="display:none;" name="input_name">
           </div>
         </section>
         <section class="messaging_section">
-          <h2 class="title">messaging</h2>
+          <header class="title">messaging</header>
           <section class="messaging messaging_default">
             <div class="messaging__header">
               <p class="messaging__header-title">Sarah Brown</p>
@@ -334,14 +340,14 @@
               </div>
               <div class="messaging__body-request">Hey! So are we cool to meet at the art gallery? Say 8pm</div>
               <textarea class="messaging__body-response" placeholder="Yeah that sounds great. See you then." rows="4"></textarea>
-              <button class="ripple-button_border-bottom-blue ripple-button">Replay</button>
+              <button class="ripple-button messaging__button">Replay</button>
             </div>
           </section>
         </section>
       </article>
       <article class="video">
-        <h2 class="title">video</h2>
-        <div class="player player_default">
+        <header class="title">video</header>
+        <div class="player">
           <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
             <source src="https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82">
           </video>
@@ -368,7 +374,7 @@
             </div>
           </div>
         </div>
-        <div class="player player_red">
+        <div class="player player_blue">
           <video muted poster="https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4">
             <source src="https://www.w3schools.com/html/mov_bbb.ogg">

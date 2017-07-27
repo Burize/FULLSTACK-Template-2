@@ -12,7 +12,6 @@ include ./Elements/messaging/messaging.pug
 include ./Elements/message-form/message-form.pug
 include ./Elements/video/video.pug
 include ./Elements/donut-chart/donut-chart.pug
-include ./Elements/drop-down/drop-down.pug
 include ./Elements/profil/profil.pug
 include ./Elements/location/location.pug
 
@@ -20,108 +19,116 @@ include ./Elements/location/location.pug
 doctype !html
 html
     head
-    meta(charset = 'utf-8')
-    script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&libraries=places&language=ru' )
-    title Webpack app
+        meta(charset = 'utf-8')
+        meta(name="Keywords" content = "fsd, fullstackdevelopment, template2")
+        meta(name="description" content = "Template 2")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+        link( rel="icon" href="favicon.ico" type="image/-icon")
+        link( rel="shortcut icon" href="favicon.ico" type="image/-icon")
+        link( rel="mask-icon" href="favicon.svg" color="#FFC618")
+        title FullStack-Template2
+        script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAdl-cDpfExj61H5C4hORCrz7WqBBEQKlU&libraries=places&language=ru' )
     body
         div.container
             article.standard-buttons
-                h2.title standard buttons
+                header.title standard buttons
+                section.standard-buttons__row 
+                    +ripple-button({text:'button', theme:'simple-blue'})
+                    +ripple-button({text:'button', theme:'simple-blue'})
+                    +ripple-button({text:'button', theme:'simple-red'})
+                    +ripple-button({text:'button', theme:'simple-red'})
                 section.standard-buttons__row
-                    +ripple-button('button', 'simple-blue')(style="font-size: 18px; width: 16%;")
-                    +ripple-button('button', 'simple-blue')(style="font-size: 25px; width: 25.5%;")
-                    +ripple-button('button', 'simple-red')(style="font-size: 25px; width: 25.5%;" )
-                    +ripple-button('button', 'simple-red')(style="font-size: 18px; width: 16%;")
+                    +ripple-button({text:'button', theme:'border-bottom-blue'})
+                    +ripple-button({text:'button', theme:'border-bottom-blue'})
+                    +ripple-button({text:'button', theme:'border-bottom-red'})
+                    +ripple-button({text:'button', theme:'border-bottom-red'})
                 section.standard-buttons__row
-                    +ripple-button('button', 'border-bottom-blue')(style="font-size: 18px; width: 16%;" )
-                    +ripple-button('button', 'border-bottom-blue')(style="font-size: 25px; width: 25.5%;")
-                    +ripple-button('button', 'border-bottom-red')(style="font-size: 25px; width: 25.5%;")
-                    +ripple-button('button', 'border-bottom-red')(style="font-size: 18px; width: 16%;")
-                section.standard-buttons__row
-                    +ripple-button('button', 'white-blue')(style="font-size: 18px; color: #4eb7a8; width: 16%;" )
-                    +ripple-button('button', 'white-blue')(style="font-size: 25px; color: #4eb7a8; width: 25.5%;")
-                    +ripple-button('button', 'white-red')(style="font-size: 25px; color: #e75735; width: 25.5%;")
-                    +ripple-button('button', 'white-red')(style="font-size: 18px; color: #e75735; width: 16%;")
+                    +ripple-button({text:'button', theme:'white-blue'})
+                    +ripple-button({text:'button', theme:'white-blue'})
+                    +ripple-button({text:'button', theme:'white-red'})
+                    +ripple-button({text:'button', theme:'white-red'})
             article.arrow-buttons
-                h2.title arrow buttons
+                header.title arrow buttons
                 section.arrow-buttons__row
-                    +arrow-button(180, 'white-blue')
-                    +arrow-button(0, 'white-blue') 
-                    +arrow-button(180, 'white-blue').arrow-button_disabled
-                    +arrow-button(0, 'white-blue').arrow-button_disabled
-                    +arrow-button(180, 'blue-white')
-                    +arrow-button(0, 'blue-white')
+                    +arrow-button({angle: 180, theme: 'white-blue'})
+                    +arrow-button({angle: 0, theme: 'white-blue'}) 
+                    +arrow-button({angle: 180, theme: 'white-blue', disabled: true})
+                    +arrow-button({angle: 0, theme: 'white-blue', disabled: true})
+                    +arrow-button({angle: 180, theme: 'blue-white'})
+                    +arrow-button({angle: 0, theme: 'blue-white'})
             article.pie-charts
-                h2.title percentages / pie chart
+                header.title percentages / pie chart
                 section.pie-charts__row
-                    +Pie-chart(0, 5, '#e75735' )
-                    +Pie-chart(38, 5, '#e75735' )
-                    +Pie-chart(62, 5, '#e75735' )
-                    +Pie-chart(89, 5, '#e75735' )
-                    +Donut-chart( 0.33, {"color": '#747474', "value": 11},
-                                                    {"color": '#e75735', "value": 26},
-                                                    {"color": '#4eb7a8', "value": 30},
-                                                    {"color": '#e5e5e5', "value": 33}
-                    )
+                    +Pie-chart({value: 0} )
+                    +Pie-chart({value: 38, width: 5, color: '#e75735'} )
+                    +Pie-chart({value: 62, width: 5, color: '#e75735'})
+                    +Pie-chart({value: 89, width: 5, color: '#e75735'} )
+                    +Donut-chart({width: 0.33, parts: [{"color": '#747474', "value": 11},
+                                                        {"color": '#e75735', "value": 26},
+                                                        {"color": '#4eb7a8', "value": 30},
+                                                        {"color": '#e5e5e5', "value": 33}]} )
             article.sliders
-                h2.title sliders
+                header.title sliders
                 section.slider__row
-                   +Slider( '#e75735', false, true)
-                   +Slider( '#4eb7a8', true, false)
+                   +Slider( { color: '#e75735', numbers: false, hint: true })
+                   +Slider( { color: '#4eb7a8', numbers: true, hint: false })
             article.stages
-                h2.title stages
-                +Stage(5, 3, '#e75735')
+                header.title stages
+                +Stage({stages: 5, complete: 3, color: '#e75735'})
             article.form-elements
-                h2.title form elements
+                header.title form elements
                 section.form-elements__row
                     form.message-form
-                        +HintControl('error','text', 'inputname','Your Name')
+                        +HintControl({ hint: 'error', input:'text', name: 'inputname', placeholder: 'Your Name'})
                         br
-                        +HintControl('thanks','text', 'inputname','Your Email')
+                        +HintControl({ hint: 'thanks', input:'text', name: 'inputname', placeholder: 'Your Email'})
                         br
                         textarea( placeholder="Your Message" rows="4").message-form__form-control.message-form__textarea
                         br
-                        +ripple-button('submit', 'border-bottom-blue')
-                    div.form-elements__control
+                        +ripple-button({text: 'submit', theme: 'border-bottom-blue'} )
+                    div.checkboxes
                         h2.title toggles
-                        section.toggles
-                            +Toggle('toggle1',"#4eb7a8")
-                            +Toggle('toggle2',"#4eb7a8")(checked)
+                        section.checkboxes__toggles
+                            +Toggle( {name: 'toggle1', color: "#4eb7a8"} )
+                            +Toggle( {name: 'toggle2', color: "#4eb7a8", checked: true} )
                         h2.title tick boxes
-                        section.tick-boxes
-                            +tick-box('tick-box1','#4eb7a8', 'checked')
-                            +tick-box('tick-box2','#4eb7a8')
+                        section.checkboxes__tick-boxes
+                            +tick-box({ name: 'tick-box1', color: '#4eb7a8', checked: true })
+                            +tick-box({ name: 'tick-box2', color: '#4eb7a8' })
             article.one-more-article
                 div.search
-                    h2.title search / drop down
+                    header.title search / drop down
                     form.message-form
-                        +Search('search1', '#e75735')
-                        +Search('search2', '#e75735','false')
-                        +Dropdown('Choose an option','inputname',[{value: 'option1', text: "option1"},{value: 'option2', text: "option2"},{value: 'option3', text: "option3"}],'#4eb7a8')
+                        +Search({name: 'search1', placeholder: 'Search', color: '#e75735'})
+                        +Search({name: 'search2', placeholder: 'Search', color: '#e75735', notfound: true})
+                        +Dropdown({ placeholder: 'Choose an option', name: 'inputname', color: '#4eb7a8', options: [{value: 'option1', text: "option1"},{value: 'option2', text: "option2"},{value: 'option3', text: "option3"}]})
                 article.user-profiles
-                    h2.title user profile
-                    +Profil('./public/profil1.jpg','John Smith','ux designer',[{href: '/#', icon: 'facebook'},
-                                                    {href: '/#', icon: 'twitter'},
-                                                    {href: '/#', icon: 'dribbble'}], 'red-name')
-                    +Profil('./public/profil2.jpg','Sarah Brown','developer',[{href: '/#', icon: 'facebook'},
-                                                    {href: '/#', icon: 'twitter'},
-                                                    {href: '/#', icon: 'dribbble'}], 'green')
+                    header.title user profile
+                    +Profil({ photo: './public/profil1.jpg',name: 'John Smith', profession: 'ux designer', theme: 'red-name',
+                                            links: [{href: '/mock-address/change-me', icon: 'facebook'},
+                                                    {href: '/mock-address/change-me', icon: 'twitter'},
+                                                    {href: '/mock-address/change-me', icon: 'dribbble'}]})
+                    +Profil({ photo: './public/profil2.jpg', name: 'Sarah Brown', profession: 'developer', theme: 'light-blue',
+                                            links: [{href: '/mock-address/change-me', icon: 'facebook'},
+                                                    {href: '/mock-address/change-me', icon: 'twitter'},
+                                                    {href: '/mock-address/change-me', icon: 'dribbble'}]})
             article.news-events
-                h2.title news & events
+                header.title news & events
                 secton.news-events__row
-                    +News("It's all going downhill", '24 august 2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', './public/news.jpg' )
-                    +Event('24', 'Aug', 'THIS IS THE TITLE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', './public/event.jpg', 'Подтвердить участие', 'green')
+                    +News({title: "It's all going downhill", date: '24 august 2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', fon: './public/news.jpg', color: '#e75735' } )
+                    +Event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', fon:'./public/event.jpg', button: 'add to calendar', theme: 'blue' })
             article.location
-                h2.title location
-                +Location('Meet us!', '1259  CALIFORNIA ST San Francisco, CA ',37.795712, -122.414756,'./public/marker.png','red')
+                header.title location
+                +Location({ title: 'Meet us!', address: '1259  CALIFORNIA ST San Francisco, CA ', lat: 37.795712, lng: -122.414756, marker: './public/marker.png', color: '#e75735' })
             article.calendar_messaging
                 section.calendar_section
-                    h2.title calendar
-                    +Calendar('input_name', 'red')
+                    header.title calendar
+                    +Calendar({ name: 'input_name', theme: 'red' })
                 section.messaging_section
-                    h2.title messaging
-                    +Messaging('Sarah Brown', './public/profil2.jpg' ,'Hey! So are we cool to meet at the art gallery? Say 8pm', 'Yeah that sounds great. See you then.','Replay','default')
+                    header.title messaging
+                    +Messaging({ name: 'Sarah Brown', photo: './public/profil2.jpg' , request: 'Hey! So are we cool to meet at the art gallery? Say 8pm', response: 'Yeah that sounds great. See you then.', button: 'Replay'})
             article.video
-                h2.title video
-                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', ['https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82'], 'default')
-                +Video('https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', ['https://www.w3schools.com/html/mov_bbb.mp4', 'https://www.w3schools.com/html/mov_bbb.ogg'], 'red')
+                header.title video
+                +Video({poster: 'https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', sources: ['https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82']})
+                +Video({ poster: 'https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', 
+                sources: ['https://www.w3schools.com/html/mov_bbb.mp4', 'https://www.w3schools.com/html/mov_bbb.ogg'], theme: 'blue'})

@@ -1,5 +1,5 @@
-mixin Pie-chart( percent, linewidth, barcolor)
-    div&attributes(attributes)( data-percent!= percent data-linewidth!=linewidth data-barcolor!= barcolor ).pie-chart
+mixin Pie-chart( options )
+    div&attributes(attributes)( data-percent!= options.value data-linewidth!= options.width  data-barcolor!= options.color ).pie-chart
         div.pie-chart__inner
             div.pie-chart__value
                 span

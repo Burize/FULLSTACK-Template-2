@@ -1,14 +1,14 @@
-mixin Slider( color, scale, hint)
+mixin Slider( options)
     div&attributes(attributes).slider
-        if(hint)
-            div(style="background-color: "+color+";").slider-hint
+        if(options.hint)
+            div(style= options.color ? "background-color: "+options.color+";" : "").slider-hint
                 span 0
-                div(style="border-color:"+ color +" transparent transparent transparent;").hint__arrow
+                div(style= options.color ? "border-color:"+ options.color +" transparent transparent transparent;" : "").hint__arrow
         div.slider__inner
             svg
                 line(x1="5%" y1="50%" x2="95%" y2="50%" stroke='#e5e5e5' stroke-width="2%" stroke-linecap="round" )
-                circle( cx="5%" cy="50%" r="5%" fill!=color)
-        if(scale)    
+                circle( cx="5%" cy="50%" r="5%" fill = options.color ? options.color : "")
+        if(options.numbers)    
             div.slider-scale
                 span 0
                 span 25

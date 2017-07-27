@@ -1,23 +1,15 @@
-
-@font-face{
-    
-    font-family SourceSansProRegular;
-    src url("./SourceSansProRegular.ttf");
-}
-
-
 .message-form{
     
     .message-form__form-control{
         
         background-color #e5e5e5;
         color #888888;
-        border none !important;
-        outline none !important;
+        border none;
+        outline none;
         border-radius 0.2em;
-        font-family SourceSansProRegular;
         font-size 1em;
         width 100%;
+        box-sizing border-box;
        
         &:focus{
 
@@ -42,7 +34,7 @@
     .message-form__textarea{
         
         resize none;
-        padding 1em 0.9em;
+        padding 0.8em 0.9em;
     }
     
     

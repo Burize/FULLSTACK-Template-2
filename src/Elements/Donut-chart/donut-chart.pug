@@ -1,2 +1,2 @@
-mixin Donut-chart( linewidth, ...pies)
-    div&attributes(attributes)( data-width!= width, data-linewidth!= linewidth  data-pies!=pies).donut-chart
+mixin Donut-chart( options)
+    div&attributes(attributes)(  data-linewidth!= options.width  data-pies!= options.parts).donut-chart

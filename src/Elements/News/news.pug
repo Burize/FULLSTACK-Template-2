@@ -1,6 +1,6 @@
-mixin News(title, date, text, src)    
-    section&attributes(attributes)(style="background-image: url("+src+");" ).news
-                        div.news__inner
-                            p.news__title!= title 
-                            p.news__date!= date 
-                            p.news__text!= text 
+mixin News(options)    
+    section&attributes(attributes)(style="background-image: url("+options.fon+");" ).news
+                        div( style= options.color ? "background-color: " + options.color : "" ).news__inner
+                            p.news__title!= options.title 
+                            p.news__date!= options.date 
+                            p.news__text!= options.text 

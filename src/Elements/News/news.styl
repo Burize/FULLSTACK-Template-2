@@ -1,31 +1,10 @@
-@font-face{
-    
-    font-family LatoBlack;
-    src url(./Lato-Black.ttf)
-}
-
-@font-face{
-    
-    font-family LatoLight;
-    src url(./Lato-Light.ttf)
-}
-
-
-@font-face{
-    
-    font-family LatoRegular;
-    src url(./Lato-Regular.ttf)
-}
-
-
-
 .news{
     
     box-sizing border-box;
     background-size cover;
     border-radius 0.3em;
     overflow hidden;
-    
+    font-family Arial, sans-serif;
     .news__inner{
 
         background-color #e75735;
@@ -33,20 +12,18 @@
         padding 2.7em;
         padding-bottom 4em;
         color white;
-        height 100%;
         box-sizing border-box;
+        height 100%;
         
         .news__title{
             
             margin 0;
-            font-family LatoLight;
             font-size 3.2em;
             line-height 1em;
         }
         
         .news__date{
             
-             font-family LatoBlack;
              text-transform uppercase;
              font-size 1.3em;
         }
@@ -54,28 +31,9 @@
         .news__text{
             
             margin-bottom 0;
-             font-family LatoRegular;
-             font-size 1.4em;
-             line-height 1.2em;
+            font-size 1.4em;
+            line-height 1.2em;
         }
     }
 }
 
-
-.news_red .news__inner{
-    
-    background-color #e23402;
-    
-}
-
-.news_orange .news__inner{
-    
-    background-color #FA6900;
-    
-}
-
-.news_blue .news__inner{
-    
-    background-color #005bac;
-    
-}

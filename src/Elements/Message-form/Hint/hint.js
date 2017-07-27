@@ -73,9 +73,9 @@ $(function(){
         element = $(element)
         element.children().remove(".hint");
             
-        var hint = $("<div/>").addClass("hint").css("background-color",color);        
-        var hint_text = $("<span/>").text( text );
-        var hint_arrow = $("<div/>").addClass("hint__arrow");
+        let hint = $("<div/>").addClass("hint").css("background-color",color);        
+        let hint_text = $("<span/>").text( text );
+        let hint_arrow = $("<div/>").addClass("hint__arrow");
          
             
             switch (side){

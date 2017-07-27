@@ -1,16 +1,10 @@
-@font-face{
-    
-    font-family LatoLight;
-    src url(./Lato-Light.ttf);
-}
-
 .pie-chart{
  
     position relative;
     user-select none;
     cursor default;
     color #9d9d9d;
-    font-family LatoLight;
+    font-family Arial,sans-serif;
                
     .pie-chart__inner{
         
@@ -18,44 +12,21 @@
         padding-top 100%;
         position absolute;
    
-              .pie-chart__value{
-                    position absolute;
-                    width 100%
-                    height 100%
-                    display: flex;
-                    justify-content center;
-                    align-items center;
-                    top 0;
-                  
-                    span{
-                        
-                        line-height 0.8em;
-                    }
-                }  
-     
-      
-    }
-}
-
-
-.pie-chart-test{
- 
-    position relative;
-    
-    width 180px;
-   
-.pie-chart__inner{
-
-        width 100%;
-        padding-top 100%;
-        position relative;
-        svg{
-      
-            width 100%;
-            height 100%;
+        .pie-chart__value{
+                    
             position absolute;
-            top: 0;
-            left 0;    
-        }
+            width 100%
+            height 100%
+            display: flex;
+            justify-content center;
+            align-items center;
+            top 0;
+                  
+            span{
+                        
+                line-height 0.8em;
+            }
+        }    
     }
 }
+

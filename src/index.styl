@@ -1,29 +1,82 @@
-@font-face{
-    
-    font-family LatoBlack;
-    src url(./Fonts/Lato-Black.ttf);
-}
+@font-face {
+    font-family: Lato;
+    src:  url('./Fonts/Lato-Light.woff') format('woff'), 
+          url('./Fonts/Lato-Light.ttf') format('truetype'),
+          url('./Fonts/Lato-Light.svg') format('svg');
+    font-style normal;
+    font-weight 300;
+   }
+   
+@font-face {
+    font-family: Lato;
+    src:  url('./Fonts/Lato-Regular.woff') format('woff'), 
+          url('./Fonts/Lato-Regular.ttf') format('truetype'),
+          url('./Fonts/Lato-Regular.svg') format('svg');
+    font-style normal;
+    font-weight 400;
+   }  
 
-@font-face{
+@font-face {
+    font-family: Lato;
+    src:  url('./Fonts/Lato-Bold.woff') format('woff'), 
+          url('./Fonts/Lato-Bold.ttf') format('truetype'),
+          url('./Fonts/Lato-Bold.svg') format('svg');
+    font-style normal;
+    font-weight 700;
+   }
+   
+@font-face {
+    font-family: Lato;
+    src:  url('./Fonts/Lato-Black.woff') format('woff'), 
+          url('./Fonts/Lato-Black.ttf') format('truetype'),
+          url('./Fonts/Lato-Black.svg') format('svg');
+    font-style normal;
+    font-weight 900;
+   }
+   
+@font-face {
+    font-family: "Source Sans Pro";
+    src:  url('./Fonts/source-sans-pro-light.woff') format('woff'), 
+          url('./Fonts/source-sans-pro-light.ttf') format('truetype'),
+          url('./Fonts/source-sans-pro-light.svg') format('svg');
+    font-style normal;
+    font-weight 300;
+   }
+   
+@font-face {
+    font-family: "Source Sans Pro";
+    src:  url('./Fonts/source-sans-pro-regular.woff') format('woff'), 
+          url('./Fonts/source-sans-pro-regular.ttf') format('truetype'),
+          url('./Fonts/source-sans-pro-regular.svg') format('svg');
+    font-style normal;
+    font-weight 400;
+   }
+   
+
+
+html{
     
-    font-family LatoLight;
-    src url(./Fonts/Lato-Light.ttf);
+    background-color white;
+    color black;
+    font-family Arial, sans-serif;
+    font-size: 16px;
 }
 
 .container{
 
     margin auto;
     width: 1200px;
-    padding-top 9%;
+    padding-top 11%;
+    
     .title{
         
-        font-family LatoBlack;
+        font-family Lato, Arial, sans-serif;
+        font-style normal;
+        font-weight 900;
         text-align center;
-        font-size 2.2em;
-        
+        font-size 2.2rem;
         text-transform uppercase;
         color #4f4f4f;
-       
     }
     
     .standard-buttons{
@@ -31,25 +84,52 @@
         width 74%;
         margin auto;
         margin-bottom 8.5%;
+        
+        .title{
+        
+            margin-bottom 16%;
+        }      
+  
+
         .standard-buttons__row{
             
             display flex;
             justify-content space-between;
             align-items flex-end;
             margin-bottom 4.5%;
+            
+            .ripple-button{
+                
+                font-family Lato, Arial, sans-serif;
+                font-weight 900;
+                
+                &:nth-child(1),
+                &:nth-child(4){
+                    
+                    width: 16%;
+                    font-size: 1.1rem;
+                }
+                
+                &:nth-child(2),
+                &:nth-child(3){
+                    
+                    width: 25.5%;
+                    font-size: 1.5rem;
+                }
+                
+            }
         }
         
-        .title{
-            margin-bottom 15%;
-        }
+        
     }
     
     .arrow-buttons{
         
         width 68%;
-         margin auto;
-         margin-bottom 7%;
-         .title{
+        margin auto;
+        margin-bottom 7.5%;
+        .title{
+            
             margin-bottom 8.5%;
         }
         
@@ -68,26 +148,27 @@
      .pie-charts{
        
         width 100%;
-         margin auto;
-         margin-bottom 5%;
-      
-         .title{
+        margin auto;
+        margin-bottom 5%;
+                
+        .title{
+            
             margin-bottom 4.2%;
         }
         
         .pie-charts__row{
             
            padding-right 45px;
-          
            display flex;
            justify-content space-between;
            align-items center;
            
            .pie-chart{
+               
                color #9d9d9d;
-               font-family LatoLight;
+               font-family Lato, Arial, sans-serif;
+               font-weight 300;
                width 16%;
-              
            }
            
            .donut-chart{
@@ -102,45 +183,54 @@
           margin-bottom 5.2%;
           
           
-         .title{
-            margin-bottom 5.8%;
+        .title{
+            
+             margin-bottom 5.8%;
         }
         
         .slider__row{
-           padding 0 1.5% 0 0;
+            
+            padding 0 1.5% 0 0;
             display flex;
             justify-content space-between;
             
             .slider{
+                
                 width 47%;
                 font-size 1.6rem;
+                font-family Lato, Arial, sans-serif;
+                font-weight 900;
             }
         }
         
     }
     
-    
     .stages{
         
         margin-bottom 8.2%;
-         .title{
+        
+        .title{
+            
             margin-bottom 4.6%;
         }
         
-          .stage{
+        .stage{
         
-         width 97%;
-         margin auto;   
+            width 97%;
+            margin auto; 
+            font-family Lato, Arial, sans-serif;
+            font-weight 900;
         }
     }
     
     .form-elements{
         
-        margin-bottom 6.5%;
+        margin-bottom 8.7%;
         
-          .title{
+        .title{
+              
             margin-bottom 8%;
-            }
+        }
         
         .form-elements__row{
              
@@ -148,34 +238,48 @@
             padding-right 15%;
             display flex;
             justify-content space-between;     
-                
+            
                 .message-form{
             
                     width 56%
+                    
+                    .message-form__form-control{
+                        
+                        font-family "Source Sans Pro", Arial, sans-serif;
+                        font-weight 400;
+                    }
        
-
                     .hint-control{
                         
                         width 72%;
                         font-size 1.6rem;
-                         margin-bottom 0.35em;
+                        margin-bottom 0.25rem;
+                        .hint{
+                            
+                            font-family Lato, Arial, sans-serif;
+                            font-weight 900;
+                        }
+                        
                     }
 
                     textarea{
-                        font-size: 1.5em;
+                        
+                        font-size: 1.6rem;
                         width 100%;
                         margin-bottom 3.6%;
                     }
                     
                     button{
                         
-                        font-size 1.6em;
+                        font-size 1.6rem;
                         float: right;
                         width 9em;
+                        font-family Lato, Arial, sans-serif;
+                        font-weight 900;
                     }
                 }
                 
-                   .form-elements__control{
+                .checkboxes{
 
                        
                        .title{
@@ -187,22 +291,28 @@
                             
                              &:nth-child(3){
                                 margin-top 28%;
-                                margin-bottom 1.65em;
+                                margin-bottom 3.55rem;
                             }
                         }
 
                         width 25%;
                         text-align center;
 
-                        .toggles{
+                        .checkboxes__toggles{
 
                             display flex;
                             justify-content space-between;
-                            margin-bottom 2em;
+                            margin-bottom 2rem;
                             font-size 2rem;
+                            
+                            .toggle{
+                                
+                                font-family Lato, Arial, sans-serif;
+                                font-weight 900;
+                            }
                         }
                         
-                        .tick-boxes{
+                        .checkboxes__tick-boxes{
                              
                             display flex;
                             justify-content space-between;
@@ -215,18 +325,18 @@
                                 font-size 2rem;
                             }
                         }
-                }
+                }     
      
         }
          
     }
        
-        .one-more-article{
+    .one-more-article{
             
             display flex;
             justify-content space-between;
             padding-left 2%;
-            margin-bottom 10.8%;
+            margin-bottom 11.3%;
             padding-right 5%
             
             .search{
@@ -235,138 +345,226 @@
                 
                 .title{
 
-                    font-size 2.2em;
+                    font-size 2.2rem;
                     margin-bottom 1.1em;
                 }
                 .message-form{
+                    
                     width 100%;
                     
-                    .message-form__input-search{
+                    .message-form__input-search, .dropdown{
 
                         width 100%;
-                        font-size 1.8em;
+                        font-size 1.8rem;
                         margin-bottom 1em;
+                        
+                        .message-form__form-control{
+                            
+                            font-family "Source Sans Pro", Arial, sans-serif;
+                            font-weight 400;
+                        }
                     }
                     
-                    .dropdown{
-
-                        width 100%;
-                        font-size 1.8em;
-                        margin-bottom 1em;
-                    }
+                 
                 }
             }
             
             .user-profiles {
-                    width: 44%;
+                    
+                width: 44%;
                       
-                   .title{
-                       margin-bottom 11.5%;
-                      
-                   }
-                   
-                   
-                   .profil {
+                .title{
                        
-                       margin-bottom 10%;
-                   }
+                    margin-bottom 11.5%;  
+                }   
                    
-              
+                .profil{
+                       
+                    margin-bottom 9%;
+                    
+                    .profil__name{
+
+                        font-family "Source Sans Pro", Arial, sans-serif;
+                        font-weight 400;
+                    }
+                    
+                    .profil__profession{
+
+                        font-family "Source Sans Pro", Arial, sans-serif;
+                        font-weight 900;
+                    }
                 }
-        }
+                   
+            }
+        }    
     
   
-        .news-events{
+    
+    
+   
+    .news-events{
             
-            margin-bottom 7.5%;
+        margin-bottom 7.5%;
             
-            .title{
+        .title{
 
-                margin-bottom 5%;
-            }
-            
-            .news-events__row{
-
-                display flex;
-                justify-content space-between;
-                align-items flex-start;
-                padding-left 2.2%;
-                padding-right 2.6%;
-                height 25.5rem
-
-                .news, .event{
-                    
-                    width 48.5%;   
-                }
-
-            }
+            margin-bottom 5.2%;
         }
-        
-        
-        .location{
-
-            margin-bottom 5.25%;
-            .title{
-                
-                margin-bottom 4.8%;
-            }
             
-            .map{
+        .news-events__row{
 
-            width 95%;
-            margin auto;
-            }
-        }
-        
-        .calendar_messaging{
-            
             display flex;
             justify-content space-between;
-            padding-left 2.4%;
+            align-items flex-start;
+            padding-left 2.2%;
             padding-right 2.6%;
-            margin-bottom 9.2%;
+            height 25.6rem;
+            
+            .news, .event{
+                    
+                width 48.5%;   
+            }
+            
+            .news{
+                
+                font-family Lato, Arial, sans-serif;
+                
+                .news__title{
+                    
+                    font-weight 300;
+                }
+                
+                .news__date{
+                    
+                    font-weight 900;
+                }
+                
+                .news__text{
+                    
+                    font-weight 400;
+                }
+                
+            }
+
+            .event{
+                
+                font-family Lato, Arial, sans-serif;
+                
+                .event__date{
+                    
+                    font-weight 300;
+                }
+                
+                .event__title, .event__button button{
+                    
+                    font-weight 900;
+                }
+                
+                .event__text{
+                    
+                    font-weight 400;
+                } 
+                
+            }
+        }
+    }
+           
+    .location{
+
+        margin-bottom 8%;
+        
+        .title{
+                
+            margin-bottom 4.8%;
+        }
+            
+        .map{
+
+            width 95%;
+            margin auto;
+            font-family Lato, Arial, sans-serif;
+            
+            .map__footer-title{
+                
+                font-weight 300;
+            }
+            
+            .map_footer-place{
+                
+                font-weight 900;
+            }
+        }
+    }
+        
+    .calendar_messaging{
+            
+        display flex;
+        justify-content space-between;
+        padding-left 2.4%;
+        padding-right 2.6%;
+        margin-bottom 8.5%;
+            
+    
+        .calendar_section{
+                
+            width 46.5%;
             
             .title{
                     
-                    margin-bottom 10%;
-                }
-                
-            .calendar_section{
-                
-                width 46%;
-            
-              
-                
-                #mycalendar{
-                      
-                      position relative;
-                }
+                margin-bottom 9.5%;
             }
+                
+        }
             
-            .messaging_section{
-                width 48.5%;
+        .messaging_section{
+            
+            width 48.5%;
 
-                 
-            }
-        }
-        
-        
-        .video{
-            
-           
-            width 95%;
-            margin auto;
-             
             .title{
-                
-                margin-bottom 4%;
+                    
+                margin-bottom 9%;
             }
             
-            .player{
-                margin-bottom 5%;
+            
+            .messaging{
+                
+                .messaging__header-title{
+                    
+                    font-family "Source Sans Pro", Arial, sans-serif;;
+                    font-weight 300;
+                }
+                
+                .messaging__body-request, 
+                .messaging__body-response{
+                    
+                    font-family Lato, Arial, sans-serif;;
+                    font-weight 700;
+                }
+                
+                .messaging__button{
+                    
+                    font-family Lato, Arial, sans-serif;;
+                    font-weight 900;
+                }
             }
-          
         }
+    }
+           
+    .video{
+            
+        width 95%;
+        margin auto;
+             
+        .title{
+                
+            margin-bottom 4%;
+        }
+            
+        .player{
+            margin-bottom 5%;
+        }
+          
+    }
 }
 
 
