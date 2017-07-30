@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "main": "server.js",
   "scripts": {
-    "devserver": "webpack-dev-server --history-api-fallback  --hot --inline --watch-poll"
+    "devserver": "webpack-dev-server"
   },
   "author": "Dmitry Hursevich",
   "license": "MIT",
