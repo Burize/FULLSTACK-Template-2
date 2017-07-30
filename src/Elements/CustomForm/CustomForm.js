@@ -1,11 +1,11 @@
-import "./message-form.styl";
+import "./CustomForm.styl";
 import "./Hint/hint.js"
 import "./Drop-down/drop-down.js"
 
 (function($){
 
        
-     $(".message-form__input-search.notFound").each( function(){         
+     $(".custom-form__input-search.notFound").each( function(){         
          
             $(this).children("input")
                 .css('background-color',$(this).children('svg').css('background-color'))

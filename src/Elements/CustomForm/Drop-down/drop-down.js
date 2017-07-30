@@ -29,7 +29,7 @@ import "./drop-down.styl"
                     });
              
             let select_option = this.root
-                    .find(".message-form__dropdown")
+                    .find(".custom-form__dropdown")
                     .first()
                     .on('click.dropDown', () => {this.Expand(); return false;}); 
 
