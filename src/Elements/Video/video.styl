@@ -58,7 +58,6 @@
 
                     .player__controls-fullscreen {
                         
-                        background-color #e75735;
                         height 100%;
                         width 8%;
                         
@@ -72,7 +71,6 @@
 
                     .player__controls-progress {
                         
-                        color: #e75735;
                         margin-left -5%;
                         width: 80%;
                         height 0.5em;
@@ -82,17 +80,6 @@
                         vertical-align: middle;
                         
                     }
-                    .player__controls-progress::-moz-progress-bar { 
-                      
-                        background-color: #e75735;
-                       
-                    }
-
-                    .player__controls-progress[value]::-webkit-progress-value {
-                        
-                        background-color: #e75735;
-                    }
-                    
                     
                     .player__controls-progress[value]::-webkit-progress-bar {
                     
@@ -103,28 +90,49 @@
     
      
     
-        &.player_red{
-                    
+        &.player_default{
+            
                     .player__controls-fullscreen {
                         
-                        background-color #e23402 !important;
+                        background-color #e75735;
                     }
                     
                     .player__controls-progress{
                         
-                        color: #e23402 !important;
+                         color: #e75735;
                     }
                     
                     .player__controls-progress[value]::-webkit-progress-value {
                       
-                        background-color: #e23402 !important;
+                        background-color: #e75735;
+                    }
+                    
+                    .player__controls-progress::-moz-progress-bar {  
+                        
+                        background-color: #e75735;     
+                    }
+                    
+        }
+        &.player_red{
+                    
+                    .player__controls-fullscreen {
+                        
+                        background-color #e23402;
+                    }
+                    
+                    .player__controls-progress{
+                        
+                        color: #e23402;
+                    }
+                    
+                    .player__controls-progress[value]::-webkit-progress-value {
+                      
+                        background-color: #e23402;
                     }
                     
                     .player__controls-progress::-moz-progress-bar { 
                         
-                        
-                        background-color: #e23402 !important; 
-                        
+                        background-color: #e23402;  
                     }
                 }
                 
@@ -134,24 +142,22 @@
                     
                     .player__controls-fullscreen {
                         
-                        background-color #4eb7a8 !important;
+                        background-color #4eb7a8;
                     }
                     
                     .player__controls-progress{
                         
-                        color: #4eb7a8 !important;
+                        color: #4eb7a8;
                     }
                         
                     .player__controls-progress[value]::-webkit-progress-value {
                         
-                        background-color: #4eb7a8 !important;
+                        background-color: #4eb7a8;
                     }
                     
                     .player__controls-progress::-moz-progress-bar { 
-                        
-                        
-                        background-color: #4eb7a8 !important; 
-                        
+                           
+                        background-color: #4eb7a8; 
                     }
                 }
                 

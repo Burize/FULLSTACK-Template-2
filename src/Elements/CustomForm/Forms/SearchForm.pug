@@ -1,0 +1,5 @@
+include ../CustomForm.pug
+form.custom-form.search-form    
+    +Search({name: 'search1', placeholder: 'Search', color: '#e75735'})
+    +Search({name: 'search2', placeholder: 'Search', color: '#e75735', notfound: true})
+    +Dropdown({ placeholder: 'Choose an option', name: 'inputname', color: '#4eb7a8', options: [{value: 'option1', text: "option1"},{value: 'option2', text: "option2"},{value: 'option3', text: "option3"}]})

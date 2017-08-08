@@ -1,0 +1,9 @@
+include ../CustomForm.pug
+form.custom-form.message-form
+    +HintControl({ hint: 'error', input:'text', name: 'inputname', placeholder: 'Your Name'})
+    br
+    +HintControl({ hint: 'thanks', input:'text', name: 'inputname', placeholder: 'Your Email'})
+    br
+    textarea( placeholder="Your Message" rows="4").custom-form__form-control.custom-form__textarea
+    br
+    +ripple-button({text: 'submit', theme: 'border-bottom-blue'} )

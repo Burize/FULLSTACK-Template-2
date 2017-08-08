@@ -9,7 +9,6 @@ include ./Elements/news/news.pug
 include ./Elements/Event/event.pug
 include ./Elements/calendar/calendar.pug
 include ./Elements/messaging/messaging.pug
-include ./Elements/message-form/message-form.pug
 include ./Elements/video/video.pug
 include ./Elements/donut-chart/donut-chart.pug
 include ./Elements/profil/profil.pug
@@ -78,14 +77,7 @@ html
             article.form-elements
                 header.title form elements
                 section.form-elements__row
-                    form.message-form
-                        +HintControl({ hint: 'error', input:'text', name: 'inputname', placeholder: 'Your Name'})
-                        br
-                        +HintControl({ hint: 'thanks', input:'text', name: 'inputname', placeholder: 'Your Email'})
-                        br
-                        textarea( placeholder="Your Message" rows="4").message-form__form-control.message-form__textarea
-                        br
-                        +ripple-button({text: 'submit', theme: 'border-bottom-blue'} )
+                    include ./Elements/CustomForm/Forms/MessageForm.pug
                     div.checkboxes
                         h2.title toggles
                         section.checkboxes__toggles
@@ -98,35 +90,32 @@ html
             article.one-more-article
                 div.search
                     header.title search / drop down
-                    form.message-form
-                        +Search({name: 'search1', placeholder: 'Search', color: '#e75735'})
-                        +Search({name: 'search2', placeholder: 'Search', color: '#e75735', notfound: true})
-                        +Dropdown({ placeholder: 'Choose an option', name: 'inputname', color: '#4eb7a8', options: [{value: 'option1', text: "option1"},{value: 'option2', text: "option2"},{value: 'option3', text: "option3"}]})
+                    include ./Elements/CustomForm/Forms/SearchForm.pug
                 article.user-profiles
                     header.title user profile
-                    +Profil({ photo: './public/profil1.jpg',name: 'John Smith', profession: 'ux designer', theme: 'red-name',
+                    +Profil({ photo: './images/profil1.jpg',name: 'John Smith', profession: 'ux designer', theme: 'red-name',
                                             links: [{href: '/mock-address/change-me', icon: 'facebook'},
                                                     {href: '/mock-address/change-me', icon: 'twitter'},
                                                     {href: '/mock-address/change-me', icon: 'dribbble'}]})
-                    +Profil({ photo: './public/profil2.jpg', name: 'Sarah Brown', profession: 'developer', theme: 'light-blue',
+                    +Profil({ photo: './images/profil2.jpg', name: 'Sarah Brown', profession: 'developer', theme: 'light-blue',
                                             links: [{href: '/mock-address/change-me', icon: 'facebook'},
                                                     {href: '/mock-address/change-me', icon: 'twitter'},
                                                     {href: '/mock-address/change-me', icon: 'dribbble'}]})
             article.news-events
                 header.title news & events
                 secton.news-events__row
-                    +News({title: "It's all going downhill", date: '24 august 2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', fon: './public/news.jpg', color: '#e75735' } )
-                    +Event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', fon:'./public/event.jpg', button: 'add to calendar', theme: 'blue' })
+                    +News({title: "It's all going downhill", date: '24 august 2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.', fon: './images/news.jpg', color: '#e75735' } )
+                    +Event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', fon:'./images/event.jpg', button: 'add to calendar', theme: 'blue' })
             article.location
                 header.title location
-                +Location({ title: 'Meet us!', address: '1259  CALIFORNIA ST San Francisco, CA ', lat: 37.795712, lng: -122.414756, marker: './public/marker.png', color: '#e75735' })
+                +Location({ title: 'Meet us!', address: '1259  CALIFORNIA ST San Francisco, CA ', lat: 37.795712, lng: -122.414756, marker: './images/marker.png', color: '#e75735' })
             article.calendar_messaging
                 section.calendar_section
                     header.title calendar
                     +Calendar({ name: 'input_name', theme: 'red' })
                 section.messaging_section
                     header.title messaging
-                    +Messaging({ name: 'Sarah Brown', photo: './public/profil2.jpg' , request: 'Hey! So are we cool to meet at the art gallery? Say 8pm', response: 'Yeah that sounds great. See you then.', button: 'Replay'})
+                    +Messaging({ name: 'Sarah Brown', photo: './images/profil2.jpg' , request: 'Hey! So are we cool to meet at the art gallery? Say 8pm', response: 'Yeah that sounds great. See you then.', button: 'Replay'})
             article.video
                 header.title video
                 +Video({poster: 'https://i.vimeocdn.com/video/433176722.webp?mw=1400&mh=654', sources: ['https://16-lvl3-pdl.vimeocdn.com/01/2596/2/62980495/156181927.mp4?expires=1498733590&token=0cfbb45741536ad59eb82']})
