@@ -11,10 +11,11 @@ module.exports = {
     entry: paths.source + 'index.js',
     output: {
         path: paths.build,
+        publicPath: '/public/',
         filename: "[name].js"
     },
     devServer: {
-    publicPath: "/public"
+        publicPath: "/public/"
     },
   
     plugins:[
@@ -25,37 +26,33 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
-            "window.jQuery": "jquery"  
+            "window.jQuery": "jquery",
+            "autoBind": "auto-bind"
         })
     ],
-    module: {
-        loaders:[
+   module: {
+    
+        rules:[
             {
-                test: /\.pug$/,
-                loader: "pug-loader",
-                exclude: [/node_modules/, /public/],
+			    test: /\.js$/,
+			    include: [
+				path.join(__dirname, 'src/')
+			     ],
+                enforce: "pre",
                 options: {
-                    pretty:true
-                }
-            },
-            {
-                test: /\.js$/,
-                loader: "babel-loader",
-                exclude: [/node_modules/, /public/]
-            },
+                fix: true,
+                },
+			    loader: 'eslint-loader',
+			    exclude: /node_modules/,
+		    },
             {
                 test: /\.css$/,
                 loader: "style-loader!css-loader!autoprefixer-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
-                test: /\.less$/,
-                loader: "style-loader!css-loader!autoprefixer-loader!less-loader",
-                exclude: [/node_modules/, /public/]
-            },
-             {
                 test: /\.styl$/,
-                 loader: "style-loader!css-loader!autoprefixer-loader!stylus-loader",
+                loader: "style-loader!css-loader!autoprefixer-loader!stylus-loader",
                 exclude: [/node_modules/, /public/]
             },
             {
@@ -63,21 +60,24 @@ module.exports = {
                 loader: 'url-loader?limit=30000&name=images/[name].[ext]' 
             },
             {
-                test: /\.jsx$/,
-                loader: "babel-loader",
-                exclude: [/node_modules/, /public/]
-            },
-         
-         {
                test: /\.(eot|woff|woff2|ttf|otf|svg)$/,
                 loader: 'url-loader?limit=30000&name=fonts/[name].[ext]'  
             },
-            {
-                test: /\.json$/,
-                loader: "json-loader"
+             {
+                test: /\.pug$/,
+                loader: "pug-loader",
+                exclude: [/node_modules/, /public/],
+                options: {
+                    pretty:true
+                }
+            },
+              {
+                test: /\.js$/,
+                loader: "babel-loader",
+                exclude: [/node_modules/, /public/]
             }
-            
-        ]
+        ],
+   
     }
 }
 

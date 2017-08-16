@@ -1,1 +1,1 @@
-import './messaging.styl'
+import './messaging.styl';

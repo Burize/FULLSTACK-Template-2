@@ -1,30 +1,34 @@
-import "./tick-box.styl"
+import './tick-box.styl';
 
 
-$(function(){
-    
-    $(".tick-box").children("input").click(function(e){
-        e.stopPropagation();
-    })
-    
-    $(".tick-box").click( function(){
-         
-         $(this).toggleClass("tick-box_off");
-         
-     }).each( function(){
-           
-        $(this).toggleClass("tick-box_off");
-          
-           if( $(this).attr('checked') )  
-                    $(this).click();
-                          
-       });        
-            
-          
-     }).each( function(){
-           
-           if( $(this).attr('checked') )  
-                    $(this).click();
-                          
-       });
-    
+class TickBox {
+  constructor(root) {
+    this.$root = $(root);
+
+    this.$root.toggleClass('tick-box_off');
+
+    this.setHandlers();
+
+
+    if (this.$root.attr('checked')) { this.$root.click(); }
+  }
+
+  setHandlers() {
+    this.$root.on('click.tickBox', this.toggle);
+
+    this.$root.children('input').click((e) => {
+      e.stopPropagation();
+    });
+  }
+  toggle(e) {
+    $(e.currentTarget).toggleClass('tick-box_off');
+  }
+}
+
+
+$(() => {
+  $('.tick-box').each((index, element) => {
+    $(element).data('tickBox', new TickBox(element));
+  });
+});
+

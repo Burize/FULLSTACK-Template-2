@@ -1,1 +1,1 @@
-import "./profil.styl"
+import './profil.styl';

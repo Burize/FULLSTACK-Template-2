@@ -1,3 +1,2 @@
-import "./arrow-button.styl"
-
+import './arrow-button.styl';
 

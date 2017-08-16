@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -192,7 +192,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(26);
+var	fixUrls = __webpack_require__(27);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -10770,49 +10770,73 @@ return jQuery;
 
 "use strict";
 
+module.exports = self => {
+	for (const key of Object.getOwnPropertyNames(self.constructor.prototype)) {
+		const val = self[key];
 
-__webpack_require__(4);
+		if (key !== 'constructor' && typeof val === 'function') {
+			self[key] = val.bind(self);
+		}
+	}
 
-__webpack_require__(27);
+	return self;
+};
 
-__webpack_require__(30);
-
-__webpack_require__(33);
-
-__webpack_require__(36);
-
-__webpack_require__(38);
-
-__webpack_require__(41);
-
-__webpack_require__(43);
-
-__webpack_require__(52);
-
-__webpack_require__(55);
-
-__webpack_require__(58);
-
-__webpack_require__(61);
-
-__webpack_require__(64);
-
-__webpack_require__(67);
-
-__webpack_require__(70);
-
-__webpack_require__(76);
-
-__webpack_require__(79);
 
 /***/ }),
 /* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_styl__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_styl__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Elements_Button_button__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Elements_Arrow_button_Arrow_button__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Elements_pie_chart_pie_chart__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Elements_slider_slider__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Elements_CustomForm_CustomForm__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Elements_toggle_toggle__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Elements_tick_box_tick_box__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Elements_Profil_profil__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Elements_news_news__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Elements_event_event__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Elements_location_location__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Elements_calendar_calendar__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Elements_messaging_messaging__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Elements_video_video__ = __webpack_require__(80);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(5);
+var content = __webpack_require__(6);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -10837,29 +10861,15 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(undefined);
-// imports
-exports.i(__webpack_require__(6), "");
-
-// module
-exports.push([module.i, "@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(8) + ") format('woff'), url(" + __webpack_require__(9) + ") format('truetype'), url(" + __webpack_require__(10) + ") format('svg');\n  font-style: normal;\n  font-weight: 300;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(11) + ") format('woff'), url(" + __webpack_require__(12) + ") format('truetype'), url(" + __webpack_require__(13) + ") format('svg');\n  font-style: normal;\n  font-weight: 400;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(14) + ") format('woff'), url(" + __webpack_require__(15) + ") format('truetype'), url(" + __webpack_require__(16) + ") format('svg');\n  font-style: normal;\n  font-weight: 700;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(17) + ") format('woff'), url(" + __webpack_require__(18) + ") format('truetype'), url(" + __webpack_require__(19) + ") format('svg');\n  font-style: normal;\n  font-weight: 900;\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  src: url(" + __webpack_require__(20) + ") format('woff'), url(" + __webpack_require__(21) + ") format('truetype'), url(" + __webpack_require__(22) + ") format('svg');\n  font-style: normal;\n  font-weight: 300;\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  src: url(" + __webpack_require__(23) + ") format('woff'), url(" + __webpack_require__(24) + ") format('truetype'), url(" + __webpack_require__(25) + ") format('svg');\n  font-style: normal;\n  font-weight: 400;\n}\nhtml {\n  background-color: #fff;\n  color: #000;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n}\n.container {\n  margin: auto;\n  width: 1200px;\n  padding-top: 11%;\n}\n.container .title {\n  font-family: Lato, Arial, sans-serif;\n  font-style: normal;\n  font-weight: 900;\n  text-align: center;\n  font-size: 2.2rem;\n  text-transform: uppercase;\n  color: #4f4f4f;\n}\n.container .standard-buttons {\n  width: 74%;\n  margin: auto;\n  margin-bottom: 8.5%;\n}\n.container .standard-buttons .title {\n  margin-bottom: 16%;\n}\n.container .standard-buttons .standard-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin-bottom: 4.5%;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(1),\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(4) {\n  width: 16%;\n  font-size: 1.1rem;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(2),\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(3) {\n  width: 25.5%;\n  font-size: 1.5rem;\n}\n.container .arrow-buttons {\n  width: 68%;\n  margin: auto;\n  margin-bottom: 7.5%;\n}\n.container .arrow-buttons .title {\n  margin-bottom: 8.5%;\n}\n.container .arrow-buttons .arrow-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .arrow-buttons .arrow-buttons__row .arrow-button {\n  width: 11.5%;\n}\n.container .pie-charts {\n  width: 100%;\n  margin: auto;\n  margin-bottom: 5%;\n}\n.container .pie-charts .title {\n  margin-bottom: 4.2%;\n}\n.container .pie-charts .pie-charts__row {\n  padding-right: 45px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.container .pie-charts .pie-charts__row .pie-chart {\n  color: #9d9d9d;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 300;\n  width: 16%;\n}\n.container .pie-charts .pie-charts__row .donut-chart {\n  width: 16%;\n}\n.container .sliders {\n  margin-bottom: 5.2%;\n}\n.container .sliders .title {\n  margin-bottom: 5.8%;\n}\n.container .sliders .slider__row {\n  padding: 0 1.5% 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .sliders .slider__row .slider {\n  width: 47%;\n  font-size: 1.6rem;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .stages {\n  margin-bottom: 8.2%;\n}\n.container .stages .title {\n  margin-bottom: 4.6%;\n}\n.container .stages .stage {\n  width: 97%;\n  margin: auto;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements {\n  margin-bottom: 8.7%;\n}\n.container .form-elements .title {\n  margin-bottom: 8%;\n}\n.container .form-elements .form-elements__row {\n  padding-left: 2.3%;\n  padding-right: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .form-elements .form-elements__row .message-form {\n  width: 56%;\n}\n.container .form-elements .form-elements__row .message-form .message-form__form-control {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .form-elements .form-elements__row .message-form .hint-control {\n  width: 72%;\n  font-size: 1.6rem;\n  margin-bottom: 0.25rem;\n}\n.container .form-elements .form-elements__row .message-form .hint-control .hint {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .message-form textarea {\n  font-size: 1.6rem;\n  width: 100%;\n  margin-bottom: 3.6%;\n}\n.container .form-elements .form-elements__row .message-form button {\n  font-size: 1.6rem;\n  float: right;\n  width: 9em;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .checkboxes {\n  width: 25%;\n  text-align: center;\n}\n.container .form-elements .form-elements__row .checkboxes .title:first-child {\n  margin-top: -4.7%;\n  margin-bottom: 24%;\n}\n.container .form-elements .form-elements__row .checkboxes .title:nth-child(3) {\n  margin-top: 28%;\n  margin-bottom: 3.55rem;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__toggles {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 2rem;\n  font-size: 2rem;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__toggles .toggle {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__tick-boxes {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 30% 0 20%;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__tick-boxes .tick-box {\n  width: 40%;\n  font-size: 2rem;\n}\n.container .one-more-article {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2%;\n  margin-bottom: 11.3%;\n  padding-right: 5%;\n}\n.container .one-more-article .search {\n  width: 50%;\n}\n.container .one-more-article .search .title {\n  font-size: 2.2rem;\n  margin-bottom: 1.1em;\n}\n.container .one-more-article .search .message-form {\n  width: 100%;\n}\n.container .one-more-article .search .message-form .message-form__input-search,\n.container .one-more-article .search .message-form .dropdown {\n  width: 100%;\n  font-size: 1.8rem;\n  margin-bottom: 1em;\n}\n.container .one-more-article .search .message-form .message-form__input-search .message-form__form-control,\n.container .one-more-article .search .message-form .dropdown .message-form__form-control {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .one-more-article .user-profiles {\n  width: 44%;\n}\n.container .one-more-article .user-profiles .title {\n  margin-bottom: 11.5%;\n}\n.container .one-more-article .user-profiles .profil {\n  margin-bottom: 9%;\n}\n.container .one-more-article .user-profiles .profil .profil__name {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .one-more-article .user-profiles .profil .profil__profession {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 900;\n}\n.container .news-events {\n  margin-bottom: 7.5%;\n}\n.container .news-events .title {\n  margin-bottom: 5.2%;\n}\n.container .news-events .news-events__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  padding-left: 2.2%;\n  padding-right: 2.6%;\n  height: 25.6rem;\n}\n.container .news-events .news-events__row .news,\n.container .news-events .news-events__row .event {\n  width: 48.5%;\n}\n.container .news-events .news-events__row .news {\n  font-family: Lato, Arial, sans-serif;\n}\n.container .news-events .news-events__row .news .news__title {\n  font-weight: 300;\n}\n.container .news-events .news-events__row .news .news__date {\n  font-weight: 900;\n}\n.container .news-events .news-events__row .news .news__text {\n  font-weight: 400;\n}\n.container .news-events .news-events__row .event {\n  font-family: Lato, Arial, sans-serif;\n}\n.container .news-events .news-events__row .event .event__date {\n  font-weight: 300;\n}\n.container .news-events .news-events__row .event .event__title,\n.container .news-events .news-events__row .event .event__button button {\n  font-weight: 900;\n}\n.container .news-events .news-events__row .event .event__text {\n  font-weight: 400;\n}\n.container .location {\n  margin-bottom: 8%;\n}\n.container .location .title {\n  margin-bottom: 4.8%;\n}\n.container .location .map {\n  width: 95%;\n  margin: auto;\n  font-family: Lato, Arial, sans-serif;\n}\n.container .location .map .map__footer-title {\n  font-weight: 300;\n}\n.container .location .map .map_footer-place {\n  font-weight: 900;\n}\n.container .calendar_messaging {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2.4%;\n  padding-right: 2.6%;\n  margin-bottom: 8.5%;\n}\n.container .calendar_messaging .calendar_section {\n  width: 46.5%;\n}\n.container .calendar_messaging .calendar_section .title {\n  margin-bottom: 9.5%;\n}\n.container .calendar_messaging .messaging_section {\n  width: 48.5%;\n}\n.container .calendar_messaging .messaging_section .title {\n  margin-bottom: 9%;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__header-title {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 300;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__body-request,\n.container .calendar_messaging .messaging_section .messaging .messaging__body-response {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 700;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__button {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .video {\n  width: 95%;\n  margin: auto;\n}\n.container .video .title {\n  margin-bottom: 4%;\n}\n.container .video .player {\n  margin-bottom: 5%;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
 // imports
-
+exports.i(__webpack_require__(7), "");
 
 // module
-exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(7) + ");\n  font-weight: normal;\n  font-style: normal;\n}\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%;\n}\n.fa-2x {\n  font-size: 2em;\n}\n.fa-3x {\n  font-size: 3em;\n}\n.fa-4x {\n  font-size: 4em;\n}\n.fa-5x {\n  font-size: 5em;\n}\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center;\n}\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none;\n}\n.fa-ul > li {\n  position: relative;\n}\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center;\n}\n.fa-li.fa-lg {\n  left: -1.85714286em;\n}\n.fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eeeeee;\n  border-radius: .1em;\n}\n.fa-pull-left {\n  float: left;\n}\n.fa-pull-right {\n  float: right;\n}\n.fa.fa-pull-left {\n  margin-right: .3em;\n}\n.fa.fa-pull-right {\n  margin-left: .3em;\n}\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.fa.pull-left {\n  margin-right: .3em;\n}\n.fa.pull-right {\n  margin-left: .3em;\n}\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear;\n}\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8);\n}\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  -ms-transform: scale(-1, 1);\n  transform: scale(-1, 1);\n}\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  -ms-transform: scale(1, -1);\n  transform: scale(1, -1);\n}\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  filter: none;\n}\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle;\n}\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center;\n}\n.fa-stack-1x {\n  line-height: inherit;\n}\n.fa-stack-2x {\n  font-size: 2em;\n}\n.fa-inverse {\n  color: #ffffff;\n}\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\";\n}\n.fa-music:before {\n  content: \"\\F001\";\n}\n.fa-search:before {\n  content: \"\\F002\";\n}\n.fa-envelope-o:before {\n  content: \"\\F003\";\n}\n.fa-heart:before {\n  content: \"\\F004\";\n}\n.fa-star:before {\n  content: \"\\F005\";\n}\n.fa-star-o:before {\n  content: \"\\F006\";\n}\n.fa-user:before {\n  content: \"\\F007\";\n}\n.fa-film:before {\n  content: \"\\F008\";\n}\n.fa-th-large:before {\n  content: \"\\F009\";\n}\n.fa-th:before {\n  content: \"\\F00A\";\n}\n.fa-th-list:before {\n  content: \"\\F00B\";\n}\n.fa-check:before {\n  content: \"\\F00C\";\n}\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\";\n}\n.fa-search-plus:before {\n  content: \"\\F00E\";\n}\n.fa-search-minus:before {\n  content: \"\\F010\";\n}\n.fa-power-off:before {\n  content: \"\\F011\";\n}\n.fa-signal:before {\n  content: \"\\F012\";\n}\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\";\n}\n.fa-trash-o:before {\n  content: \"\\F014\";\n}\n.fa-home:before {\n  content: \"\\F015\";\n}\n.fa-file-o:before {\n  content: \"\\F016\";\n}\n.fa-clock-o:before {\n  content: \"\\F017\";\n}\n.fa-road:before {\n  content: \"\\F018\";\n}\n.fa-download:before {\n  content: \"\\F019\";\n}\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\";\n}\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\";\n}\n.fa-inbox:before {\n  content: \"\\F01C\";\n}\n.fa-play-circle-o:before {\n  content: \"\\F01D\";\n}\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\";\n}\n.fa-refresh:before {\n  content: \"\\F021\";\n}\n.fa-list-alt:before {\n  content: \"\\F022\";\n}\n.fa-lock:before {\n  content: \"\\F023\";\n}\n.fa-flag:before {\n  content: \"\\F024\";\n}\n.fa-headphones:before {\n  content: \"\\F025\";\n}\n.fa-volume-off:before {\n  content: \"\\F026\";\n}\n.fa-volume-down:before {\n  content: \"\\F027\";\n}\n.fa-volume-up:before {\n  content: \"\\F028\";\n}\n.fa-qrcode:before {\n  content: \"\\F029\";\n}\n.fa-barcode:before {\n  content: \"\\F02A\";\n}\n.fa-tag:before {\n  content: \"\\F02B\";\n}\n.fa-tags:before {\n  content: \"\\F02C\";\n}\n.fa-book:before {\n  content: \"\\F02D\";\n}\n.fa-bookmark:before {\n  content: \"\\F02E\";\n}\n.fa-print:before {\n  content: \"\\F02F\";\n}\n.fa-camera:before {\n  content: \"\\F030\";\n}\n.fa-font:before {\n  content: \"\\F031\";\n}\n.fa-bold:before {\n  content: \"\\F032\";\n}\n.fa-italic:before {\n  content: \"\\F033\";\n}\n.fa-text-height:before {\n  content: \"\\F034\";\n}\n.fa-text-width:before {\n  content: \"\\F035\";\n}\n.fa-align-left:before {\n  content: \"\\F036\";\n}\n.fa-align-center:before {\n  content: \"\\F037\";\n}\n.fa-align-right:before {\n  content: \"\\F038\";\n}\n.fa-align-justify:before {\n  content: \"\\F039\";\n}\n.fa-list:before {\n  content: \"\\F03A\";\n}\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\";\n}\n.fa-indent:before {\n  content: \"\\F03C\";\n}\n.fa-video-camera:before {\n  content: \"\\F03D\";\n}\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\";\n}\n.fa-pencil:before {\n  content: \"\\F040\";\n}\n.fa-map-marker:before {\n  content: \"\\F041\";\n}\n.fa-adjust:before {\n  content: \"\\F042\";\n}\n.fa-tint:before {\n  content: \"\\F043\";\n}\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\";\n}\n.fa-share-square-o:before {\n  content: \"\\F045\";\n}\n.fa-check-square-o:before {\n  content: \"\\F046\";\n}\n.fa-arrows:before {\n  content: \"\\F047\";\n}\n.fa-step-backward:before {\n  content: \"\\F048\";\n}\n.fa-fast-backward:before {\n  content: \"\\F049\";\n}\n.fa-backward:before {\n  content: \"\\F04A\";\n}\n.fa-play:before {\n  content: \"\\F04B\";\n}\n.fa-pause:before {\n  content: \"\\F04C\";\n}\n.fa-stop:before {\n  content: \"\\F04D\";\n}\n.fa-forward:before {\n  content: \"\\F04E\";\n}\n.fa-fast-forward:before {\n  content: \"\\F050\";\n}\n.fa-step-forward:before {\n  content: \"\\F051\";\n}\n.fa-eject:before {\n  content: \"\\F052\";\n}\n.fa-chevron-left:before {\n  content: \"\\F053\";\n}\n.fa-chevron-right:before {\n  content: \"\\F054\";\n}\n.fa-plus-circle:before {\n  content: \"\\F055\";\n}\n.fa-minus-circle:before {\n  content: \"\\F056\";\n}\n.fa-times-circle:before {\n  content: \"\\F057\";\n}\n.fa-check-circle:before {\n  content: \"\\F058\";\n}\n.fa-question-circle:before {\n  content: \"\\F059\";\n}\n.fa-info-circle:before {\n  content: \"\\F05A\";\n}\n.fa-crosshairs:before {\n  content: \"\\F05B\";\n}\n.fa-times-circle-o:before {\n  content: \"\\F05C\";\n}\n.fa-check-circle-o:before {\n  content: \"\\F05D\";\n}\n.fa-ban:before {\n  content: \"\\F05E\";\n}\n.fa-arrow-left:before {\n  content: \"\\F060\";\n}\n.fa-arrow-right:before {\n  content: \"\\F061\";\n}\n.fa-arrow-up:before {\n  content: \"\\F062\";\n}\n.fa-arrow-down:before {\n  content: \"\\F063\";\n}\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\";\n}\n.fa-expand:before {\n  content: \"\\F065\";\n}\n.fa-compress:before {\n  content: \"\\F066\";\n}\n.fa-plus:before {\n  content: \"\\F067\";\n}\n.fa-minus:before {\n  content: \"\\F068\";\n}\n.fa-asterisk:before {\n  content: \"\\F069\";\n}\n.fa-exclamation-circle:before {\n  content: \"\\F06A\";\n}\n.fa-gift:before {\n  content: \"\\F06B\";\n}\n.fa-leaf:before {\n  content: \"\\F06C\";\n}\n.fa-fire:before {\n  content: \"\\F06D\";\n}\n.fa-eye:before {\n  content: \"\\F06E\";\n}\n.fa-eye-slash:before {\n  content: \"\\F070\";\n}\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\";\n}\n.fa-plane:before {\n  content: \"\\F072\";\n}\n.fa-calendar:before {\n  content: \"\\F073\";\n}\n.fa-random:before {\n  content: \"\\F074\";\n}\n.fa-comment:before {\n  content: \"\\F075\";\n}\n.fa-magnet:before {\n  content: \"\\F076\";\n}\n.fa-chevron-up:before {\n  content: \"\\F077\";\n}\n.fa-chevron-down:before {\n  content: \"\\F078\";\n}\n.fa-retweet:before {\n  content: \"\\F079\";\n}\n.fa-shopping-cart:before {\n  content: \"\\F07A\";\n}\n.fa-folder:before {\n  content: \"\\F07B\";\n}\n.fa-folder-open:before {\n  content: \"\\F07C\";\n}\n.fa-arrows-v:before {\n  content: \"\\F07D\";\n}\n.fa-arrows-h:before {\n  content: \"\\F07E\";\n}\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\";\n}\n.fa-twitter-square:before {\n  content: \"\\F081\";\n}\n.fa-facebook-square:before {\n  content: \"\\F082\";\n}\n.fa-camera-retro:before {\n  content: \"\\F083\";\n}\n.fa-key:before {\n  content: \"\\F084\";\n}\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\";\n}\n.fa-comments:before {\n  content: \"\\F086\";\n}\n.fa-thumbs-o-up:before {\n  content: \"\\F087\";\n}\n.fa-thumbs-o-down:before {\n  content: \"\\F088\";\n}\n.fa-star-half:before {\n  content: \"\\F089\";\n}\n.fa-heart-o:before {\n  content: \"\\F08A\";\n}\n.fa-sign-out:before {\n  content: \"\\F08B\";\n}\n.fa-linkedin-square:before {\n  content: \"\\F08C\";\n}\n.fa-thumb-tack:before {\n  content: \"\\F08D\";\n}\n.fa-external-link:before {\n  content: \"\\F08E\";\n}\n.fa-sign-in:before {\n  content: \"\\F090\";\n}\n.fa-trophy:before {\n  content: \"\\F091\";\n}\n.fa-github-square:before {\n  content: \"\\F092\";\n}\n.fa-upload:before {\n  content: \"\\F093\";\n}\n.fa-lemon-o:before {\n  content: \"\\F094\";\n}\n.fa-phone:before {\n  content: \"\\F095\";\n}\n.fa-square-o:before {\n  content: \"\\F096\";\n}\n.fa-bookmark-o:before {\n  content: \"\\F097\";\n}\n.fa-phone-square:before {\n  content: \"\\F098\";\n}\n.fa-twitter:before {\n  content: \"\\F099\";\n}\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\";\n}\n.fa-github:before {\n  content: \"\\F09B\";\n}\n.fa-unlock:before {\n  content: \"\\F09C\";\n}\n.fa-credit-card:before {\n  content: \"\\F09D\";\n}\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\";\n}\n.fa-hdd-o:before {\n  content: \"\\F0A0\";\n}\n.fa-bullhorn:before {\n  content: \"\\F0A1\";\n}\n.fa-bell:before {\n  content: \"\\F0F3\";\n}\n.fa-certificate:before {\n  content: \"\\F0A3\";\n}\n.fa-hand-o-right:before {\n  content: \"\\F0A4\";\n}\n.fa-hand-o-left:before {\n  content: \"\\F0A5\";\n}\n.fa-hand-o-up:before {\n  content: \"\\F0A6\";\n}\n.fa-hand-o-down:before {\n  content: \"\\F0A7\";\n}\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\";\n}\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\";\n}\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\";\n}\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\";\n}\n.fa-globe:before {\n  content: \"\\F0AC\";\n}\n.fa-wrench:before {\n  content: \"\\F0AD\";\n}\n.fa-tasks:before {\n  content: \"\\F0AE\";\n}\n.fa-filter:before {\n  content: \"\\F0B0\";\n}\n.fa-briefcase:before {\n  content: \"\\F0B1\";\n}\n.fa-arrows-alt:before {\n  content: \"\\F0B2\";\n}\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\";\n}\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\";\n}\n.fa-cloud:before {\n  content: \"\\F0C2\";\n}\n.fa-flask:before {\n  content: \"\\F0C3\";\n}\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\";\n}\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\";\n}\n.fa-paperclip:before {\n  content: \"\\F0C6\";\n}\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\";\n}\n.fa-square:before {\n  content: \"\\F0C8\";\n}\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\";\n}\n.fa-list-ul:before {\n  content: \"\\F0CA\";\n}\n.fa-list-ol:before {\n  content: \"\\F0CB\";\n}\n.fa-strikethrough:before {\n  content: \"\\F0CC\";\n}\n.fa-underline:before {\n  content: \"\\F0CD\";\n}\n.fa-table:before {\n  content: \"\\F0CE\";\n}\n.fa-magic:before {\n  content: \"\\F0D0\";\n}\n.fa-truck:before {\n  content: \"\\F0D1\";\n}\n.fa-pinterest:before {\n  content: \"\\F0D2\";\n}\n.fa-pinterest-square:before {\n  content: \"\\F0D3\";\n}\n.fa-google-plus-square:before {\n  content: \"\\F0D4\";\n}\n.fa-google-plus:before {\n  content: \"\\F0D5\";\n}\n.fa-money:before {\n  content: \"\\F0D6\";\n}\n.fa-caret-down:before {\n  content: \"\\F0D7\";\n}\n.fa-caret-up:before {\n  content: \"\\F0D8\";\n}\n.fa-caret-left:before {\n  content: \"\\F0D9\";\n}\n.fa-caret-right:before {\n  content: \"\\F0DA\";\n}\n.fa-columns:before {\n  content: \"\\F0DB\";\n}\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\";\n}\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\";\n}\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\";\n}\n.fa-envelope:before {\n  content: \"\\F0E0\";\n}\n.fa-linkedin:before {\n  content: \"\\F0E1\";\n}\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\";\n}\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\";\n}\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\";\n}\n.fa-comment-o:before {\n  content: \"\\F0E5\";\n}\n.fa-comments-o:before {\n  content: \"\\F0E6\";\n}\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\";\n}\n.fa-sitemap:before {\n  content: \"\\F0E8\";\n}\n.fa-umbrella:before {\n  content: \"\\F0E9\";\n}\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\";\n}\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\";\n}\n.fa-exchange:before {\n  content: \"\\F0EC\";\n}\n.fa-cloud-download:before {\n  content: \"\\F0ED\";\n}\n.fa-cloud-upload:before {\n  content: \"\\F0EE\";\n}\n.fa-user-md:before {\n  content: \"\\F0F0\";\n}\n.fa-stethoscope:before {\n  content: \"\\F0F1\";\n}\n.fa-suitcase:before {\n  content: \"\\F0F2\";\n}\n.fa-bell-o:before {\n  content: \"\\F0A2\";\n}\n.fa-coffee:before {\n  content: \"\\F0F4\";\n}\n.fa-cutlery:before {\n  content: \"\\F0F5\";\n}\n.fa-file-text-o:before {\n  content: \"\\F0F6\";\n}\n.fa-building-o:before {\n  content: \"\\F0F7\";\n}\n.fa-hospital-o:before {\n  content: \"\\F0F8\";\n}\n.fa-ambulance:before {\n  content: \"\\F0F9\";\n}\n.fa-medkit:before {\n  content: \"\\F0FA\";\n}\n.fa-fighter-jet:before {\n  content: \"\\F0FB\";\n}\n.fa-beer:before {\n  content: \"\\F0FC\";\n}\n.fa-h-square:before {\n  content: \"\\F0FD\";\n}\n.fa-plus-square:before {\n  content: \"\\F0FE\";\n}\n.fa-angle-double-left:before {\n  content: \"\\F100\";\n}\n.fa-angle-double-right:before {\n  content: \"\\F101\";\n}\n.fa-angle-double-up:before {\n  content: \"\\F102\";\n}\n.fa-angle-double-down:before {\n  content: \"\\F103\";\n}\n.fa-angle-left:before {\n  content: \"\\F104\";\n}\n.fa-angle-right:before {\n  content: \"\\F105\";\n}\n.fa-angle-up:before {\n  content: \"\\F106\";\n}\n.fa-angle-down:before {\n  content: \"\\F107\";\n}\n.fa-desktop:before {\n  content: \"\\F108\";\n}\n.fa-laptop:before {\n  content: \"\\F109\";\n}\n.fa-tablet:before {\n  content: \"\\F10A\";\n}\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\";\n}\n.fa-circle-o:before {\n  content: \"\\F10C\";\n}\n.fa-quote-left:before {\n  content: \"\\F10D\";\n}\n.fa-quote-right:before {\n  content: \"\\F10E\";\n}\n.fa-spinner:before {\n  content: \"\\F110\";\n}\n.fa-circle:before {\n  content: \"\\F111\";\n}\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\";\n}\n.fa-github-alt:before {\n  content: \"\\F113\";\n}\n.fa-folder-o:before {\n  content: \"\\F114\";\n}\n.fa-folder-open-o:before {\n  content: \"\\F115\";\n}\n.fa-smile-o:before {\n  content: \"\\F118\";\n}\n.fa-frown-o:before {\n  content: \"\\F119\";\n}\n.fa-meh-o:before {\n  content: \"\\F11A\";\n}\n.fa-gamepad:before {\n  content: \"\\F11B\";\n}\n.fa-keyboard-o:before {\n  content: \"\\F11C\";\n}\n.fa-flag-o:before {\n  content: \"\\F11D\";\n}\n.fa-flag-checkered:before {\n  content: \"\\F11E\";\n}\n.fa-terminal:before {\n  content: \"\\F120\";\n}\n.fa-code:before {\n  content: \"\\F121\";\n}\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\";\n}\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\";\n}\n.fa-location-arrow:before {\n  content: \"\\F124\";\n}\n.fa-crop:before {\n  content: \"\\F125\";\n}\n.fa-code-fork:before {\n  content: \"\\F126\";\n}\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\";\n}\n.fa-question:before {\n  content: \"\\F128\";\n}\n.fa-info:before {\n  content: \"\\F129\";\n}\n.fa-exclamation:before {\n  content: \"\\F12A\";\n}\n.fa-superscript:before {\n  content: \"\\F12B\";\n}\n.fa-subscript:before {\n  content: \"\\F12C\";\n}\n.fa-eraser:before {\n  content: \"\\F12D\";\n}\n.fa-puzzle-piece:before {\n  content: \"\\F12E\";\n}\n.fa-microphone:before {\n  content: \"\\F130\";\n}\n.fa-microphone-slash:before {\n  content: \"\\F131\";\n}\n.fa-shield:before {\n  content: \"\\F132\";\n}\n.fa-calendar-o:before {\n  content: \"\\F133\";\n}\n.fa-fire-extinguisher:before {\n  content: \"\\F134\";\n}\n.fa-rocket:before {\n  content: \"\\F135\";\n}\n.fa-maxcdn:before {\n  content: \"\\F136\";\n}\n.fa-chevron-circle-left:before {\n  content: \"\\F137\";\n}\n.fa-chevron-circle-right:before {\n  content: \"\\F138\";\n}\n.fa-chevron-circle-up:before {\n  content: \"\\F139\";\n}\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\";\n}\n.fa-html5:before {\n  content: \"\\F13B\";\n}\n.fa-css3:before {\n  content: \"\\F13C\";\n}\n.fa-anchor:before {\n  content: \"\\F13D\";\n}\n.fa-unlock-alt:before {\n  content: \"\\F13E\";\n}\n.fa-bullseye:before {\n  content: \"\\F140\";\n}\n.fa-ellipsis-h:before {\n  content: \"\\F141\";\n}\n.fa-ellipsis-v:before {\n  content: \"\\F142\";\n}\n.fa-rss-square:before {\n  content: \"\\F143\";\n}\n.fa-play-circle:before {\n  content: \"\\F144\";\n}\n.fa-ticket:before {\n  content: \"\\F145\";\n}\n.fa-minus-square:before {\n  content: \"\\F146\";\n}\n.fa-minus-square-o:before {\n  content: \"\\F147\";\n}\n.fa-level-up:before {\n  content: \"\\F148\";\n}\n.fa-level-down:before {\n  content: \"\\F149\";\n}\n.fa-check-square:before {\n  content: \"\\F14A\";\n}\n.fa-pencil-square:before {\n  content: \"\\F14B\";\n}\n.fa-external-link-square:before {\n  content: \"\\F14C\";\n}\n.fa-share-square:before {\n  content: \"\\F14D\";\n}\n.fa-compass:before {\n  content: \"\\F14E\";\n}\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\";\n}\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\";\n}\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\";\n}\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\";\n}\n.fa-gbp:before {\n  content: \"\\F154\";\n}\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\";\n}\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\";\n}\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\";\n}\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\";\n}\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\";\n}\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\";\n}\n.fa-file:before {\n  content: \"\\F15B\";\n}\n.fa-file-text:before {\n  content: \"\\F15C\";\n}\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\";\n}\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\";\n}\n.fa-sort-amount-asc:before {\n  content: \"\\F160\";\n}\n.fa-sort-amount-desc:before {\n  content: \"\\F161\";\n}\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\";\n}\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\";\n}\n.fa-thumbs-up:before {\n  content: \"\\F164\";\n}\n.fa-thumbs-down:before {\n  content: \"\\F165\";\n}\n.fa-youtube-square:before {\n  content: \"\\F166\";\n}\n.fa-youtube:before {\n  content: \"\\F167\";\n}\n.fa-xing:before {\n  content: \"\\F168\";\n}\n.fa-xing-square:before {\n  content: \"\\F169\";\n}\n.fa-youtube-play:before {\n  content: \"\\F16A\";\n}\n.fa-dropbox:before {\n  content: \"\\F16B\";\n}\n.fa-stack-overflow:before {\n  content: \"\\F16C\";\n}\n.fa-instagram:before {\n  content: \"\\F16D\";\n}\n.fa-flickr:before {\n  content: \"\\F16E\";\n}\n.fa-adn:before {\n  content: \"\\F170\";\n}\n.fa-bitbucket:before {\n  content: \"\\F171\";\n}\n.fa-bitbucket-square:before {\n  content: \"\\F172\";\n}\n.fa-tumblr:before {\n  content: \"\\F173\";\n}\n.fa-tumblr-square:before {\n  content: \"\\F174\";\n}\n.fa-long-arrow-down:before {\n  content: \"\\F175\";\n}\n.fa-long-arrow-up:before {\n  content: \"\\F176\";\n}\n.fa-long-arrow-left:before {\n  content: \"\\F177\";\n}\n.fa-long-arrow-right:before {\n  content: \"\\F178\";\n}\n.fa-apple:before {\n  content: \"\\F179\";\n}\n.fa-windows:before {\n  content: \"\\F17A\";\n}\n.fa-android:before {\n  content: \"\\F17B\";\n}\n.fa-linux:before {\n  content: \"\\F17C\";\n}\n.fa-dribbble:before {\n  content: \"\\F17D\";\n}\n.fa-skype:before {\n  content: \"\\F17E\";\n}\n.fa-foursquare:before {\n  content: \"\\F180\";\n}\n.fa-trello:before {\n  content: \"\\F181\";\n}\n.fa-female:before {\n  content: \"\\F182\";\n}\n.fa-male:before {\n  content: \"\\F183\";\n}\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\";\n}\n.fa-sun-o:before {\n  content: \"\\F185\";\n}\n.fa-moon-o:before {\n  content: \"\\F186\";\n}\n.fa-archive:before {\n  content: \"\\F187\";\n}\n.fa-bug:before {\n  content: \"\\F188\";\n}\n.fa-vk:before {\n  content: \"\\F189\";\n}\n.fa-weibo:before {\n  content: \"\\F18A\";\n}\n.fa-renren:before {\n  content: \"\\F18B\";\n}\n.fa-pagelines:before {\n  content: \"\\F18C\";\n}\n.fa-stack-exchange:before {\n  content: \"\\F18D\";\n}\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\";\n}\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\";\n}\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\";\n}\n.fa-dot-circle-o:before {\n  content: \"\\F192\";\n}\n.fa-wheelchair:before {\n  content: \"\\F193\";\n}\n.fa-vimeo-square:before {\n  content: \"\\F194\";\n}\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\";\n}\n.fa-plus-square-o:before {\n  content: \"\\F196\";\n}\n.fa-space-shuttle:before {\n  content: \"\\F197\";\n}\n.fa-slack:before {\n  content: \"\\F198\";\n}\n.fa-envelope-square:before {\n  content: \"\\F199\";\n}\n.fa-wordpress:before {\n  content: \"\\F19A\";\n}\n.fa-openid:before {\n  content: \"\\F19B\";\n}\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\";\n}\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\";\n}\n.fa-yahoo:before {\n  content: \"\\F19E\";\n}\n.fa-google:before {\n  content: \"\\F1A0\";\n}\n.fa-reddit:before {\n  content: \"\\F1A1\";\n}\n.fa-reddit-square:before {\n  content: \"\\F1A2\";\n}\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\";\n}\n.fa-stumbleupon:before {\n  content: \"\\F1A4\";\n}\n.fa-delicious:before {\n  content: \"\\F1A5\";\n}\n.fa-digg:before {\n  content: \"\\F1A6\";\n}\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\";\n}\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\";\n}\n.fa-drupal:before {\n  content: \"\\F1A9\";\n}\n.fa-joomla:before {\n  content: \"\\F1AA\";\n}\n.fa-language:before {\n  content: \"\\F1AB\";\n}\n.fa-fax:before {\n  content: \"\\F1AC\";\n}\n.fa-building:before {\n  content: \"\\F1AD\";\n}\n.fa-child:before {\n  content: \"\\F1AE\";\n}\n.fa-paw:before {\n  content: \"\\F1B0\";\n}\n.fa-spoon:before {\n  content: \"\\F1B1\";\n}\n.fa-cube:before {\n  content: \"\\F1B2\";\n}\n.fa-cubes:before {\n  content: \"\\F1B3\";\n}\n.fa-behance:before {\n  content: \"\\F1B4\";\n}\n.fa-behance-square:before {\n  content: \"\\F1B5\";\n}\n.fa-steam:before {\n  content: \"\\F1B6\";\n}\n.fa-steam-square:before {\n  content: \"\\F1B7\";\n}\n.fa-recycle:before {\n  content: \"\\F1B8\";\n}\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\";\n}\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\";\n}\n.fa-tree:before {\n  content: \"\\F1BB\";\n}\n.fa-spotify:before {\n  content: \"\\F1BC\";\n}\n.fa-deviantart:before {\n  content: \"\\F1BD\";\n}\n.fa-soundcloud:before {\n  content: \"\\F1BE\";\n}\n.fa-database:before {\n  content: \"\\F1C0\";\n}\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\";\n}\n.fa-file-word-o:before {\n  content: \"\\F1C2\";\n}\n.fa-file-excel-o:before {\n  content: \"\\F1C3\";\n}\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\";\n}\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\";\n}\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\";\n}\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\";\n}\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\";\n}\n.fa-file-code-o:before {\n  content: \"\\F1C9\";\n}\n.fa-vine:before {\n  content: \"\\F1CA\";\n}\n.fa-codepen:before {\n  content: \"\\F1CB\";\n}\n.fa-jsfiddle:before {\n  content: \"\\F1CC\";\n}\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\";\n}\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\";\n}\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\";\n}\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\";\n}\n.fa-git-square:before {\n  content: \"\\F1D2\";\n}\n.fa-git:before {\n  content: \"\\F1D3\";\n}\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\";\n}\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\";\n}\n.fa-qq:before {\n  content: \"\\F1D6\";\n}\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\";\n}\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\";\n}\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\";\n}\n.fa-history:before {\n  content: \"\\F1DA\";\n}\n.fa-circle-thin:before {\n  content: \"\\F1DB\";\n}\n.fa-header:before {\n  content: \"\\F1DC\";\n}\n.fa-paragraph:before {\n  content: \"\\F1DD\";\n}\n.fa-sliders:before {\n  content: \"\\F1DE\";\n}\n.fa-share-alt:before {\n  content: \"\\F1E0\";\n}\n.fa-share-alt-square:before {\n  content: \"\\F1E1\";\n}\n.fa-bomb:before {\n  content: \"\\F1E2\";\n}\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\";\n}\n.fa-tty:before {\n  content: \"\\F1E4\";\n}\n.fa-binoculars:before {\n  content: \"\\F1E5\";\n}\n.fa-plug:before {\n  content: \"\\F1E6\";\n}\n.fa-slideshare:before {\n  content: \"\\F1E7\";\n}\n.fa-twitch:before {\n  content: \"\\F1E8\";\n}\n.fa-yelp:before {\n  content: \"\\F1E9\";\n}\n.fa-newspaper-o:before {\n  content: \"\\F1EA\";\n}\n.fa-wifi:before {\n  content: \"\\F1EB\";\n}\n.fa-calculator:before {\n  content: \"\\F1EC\";\n}\n.fa-paypal:before {\n  content: \"\\F1ED\";\n}\n.fa-google-wallet:before {\n  content: \"\\F1EE\";\n}\n.fa-cc-visa:before {\n  content: \"\\F1F0\";\n}\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\";\n}\n.fa-cc-discover:before {\n  content: \"\\F1F2\";\n}\n.fa-cc-amex:before {\n  content: \"\\F1F3\";\n}\n.fa-cc-paypal:before {\n  content: \"\\F1F4\";\n}\n.fa-cc-stripe:before {\n  content: \"\\F1F5\";\n}\n.fa-bell-slash:before {\n  content: \"\\F1F6\";\n}\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\";\n}\n.fa-trash:before {\n  content: \"\\F1F8\";\n}\n.fa-copyright:before {\n  content: \"\\F1F9\";\n}\n.fa-at:before {\n  content: \"\\F1FA\";\n}\n.fa-eyedropper:before {\n  content: \"\\F1FB\";\n}\n.fa-paint-brush:before {\n  content: \"\\F1FC\";\n}\n.fa-birthday-cake:before {\n  content: \"\\F1FD\";\n}\n.fa-area-chart:before {\n  content: \"\\F1FE\";\n}\n.fa-pie-chart:before {\n  content: \"\\F200\";\n}\n.fa-line-chart:before {\n  content: \"\\F201\";\n}\n.fa-lastfm:before {\n  content: \"\\F202\";\n}\n.fa-lastfm-square:before {\n  content: \"\\F203\";\n}\n.fa-toggle-off:before {\n  content: \"\\F204\";\n}\n.fa-toggle-on:before {\n  content: \"\\F205\";\n}\n.fa-bicycle:before {\n  content: \"\\F206\";\n}\n.fa-bus:before {\n  content: \"\\F207\";\n}\n.fa-ioxhost:before {\n  content: \"\\F208\";\n}\n.fa-angellist:before {\n  content: \"\\F209\";\n}\n.fa-cc:before {\n  content: \"\\F20A\";\n}\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\";\n}\n.fa-meanpath:before {\n  content: \"\\F20C\";\n}\n.fa-buysellads:before {\n  content: \"\\F20D\";\n}\n.fa-connectdevelop:before {\n  content: \"\\F20E\";\n}\n.fa-dashcube:before {\n  content: \"\\F210\";\n}\n.fa-forumbee:before {\n  content: \"\\F211\";\n}\n.fa-leanpub:before {\n  content: \"\\F212\";\n}\n.fa-sellsy:before {\n  content: \"\\F213\";\n}\n.fa-shirtsinbulk:before {\n  content: \"\\F214\";\n}\n.fa-simplybuilt:before {\n  content: \"\\F215\";\n}\n.fa-skyatlas:before {\n  content: \"\\F216\";\n}\n.fa-cart-plus:before {\n  content: \"\\F217\";\n}\n.fa-cart-arrow-down:before {\n  content: \"\\F218\";\n}\n.fa-diamond:before {\n  content: \"\\F219\";\n}\n.fa-ship:before {\n  content: \"\\F21A\";\n}\n.fa-user-secret:before {\n  content: \"\\F21B\";\n}\n.fa-motorcycle:before {\n  content: \"\\F21C\";\n}\n.fa-street-view:before {\n  content: \"\\F21D\";\n}\n.fa-heartbeat:before {\n  content: \"\\F21E\";\n}\n.fa-venus:before {\n  content: \"\\F221\";\n}\n.fa-mars:before {\n  content: \"\\F222\";\n}\n.fa-mercury:before {\n  content: \"\\F223\";\n}\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\";\n}\n.fa-transgender-alt:before {\n  content: \"\\F225\";\n}\n.fa-venus-double:before {\n  content: \"\\F226\";\n}\n.fa-mars-double:before {\n  content: \"\\F227\";\n}\n.fa-venus-mars:before {\n  content: \"\\F228\";\n}\n.fa-mars-stroke:before {\n  content: \"\\F229\";\n}\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\";\n}\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\";\n}\n.fa-neuter:before {\n  content: \"\\F22C\";\n}\n.fa-genderless:before {\n  content: \"\\F22D\";\n}\n.fa-facebook-official:before {\n  content: \"\\F230\";\n}\n.fa-pinterest-p:before {\n  content: \"\\F231\";\n}\n.fa-whatsapp:before {\n  content: \"\\F232\";\n}\n.fa-server:before {\n  content: \"\\F233\";\n}\n.fa-user-plus:before {\n  content: \"\\F234\";\n}\n.fa-user-times:before {\n  content: \"\\F235\";\n}\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\";\n}\n.fa-viacoin:before {\n  content: \"\\F237\";\n}\n.fa-train:before {\n  content: \"\\F238\";\n}\n.fa-subway:before {\n  content: \"\\F239\";\n}\n.fa-medium:before {\n  content: \"\\F23A\";\n}\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\";\n}\n.fa-optin-monster:before {\n  content: \"\\F23C\";\n}\n.fa-opencart:before {\n  content: \"\\F23D\";\n}\n.fa-expeditedssl:before {\n  content: \"\\F23E\";\n}\n.fa-battery-4:before,\n.fa-battery:before,\n.fa-battery-full:before {\n  content: \"\\F240\";\n}\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\";\n}\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\";\n}\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\";\n}\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\";\n}\n.fa-mouse-pointer:before {\n  content: \"\\F245\";\n}\n.fa-i-cursor:before {\n  content: \"\\F246\";\n}\n.fa-object-group:before {\n  content: \"\\F247\";\n}\n.fa-object-ungroup:before {\n  content: \"\\F248\";\n}\n.fa-sticky-note:before {\n  content: \"\\F249\";\n}\n.fa-sticky-note-o:before {\n  content: \"\\F24A\";\n}\n.fa-cc-jcb:before {\n  content: \"\\F24B\";\n}\n.fa-cc-diners-club:before {\n  content: \"\\F24C\";\n}\n.fa-clone:before {\n  content: \"\\F24D\";\n}\n.fa-balance-scale:before {\n  content: \"\\F24E\";\n}\n.fa-hourglass-o:before {\n  content: \"\\F250\";\n}\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\";\n}\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\";\n}\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\";\n}\n.fa-hourglass:before {\n  content: \"\\F254\";\n}\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\";\n}\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\";\n}\n.fa-hand-scissors-o:before {\n  content: \"\\F257\";\n}\n.fa-hand-lizard-o:before {\n  content: \"\\F258\";\n}\n.fa-hand-spock-o:before {\n  content: \"\\F259\";\n}\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\";\n}\n.fa-hand-peace-o:before {\n  content: \"\\F25B\";\n}\n.fa-trademark:before {\n  content: \"\\F25C\";\n}\n.fa-registered:before {\n  content: \"\\F25D\";\n}\n.fa-creative-commons:before {\n  content: \"\\F25E\";\n}\n.fa-gg:before {\n  content: \"\\F260\";\n}\n.fa-gg-circle:before {\n  content: \"\\F261\";\n}\n.fa-tripadvisor:before {\n  content: \"\\F262\";\n}\n.fa-odnoklassniki:before {\n  content: \"\\F263\";\n}\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\";\n}\n.fa-get-pocket:before {\n  content: \"\\F265\";\n}\n.fa-wikipedia-w:before {\n  content: \"\\F266\";\n}\n.fa-safari:before {\n  content: \"\\F267\";\n}\n.fa-chrome:before {\n  content: \"\\F268\";\n}\n.fa-firefox:before {\n  content: \"\\F269\";\n}\n.fa-opera:before {\n  content: \"\\F26A\";\n}\n.fa-internet-explorer:before {\n  content: \"\\F26B\";\n}\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\";\n}\n.fa-contao:before {\n  content: \"\\F26D\";\n}\n.fa-500px:before {\n  content: \"\\F26E\";\n}\n.fa-amazon:before {\n  content: \"\\F270\";\n}\n.fa-calendar-plus-o:before {\n  content: \"\\F271\";\n}\n.fa-calendar-minus-o:before {\n  content: \"\\F272\";\n}\n.fa-calendar-times-o:before {\n  content: \"\\F273\";\n}\n.fa-calendar-check-o:before {\n  content: \"\\F274\";\n}\n.fa-industry:before {\n  content: \"\\F275\";\n}\n.fa-map-pin:before {\n  content: \"\\F276\";\n}\n.fa-map-signs:before {\n  content: \"\\F277\";\n}\n.fa-map-o:before {\n  content: \"\\F278\";\n}\n.fa-map:before {\n  content: \"\\F279\";\n}\n.fa-commenting:before {\n  content: \"\\F27A\";\n}\n.fa-commenting-o:before {\n  content: \"\\F27B\";\n}\n.fa-houzz:before {\n  content: \"\\F27C\";\n}\n.fa-vimeo:before {\n  content: \"\\F27D\";\n}\n.fa-black-tie:before {\n  content: \"\\F27E\";\n}\n.fa-fonticons:before {\n  content: \"\\F280\";\n}\n.fa-reddit-alien:before {\n  content: \"\\F281\";\n}\n.fa-edge:before {\n  content: \"\\F282\";\n}\n.fa-credit-card-alt:before {\n  content: \"\\F283\";\n}\n.fa-codiepie:before {\n  content: \"\\F284\";\n}\n.fa-modx:before {\n  content: \"\\F285\";\n}\n.fa-fort-awesome:before {\n  content: \"\\F286\";\n}\n.fa-usb:before {\n  content: \"\\F287\";\n}\n.fa-product-hunt:before {\n  content: \"\\F288\";\n}\n.fa-mixcloud:before {\n  content: \"\\F289\";\n}\n.fa-scribd:before {\n  content: \"\\F28A\";\n}\n.fa-pause-circle:before {\n  content: \"\\F28B\";\n}\n.fa-pause-circle-o:before {\n  content: \"\\F28C\";\n}\n.fa-stop-circle:before {\n  content: \"\\F28D\";\n}\n.fa-stop-circle-o:before {\n  content: \"\\F28E\";\n}\n.fa-shopping-bag:before {\n  content: \"\\F290\";\n}\n.fa-shopping-basket:before {\n  content: \"\\F291\";\n}\n.fa-hashtag:before {\n  content: \"\\F292\";\n}\n.fa-bluetooth:before {\n  content: \"\\F293\";\n}\n.fa-bluetooth-b:before {\n  content: \"\\F294\";\n}\n.fa-percent:before {\n  content: \"\\F295\";\n}\n.fa-gitlab:before {\n  content: \"\\F296\";\n}\n.fa-wpbeginner:before {\n  content: \"\\F297\";\n}\n.fa-wpforms:before {\n  content: \"\\F298\";\n}\n.fa-envira:before {\n  content: \"\\F299\";\n}\n.fa-universal-access:before {\n  content: \"\\F29A\";\n}\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\";\n}\n.fa-question-circle-o:before {\n  content: \"\\F29C\";\n}\n.fa-blind:before {\n  content: \"\\F29D\";\n}\n.fa-audio-description:before {\n  content: \"\\F29E\";\n}\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\";\n}\n.fa-braille:before {\n  content: \"\\F2A1\";\n}\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\";\n}\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\";\n}\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\";\n}\n.fa-glide:before {\n  content: \"\\F2A5\";\n}\n.fa-glide-g:before {\n  content: \"\\F2A6\";\n}\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\";\n}\n.fa-low-vision:before {\n  content: \"\\F2A8\";\n}\n.fa-viadeo:before {\n  content: \"\\F2A9\";\n}\n.fa-viadeo-square:before {\n  content: \"\\F2AA\";\n}\n.fa-snapchat:before {\n  content: \"\\F2AB\";\n}\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\";\n}\n.fa-snapchat-square:before {\n  content: \"\\F2AD\";\n}\n.fa-pied-piper:before {\n  content: \"\\F2AE\";\n}\n.fa-first-order:before {\n  content: \"\\F2B0\";\n}\n.fa-yoast:before {\n  content: \"\\F2B1\";\n}\n.fa-themeisle:before {\n  content: \"\\F2B2\";\n}\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\";\n}\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\";\n}\n.fa-handshake-o:before {\n  content: \"\\F2B5\";\n}\n.fa-envelope-open:before {\n  content: \"\\F2B6\";\n}\n.fa-envelope-open-o:before {\n  content: \"\\F2B7\";\n}\n.fa-linode:before {\n  content: \"\\F2B8\";\n}\n.fa-address-book:before {\n  content: \"\\F2B9\";\n}\n.fa-address-book-o:before {\n  content: \"\\F2BA\";\n}\n.fa-vcard:before,\n.fa-address-card:before {\n  content: \"\\F2BB\";\n}\n.fa-vcard-o:before,\n.fa-address-card-o:before {\n  content: \"\\F2BC\";\n}\n.fa-user-circle:before {\n  content: \"\\F2BD\";\n}\n.fa-user-circle-o:before {\n  content: \"\\F2BE\";\n}\n.fa-user-o:before {\n  content: \"\\F2C0\";\n}\n.fa-id-badge:before {\n  content: \"\\F2C1\";\n}\n.fa-drivers-license:before,\n.fa-id-card:before {\n  content: \"\\F2C2\";\n}\n.fa-drivers-license-o:before,\n.fa-id-card-o:before {\n  content: \"\\F2C3\";\n}\n.fa-quora:before {\n  content: \"\\F2C4\";\n}\n.fa-free-code-camp:before {\n  content: \"\\F2C5\";\n}\n.fa-telegram:before {\n  content: \"\\F2C6\";\n}\n.fa-thermometer-4:before,\n.fa-thermometer:before,\n.fa-thermometer-full:before {\n  content: \"\\F2C7\";\n}\n.fa-thermometer-3:before,\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\";\n}\n.fa-thermometer-2:before,\n.fa-thermometer-half:before {\n  content: \"\\F2C9\";\n}\n.fa-thermometer-1:before,\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\";\n}\n.fa-thermometer-0:before,\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\";\n}\n.fa-shower:before {\n  content: \"\\F2CC\";\n}\n.fa-bathtub:before,\n.fa-s15:before,\n.fa-bath:before {\n  content: \"\\F2CD\";\n}\n.fa-podcast:before {\n  content: \"\\F2CE\";\n}\n.fa-window-maximize:before {\n  content: \"\\F2D0\";\n}\n.fa-window-minimize:before {\n  content: \"\\F2D1\";\n}\n.fa-window-restore:before {\n  content: \"\\F2D2\";\n}\n.fa-times-rectangle:before,\n.fa-window-close:before {\n  content: \"\\F2D3\";\n}\n.fa-times-rectangle-o:before,\n.fa-window-close-o:before {\n  content: \"\\F2D4\";\n}\n.fa-bandcamp:before {\n  content: \"\\F2D5\";\n}\n.fa-grav:before {\n  content: \"\\F2D6\";\n}\n.fa-etsy:before {\n  content: \"\\F2D7\";\n}\n.fa-imdb:before {\n  content: \"\\F2D8\";\n}\n.fa-ravelry:before {\n  content: \"\\F2D9\";\n}\n.fa-eercast:before {\n  content: \"\\F2DA\";\n}\n.fa-microchip:before {\n  content: \"\\F2DB\";\n}\n.fa-snowflake-o:before {\n  content: \"\\F2DC\";\n}\n.fa-superpowers:before {\n  content: \"\\F2DD\";\n}\n.fa-wpexplorer:before {\n  content: \"\\F2DE\";\n}\n.fa-meetup:before {\n  content: \"\\F2E0\";\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(9) + ") format('woff'), url(" + __webpack_require__(10) + ") format('truetype'), url(" + __webpack_require__(11) + ") format('svg');\n  font-style: normal;\n  font-weight: 300;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(12) + ") format('woff'), url(" + __webpack_require__(13) + ") format('truetype'), url(" + __webpack_require__(14) + ") format('svg');\n  font-style: normal;\n  font-weight: 400;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(15) + ") format('woff'), url(" + __webpack_require__(16) + ") format('truetype'), url(" + __webpack_require__(17) + ") format('svg');\n  font-style: normal;\n  font-weight: 700;\n}\n@font-face {\n  font-family: Lato;\n  src: url(" + __webpack_require__(18) + ") format('woff'), url(" + __webpack_require__(19) + ") format('truetype'), url(" + __webpack_require__(20) + ") format('svg');\n  font-style: normal;\n  font-weight: 900;\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  src: url(" + __webpack_require__(21) + ") format('woff'), url(" + __webpack_require__(22) + ") format('truetype'), url(" + __webpack_require__(23) + ") format('svg');\n  font-style: normal;\n  font-weight: 300;\n}\n@font-face {\n  font-family: \"Source Sans Pro\";\n  src: url(" + __webpack_require__(24) + ") format('woff'), url(" + __webpack_require__(25) + ") format('truetype'), url(" + __webpack_require__(26) + ") format('svg');\n  font-style: normal;\n  font-weight: 400;\n}\nhtml {\n  background-color: #fff;\n  color: #000;\n  font-family: Arial, sans-serif;\n  font-size: 16px;\n}\n.container {\n  margin: auto;\n  width: 1200px;\n  padding-top: 11%;\n}\n.container .title {\n  font-family: Lato, Arial, sans-serif;\n  font-style: normal;\n  font-weight: 900;\n  text-align: center;\n  font-size: 2.2rem;\n  text-transform: uppercase;\n  color: #4f4f4f;\n}\n.container .standard-buttons {\n  width: 74%;\n  margin: auto;\n  margin-bottom: 8.5%;\n}\n.container .standard-buttons .title {\n  margin-bottom: 16%;\n}\n.container .standard-buttons .standard-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: end;\n      -ms-flex-align: end;\n          align-items: flex-end;\n  margin-bottom: 4.5%;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(1),\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(4) {\n  width: 16%;\n  font-size: 1.1rem;\n}\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(2),\n.container .standard-buttons .standard-buttons__row .ripple-button:nth-child(3) {\n  width: 25.5%;\n  font-size: 1.5rem;\n}\n.container .arrow-buttons {\n  width: 68%;\n  margin: auto;\n  margin-bottom: 7.5%;\n}\n.container .arrow-buttons .title {\n  margin-bottom: 8.5%;\n}\n.container .arrow-buttons .arrow-buttons__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .arrow-buttons .arrow-buttons__row .arrow-button {\n  width: 11.5%;\n}\n.container .pie-charts {\n  width: 100%;\n  margin: auto;\n  margin-bottom: 5%;\n}\n.container .pie-charts .title {\n  margin-bottom: 4.2%;\n}\n.container .pie-charts .pie-charts__row {\n  padding-right: 45px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.container .pie-charts .pie-charts__row .pie-chart {\n  color: #9d9d9d;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 300;\n  width: 16%;\n}\n.container .pie-charts .pie-charts__row .donut-chart {\n  width: 16%;\n}\n.container .sliders {\n  margin-bottom: 5.2%;\n}\n.container .sliders .title {\n  margin-bottom: 5.8%;\n}\n.container .sliders .slider__row {\n  padding: 0 1.5% 0 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .sliders .slider__row .slider {\n  width: 47%;\n  font-size: 1.6rem;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .stages {\n  margin-bottom: 8.2%;\n}\n.container .stages .title {\n  margin-bottom: 4.6%;\n}\n.container .stages .stage {\n  width: 97%;\n  margin: auto;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements {\n  margin-bottom: 8.7%;\n}\n.container .form-elements .title {\n  margin-bottom: 8%;\n}\n.container .form-elements .form-elements__row {\n  padding-left: 2.3%;\n  padding-right: 15%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.container .form-elements .form-elements__row .message-form {\n  width: 56%;\n}\n.container .form-elements .form-elements__row .message-form .custom-form__form-control {\n  font-family: \"Source Sans Pro\", Arial, sans-serif !important;\n  font-weight: 400;\n}\n.container .form-elements .form-elements__row .message-form .hint-control {\n  width: 72%;\n  font-size: 1.6rem;\n  margin-bottom: 0.25rem;\n}\n.container .form-elements .form-elements__row .message-form .hint-control .hint {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .message-form textarea {\n  font-size: 1.6rem;\n  width: 100%;\n  margin-bottom: 3.6%;\n}\n.container .form-elements .form-elements__row .message-form button {\n  font-size: 1.6rem;\n  float: right;\n  width: 9em;\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .checkboxes {\n  width: 25%;\n  text-align: center;\n}\n.container .form-elements .form-elements__row .checkboxes .title:first-child {\n  margin-top: -4.7%;\n  margin-bottom: 24%;\n}\n.container .form-elements .form-elements__row .checkboxes .title:nth-child(3) {\n  margin-top: 28%;\n  margin-bottom: 3.55rem;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__toggles {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  margin-bottom: 2rem;\n  font-size: 2rem;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__toggles .toggle {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__tick-boxes {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding: 0 30% 0 20%;\n}\n.container .form-elements .form-elements__row .checkboxes .checkboxes__tick-boxes .tick-box {\n  width: 40%;\n  font-size: 2rem;\n}\n.container .one-more-article {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2%;\n  margin-bottom: 11.3%;\n  padding-right: 5%;\n}\n.container .one-more-article .search {\n  width: 50%;\n}\n.container .one-more-article .search .title {\n  font-size: 2.2rem;\n  margin-bottom: 1.1em;\n}\n.container .one-more-article .search .search-form {\n  width: 100%;\n}\n.container .one-more-article .search .search-form .custom-form__input-search,\n.container .one-more-article .search .search-form .dropdown {\n  width: 100%;\n  font-size: 1.8rem;\n  margin-bottom: 1em;\n}\n.container .one-more-article .search .search-form .custom-form__input-search .custom-form__form-control,\n.container .one-more-article .search .search-form .dropdown .custom-form__form-control {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .one-more-article .search .search-form .dropdown li {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .one-more-article .user-profiles {\n  width: 44%;\n}\n.container .one-more-article .user-profiles .title {\n  margin-bottom: 11.5%;\n}\n.container .one-more-article .user-profiles .profil {\n  margin-bottom: 9%;\n}\n.container .one-more-article .user-profiles .profil .profil__name {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 400;\n}\n.container .one-more-article .user-profiles .profil .profil__profession {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 900;\n}\n.container .news-events {\n  margin-bottom: 7.5%;\n}\n.container .news-events .title {\n  margin-bottom: 5.2%;\n}\n.container .news-events .news-events__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  padding-left: 2.2%;\n  padding-right: 2.6%;\n  height: 25.6rem;\n}\n.container .news-events .news-events__row .news,\n.container .news-events .news-events__row .event {\n  width: 48.5%;\n}\n.container .news-events .news-events__row .news {\n  font-family: Lato, Arial, sans-serif;\n}\n.container .news-events .news-events__row .news .news__title {\n  font-weight: 300;\n}\n.container .news-events .news-events__row .news .news__date {\n  font-weight: 900;\n}\n.container .news-events .news-events__row .news .news__text {\n  font-weight: 400;\n}\n.container .news-events .news-events__row .event {\n  font-family: Lato, Arial, sans-serif;\n}\n.container .news-events .news-events__row .event .event__date {\n  font-weight: 300;\n}\n.container .news-events .news-events__row .event .event__title,\n.container .news-events .news-events__row .event .event__button button {\n  font-weight: 900;\n}\n.container .news-events .news-events__row .event .event__text {\n  font-weight: 400;\n}\n.container .location {\n  margin-bottom: 8%;\n}\n.container .location .title {\n  margin-bottom: 4.8%;\n}\n.container .location .map {\n  width: 95%;\n  margin: auto;\n  font-family: Lato, Arial, sans-serif;\n}\n.container .location .map .map__footer-title {\n  font-weight: 300;\n}\n.container .location .map .map_footer-place {\n  font-weight: 900;\n}\n.container .calendar_messaging {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  padding-left: 2.4%;\n  padding-right: 2.6%;\n  margin-bottom: 8.5%;\n}\n.container .calendar_messaging .calendar_section {\n  width: 46.5%;\n}\n.container .calendar_messaging .calendar_section .title {\n  margin-bottom: 9.5%;\n}\n.container .calendar_messaging .messaging_section {\n  width: 48.5%;\n}\n.container .calendar_messaging .messaging_section .title {\n  margin-bottom: 9%;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__header-title {\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: 300;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__body-request,\n.container .calendar_messaging .messaging_section .messaging .messaging__body-response {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 700;\n}\n.container .calendar_messaging .messaging_section .messaging .messaging__button {\n  font-family: Lato, Arial, sans-serif;\n  font-weight: 900;\n}\n.container .video {\n  width: 95%;\n  margin: auto;\n}\n.container .video .title {\n  margin-bottom: 4%;\n}\n.container .video .player {\n  margin-bottom: 5%;\n}\n", ""]);
 
 // exports
 
@@ -10868,118 +10878,132 @@ exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://font
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/fontawesome-webfont.ttf";
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome\n *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)\n */\n/* FONT PATH\n * -------------------------- */\n@font-face {\n  font-family: 'FontAwesome';\n  src: url(" + __webpack_require__(8) + ");\n  font-weight: normal;\n  font-style: normal;\n}\n.fa {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n/* makes the font 33% larger relative to the icon container */\n.fa-lg {\n  font-size: 1.33333333em;\n  line-height: 0.75em;\n  vertical-align: -15%;\n}\n.fa-2x {\n  font-size: 2em;\n}\n.fa-3x {\n  font-size: 3em;\n}\n.fa-4x {\n  font-size: 4em;\n}\n.fa-5x {\n  font-size: 5em;\n}\n.fa-fw {\n  width: 1.28571429em;\n  text-align: center;\n}\n.fa-ul {\n  padding-left: 0;\n  margin-left: 2.14285714em;\n  list-style-type: none;\n}\n.fa-ul > li {\n  position: relative;\n}\n.fa-li {\n  position: absolute;\n  left: -2.14285714em;\n  width: 2.14285714em;\n  top: 0.14285714em;\n  text-align: center;\n}\n.fa-li.fa-lg {\n  left: -1.85714286em;\n}\n.fa-border {\n  padding: .2em .25em .15em;\n  border: solid 0.08em #eeeeee;\n  border-radius: .1em;\n}\n.fa-pull-left {\n  float: left;\n}\n.fa-pull-right {\n  float: right;\n}\n.fa.fa-pull-left {\n  margin-right: .3em;\n}\n.fa.fa-pull-right {\n  margin-left: .3em;\n}\n/* Deprecated as of 4.4.0 */\n.pull-right {\n  float: right;\n}\n.pull-left {\n  float: left;\n}\n.fa.pull-left {\n  margin-right: .3em;\n}\n.fa.pull-right {\n  margin-left: .3em;\n}\n.fa-spin {\n  -webkit-animation: fa-spin 2s infinite linear;\n  animation: fa-spin 2s infinite linear;\n}\n.fa-pulse {\n  -webkit-animation: fa-spin 1s infinite steps(8);\n  animation: fa-spin 1s infinite steps(8);\n}\n@-webkit-keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n    transform: rotate(359deg);\n  }\n}\n.fa-rotate-90 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)\";\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.fa-rotate-180 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)\";\n  -webkit-transform: rotate(180deg);\n  -ms-transform: rotate(180deg);\n  transform: rotate(180deg);\n}\n.fa-rotate-270 {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)\";\n  -webkit-transform: rotate(270deg);\n  -ms-transform: rotate(270deg);\n  transform: rotate(270deg);\n}\n.fa-flip-horizontal {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)\";\n  -webkit-transform: scale(-1, 1);\n  -ms-transform: scale(-1, 1);\n  transform: scale(-1, 1);\n}\n.fa-flip-vertical {\n  -ms-filter: \"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)\";\n  -webkit-transform: scale(1, -1);\n  -ms-transform: scale(1, -1);\n  transform: scale(1, -1);\n}\n:root .fa-rotate-90,\n:root .fa-rotate-180,\n:root .fa-rotate-270,\n:root .fa-flip-horizontal,\n:root .fa-flip-vertical {\n  filter: none;\n}\n.fa-stack {\n  position: relative;\n  display: inline-block;\n  width: 2em;\n  height: 2em;\n  line-height: 2em;\n  vertical-align: middle;\n}\n.fa-stack-1x,\n.fa-stack-2x {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  text-align: center;\n}\n.fa-stack-1x {\n  line-height: inherit;\n}\n.fa-stack-2x {\n  font-size: 2em;\n}\n.fa-inverse {\n  color: #ffffff;\n}\n/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen\n   readers do not read off random characters that represent icons */\n.fa-glass:before {\n  content: \"\\F000\";\n}\n.fa-music:before {\n  content: \"\\F001\";\n}\n.fa-search:before {\n  content: \"\\F002\";\n}\n.fa-envelope-o:before {\n  content: \"\\F003\";\n}\n.fa-heart:before {\n  content: \"\\F004\";\n}\n.fa-star:before {\n  content: \"\\F005\";\n}\n.fa-star-o:before {\n  content: \"\\F006\";\n}\n.fa-user:before {\n  content: \"\\F007\";\n}\n.fa-film:before {\n  content: \"\\F008\";\n}\n.fa-th-large:before {\n  content: \"\\F009\";\n}\n.fa-th:before {\n  content: \"\\F00A\";\n}\n.fa-th-list:before {\n  content: \"\\F00B\";\n}\n.fa-check:before {\n  content: \"\\F00C\";\n}\n.fa-remove:before,\n.fa-close:before,\n.fa-times:before {\n  content: \"\\F00D\";\n}\n.fa-search-plus:before {\n  content: \"\\F00E\";\n}\n.fa-search-minus:before {\n  content: \"\\F010\";\n}\n.fa-power-off:before {\n  content: \"\\F011\";\n}\n.fa-signal:before {\n  content: \"\\F012\";\n}\n.fa-gear:before,\n.fa-cog:before {\n  content: \"\\F013\";\n}\n.fa-trash-o:before {\n  content: \"\\F014\";\n}\n.fa-home:before {\n  content: \"\\F015\";\n}\n.fa-file-o:before {\n  content: \"\\F016\";\n}\n.fa-clock-o:before {\n  content: \"\\F017\";\n}\n.fa-road:before {\n  content: \"\\F018\";\n}\n.fa-download:before {\n  content: \"\\F019\";\n}\n.fa-arrow-circle-o-down:before {\n  content: \"\\F01A\";\n}\n.fa-arrow-circle-o-up:before {\n  content: \"\\F01B\";\n}\n.fa-inbox:before {\n  content: \"\\F01C\";\n}\n.fa-play-circle-o:before {\n  content: \"\\F01D\";\n}\n.fa-rotate-right:before,\n.fa-repeat:before {\n  content: \"\\F01E\";\n}\n.fa-refresh:before {\n  content: \"\\F021\";\n}\n.fa-list-alt:before {\n  content: \"\\F022\";\n}\n.fa-lock:before {\n  content: \"\\F023\";\n}\n.fa-flag:before {\n  content: \"\\F024\";\n}\n.fa-headphones:before {\n  content: \"\\F025\";\n}\n.fa-volume-off:before {\n  content: \"\\F026\";\n}\n.fa-volume-down:before {\n  content: \"\\F027\";\n}\n.fa-volume-up:before {\n  content: \"\\F028\";\n}\n.fa-qrcode:before {\n  content: \"\\F029\";\n}\n.fa-barcode:before {\n  content: \"\\F02A\";\n}\n.fa-tag:before {\n  content: \"\\F02B\";\n}\n.fa-tags:before {\n  content: \"\\F02C\";\n}\n.fa-book:before {\n  content: \"\\F02D\";\n}\n.fa-bookmark:before {\n  content: \"\\F02E\";\n}\n.fa-print:before {\n  content: \"\\F02F\";\n}\n.fa-camera:before {\n  content: \"\\F030\";\n}\n.fa-font:before {\n  content: \"\\F031\";\n}\n.fa-bold:before {\n  content: \"\\F032\";\n}\n.fa-italic:before {\n  content: \"\\F033\";\n}\n.fa-text-height:before {\n  content: \"\\F034\";\n}\n.fa-text-width:before {\n  content: \"\\F035\";\n}\n.fa-align-left:before {\n  content: \"\\F036\";\n}\n.fa-align-center:before {\n  content: \"\\F037\";\n}\n.fa-align-right:before {\n  content: \"\\F038\";\n}\n.fa-align-justify:before {\n  content: \"\\F039\";\n}\n.fa-list:before {\n  content: \"\\F03A\";\n}\n.fa-dedent:before,\n.fa-outdent:before {\n  content: \"\\F03B\";\n}\n.fa-indent:before {\n  content: \"\\F03C\";\n}\n.fa-video-camera:before {\n  content: \"\\F03D\";\n}\n.fa-photo:before,\n.fa-image:before,\n.fa-picture-o:before {\n  content: \"\\F03E\";\n}\n.fa-pencil:before {\n  content: \"\\F040\";\n}\n.fa-map-marker:before {\n  content: \"\\F041\";\n}\n.fa-adjust:before {\n  content: \"\\F042\";\n}\n.fa-tint:before {\n  content: \"\\F043\";\n}\n.fa-edit:before,\n.fa-pencil-square-o:before {\n  content: \"\\F044\";\n}\n.fa-share-square-o:before {\n  content: \"\\F045\";\n}\n.fa-check-square-o:before {\n  content: \"\\F046\";\n}\n.fa-arrows:before {\n  content: \"\\F047\";\n}\n.fa-step-backward:before {\n  content: \"\\F048\";\n}\n.fa-fast-backward:before {\n  content: \"\\F049\";\n}\n.fa-backward:before {\n  content: \"\\F04A\";\n}\n.fa-play:before {\n  content: \"\\F04B\";\n}\n.fa-pause:before {\n  content: \"\\F04C\";\n}\n.fa-stop:before {\n  content: \"\\F04D\";\n}\n.fa-forward:before {\n  content: \"\\F04E\";\n}\n.fa-fast-forward:before {\n  content: \"\\F050\";\n}\n.fa-step-forward:before {\n  content: \"\\F051\";\n}\n.fa-eject:before {\n  content: \"\\F052\";\n}\n.fa-chevron-left:before {\n  content: \"\\F053\";\n}\n.fa-chevron-right:before {\n  content: \"\\F054\";\n}\n.fa-plus-circle:before {\n  content: \"\\F055\";\n}\n.fa-minus-circle:before {\n  content: \"\\F056\";\n}\n.fa-times-circle:before {\n  content: \"\\F057\";\n}\n.fa-check-circle:before {\n  content: \"\\F058\";\n}\n.fa-question-circle:before {\n  content: \"\\F059\";\n}\n.fa-info-circle:before {\n  content: \"\\F05A\";\n}\n.fa-crosshairs:before {\n  content: \"\\F05B\";\n}\n.fa-times-circle-o:before {\n  content: \"\\F05C\";\n}\n.fa-check-circle-o:before {\n  content: \"\\F05D\";\n}\n.fa-ban:before {\n  content: \"\\F05E\";\n}\n.fa-arrow-left:before {\n  content: \"\\F060\";\n}\n.fa-arrow-right:before {\n  content: \"\\F061\";\n}\n.fa-arrow-up:before {\n  content: \"\\F062\";\n}\n.fa-arrow-down:before {\n  content: \"\\F063\";\n}\n.fa-mail-forward:before,\n.fa-share:before {\n  content: \"\\F064\";\n}\n.fa-expand:before {\n  content: \"\\F065\";\n}\n.fa-compress:before {\n  content: \"\\F066\";\n}\n.fa-plus:before {\n  content: \"\\F067\";\n}\n.fa-minus:before {\n  content: \"\\F068\";\n}\n.fa-asterisk:before {\n  content: \"\\F069\";\n}\n.fa-exclamation-circle:before {\n  content: \"\\F06A\";\n}\n.fa-gift:before {\n  content: \"\\F06B\";\n}\n.fa-leaf:before {\n  content: \"\\F06C\";\n}\n.fa-fire:before {\n  content: \"\\F06D\";\n}\n.fa-eye:before {\n  content: \"\\F06E\";\n}\n.fa-eye-slash:before {\n  content: \"\\F070\";\n}\n.fa-warning:before,\n.fa-exclamation-triangle:before {\n  content: \"\\F071\";\n}\n.fa-plane:before {\n  content: \"\\F072\";\n}\n.fa-calendar:before {\n  content: \"\\F073\";\n}\n.fa-random:before {\n  content: \"\\F074\";\n}\n.fa-comment:before {\n  content: \"\\F075\";\n}\n.fa-magnet:before {\n  content: \"\\F076\";\n}\n.fa-chevron-up:before {\n  content: \"\\F077\";\n}\n.fa-chevron-down:before {\n  content: \"\\F078\";\n}\n.fa-retweet:before {\n  content: \"\\F079\";\n}\n.fa-shopping-cart:before {\n  content: \"\\F07A\";\n}\n.fa-folder:before {\n  content: \"\\F07B\";\n}\n.fa-folder-open:before {\n  content: \"\\F07C\";\n}\n.fa-arrows-v:before {\n  content: \"\\F07D\";\n}\n.fa-arrows-h:before {\n  content: \"\\F07E\";\n}\n.fa-bar-chart-o:before,\n.fa-bar-chart:before {\n  content: \"\\F080\";\n}\n.fa-twitter-square:before {\n  content: \"\\F081\";\n}\n.fa-facebook-square:before {\n  content: \"\\F082\";\n}\n.fa-camera-retro:before {\n  content: \"\\F083\";\n}\n.fa-key:before {\n  content: \"\\F084\";\n}\n.fa-gears:before,\n.fa-cogs:before {\n  content: \"\\F085\";\n}\n.fa-comments:before {\n  content: \"\\F086\";\n}\n.fa-thumbs-o-up:before {\n  content: \"\\F087\";\n}\n.fa-thumbs-o-down:before {\n  content: \"\\F088\";\n}\n.fa-star-half:before {\n  content: \"\\F089\";\n}\n.fa-heart-o:before {\n  content: \"\\F08A\";\n}\n.fa-sign-out:before {\n  content: \"\\F08B\";\n}\n.fa-linkedin-square:before {\n  content: \"\\F08C\";\n}\n.fa-thumb-tack:before {\n  content: \"\\F08D\";\n}\n.fa-external-link:before {\n  content: \"\\F08E\";\n}\n.fa-sign-in:before {\n  content: \"\\F090\";\n}\n.fa-trophy:before {\n  content: \"\\F091\";\n}\n.fa-github-square:before {\n  content: \"\\F092\";\n}\n.fa-upload:before {\n  content: \"\\F093\";\n}\n.fa-lemon-o:before {\n  content: \"\\F094\";\n}\n.fa-phone:before {\n  content: \"\\F095\";\n}\n.fa-square-o:before {\n  content: \"\\F096\";\n}\n.fa-bookmark-o:before {\n  content: \"\\F097\";\n}\n.fa-phone-square:before {\n  content: \"\\F098\";\n}\n.fa-twitter:before {\n  content: \"\\F099\";\n}\n.fa-facebook-f:before,\n.fa-facebook:before {\n  content: \"\\F09A\";\n}\n.fa-github:before {\n  content: \"\\F09B\";\n}\n.fa-unlock:before {\n  content: \"\\F09C\";\n}\n.fa-credit-card:before {\n  content: \"\\F09D\";\n}\n.fa-feed:before,\n.fa-rss:before {\n  content: \"\\F09E\";\n}\n.fa-hdd-o:before {\n  content: \"\\F0A0\";\n}\n.fa-bullhorn:before {\n  content: \"\\F0A1\";\n}\n.fa-bell:before {\n  content: \"\\F0F3\";\n}\n.fa-certificate:before {\n  content: \"\\F0A3\";\n}\n.fa-hand-o-right:before {\n  content: \"\\F0A4\";\n}\n.fa-hand-o-left:before {\n  content: \"\\F0A5\";\n}\n.fa-hand-o-up:before {\n  content: \"\\F0A6\";\n}\n.fa-hand-o-down:before {\n  content: \"\\F0A7\";\n}\n.fa-arrow-circle-left:before {\n  content: \"\\F0A8\";\n}\n.fa-arrow-circle-right:before {\n  content: \"\\F0A9\";\n}\n.fa-arrow-circle-up:before {\n  content: \"\\F0AA\";\n}\n.fa-arrow-circle-down:before {\n  content: \"\\F0AB\";\n}\n.fa-globe:before {\n  content: \"\\F0AC\";\n}\n.fa-wrench:before {\n  content: \"\\F0AD\";\n}\n.fa-tasks:before {\n  content: \"\\F0AE\";\n}\n.fa-filter:before {\n  content: \"\\F0B0\";\n}\n.fa-briefcase:before {\n  content: \"\\F0B1\";\n}\n.fa-arrows-alt:before {\n  content: \"\\F0B2\";\n}\n.fa-group:before,\n.fa-users:before {\n  content: \"\\F0C0\";\n}\n.fa-chain:before,\n.fa-link:before {\n  content: \"\\F0C1\";\n}\n.fa-cloud:before {\n  content: \"\\F0C2\";\n}\n.fa-flask:before {\n  content: \"\\F0C3\";\n}\n.fa-cut:before,\n.fa-scissors:before {\n  content: \"\\F0C4\";\n}\n.fa-copy:before,\n.fa-files-o:before {\n  content: \"\\F0C5\";\n}\n.fa-paperclip:before {\n  content: \"\\F0C6\";\n}\n.fa-save:before,\n.fa-floppy-o:before {\n  content: \"\\F0C7\";\n}\n.fa-square:before {\n  content: \"\\F0C8\";\n}\n.fa-navicon:before,\n.fa-reorder:before,\n.fa-bars:before {\n  content: \"\\F0C9\";\n}\n.fa-list-ul:before {\n  content: \"\\F0CA\";\n}\n.fa-list-ol:before {\n  content: \"\\F0CB\";\n}\n.fa-strikethrough:before {\n  content: \"\\F0CC\";\n}\n.fa-underline:before {\n  content: \"\\F0CD\";\n}\n.fa-table:before {\n  content: \"\\F0CE\";\n}\n.fa-magic:before {\n  content: \"\\F0D0\";\n}\n.fa-truck:before {\n  content: \"\\F0D1\";\n}\n.fa-pinterest:before {\n  content: \"\\F0D2\";\n}\n.fa-pinterest-square:before {\n  content: \"\\F0D3\";\n}\n.fa-google-plus-square:before {\n  content: \"\\F0D4\";\n}\n.fa-google-plus:before {\n  content: \"\\F0D5\";\n}\n.fa-money:before {\n  content: \"\\F0D6\";\n}\n.fa-caret-down:before {\n  content: \"\\F0D7\";\n}\n.fa-caret-up:before {\n  content: \"\\F0D8\";\n}\n.fa-caret-left:before {\n  content: \"\\F0D9\";\n}\n.fa-caret-right:before {\n  content: \"\\F0DA\";\n}\n.fa-columns:before {\n  content: \"\\F0DB\";\n}\n.fa-unsorted:before,\n.fa-sort:before {\n  content: \"\\F0DC\";\n}\n.fa-sort-down:before,\n.fa-sort-desc:before {\n  content: \"\\F0DD\";\n}\n.fa-sort-up:before,\n.fa-sort-asc:before {\n  content: \"\\F0DE\";\n}\n.fa-envelope:before {\n  content: \"\\F0E0\";\n}\n.fa-linkedin:before {\n  content: \"\\F0E1\";\n}\n.fa-rotate-left:before,\n.fa-undo:before {\n  content: \"\\F0E2\";\n}\n.fa-legal:before,\n.fa-gavel:before {\n  content: \"\\F0E3\";\n}\n.fa-dashboard:before,\n.fa-tachometer:before {\n  content: \"\\F0E4\";\n}\n.fa-comment-o:before {\n  content: \"\\F0E5\";\n}\n.fa-comments-o:before {\n  content: \"\\F0E6\";\n}\n.fa-flash:before,\n.fa-bolt:before {\n  content: \"\\F0E7\";\n}\n.fa-sitemap:before {\n  content: \"\\F0E8\";\n}\n.fa-umbrella:before {\n  content: \"\\F0E9\";\n}\n.fa-paste:before,\n.fa-clipboard:before {\n  content: \"\\F0EA\";\n}\n.fa-lightbulb-o:before {\n  content: \"\\F0EB\";\n}\n.fa-exchange:before {\n  content: \"\\F0EC\";\n}\n.fa-cloud-download:before {\n  content: \"\\F0ED\";\n}\n.fa-cloud-upload:before {\n  content: \"\\F0EE\";\n}\n.fa-user-md:before {\n  content: \"\\F0F0\";\n}\n.fa-stethoscope:before {\n  content: \"\\F0F1\";\n}\n.fa-suitcase:before {\n  content: \"\\F0F2\";\n}\n.fa-bell-o:before {\n  content: \"\\F0A2\";\n}\n.fa-coffee:before {\n  content: \"\\F0F4\";\n}\n.fa-cutlery:before {\n  content: \"\\F0F5\";\n}\n.fa-file-text-o:before {\n  content: \"\\F0F6\";\n}\n.fa-building-o:before {\n  content: \"\\F0F7\";\n}\n.fa-hospital-o:before {\n  content: \"\\F0F8\";\n}\n.fa-ambulance:before {\n  content: \"\\F0F9\";\n}\n.fa-medkit:before {\n  content: \"\\F0FA\";\n}\n.fa-fighter-jet:before {\n  content: \"\\F0FB\";\n}\n.fa-beer:before {\n  content: \"\\F0FC\";\n}\n.fa-h-square:before {\n  content: \"\\F0FD\";\n}\n.fa-plus-square:before {\n  content: \"\\F0FE\";\n}\n.fa-angle-double-left:before {\n  content: \"\\F100\";\n}\n.fa-angle-double-right:before {\n  content: \"\\F101\";\n}\n.fa-angle-double-up:before {\n  content: \"\\F102\";\n}\n.fa-angle-double-down:before {\n  content: \"\\F103\";\n}\n.fa-angle-left:before {\n  content: \"\\F104\";\n}\n.fa-angle-right:before {\n  content: \"\\F105\";\n}\n.fa-angle-up:before {\n  content: \"\\F106\";\n}\n.fa-angle-down:before {\n  content: \"\\F107\";\n}\n.fa-desktop:before {\n  content: \"\\F108\";\n}\n.fa-laptop:before {\n  content: \"\\F109\";\n}\n.fa-tablet:before {\n  content: \"\\F10A\";\n}\n.fa-mobile-phone:before,\n.fa-mobile:before {\n  content: \"\\F10B\";\n}\n.fa-circle-o:before {\n  content: \"\\F10C\";\n}\n.fa-quote-left:before {\n  content: \"\\F10D\";\n}\n.fa-quote-right:before {\n  content: \"\\F10E\";\n}\n.fa-spinner:before {\n  content: \"\\F110\";\n}\n.fa-circle:before {\n  content: \"\\F111\";\n}\n.fa-mail-reply:before,\n.fa-reply:before {\n  content: \"\\F112\";\n}\n.fa-github-alt:before {\n  content: \"\\F113\";\n}\n.fa-folder-o:before {\n  content: \"\\F114\";\n}\n.fa-folder-open-o:before {\n  content: \"\\F115\";\n}\n.fa-smile-o:before {\n  content: \"\\F118\";\n}\n.fa-frown-o:before {\n  content: \"\\F119\";\n}\n.fa-meh-o:before {\n  content: \"\\F11A\";\n}\n.fa-gamepad:before {\n  content: \"\\F11B\";\n}\n.fa-keyboard-o:before {\n  content: \"\\F11C\";\n}\n.fa-flag-o:before {\n  content: \"\\F11D\";\n}\n.fa-flag-checkered:before {\n  content: \"\\F11E\";\n}\n.fa-terminal:before {\n  content: \"\\F120\";\n}\n.fa-code:before {\n  content: \"\\F121\";\n}\n.fa-mail-reply-all:before,\n.fa-reply-all:before {\n  content: \"\\F122\";\n}\n.fa-star-half-empty:before,\n.fa-star-half-full:before,\n.fa-star-half-o:before {\n  content: \"\\F123\";\n}\n.fa-location-arrow:before {\n  content: \"\\F124\";\n}\n.fa-crop:before {\n  content: \"\\F125\";\n}\n.fa-code-fork:before {\n  content: \"\\F126\";\n}\n.fa-unlink:before,\n.fa-chain-broken:before {\n  content: \"\\F127\";\n}\n.fa-question:before {\n  content: \"\\F128\";\n}\n.fa-info:before {\n  content: \"\\F129\";\n}\n.fa-exclamation:before {\n  content: \"\\F12A\";\n}\n.fa-superscript:before {\n  content: \"\\F12B\";\n}\n.fa-subscript:before {\n  content: \"\\F12C\";\n}\n.fa-eraser:before {\n  content: \"\\F12D\";\n}\n.fa-puzzle-piece:before {\n  content: \"\\F12E\";\n}\n.fa-microphone:before {\n  content: \"\\F130\";\n}\n.fa-microphone-slash:before {\n  content: \"\\F131\";\n}\n.fa-shield:before {\n  content: \"\\F132\";\n}\n.fa-calendar-o:before {\n  content: \"\\F133\";\n}\n.fa-fire-extinguisher:before {\n  content: \"\\F134\";\n}\n.fa-rocket:before {\n  content: \"\\F135\";\n}\n.fa-maxcdn:before {\n  content: \"\\F136\";\n}\n.fa-chevron-circle-left:before {\n  content: \"\\F137\";\n}\n.fa-chevron-circle-right:before {\n  content: \"\\F138\";\n}\n.fa-chevron-circle-up:before {\n  content: \"\\F139\";\n}\n.fa-chevron-circle-down:before {\n  content: \"\\F13A\";\n}\n.fa-html5:before {\n  content: \"\\F13B\";\n}\n.fa-css3:before {\n  content: \"\\F13C\";\n}\n.fa-anchor:before {\n  content: \"\\F13D\";\n}\n.fa-unlock-alt:before {\n  content: \"\\F13E\";\n}\n.fa-bullseye:before {\n  content: \"\\F140\";\n}\n.fa-ellipsis-h:before {\n  content: \"\\F141\";\n}\n.fa-ellipsis-v:before {\n  content: \"\\F142\";\n}\n.fa-rss-square:before {\n  content: \"\\F143\";\n}\n.fa-play-circle:before {\n  content: \"\\F144\";\n}\n.fa-ticket:before {\n  content: \"\\F145\";\n}\n.fa-minus-square:before {\n  content: \"\\F146\";\n}\n.fa-minus-square-o:before {\n  content: \"\\F147\";\n}\n.fa-level-up:before {\n  content: \"\\F148\";\n}\n.fa-level-down:before {\n  content: \"\\F149\";\n}\n.fa-check-square:before {\n  content: \"\\F14A\";\n}\n.fa-pencil-square:before {\n  content: \"\\F14B\";\n}\n.fa-external-link-square:before {\n  content: \"\\F14C\";\n}\n.fa-share-square:before {\n  content: \"\\F14D\";\n}\n.fa-compass:before {\n  content: \"\\F14E\";\n}\n.fa-toggle-down:before,\n.fa-caret-square-o-down:before {\n  content: \"\\F150\";\n}\n.fa-toggle-up:before,\n.fa-caret-square-o-up:before {\n  content: \"\\F151\";\n}\n.fa-toggle-right:before,\n.fa-caret-square-o-right:before {\n  content: \"\\F152\";\n}\n.fa-euro:before,\n.fa-eur:before {\n  content: \"\\F153\";\n}\n.fa-gbp:before {\n  content: \"\\F154\";\n}\n.fa-dollar:before,\n.fa-usd:before {\n  content: \"\\F155\";\n}\n.fa-rupee:before,\n.fa-inr:before {\n  content: \"\\F156\";\n}\n.fa-cny:before,\n.fa-rmb:before,\n.fa-yen:before,\n.fa-jpy:before {\n  content: \"\\F157\";\n}\n.fa-ruble:before,\n.fa-rouble:before,\n.fa-rub:before {\n  content: \"\\F158\";\n}\n.fa-won:before,\n.fa-krw:before {\n  content: \"\\F159\";\n}\n.fa-bitcoin:before,\n.fa-btc:before {\n  content: \"\\F15A\";\n}\n.fa-file:before {\n  content: \"\\F15B\";\n}\n.fa-file-text:before {\n  content: \"\\F15C\";\n}\n.fa-sort-alpha-asc:before {\n  content: \"\\F15D\";\n}\n.fa-sort-alpha-desc:before {\n  content: \"\\F15E\";\n}\n.fa-sort-amount-asc:before {\n  content: \"\\F160\";\n}\n.fa-sort-amount-desc:before {\n  content: \"\\F161\";\n}\n.fa-sort-numeric-asc:before {\n  content: \"\\F162\";\n}\n.fa-sort-numeric-desc:before {\n  content: \"\\F163\";\n}\n.fa-thumbs-up:before {\n  content: \"\\F164\";\n}\n.fa-thumbs-down:before {\n  content: \"\\F165\";\n}\n.fa-youtube-square:before {\n  content: \"\\F166\";\n}\n.fa-youtube:before {\n  content: \"\\F167\";\n}\n.fa-xing:before {\n  content: \"\\F168\";\n}\n.fa-xing-square:before {\n  content: \"\\F169\";\n}\n.fa-youtube-play:before {\n  content: \"\\F16A\";\n}\n.fa-dropbox:before {\n  content: \"\\F16B\";\n}\n.fa-stack-overflow:before {\n  content: \"\\F16C\";\n}\n.fa-instagram:before {\n  content: \"\\F16D\";\n}\n.fa-flickr:before {\n  content: \"\\F16E\";\n}\n.fa-adn:before {\n  content: \"\\F170\";\n}\n.fa-bitbucket:before {\n  content: \"\\F171\";\n}\n.fa-bitbucket-square:before {\n  content: \"\\F172\";\n}\n.fa-tumblr:before {\n  content: \"\\F173\";\n}\n.fa-tumblr-square:before {\n  content: \"\\F174\";\n}\n.fa-long-arrow-down:before {\n  content: \"\\F175\";\n}\n.fa-long-arrow-up:before {\n  content: \"\\F176\";\n}\n.fa-long-arrow-left:before {\n  content: \"\\F177\";\n}\n.fa-long-arrow-right:before {\n  content: \"\\F178\";\n}\n.fa-apple:before {\n  content: \"\\F179\";\n}\n.fa-windows:before {\n  content: \"\\F17A\";\n}\n.fa-android:before {\n  content: \"\\F17B\";\n}\n.fa-linux:before {\n  content: \"\\F17C\";\n}\n.fa-dribbble:before {\n  content: \"\\F17D\";\n}\n.fa-skype:before {\n  content: \"\\F17E\";\n}\n.fa-foursquare:before {\n  content: \"\\F180\";\n}\n.fa-trello:before {\n  content: \"\\F181\";\n}\n.fa-female:before {\n  content: \"\\F182\";\n}\n.fa-male:before {\n  content: \"\\F183\";\n}\n.fa-gittip:before,\n.fa-gratipay:before {\n  content: \"\\F184\";\n}\n.fa-sun-o:before {\n  content: \"\\F185\";\n}\n.fa-moon-o:before {\n  content: \"\\F186\";\n}\n.fa-archive:before {\n  content: \"\\F187\";\n}\n.fa-bug:before {\n  content: \"\\F188\";\n}\n.fa-vk:before {\n  content: \"\\F189\";\n}\n.fa-weibo:before {\n  content: \"\\F18A\";\n}\n.fa-renren:before {\n  content: \"\\F18B\";\n}\n.fa-pagelines:before {\n  content: \"\\F18C\";\n}\n.fa-stack-exchange:before {\n  content: \"\\F18D\";\n}\n.fa-arrow-circle-o-right:before {\n  content: \"\\F18E\";\n}\n.fa-arrow-circle-o-left:before {\n  content: \"\\F190\";\n}\n.fa-toggle-left:before,\n.fa-caret-square-o-left:before {\n  content: \"\\F191\";\n}\n.fa-dot-circle-o:before {\n  content: \"\\F192\";\n}\n.fa-wheelchair:before {\n  content: \"\\F193\";\n}\n.fa-vimeo-square:before {\n  content: \"\\F194\";\n}\n.fa-turkish-lira:before,\n.fa-try:before {\n  content: \"\\F195\";\n}\n.fa-plus-square-o:before {\n  content: \"\\F196\";\n}\n.fa-space-shuttle:before {\n  content: \"\\F197\";\n}\n.fa-slack:before {\n  content: \"\\F198\";\n}\n.fa-envelope-square:before {\n  content: \"\\F199\";\n}\n.fa-wordpress:before {\n  content: \"\\F19A\";\n}\n.fa-openid:before {\n  content: \"\\F19B\";\n}\n.fa-institution:before,\n.fa-bank:before,\n.fa-university:before {\n  content: \"\\F19C\";\n}\n.fa-mortar-board:before,\n.fa-graduation-cap:before {\n  content: \"\\F19D\";\n}\n.fa-yahoo:before {\n  content: \"\\F19E\";\n}\n.fa-google:before {\n  content: \"\\F1A0\";\n}\n.fa-reddit:before {\n  content: \"\\F1A1\";\n}\n.fa-reddit-square:before {\n  content: \"\\F1A2\";\n}\n.fa-stumbleupon-circle:before {\n  content: \"\\F1A3\";\n}\n.fa-stumbleupon:before {\n  content: \"\\F1A4\";\n}\n.fa-delicious:before {\n  content: \"\\F1A5\";\n}\n.fa-digg:before {\n  content: \"\\F1A6\";\n}\n.fa-pied-piper-pp:before {\n  content: \"\\F1A7\";\n}\n.fa-pied-piper-alt:before {\n  content: \"\\F1A8\";\n}\n.fa-drupal:before {\n  content: \"\\F1A9\";\n}\n.fa-joomla:before {\n  content: \"\\F1AA\";\n}\n.fa-language:before {\n  content: \"\\F1AB\";\n}\n.fa-fax:before {\n  content: \"\\F1AC\";\n}\n.fa-building:before {\n  content: \"\\F1AD\";\n}\n.fa-child:before {\n  content: \"\\F1AE\";\n}\n.fa-paw:before {\n  content: \"\\F1B0\";\n}\n.fa-spoon:before {\n  content: \"\\F1B1\";\n}\n.fa-cube:before {\n  content: \"\\F1B2\";\n}\n.fa-cubes:before {\n  content: \"\\F1B3\";\n}\n.fa-behance:before {\n  content: \"\\F1B4\";\n}\n.fa-behance-square:before {\n  content: \"\\F1B5\";\n}\n.fa-steam:before {\n  content: \"\\F1B6\";\n}\n.fa-steam-square:before {\n  content: \"\\F1B7\";\n}\n.fa-recycle:before {\n  content: \"\\F1B8\";\n}\n.fa-automobile:before,\n.fa-car:before {\n  content: \"\\F1B9\";\n}\n.fa-cab:before,\n.fa-taxi:before {\n  content: \"\\F1BA\";\n}\n.fa-tree:before {\n  content: \"\\F1BB\";\n}\n.fa-spotify:before {\n  content: \"\\F1BC\";\n}\n.fa-deviantart:before {\n  content: \"\\F1BD\";\n}\n.fa-soundcloud:before {\n  content: \"\\F1BE\";\n}\n.fa-database:before {\n  content: \"\\F1C0\";\n}\n.fa-file-pdf-o:before {\n  content: \"\\F1C1\";\n}\n.fa-file-word-o:before {\n  content: \"\\F1C2\";\n}\n.fa-file-excel-o:before {\n  content: \"\\F1C3\";\n}\n.fa-file-powerpoint-o:before {\n  content: \"\\F1C4\";\n}\n.fa-file-photo-o:before,\n.fa-file-picture-o:before,\n.fa-file-image-o:before {\n  content: \"\\F1C5\";\n}\n.fa-file-zip-o:before,\n.fa-file-archive-o:before {\n  content: \"\\F1C6\";\n}\n.fa-file-sound-o:before,\n.fa-file-audio-o:before {\n  content: \"\\F1C7\";\n}\n.fa-file-movie-o:before,\n.fa-file-video-o:before {\n  content: \"\\F1C8\";\n}\n.fa-file-code-o:before {\n  content: \"\\F1C9\";\n}\n.fa-vine:before {\n  content: \"\\F1CA\";\n}\n.fa-codepen:before {\n  content: \"\\F1CB\";\n}\n.fa-jsfiddle:before {\n  content: \"\\F1CC\";\n}\n.fa-life-bouy:before,\n.fa-life-buoy:before,\n.fa-life-saver:before,\n.fa-support:before,\n.fa-life-ring:before {\n  content: \"\\F1CD\";\n}\n.fa-circle-o-notch:before {\n  content: \"\\F1CE\";\n}\n.fa-ra:before,\n.fa-resistance:before,\n.fa-rebel:before {\n  content: \"\\F1D0\";\n}\n.fa-ge:before,\n.fa-empire:before {\n  content: \"\\F1D1\";\n}\n.fa-git-square:before {\n  content: \"\\F1D2\";\n}\n.fa-git:before {\n  content: \"\\F1D3\";\n}\n.fa-y-combinator-square:before,\n.fa-yc-square:before,\n.fa-hacker-news:before {\n  content: \"\\F1D4\";\n}\n.fa-tencent-weibo:before {\n  content: \"\\F1D5\";\n}\n.fa-qq:before {\n  content: \"\\F1D6\";\n}\n.fa-wechat:before,\n.fa-weixin:before {\n  content: \"\\F1D7\";\n}\n.fa-send:before,\n.fa-paper-plane:before {\n  content: \"\\F1D8\";\n}\n.fa-send-o:before,\n.fa-paper-plane-o:before {\n  content: \"\\F1D9\";\n}\n.fa-history:before {\n  content: \"\\F1DA\";\n}\n.fa-circle-thin:before {\n  content: \"\\F1DB\";\n}\n.fa-header:before {\n  content: \"\\F1DC\";\n}\n.fa-paragraph:before {\n  content: \"\\F1DD\";\n}\n.fa-sliders:before {\n  content: \"\\F1DE\";\n}\n.fa-share-alt:before {\n  content: \"\\F1E0\";\n}\n.fa-share-alt-square:before {\n  content: \"\\F1E1\";\n}\n.fa-bomb:before {\n  content: \"\\F1E2\";\n}\n.fa-soccer-ball-o:before,\n.fa-futbol-o:before {\n  content: \"\\F1E3\";\n}\n.fa-tty:before {\n  content: \"\\F1E4\";\n}\n.fa-binoculars:before {\n  content: \"\\F1E5\";\n}\n.fa-plug:before {\n  content: \"\\F1E6\";\n}\n.fa-slideshare:before {\n  content: \"\\F1E7\";\n}\n.fa-twitch:before {\n  content: \"\\F1E8\";\n}\n.fa-yelp:before {\n  content: \"\\F1E9\";\n}\n.fa-newspaper-o:before {\n  content: \"\\F1EA\";\n}\n.fa-wifi:before {\n  content: \"\\F1EB\";\n}\n.fa-calculator:before {\n  content: \"\\F1EC\";\n}\n.fa-paypal:before {\n  content: \"\\F1ED\";\n}\n.fa-google-wallet:before {\n  content: \"\\F1EE\";\n}\n.fa-cc-visa:before {\n  content: \"\\F1F0\";\n}\n.fa-cc-mastercard:before {\n  content: \"\\F1F1\";\n}\n.fa-cc-discover:before {\n  content: \"\\F1F2\";\n}\n.fa-cc-amex:before {\n  content: \"\\F1F3\";\n}\n.fa-cc-paypal:before {\n  content: \"\\F1F4\";\n}\n.fa-cc-stripe:before {\n  content: \"\\F1F5\";\n}\n.fa-bell-slash:before {\n  content: \"\\F1F6\";\n}\n.fa-bell-slash-o:before {\n  content: \"\\F1F7\";\n}\n.fa-trash:before {\n  content: \"\\F1F8\";\n}\n.fa-copyright:before {\n  content: \"\\F1F9\";\n}\n.fa-at:before {\n  content: \"\\F1FA\";\n}\n.fa-eyedropper:before {\n  content: \"\\F1FB\";\n}\n.fa-paint-brush:before {\n  content: \"\\F1FC\";\n}\n.fa-birthday-cake:before {\n  content: \"\\F1FD\";\n}\n.fa-area-chart:before {\n  content: \"\\F1FE\";\n}\n.fa-pie-chart:before {\n  content: \"\\F200\";\n}\n.fa-line-chart:before {\n  content: \"\\F201\";\n}\n.fa-lastfm:before {\n  content: \"\\F202\";\n}\n.fa-lastfm-square:before {\n  content: \"\\F203\";\n}\n.fa-toggle-off:before {\n  content: \"\\F204\";\n}\n.fa-toggle-on:before {\n  content: \"\\F205\";\n}\n.fa-bicycle:before {\n  content: \"\\F206\";\n}\n.fa-bus:before {\n  content: \"\\F207\";\n}\n.fa-ioxhost:before {\n  content: \"\\F208\";\n}\n.fa-angellist:before {\n  content: \"\\F209\";\n}\n.fa-cc:before {\n  content: \"\\F20A\";\n}\n.fa-shekel:before,\n.fa-sheqel:before,\n.fa-ils:before {\n  content: \"\\F20B\";\n}\n.fa-meanpath:before {\n  content: \"\\F20C\";\n}\n.fa-buysellads:before {\n  content: \"\\F20D\";\n}\n.fa-connectdevelop:before {\n  content: \"\\F20E\";\n}\n.fa-dashcube:before {\n  content: \"\\F210\";\n}\n.fa-forumbee:before {\n  content: \"\\F211\";\n}\n.fa-leanpub:before {\n  content: \"\\F212\";\n}\n.fa-sellsy:before {\n  content: \"\\F213\";\n}\n.fa-shirtsinbulk:before {\n  content: \"\\F214\";\n}\n.fa-simplybuilt:before {\n  content: \"\\F215\";\n}\n.fa-skyatlas:before {\n  content: \"\\F216\";\n}\n.fa-cart-plus:before {\n  content: \"\\F217\";\n}\n.fa-cart-arrow-down:before {\n  content: \"\\F218\";\n}\n.fa-diamond:before {\n  content: \"\\F219\";\n}\n.fa-ship:before {\n  content: \"\\F21A\";\n}\n.fa-user-secret:before {\n  content: \"\\F21B\";\n}\n.fa-motorcycle:before {\n  content: \"\\F21C\";\n}\n.fa-street-view:before {\n  content: \"\\F21D\";\n}\n.fa-heartbeat:before {\n  content: \"\\F21E\";\n}\n.fa-venus:before {\n  content: \"\\F221\";\n}\n.fa-mars:before {\n  content: \"\\F222\";\n}\n.fa-mercury:before {\n  content: \"\\F223\";\n}\n.fa-intersex:before,\n.fa-transgender:before {\n  content: \"\\F224\";\n}\n.fa-transgender-alt:before {\n  content: \"\\F225\";\n}\n.fa-venus-double:before {\n  content: \"\\F226\";\n}\n.fa-mars-double:before {\n  content: \"\\F227\";\n}\n.fa-venus-mars:before {\n  content: \"\\F228\";\n}\n.fa-mars-stroke:before {\n  content: \"\\F229\";\n}\n.fa-mars-stroke-v:before {\n  content: \"\\F22A\";\n}\n.fa-mars-stroke-h:before {\n  content: \"\\F22B\";\n}\n.fa-neuter:before {\n  content: \"\\F22C\";\n}\n.fa-genderless:before {\n  content: \"\\F22D\";\n}\n.fa-facebook-official:before {\n  content: \"\\F230\";\n}\n.fa-pinterest-p:before {\n  content: \"\\F231\";\n}\n.fa-whatsapp:before {\n  content: \"\\F232\";\n}\n.fa-server:before {\n  content: \"\\F233\";\n}\n.fa-user-plus:before {\n  content: \"\\F234\";\n}\n.fa-user-times:before {\n  content: \"\\F235\";\n}\n.fa-hotel:before,\n.fa-bed:before {\n  content: \"\\F236\";\n}\n.fa-viacoin:before {\n  content: \"\\F237\";\n}\n.fa-train:before {\n  content: \"\\F238\";\n}\n.fa-subway:before {\n  content: \"\\F239\";\n}\n.fa-medium:before {\n  content: \"\\F23A\";\n}\n.fa-yc:before,\n.fa-y-combinator:before {\n  content: \"\\F23B\";\n}\n.fa-optin-monster:before {\n  content: \"\\F23C\";\n}\n.fa-opencart:before {\n  content: \"\\F23D\";\n}\n.fa-expeditedssl:before {\n  content: \"\\F23E\";\n}\n.fa-battery-4:before,\n.fa-battery:before,\n.fa-battery-full:before {\n  content: \"\\F240\";\n}\n.fa-battery-3:before,\n.fa-battery-three-quarters:before {\n  content: \"\\F241\";\n}\n.fa-battery-2:before,\n.fa-battery-half:before {\n  content: \"\\F242\";\n}\n.fa-battery-1:before,\n.fa-battery-quarter:before {\n  content: \"\\F243\";\n}\n.fa-battery-0:before,\n.fa-battery-empty:before {\n  content: \"\\F244\";\n}\n.fa-mouse-pointer:before {\n  content: \"\\F245\";\n}\n.fa-i-cursor:before {\n  content: \"\\F246\";\n}\n.fa-object-group:before {\n  content: \"\\F247\";\n}\n.fa-object-ungroup:before {\n  content: \"\\F248\";\n}\n.fa-sticky-note:before {\n  content: \"\\F249\";\n}\n.fa-sticky-note-o:before {\n  content: \"\\F24A\";\n}\n.fa-cc-jcb:before {\n  content: \"\\F24B\";\n}\n.fa-cc-diners-club:before {\n  content: \"\\F24C\";\n}\n.fa-clone:before {\n  content: \"\\F24D\";\n}\n.fa-balance-scale:before {\n  content: \"\\F24E\";\n}\n.fa-hourglass-o:before {\n  content: \"\\F250\";\n}\n.fa-hourglass-1:before,\n.fa-hourglass-start:before {\n  content: \"\\F251\";\n}\n.fa-hourglass-2:before,\n.fa-hourglass-half:before {\n  content: \"\\F252\";\n}\n.fa-hourglass-3:before,\n.fa-hourglass-end:before {\n  content: \"\\F253\";\n}\n.fa-hourglass:before {\n  content: \"\\F254\";\n}\n.fa-hand-grab-o:before,\n.fa-hand-rock-o:before {\n  content: \"\\F255\";\n}\n.fa-hand-stop-o:before,\n.fa-hand-paper-o:before {\n  content: \"\\F256\";\n}\n.fa-hand-scissors-o:before {\n  content: \"\\F257\";\n}\n.fa-hand-lizard-o:before {\n  content: \"\\F258\";\n}\n.fa-hand-spock-o:before {\n  content: \"\\F259\";\n}\n.fa-hand-pointer-o:before {\n  content: \"\\F25A\";\n}\n.fa-hand-peace-o:before {\n  content: \"\\F25B\";\n}\n.fa-trademark:before {\n  content: \"\\F25C\";\n}\n.fa-registered:before {\n  content: \"\\F25D\";\n}\n.fa-creative-commons:before {\n  content: \"\\F25E\";\n}\n.fa-gg:before {\n  content: \"\\F260\";\n}\n.fa-gg-circle:before {\n  content: \"\\F261\";\n}\n.fa-tripadvisor:before {\n  content: \"\\F262\";\n}\n.fa-odnoklassniki:before {\n  content: \"\\F263\";\n}\n.fa-odnoklassniki-square:before {\n  content: \"\\F264\";\n}\n.fa-get-pocket:before {\n  content: \"\\F265\";\n}\n.fa-wikipedia-w:before {\n  content: \"\\F266\";\n}\n.fa-safari:before {\n  content: \"\\F267\";\n}\n.fa-chrome:before {\n  content: \"\\F268\";\n}\n.fa-firefox:before {\n  content: \"\\F269\";\n}\n.fa-opera:before {\n  content: \"\\F26A\";\n}\n.fa-internet-explorer:before {\n  content: \"\\F26B\";\n}\n.fa-tv:before,\n.fa-television:before {\n  content: \"\\F26C\";\n}\n.fa-contao:before {\n  content: \"\\F26D\";\n}\n.fa-500px:before {\n  content: \"\\F26E\";\n}\n.fa-amazon:before {\n  content: \"\\F270\";\n}\n.fa-calendar-plus-o:before {\n  content: \"\\F271\";\n}\n.fa-calendar-minus-o:before {\n  content: \"\\F272\";\n}\n.fa-calendar-times-o:before {\n  content: \"\\F273\";\n}\n.fa-calendar-check-o:before {\n  content: \"\\F274\";\n}\n.fa-industry:before {\n  content: \"\\F275\";\n}\n.fa-map-pin:before {\n  content: \"\\F276\";\n}\n.fa-map-signs:before {\n  content: \"\\F277\";\n}\n.fa-map-o:before {\n  content: \"\\F278\";\n}\n.fa-map:before {\n  content: \"\\F279\";\n}\n.fa-commenting:before {\n  content: \"\\F27A\";\n}\n.fa-commenting-o:before {\n  content: \"\\F27B\";\n}\n.fa-houzz:before {\n  content: \"\\F27C\";\n}\n.fa-vimeo:before {\n  content: \"\\F27D\";\n}\n.fa-black-tie:before {\n  content: \"\\F27E\";\n}\n.fa-fonticons:before {\n  content: \"\\F280\";\n}\n.fa-reddit-alien:before {\n  content: \"\\F281\";\n}\n.fa-edge:before {\n  content: \"\\F282\";\n}\n.fa-credit-card-alt:before {\n  content: \"\\F283\";\n}\n.fa-codiepie:before {\n  content: \"\\F284\";\n}\n.fa-modx:before {\n  content: \"\\F285\";\n}\n.fa-fort-awesome:before {\n  content: \"\\F286\";\n}\n.fa-usb:before {\n  content: \"\\F287\";\n}\n.fa-product-hunt:before {\n  content: \"\\F288\";\n}\n.fa-mixcloud:before {\n  content: \"\\F289\";\n}\n.fa-scribd:before {\n  content: \"\\F28A\";\n}\n.fa-pause-circle:before {\n  content: \"\\F28B\";\n}\n.fa-pause-circle-o:before {\n  content: \"\\F28C\";\n}\n.fa-stop-circle:before {\n  content: \"\\F28D\";\n}\n.fa-stop-circle-o:before {\n  content: \"\\F28E\";\n}\n.fa-shopping-bag:before {\n  content: \"\\F290\";\n}\n.fa-shopping-basket:before {\n  content: \"\\F291\";\n}\n.fa-hashtag:before {\n  content: \"\\F292\";\n}\n.fa-bluetooth:before {\n  content: \"\\F293\";\n}\n.fa-bluetooth-b:before {\n  content: \"\\F294\";\n}\n.fa-percent:before {\n  content: \"\\F295\";\n}\n.fa-gitlab:before {\n  content: \"\\F296\";\n}\n.fa-wpbeginner:before {\n  content: \"\\F297\";\n}\n.fa-wpforms:before {\n  content: \"\\F298\";\n}\n.fa-envira:before {\n  content: \"\\F299\";\n}\n.fa-universal-access:before {\n  content: \"\\F29A\";\n}\n.fa-wheelchair-alt:before {\n  content: \"\\F29B\";\n}\n.fa-question-circle-o:before {\n  content: \"\\F29C\";\n}\n.fa-blind:before {\n  content: \"\\F29D\";\n}\n.fa-audio-description:before {\n  content: \"\\F29E\";\n}\n.fa-volume-control-phone:before {\n  content: \"\\F2A0\";\n}\n.fa-braille:before {\n  content: \"\\F2A1\";\n}\n.fa-assistive-listening-systems:before {\n  content: \"\\F2A2\";\n}\n.fa-asl-interpreting:before,\n.fa-american-sign-language-interpreting:before {\n  content: \"\\F2A3\";\n}\n.fa-deafness:before,\n.fa-hard-of-hearing:before,\n.fa-deaf:before {\n  content: \"\\F2A4\";\n}\n.fa-glide:before {\n  content: \"\\F2A5\";\n}\n.fa-glide-g:before {\n  content: \"\\F2A6\";\n}\n.fa-signing:before,\n.fa-sign-language:before {\n  content: \"\\F2A7\";\n}\n.fa-low-vision:before {\n  content: \"\\F2A8\";\n}\n.fa-viadeo:before {\n  content: \"\\F2A9\";\n}\n.fa-viadeo-square:before {\n  content: \"\\F2AA\";\n}\n.fa-snapchat:before {\n  content: \"\\F2AB\";\n}\n.fa-snapchat-ghost:before {\n  content: \"\\F2AC\";\n}\n.fa-snapchat-square:before {\n  content: \"\\F2AD\";\n}\n.fa-pied-piper:before {\n  content: \"\\F2AE\";\n}\n.fa-first-order:before {\n  content: \"\\F2B0\";\n}\n.fa-yoast:before {\n  content: \"\\F2B1\";\n}\n.fa-themeisle:before {\n  content: \"\\F2B2\";\n}\n.fa-google-plus-circle:before,\n.fa-google-plus-official:before {\n  content: \"\\F2B3\";\n}\n.fa-fa:before,\n.fa-font-awesome:before {\n  content: \"\\F2B4\";\n}\n.fa-handshake-o:before {\n  content: \"\\F2B5\";\n}\n.fa-envelope-open:before {\n  content: \"\\F2B6\";\n}\n.fa-envelope-open-o:before {\n  content: \"\\F2B7\";\n}\n.fa-linode:before {\n  content: \"\\F2B8\";\n}\n.fa-address-book:before {\n  content: \"\\F2B9\";\n}\n.fa-address-book-o:before {\n  content: \"\\F2BA\";\n}\n.fa-vcard:before,\n.fa-address-card:before {\n  content: \"\\F2BB\";\n}\n.fa-vcard-o:before,\n.fa-address-card-o:before {\n  content: \"\\F2BC\";\n}\n.fa-user-circle:before {\n  content: \"\\F2BD\";\n}\n.fa-user-circle-o:before {\n  content: \"\\F2BE\";\n}\n.fa-user-o:before {\n  content: \"\\F2C0\";\n}\n.fa-id-badge:before {\n  content: \"\\F2C1\";\n}\n.fa-drivers-license:before,\n.fa-id-card:before {\n  content: \"\\F2C2\";\n}\n.fa-drivers-license-o:before,\n.fa-id-card-o:before {\n  content: \"\\F2C3\";\n}\n.fa-quora:before {\n  content: \"\\F2C4\";\n}\n.fa-free-code-camp:before {\n  content: \"\\F2C5\";\n}\n.fa-telegram:before {\n  content: \"\\F2C6\";\n}\n.fa-thermometer-4:before,\n.fa-thermometer:before,\n.fa-thermometer-full:before {\n  content: \"\\F2C7\";\n}\n.fa-thermometer-3:before,\n.fa-thermometer-three-quarters:before {\n  content: \"\\F2C8\";\n}\n.fa-thermometer-2:before,\n.fa-thermometer-half:before {\n  content: \"\\F2C9\";\n}\n.fa-thermometer-1:before,\n.fa-thermometer-quarter:before {\n  content: \"\\F2CA\";\n}\n.fa-thermometer-0:before,\n.fa-thermometer-empty:before {\n  content: \"\\F2CB\";\n}\n.fa-shower:before {\n  content: \"\\F2CC\";\n}\n.fa-bathtub:before,\n.fa-s15:before,\n.fa-bath:before {\n  content: \"\\F2CD\";\n}\n.fa-podcast:before {\n  content: \"\\F2CE\";\n}\n.fa-window-maximize:before {\n  content: \"\\F2D0\";\n}\n.fa-window-minimize:before {\n  content: \"\\F2D1\";\n}\n.fa-window-restore:before {\n  content: \"\\F2D2\";\n}\n.fa-times-rectangle:before,\n.fa-window-close:before {\n  content: \"\\F2D3\";\n}\n.fa-times-rectangle-o:before,\n.fa-window-close-o:before {\n  content: \"\\F2D4\";\n}\n.fa-bandcamp:before {\n  content: \"\\F2D5\";\n}\n.fa-grav:before {\n  content: \"\\F2D6\";\n}\n.fa-etsy:before {\n  content: \"\\F2D7\";\n}\n.fa-imdb:before {\n  content: \"\\F2D8\";\n}\n.fa-ravelry:before {\n  content: \"\\F2D9\";\n}\n.fa-eercast:before {\n  content: \"\\F2DA\";\n}\n.fa-microchip:before {\n  content: \"\\F2DB\";\n}\n.fa-snowflake-o:before {\n  content: \"\\F2DC\";\n}\n.fa-superpowers:before {\n  content: \"\\F2DD\";\n}\n.fa-wpexplorer:before {\n  content: \"\\F2DE\";\n}\n.fa-meetup:before {\n  content: \"\\F2E0\";\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\n", ""]);
+
+// exports
+
 
 /***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Light.woff";
+module.exports = __webpack_require__.p + "fonts/fontawesome-webfont.ttf";
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Light.ttf";
+module.exports = __webpack_require__.p + "fonts/Lato-Light.woff";
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Light.svg";
+module.exports = __webpack_require__.p + "fonts/Lato-Light.ttf";
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Regular.woff";
+module.exports = __webpack_require__.p + "fonts/Lato-Light.svg";
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Regular.ttf";
+module.exports = __webpack_require__.p + "fonts/Lato-Regular.woff";
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Regular.svg";
+module.exports = __webpack_require__.p + "fonts/Lato-Regular.ttf";
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Bold.woff";
+module.exports = __webpack_require__.p + "fonts/Lato-Regular.svg";
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Bold.ttf";
+module.exports = __webpack_require__.p + "fonts/Lato-Bold.woff";
 
 /***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Bold.svg";
+module.exports = __webpack_require__.p + "fonts/Lato-Bold.ttf";
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Black.woff";
+module.exports = __webpack_require__.p + "fonts/Lato-Bold.svg";
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Black.ttf";
+module.exports = __webpack_require__.p + "fonts/Lato-Black.woff";
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/Lato-Black.svg";
+module.exports = __webpack_require__.p + "fonts/Lato-Black.ttf";
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.woff";
+module.exports = __webpack_require__.p + "fonts/Lato-Black.svg";
 
 /***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.ttf";
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.woff";
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.svg";
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.ttf";
 
 /***/ }),
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.woff";
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-light.svg";
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.ttf";
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.woff";
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.svg";
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.ttf";
 
 /***/ }),
 /* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/source-sans-pro-regular.svg";
+
+/***/ }),
+/* 27 */
 /***/ (function(module, exports) {
 
 
@@ -11074,49 +11098,52 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_styl__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__button_styl__);
 
-__webpack_require__(28);
 
-$(function () {
 
+$(() => {
   $('.ripple-button').on('click', function (event) {
+    const $div = $('<div/>');
+    const btnOffset = $(this).offset();
+    const xPos = event.pageX - btnOffset.left;
+    const yPos = event.pageY - btnOffset.top;
 
-    var $div = $('<div/>'),
-        btnOffset = $(this).offset(),
-        xPos = event.pageX - btnOffset.left,
-        yPos = event.pageY - btnOffset.top;
 
     $div.addClass('ripple');
-    var $ripple = $(".ripple");
+    const $ripple = $('.ripple');
 
-    $ripple.css("height", $(this).height());
-    $ripple.css("width", $(this).height());
-    $div.css({
-      top: yPos - $ripple.height() / 2,
-      left: xPos - $ripple.width() / 2,
-      background: $(this).data("ripple-color")
-    }).appendTo($(this));
+    $ripple.css('height', $(this).height());
+    $ripple.css('width', $(this).height());
+    $div
+      .css({
+        top: yPos - ($ripple.height() / 2),
+        left: xPos - ($ripple.width() / 2),
+        background: $(this).data('ripple-color'),
+      })
+      .appendTo($(this));
 
-    window.setTimeout(function () {
+    window.setTimeout(() => {
       $div.remove();
     }, 1500);
   });
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(30);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -11141,7 +11168,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -11155,22 +11182,24 @@ exports.push([module.i, ".ripple-button {\n  background-color: #e75735;\n  color
 
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 31 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrow_button_styl__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrow_button_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__arrow_button_styl__);
 
 
-__webpack_require__(31);
+
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(32);
+var content = __webpack_require__(33);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -11195,7 +11224,7 @@ if(false) {
 }
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -11203,108 +11232,102 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".arrow-button {\n  cursor: pointer;\n}\n.arrow-button .arrow-button__inner {\n  padding-top: 100%;\n  position: relative;\n}\n.arrow-button .arrow-button__inner .arrow-button-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.arrow-button.arrow-button_white-blue circle {\n  stroke: #e5e5e5 !important;\n  fill: #e5e5e5 !important;\n}\n.arrow-button.arrow-button_white-blue polyline {\n  stroke: #fff !important;\n}\n.arrow-button.arrow-button_disabled circle {\n  stroke: #e5e5e5;\n  fill: #e5e5e5;\n}\n.arrow-button.arrow-button_disabled polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_blue-white circle {\n  stroke: #4eb7a8;\n  fill: #4eb7a8;\n}\n.arrow-button.arrow-button_blue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_bluuue-white circle {\n  stroke: #005bac;\n  fill: #005bac;\n}\n.arrow-button.arrow-button_bluuue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_orange circle {\n  stroke: #fa6900;\n  fill: none;\n}\n.arrow-button.arrow-button_orange polyline {\n  stroke: #fa6900;\n}\n", ""]);
+exports.push([module.i, ".arrow-button {\n  cursor: pointer;\n}\n.arrow-button .arrow-button__inner {\n  padding-top: 100%;\n  position: relative;\n}\n.arrow-button .arrow-button__inner .arrow-button-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.arrow-button.arrow-button_disabled svg circle {\n  stroke: #e5e5e5;\n  fill: #e5e5e5;\n}\n.arrow-button.arrow-button_disabled svg polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_white-blue circle {\n  stroke: #4eb7a8;\n  fill: #fff;\n}\n.arrow-button.arrow-button_white-blue polyline {\n  stroke: #4eb7a8;\n}\n.arrow-button.arrow-button_blue-white circle {\n  stroke: #4eb7a8;\n  fill: #4eb7a8;\n}\n.arrow-button.arrow-button_blue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_bluuue-white circle {\n  stroke: #005bac;\n  fill: #005bac;\n}\n.arrow-button.arrow-button_bluuue-white polyline {\n  stroke: #fff;\n}\n.arrow-button.arrow-button_orange circle {\n  stroke: #fa6900;\n  fill: none;\n}\n.arrow-button.arrow-button_orange polyline {\n  stroke: #fa6900;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_chart_styl__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_chart_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pie_chart_styl__);
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-__webpack_require__(34);
 
 (function ($) {
-    var CanvasRenderer = (function () {
-        function CanvasRenderer(element, percent, linewidth, barcolor) {
-            _classCallCheck(this, CanvasRenderer);
+  class CanvasRenderer {
+    constructor(element, percent, linewidth, barcolor) {
+      this.element = element;
+      this.percent = percent;
+      this.linewidth = linewidth;
+      this.barcolor = barcolor;
+      this.trackcolor = '#eee';
 
-            this.element = element;
-            this.percent = percent;
-            this.linewidth = linewidth;
-            this.barcolor = barcolor;
-            this.trackcolor = '#eee';
+      this.canvas = document.createElement('canvas');
 
-            this.canvas = document.createElement('canvas');
+      element.appendChild(this.canvas);
 
-            element.appendChild(this.canvas);
+      this.ctx = this.canvas.getContext('2d');
+    }
 
-            this.ctx = this.canvas.getContext('2d');
-        }
+    draw() {
+      const width = $(this.element).outerWidth();
 
-        _createClass(CanvasRenderer, [{
-            key: 'draw',
-            value: function draw() {
+      this.canvas.width = width;
+      this.canvas.height = width;
 
-                var width = $(this.element).outerWidth();
+      this.ctx.translate(width / 2.0, width / 2.0);
 
-                this.canvas.width = this.canvas.height = width;
+      this.ctx.rotate(-0.5 * Math.PI);
 
-                this.ctx.translate(width / 2.0, width / 2.0);
+      this.radius = (width - this.linewidth * width / 100.0) / 2.0;
 
-                this.ctx.rotate(-0.5 * Math.PI);
+      if (this.percent !== 0) {
+        this.drawCircle(1, this.trackcolor);
+        this.drawCircle(this.percent / 100.0, this.barcolor);
+      }
+    }
 
-                this.radius = (width - this.linewidth * width / 100.0) / 2.0;
+    drawCircle(percent, color) {
+      this.ctx.beginPath();
+      this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
 
-                if (this.percent != 0) {
-                    this.drawCircle(1, this.trackcolor);
-                    this.drawCircle(this.percent / 100.0, this.barcolor);
-                }
-            }
-        }, {
-            key: 'drawCircle',
-            value: function drawCircle(percent, color) {
+      this.ctx.strokeStyle = color;
+      this.ctx.lineWidth = this.linewidth * $(this.element).outerWidth() / 100.0;
 
-                this.ctx.beginPath();
-                this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
+      this.ctx.stroke();
+    }
+  }
 
-                this.ctx.strokeStyle = color;
-                this.ctx.lineWidth = this.linewidth * $(this.element).outerWidth() / 100.0;
 
-                this.ctx.stroke();
-            }
-        }]);
+  $('.pie-chart').each(function () {
+    const renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
 
-        return CanvasRenderer;
-    })();
 
-    ;
+    const value = $(this).data('percent');
 
-    $('.pie-chart').each(function () {
+    $(this).children('.pie-chart__inner')
+      .children('.pie-chart__value')
+      .children('span')
+      .css('font-size', $(this).outerWidth() / 2.4)
+      .html(value);
 
-        var renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
+    renderer.draw();
 
-        var value = $(this).data('percent');
-
-        $(this).children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size', $(this).outerWidth() / 2.4).html(value);
-
-        renderer.draw();
-
-        var _this = $(this);
-        $(window).resize(function () {
-
-            _this.children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size', _this.outerWidth() / 2.4);
-            renderer.draw();
-        });
+    const _this = $(this);
+    $(window).resize(() => {
+      _this.children('.pie-chart__inner')
+        .children('.pie-chart__value')
+        .children('span')
+        .css('font-size', _this.outerWidth() / 2.4);
+      renderer.draw();
     });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+  });
+}(jQuery));
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(35);
+var content = __webpack_require__(36);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -11329,7 +11352,7 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -11343,87 +11366,92 @@ exports.push([module.i, ".pie-chart {\n  position: relative;\n  -webkit-user-sel
 
 
 /***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var d3 = __webpack_require__(37);
-
-(function ($) {
-	var DonutPie = (function () {
-		function DonutPie(self, width, linewidth, pies) {
-			_classCallCheck(this, DonutPie);
-
-			this.self = self;
-			this.width = $(this.self).outerWidth();
-			this.linewidth = linewidth;
-			this.data = pies;
-
-			this.svg = d3.select(this.self).append("svg").append("g");
-
-			this.svg.append("g").attr("class", "slices");
-
-			this.pie = d3.pie().sort(null).value(function (d) {
-				return d.value;
-			});
-
-			this.slice = this.svg.select(".slices").selectAll("path.slice").data(this.pie(this.data));
-
-			this.Display();
-		}
-
-		_createClass(DonutPie, [{
-			key: "Display",
-			value: function Display() {
-				var radius = $(this.self).outerWidth() / 2;
-
-				$(this.self).children('svg').attr("width", radius * 2).attr("height", radius * 2).find(".slices").first().html("");
-
-				this.arc = d3.arc().outerRadius(radius * (1 - this.linewidth)).innerRadius(radius);
-
-				this.svg.attr("transform", "translate(" + radius + "," + radius + ")");
-
-				this.slice.enter().insert("path").style("fill", function (d) {
-					return d.data.color;
-				}).attr("class", "slice").attr("d", this.arc);
-
-				this.slice.exit().remove();
-			}
-		}]);
-
-		return DonutPie;
-	})();
-
-	$('.donut-chart').each(function () {
-
-		var $donutpie = new DonutPie(this, $(this).outerWidth(), $(this).data('linewidth'), $(this).data('pies'));
-
-		$(window).resize(function () {
-
-			$donutpie.Display();
-		});
-	});
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://d3js.org Version 4.9.1. Copyright 2017 Mike Bostock.
+/* WEBPACK VAR INJECTION */(function(jQuery) {const d3 = __webpack_require__(38);
+
+(function ($) {
+  class DonutPie {
+    constructor(self, width, linewidth, pies) {
+      this.self = self;
+      this.width = $(this.self).outerWidth();
+      this.linewidth = linewidth;
+      this.data = pies;
+
+      this.svg = d3.select(this.self)
+        .append('svg')
+        .append('g');
+
+      this.svg.append('g')
+        .attr('class', 'slices');
+
+      this.pie = d3.pie()
+        .sort(null)
+        .value(d => d.value);
+
+
+      this.slice = this.svg.select('.slices').selectAll('path.slice')
+        .data(this.pie(this.data));
+
+      this.Display();
+    }
+
+    Display() {
+      const radius = $(this.self).outerWidth() / 2;
+
+      $(this.self).children('svg')
+        .attr('width', radius * 2)
+        .attr('height', radius * 2)
+        .find('.slices')
+        .first()
+        .html('');
+
+
+      this.arc = d3.arc()
+        .outerRadius(radius * (1 - this.linewidth))
+        .innerRadius(radius);
+
+
+      this.svg.attr('transform', `translate(${radius},${radius})`);
+
+
+      this.slice.enter()
+        .insert('path')
+        .style('fill', d => d.data.color)
+        .attr('class', 'slice')
+        .attr('d', this.arc);
+
+      this.slice.exit()
+        .remove();
+    }
+  }
+
+
+  $('.donut-chart').each(function () {
+    const $donutpie = new DonutPie(this, $(this).outerWidth(), $(this).data('linewidth'), $(this).data('pies'));
+
+
+    $(window).resize(() => {
+      $donutpie.Display();
+    });
+  });
+}(jQuery));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://d3js.org Version 4.10.0. Copyright 2017 Mike Bostock.
 (function (global, factory) {
 	 true ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
 	(factory((global.d3 = global.d3 || {})));
 }(this, (function (exports) { 'use strict';
 
-var version = "4.9.1";
+var version = "4.10.0";
 
 var ascending = function(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
@@ -11992,11 +12020,17 @@ function translateY(y) {
   return "translate(0," + (y + 0.5) + ")";
 }
 
+function number$1(scale) {
+  return function(d) {
+    return +scale(d);
+  };
+}
+
 function center(scale) {
   var offset = Math.max(0, scale.bandwidth() - 1) / 2; // Adjust for 0.5px offset.
   if (scale.round()) offset = Math.round(offset);
   return function(d) {
-    return scale(d) + offset;
+    return +scale(d) + offset;
   };
 }
 
@@ -12020,9 +12054,9 @@ function axis(orient, scale) {
         format = tickFormat == null ? (scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments) : identity$1) : tickFormat,
         spacing = Math.max(tickSizeInner, 0) + tickPadding,
         range = scale.range(),
-        range0 = range[0] + 0.5,
-        range1 = range[range.length - 1] + 0.5,
-        position = (scale.bandwidth ? center : identity$1)(scale.copy()),
+        range0 = +range[0] + 0.5,
+        range1 = +range[range.length - 1] + 0.5,
+        position = (scale.bandwidth ? center : number$1)(scale.copy()),
         selection = context.selection ? context.selection() : context,
         path = selection.selectAll(".domain").data([null]),
         tick = selection.selectAll(".tick").data(values, scale).order(),
@@ -12662,9 +12696,9 @@ var selection_exit = function() {
   return new Selection(this._exit || this._groups.map(sparse), this._parents);
 };
 
-var selection_merge = function(selection) {
+var selection_merge = function(selection$$1) {
 
-  for (var groups0 = this._groups, groups1 = selection._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
+  for (var groups0 = this._groups, groups1 = selection$$1._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
     for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
       if (node = group0[i] || group1[i]) {
         merge[i] = node;
@@ -13248,6 +13282,10 @@ function defaultSubject(d) {
   return d == null ? {x: exports.event.x, y: exports.event.y} : d;
 }
 
+function touchable() {
+  return "ontouchstart" in this;
+}
+
 var drag = function() {
   var filter = defaultFilter$1,
       container = defaultContainer,
@@ -13261,12 +13299,14 @@ var drag = function() {
       touchending,
       clickDistance2 = 0;
 
-  function drag(selection$$1) {
-    selection$$1
+  function drag(selection) {
+    selection
         .on("mousedown.drag", mousedowned)
+      .filter(touchable)
         .on("touchstart.drag", touchstarted)
         .on("touchmove.drag", touchmoved)
         .on("touchend.drag touchcancel.drag", touchended)
+        .style("touch-action", "none")
         .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
   }
 
@@ -13957,7 +13997,7 @@ function nogamma(a, b) {
   return d ? linear(a, d) : constant$3(isNaN(a) ? b : a);
 }
 
-var interpolateRgb = ((function rgbGamma(y) {
+var interpolateRgb = (function rgbGamma(y) {
   var color$$1 = gamma(y);
 
   function rgb$$1(start, end) {
@@ -13977,7 +14017,7 @@ var interpolateRgb = ((function rgbGamma(y) {
   rgb$$1.gamma = rgbGamma;
 
   return rgb$$1;
-}))(1);
+})(1);
 
 function rgbSpline(spline) {
   return function(colors) {
@@ -14412,7 +14452,7 @@ var clockLast = 0;
 var clockNow = 0;
 var clockSkew = 0;
 var clock = typeof performance === "object" && performance.now ? performance : Date;
-var setFrame = typeof requestAnimationFrame === "function" ? requestAnimationFrame : function(f) { setTimeout(f, 17); };
+var setFrame = typeof window === "object" && window.requestAnimationFrame ? window.requestAnimationFrame.bind(window) : function(f) { setTimeout(f, 17); };
 
 function now() {
   return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
@@ -14690,7 +14730,7 @@ function create(node, id, self) {
 
 var interrupt = function(node, name) {
   var schedules = node.__transition,
-      schedule,
+      schedule$$1,
       active,
       empty = true,
       i;
@@ -14700,11 +14740,11 @@ var interrupt = function(node, name) {
   name = name == null ? null : name + "";
 
   for (i in schedules) {
-    if ((schedule = schedules[i]).name !== name) { empty = false; continue; }
-    active = schedule.state > STARTING && schedule.state < ENDING;
-    schedule.state = ENDED;
-    schedule.timer.stop();
-    if (active) schedule.on.call("interrupt", node, node.__data__, schedule.index, schedule.group);
+    if ((schedule$$1 = schedules[i]).name !== name) { empty = false; continue; }
+    active = schedule$$1.state > STARTING && schedule$$1.state < ENDING;
+    schedule$$1.state = ENDED;
+    schedule$$1.timer.stop();
+    if (active) schedule$$1.on.call("interrupt", node, node.__data__, schedule$$1.index, schedule$$1.group);
     delete schedules[i];
   }
 
@@ -14720,8 +14760,8 @@ var selection_interrupt = function(name) {
 function tweenRemove(id, name) {
   var tween0, tween1;
   return function() {
-    var schedule = set$1(this, id),
-        tween = schedule.tween;
+    var schedule$$1 = set$1(this, id),
+        tween = schedule$$1.tween;
 
     // If this node shared tween with the previous node,
     // just assign the updated shared tween and we’re done!
@@ -14737,7 +14777,7 @@ function tweenRemove(id, name) {
       }
     }
 
-    schedule.tween = tween1;
+    schedule$$1.tween = tween1;
   };
 }
 
@@ -14745,8 +14785,8 @@ function tweenFunction(id, name, value) {
   var tween0, tween1;
   if (typeof value !== "function") throw new Error;
   return function() {
-    var schedule = set$1(this, id),
-        tween = schedule.tween;
+    var schedule$$1 = set$1(this, id),
+        tween = schedule$$1.tween;
 
     // If this node shared tween with the previous node,
     // just assign the updated shared tween and we’re done!
@@ -14762,7 +14802,7 @@ function tweenFunction(id, name, value) {
       if (i === n) tween1.push(t);
     }
 
-    schedule.tween = tween1;
+    schedule$$1.tween = tween1;
   };
 }
 
@@ -14788,8 +14828,8 @@ function tweenValue(transition, name, value) {
   var id = transition._id;
 
   transition.each(function() {
-    var schedule = set$1(this, id);
-    (schedule.value || (schedule.value = {}))[name] = value.apply(this, arguments);
+    var schedule$$1 = set$1(this, id);
+    (schedule$$1.value || (schedule$$1.value = {}))[name] = value.apply(this, arguments);
   });
 
   return function(node) {
@@ -14797,7 +14837,7 @@ function tweenValue(transition, name, value) {
   };
 }
 
-var interpolate$$1 = function(a, b) {
+var interpolate = function(a, b) {
   var c;
   return (typeof b === "number" ? reinterpolate
       : b instanceof color ? interpolateRgb
@@ -14868,7 +14908,7 @@ function attrFunctionNS$1(fullname, interpolate$$1, value) {
 }
 
 var transition_attr = function(name, value) {
-  var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg : interpolate$$1;
+  var fullname = namespace(name), i = fullname === "transform" ? interpolateTransformSvg : interpolate;
   return this.attrTween(name, typeof value === "function"
       ? (fullname.local ? attrFunctionNS$1 : attrFunction$1)(fullname, i, tweenValue(this, "attr." + name, value))
       : value == null ? (fullname.local ? attrRemoveNS$1 : attrRemove$1)(fullname)
@@ -14979,10 +15019,10 @@ var transition_filter = function(match) {
   return new Transition(subgroups, this._parents, this._name, this._id);
 };
 
-var transition_merge = function(transition) {
-  if (transition._id !== this._id) throw new Error;
+var transition_merge = function(transition$$1) {
+  if (transition$$1._id !== this._id) throw new Error;
 
-  for (var groups0 = this._groups, groups1 = transition._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
+  for (var groups0 = this._groups, groups1 = transition$$1._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
     for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
       if (node = group0[i] || group1[i]) {
         merge[i] = node;
@@ -15008,15 +15048,15 @@ function start(name) {
 function onFunction(id, name, listener) {
   var on0, on1, sit = start(name) ? init : set$1;
   return function() {
-    var schedule = sit(this, id),
-        on = schedule.on;
+    var schedule$$1 = sit(this, id),
+        on = schedule$$1.on;
 
     // If this node shared a dispatch with the previous node,
     // just assign the updated shared dispatch and we’re done!
     // Otherwise, copy-on-write.
     if (on !== on0) (on1 = (on0 = on).copy()).on(name, listener);
 
-    schedule.on = on1;
+    schedule$$1.on = on1;
   };
 }
 
@@ -15088,7 +15128,7 @@ var transition_selection = function() {
   return new Selection$1(this._groups, this._parents);
 };
 
-function styleRemove$1(name, interpolate$$2) {
+function styleRemove$1(name, interpolate$$1) {
   var value00,
       value10,
       interpolate0;
@@ -15097,7 +15137,7 @@ function styleRemove$1(name, interpolate$$2) {
         value1 = (this.style.removeProperty(name), styleValue(this, name));
     return value0 === value1 ? null
         : value0 === value00 && value1 === value10 ? interpolate0
-        : interpolate0 = interpolate$$2(value00 = value0, value10 = value1);
+        : interpolate0 = interpolate$$1(value00 = value0, value10 = value1);
   };
 }
 
@@ -15107,18 +15147,18 @@ function styleRemoveEnd(name) {
   };
 }
 
-function styleConstant$1(name, interpolate$$2, value1) {
+function styleConstant$1(name, interpolate$$1, value1) {
   var value00,
       interpolate0;
   return function() {
     var value0 = styleValue(this, name);
     return value0 === value1 ? null
         : value0 === value00 ? interpolate0
-        : interpolate0 = interpolate$$2(value00 = value0, value1);
+        : interpolate0 = interpolate$$1(value00 = value0, value1);
   };
 }
 
-function styleFunction$1(name, interpolate$$2, value) {
+function styleFunction$1(name, interpolate$$1, value) {
   var value00,
       value10,
       interpolate0;
@@ -15128,12 +15168,12 @@ function styleFunction$1(name, interpolate$$2, value) {
     if (value1 == null) value1 = (this.style.removeProperty(name), styleValue(this, name));
     return value0 === value1 ? null
         : value0 === value00 && value1 === value10 ? interpolate0
-        : interpolate0 = interpolate$$2(value00 = value0, value10 = value1);
+        : interpolate0 = interpolate$$1(value00 = value0, value10 = value1);
   };
 }
 
 var transition_style = function(name, value, priority) {
-  var i = (name += "") === "transform" ? interpolateTransformCss : interpolate$$1;
+  var i = (name += "") === "transform" ? interpolateTransformCss : interpolate;
   return value == null ? this
           .styleTween(name, styleRemove$1(name, i))
           .on("end.style." + name, styleRemoveEnd(name))
@@ -15504,13 +15544,13 @@ var root$1 = [null];
 
 var active = function(node, name) {
   var schedules = node.__transition,
-      schedule,
+      schedule$$1,
       i;
 
   if (schedules) {
     name = name == null ? null : name + "";
     for (i in schedules) {
-      if ((schedule = schedules[i]).state > SCHEDULED && schedule.name === name) {
+      if ((schedule$$1 = schedules[i]).state > SCHEDULED && schedule$$1.name === name) {
         return new Transition([[node]], root$1, name, +i);
       }
     }
@@ -15719,7 +15759,7 @@ function brush$1(dim) {
         .on("mousedown.brush touchstart.brush", started);
   }
 
-  brush.move = function(group, selection$$1) {
+  brush.move = function(group, selection) {
     if (group.selection) {
       group
           .on("start.brush", function() { emitter(this, arguments).beforestart().start(); })
@@ -15729,7 +15769,7 @@ function brush$1(dim) {
                 state = that.__brush,
                 emit = emitter(that, arguments),
                 selection0 = state.selection,
-                selection1 = dim.input(typeof selection$$1 === "function" ? selection$$1.apply(this, arguments) : selection$$1, state.extent),
+                selection1 = dim.input(typeof selection === "function" ? selection.apply(this, arguments) : selection, state.extent),
                 i = interpolateValue(selection0, selection1);
 
             function tween(t) {
@@ -15746,7 +15786,7 @@ function brush$1(dim) {
             var that = this,
                 args = arguments,
                 state = that.__brush,
-                selection1 = dim.input(typeof selection$$1 === "function" ? selection$$1.apply(that, args) : selection$$1, state.extent),
+                selection1 = dim.input(typeof selection === "function" ? selection.apply(that, args) : selection, state.extent),
                 emit = emitter(that, args).beforestart();
 
             interrupt(that);
@@ -15759,22 +15799,22 @@ function brush$1(dim) {
 
   function redraw() {
     var group = select(this),
-        selection$$1 = local$$1(this).selection;
+        selection = local$$1(this).selection;
 
-    if (selection$$1) {
+    if (selection) {
       group.selectAll(".selection")
           .style("display", null)
-          .attr("x", selection$$1[0][0])
-          .attr("y", selection$$1[0][1])
-          .attr("width", selection$$1[1][0] - selection$$1[0][0])
-          .attr("height", selection$$1[1][1] - selection$$1[0][1]);
+          .attr("x", selection[0][0])
+          .attr("y", selection[0][1])
+          .attr("width", selection[1][0] - selection[0][0])
+          .attr("height", selection[1][1] - selection[0][1]);
 
       group.selectAll(".handle")
           .style("display", null)
-          .attr("x", function(d) { return d.type[d.type.length - 1] === "e" ? selection$$1[1][0] - handleSize / 2 : selection$$1[0][0] - handleSize / 2; })
-          .attr("y", function(d) { return d.type[0] === "s" ? selection$$1[1][1] - handleSize / 2 : selection$$1[0][1] - handleSize / 2; })
-          .attr("width", function(d) { return d.type === "n" || d.type === "s" ? selection$$1[1][0] - selection$$1[0][0] + handleSize : handleSize; })
-          .attr("height", function(d) { return d.type === "e" || d.type === "w" ? selection$$1[1][1] - selection$$1[0][1] + handleSize : handleSize; });
+          .attr("x", function(d) { return d.type[d.type.length - 1] === "e" ? selection[1][0] - handleSize / 2 : selection[0][0] - handleSize / 2; })
+          .attr("y", function(d) { return d.type[0] === "s" ? selection[1][1] - handleSize / 2 : selection[0][1] - handleSize / 2; })
+          .attr("width", function(d) { return d.type === "n" || d.type === "s" ? selection[1][0] - selection[0][0] + handleSize : handleSize; })
+          .attr("height", function(d) { return d.type === "e" || d.type === "w" ? selection[1][1] - selection[0][1] + handleSize : handleSize; });
     }
 
     else {
@@ -15832,7 +15872,7 @@ function brush$1(dim) {
         signY = dim === X ? null : signsY[type],
         state = local$$1(that),
         extent = state.extent,
-        selection$$1 = state.selection,
+        selection = state.selection,
         W = extent[0][0], w0, w1,
         N = extent[0][1], n0, n1,
         E = extent[1][0], e0, e1,
@@ -15848,15 +15888,15 @@ function brush$1(dim) {
         emit = emitter(that, arguments).beforestart();
 
     if (type === "overlay") {
-      state.selection = selection$$1 = [
+      state.selection = selection = [
         [w0 = dim === Y ? W : point0[0], n0 = dim === X ? N : point0[1]],
         [e0 = dim === Y ? E : w0, s0 = dim === X ? S : n0]
       ];
     } else {
-      w0 = selection$$1[0][0];
-      n0 = selection$$1[0][1];
-      e0 = selection$$1[1][0];
-      s0 = selection$$1[1][1];
+      w0 = selection[0][0];
+      n0 = selection[0][1];
+      e0 = selection[1][0];
+      s0 = selection[1][1];
     }
 
     w1 = w0;
@@ -15942,14 +15982,14 @@ function brush$1(dim) {
         if (type in flipY) overlay.attr("cursor", cursors[type = flipY[type]]);
       }
 
-      if (state.selection) selection$$1 = state.selection; // May be set by brush.move!
-      if (lockX) w1 = selection$$1[0][0], e1 = selection$$1[1][0];
-      if (lockY) n1 = selection$$1[0][1], s1 = selection$$1[1][1];
+      if (state.selection) selection = state.selection; // May be set by brush.move!
+      if (lockX) w1 = selection[0][0], e1 = selection[1][0];
+      if (lockY) n1 = selection[0][1], s1 = selection[1][1];
 
-      if (selection$$1[0][0] !== w1
-          || selection$$1[0][1] !== n1
-          || selection$$1[1][0] !== e1
-          || selection$$1[1][1] !== s1) {
+      if (selection[0][0] !== w1
+          || selection[0][1] !== n1
+          || selection[1][0] !== e1
+          || selection[1][1] !== s1) {
         state.selection = [[w1, n1], [e1, s1]];
         redraw.call(that);
         emit.brush();
@@ -15969,8 +16009,8 @@ function brush$1(dim) {
       }
       group.attr("pointer-events", "all");
       overlay.attr("cursor", cursors.overlay);
-      if (state.selection) selection$$1 = state.selection; // May be set by brush.move (on start)!
-      if (empty(selection$$1)) state.selection = null, redraw.call(that);
+      if (state.selection) selection = state.selection; // May be set by brush.move (on start)!
+      if (empty(selection)) state.selection = null, redraw.call(that);
       emit.end();
     }
 
@@ -16499,10 +16539,10 @@ var nest = function() {
       nest;
 
   function apply(array, depth, createResult, setResult) {
-    if (depth >= keys.length) return rollup != null
-        ? rollup(array) : (sortValues != null
-        ? array.sort(sortValues)
-        : array);
+    if (depth >= keys.length) {
+      if (sortValues != null) array.sort(sortValues);
+      return rollup != null ? rollup(array) : array;
+    }
 
     var i = -1,
         n = array.length,
@@ -17607,17 +17647,17 @@ var manyBody = function() {
   }
 
   function accumulate(quad) {
-    var strength = 0, q, c, x$$1, y$$1, i;
+    var strength = 0, q, c, x, y, i;
 
     // For internal nodes, accumulate forces from child quadrants.
     if (quad.length) {
-      for (x$$1 = y$$1 = i = 0; i < 4; ++i) {
+      for (x = y = i = 0; i < 4; ++i) {
         if ((q = quad[i]) && (c = q.value)) {
-          strength += c, x$$1 += c * q.x, y$$1 += c * q.y;
+          strength += c, x += c * q.x, y += c * q.y;
         }
       }
-      quad.x = x$$1 / strength;
-      quad.y = y$$1 / strength;
+      quad.x = x / strength;
+      quad.y = y / strength;
     }
 
     // For leaf nodes, accumulate forces from coincident quadrants.
@@ -17635,20 +17675,20 @@ var manyBody = function() {
   function apply(quad, x1, _, x2) {
     if (!quad.value) return true;
 
-    var x$$1 = quad.x - node.x,
-        y$$1 = quad.y - node.y,
+    var x = quad.x - node.x,
+        y = quad.y - node.y,
         w = x2 - x1,
-        l = x$$1 * x$$1 + y$$1 * y$$1;
+        l = x * x + y * y;
 
     // Apply the Barnes-Hut approximation if possible.
     // Limit forces for very close nodes; randomize direction if coincident.
     if (w * w / theta2 < l) {
       if (l < distanceMax2) {
-        if (x$$1 === 0) x$$1 = jiggle(), l += x$$1 * x$$1;
-        if (y$$1 === 0) y$$1 = jiggle(), l += y$$1 * y$$1;
+        if (x === 0) x = jiggle(), l += x * x;
+        if (y === 0) y = jiggle(), l += y * y;
         if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
-        node.vx += x$$1 * quad.value * alpha / l;
-        node.vy += y$$1 * quad.value * alpha / l;
+        node.vx += x * quad.value * alpha / l;
+        node.vy += y * quad.value * alpha / l;
       }
       return true;
     }
@@ -17658,15 +17698,15 @@ var manyBody = function() {
 
     // Limit forces for very close nodes; randomize direction if coincident.
     if (quad.data !== node || quad.next) {
-      if (x$$1 === 0) x$$1 = jiggle(), l += x$$1 * x$$1;
-      if (y$$1 === 0) y$$1 = jiggle(), l += y$$1 * y$$1;
+      if (x === 0) x = jiggle(), l += x * x;
+      if (y === 0) y = jiggle(), l += y * y;
       if (l < distanceMin2) l = Math.sqrt(distanceMin2 * l);
     }
 
     do if (quad.data !== node) {
       w = strengths[quad.data.index] * alpha / l;
-      node.vx += x$$1 * w;
-      node.vy += y$$1 * w;
+      node.vx += x * w;
+      node.vy += y * w;
     } while (quad = quad.next);
   }
 
@@ -20903,7 +20943,7 @@ function scaleTranslate(kx, ky, tx, ty) {
 }
 
 var identity$5 = function() {
-  var k = 1, tx = 0, ty = 0, sx = 1, sy = 1, transform = identity$4, // scale, translate and reflect
+  var k = 1, tx = 0, ty = 0, sx = 1, sy = 1, transform$$1 = identity$4, // scale, translate and reflect
       x0 = null, y0, x1, y1, clip = identity$4, // clip extent
       cache,
       cacheStream,
@@ -20916,22 +20956,22 @@ var identity$5 = function() {
 
   return projection = {
     stream: function(stream) {
-      return cache && cacheStream === stream ? cache : cache = transform(clip(cacheStream = stream));
+      return cache && cacheStream === stream ? cache : cache = transform$$1(clip(cacheStream = stream));
     },
     clipExtent: function(_) {
       return arguments.length ? (clip = _ == null ? (x0 = y0 = x1 = y1 = null, identity$4) : clipExtent(x0 = +_[0][0], y0 = +_[0][1], x1 = +_[1][0], y1 = +_[1][1]), reset()) : x0 == null ? null : [[x0, y0], [x1, y1]];
     },
     scale: function(_) {
-      return arguments.length ? (transform = scaleTranslate((k = +_) * sx, k * sy, tx, ty), reset()) : k;
+      return arguments.length ? (transform$$1 = scaleTranslate((k = +_) * sx, k * sy, tx, ty), reset()) : k;
     },
     translate: function(_) {
-      return arguments.length ? (transform = scaleTranslate(k * sx, k * sy, tx = +_[0], ty = +_[1]), reset()) : [tx, ty];
+      return arguments.length ? (transform$$1 = scaleTranslate(k * sx, k * sy, tx = +_[0], ty = +_[1]), reset()) : [tx, ty];
     },
     reflectX: function(_) {
-      return arguments.length ? (transform = scaleTranslate(k * (sx = _ ? -1 : 1), k * sy, tx, ty), reset()) : sx < 0;
+      return arguments.length ? (transform$$1 = scaleTranslate(k * (sx = _ ? -1 : 1), k * sy, tx, ty), reset()) : sx < 0;
     },
     reflectY: function(_) {
-      return arguments.length ? (transform = scaleTranslate(k * sx, k * (sy = _ ? -1 : 1), tx, ty), reset()) : sy < 0;
+      return arguments.length ? (transform$$1 = scaleTranslate(k * sx, k * (sy = _ ? -1 : 1), tx, ty), reset()) : sy < 0;
     },
     fitExtent: function(extent, object) {
       return fitExtent(projection, extent, object);
@@ -21284,83 +21324,92 @@ Node.prototype = hierarchy.prototype = {
   copy: node_copy
 };
 
-function Node$2(value) {
-  this._ = value;
-  this.next = null;
-}
+var slice$3 = Array.prototype.slice;
 
-var shuffle$1 = function(array) {
-  var i,
-      n = (array = array.slice()).length,
-      head = null,
-      node = head;
+function shuffle$1(array) {
+  var m = array.length,
+      t,
+      i;
 
-  while (n) {
-    var next = new Node$2(array[n - 1]);
-    if (node) node = node.next = next;
-    else node = head = next;
-    array[i] = array[--n];
+  while (m) {
+    i = Math.random() * m-- | 0;
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
   }
 
-  return {
-    head: head,
-    tail: node
-  };
-};
+  return array;
+}
 
 var enclose = function(circles) {
-  return encloseN(shuffle$1(circles), []);
+  var i = 0, n = (circles = shuffle$1(slice$3.call(circles))).length, B = [], p, e;
+
+  while (i < n) {
+    p = circles[i];
+    if (e && enclosesWeak(e, p)) ++i;
+    else e = encloseBasis(B = extendBasis(B, p)), i = 0;
+  }
+
+  return e;
 };
 
-function encloses(a, b) {
-  var dx = b.x - a.x,
-      dy = b.y - a.y,
-      dr = a.r - b.r;
-  return dr * dr + 1e-6 > dx * dx + dy * dy;
-}
+function extendBasis(B, p) {
+  var i, j;
 
-// Returns the smallest circle that contains circles L and intersects circles B.
-function encloseN(L, B) {
-  var circle,
-      l0 = null,
-      l1 = L.head,
-      l2,
-      p1;
+  if (enclosesWeakAll(p, B)) return [p];
 
-  switch (B.length) {
-    case 1: circle = enclose1(B[0]); break;
-    case 2: circle = enclose2(B[0], B[1]); break;
-    case 3: circle = enclose3(B[0], B[1], B[2]); break;
-  }
-
-  while (l1) {
-    p1 = l1._, l2 = l1.next;
-    if (!circle || !encloses(circle, p1)) {
-
-      // Temporarily truncate L before l1.
-      if (l0) L.tail = l0, l0.next = null;
-      else L.head = L.tail = null;
-
-      B.push(p1);
-      circle = encloseN(L, B); // Note: reorders L!
-      B.pop();
-
-      // Move l1 to the front of L and reconnect the truncated list L.
-      if (L.head) l1.next = L.head, L.head = l1;
-      else l1.next = null, L.head = L.tail = l1;
-      l0 = L.tail, l0.next = l2;
-
-    } else {
-      l0 = l1;
+  // If we get here then B must have at least one element.
+  for (i = 0; i < B.length; ++i) {
+    if (enclosesNot(p, B[i])
+        && enclosesWeakAll(encloseBasis2(B[i], p), B)) {
+      return [B[i], p];
     }
-    l1 = l2;
   }
 
-  L.tail = l0;
-  return circle;
+  // If we get here then B must have at least two elements.
+  for (i = 0; i < B.length - 1; ++i) {
+    for (j = i + 1; j < B.length; ++j) {
+      if (enclosesNot(encloseBasis2(B[i], B[j]), p)
+          && enclosesNot(encloseBasis2(B[i], p), B[j])
+          && enclosesNot(encloseBasis2(B[j], p), B[i])
+          && enclosesWeakAll(encloseBasis3(B[i], B[j], p), B)) {
+        return [B[i], B[j], p];
+      }
+    }
+  }
+
+  // If we get here then something is very wrong.
+  throw new Error;
 }
 
-function enclose1(a) {
+function enclosesNot(a, b) {
+  var dr = a.r - b.r, dx = b.x - a.x, dy = b.y - a.y;
+  return dr < 0 || dr * dr < dx * dx + dy * dy;
+}
+
+function enclosesWeak(a, b) {
+  var dr = a.r - b.r + 1e-6, dx = b.x - a.x, dy = b.y - a.y;
+  return dr > 0 && dr * dr > dx * dx + dy * dy;
+}
+
+function enclosesWeakAll(a, B) {
+  for (var i = 0; i < B.length; ++i) {
+    if (!enclosesWeak(a, B[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function encloseBasis(B) {
+  switch (B.length) {
+    case 1: return encloseBasis1(B[0]);
+    case 2: return encloseBasis2(B[0], B[1]);
+    case 3: return encloseBasis3(B[0], B[1], B[2]);
+  }
+}
+
+function encloseBasis1(a) {
   return {
     x: a.x,
     y: a.y,
@@ -21368,7 +21417,7 @@ function enclose1(a) {
   };
 }
 
-function enclose2(a, b) {
+function encloseBasis2(a, b) {
   var x1 = a.x, y1 = a.y, r1 = a.r,
       x2 = b.x, y2 = b.y, r2 = b.r,
       x21 = x2 - x1, y21 = y2 - y1, r21 = r2 - r1,
@@ -21380,30 +21429,31 @@ function enclose2(a, b) {
   };
 }
 
-function enclose3(a, b, c) {
+function encloseBasis3(a, b, c) {
   var x1 = a.x, y1 = a.y, r1 = a.r,
       x2 = b.x, y2 = b.y, r2 = b.r,
       x3 = c.x, y3 = c.y, r3 = c.r,
-      a2 = 2 * (x1 - x2),
-      b2 = 2 * (y1 - y2),
-      c2 = 2 * (r2 - r1),
-      d2 = x1 * x1 + y1 * y1 - r1 * r1 - x2 * x2 - y2 * y2 + r2 * r2,
-      a3 = 2 * (x1 - x3),
-      b3 = 2 * (y1 - y3),
-      c3 = 2 * (r3 - r1),
-      d3 = x1 * x1 + y1 * y1 - r1 * r1 - x3 * x3 - y3 * y3 + r3 * r3,
+      a2 = x1 - x2,
+      a3 = x1 - x3,
+      b2 = y1 - y2,
+      b3 = y1 - y3,
+      c2 = r2 - r1,
+      c3 = r3 - r1,
+      d1 = x1 * x1 + y1 * y1 - r1 * r1,
+      d2 = d1 - x2 * x2 - y2 * y2 + r2 * r2,
+      d3 = d1 - x3 * x3 - y3 * y3 + r3 * r3,
       ab = a3 * b2 - a2 * b3,
-      xa = (b2 * d3 - b3 * d2) / ab - x1,
+      xa = (b2 * d3 - b3 * d2) / (ab * 2) - x1,
       xb = (b3 * c2 - b2 * c3) / ab,
-      ya = (a3 * d2 - a2 * d3) / ab - y1,
+      ya = (a3 * d2 - a2 * d3) / (ab * 2) - y1,
       yb = (a2 * c3 - a3 * c2) / ab,
       A = xb * xb + yb * yb - 1,
-      B = 2 * (xa * xb + ya * yb + r1),
+      B = 2 * (r1 + xa * xb + ya * yb),
       C = xa * xa + ya * ya - r1 * r1,
-      r = (-B - Math.sqrt(B * B - 4 * A * C)) / (2 * A);
+      r = -(A ? (B + Math.sqrt(B * B - 4 * A * C)) / (2 * A) : C / B);
   return {
-    x: xa + xb * r + x1,
-    y: ya + yb * r + y1,
+    x: x1 + xa + xb * r,
+    y: y1 + ya + yb * r,
     r: r
   };
 }
@@ -21434,12 +21484,12 @@ function intersects(a, b) {
   return dr * dr - 1e-6 > dx * dx + dy * dy;
 }
 
-function distance2(node, x, y) {
+function score(node) {
   var a = node._,
       b = node.next._,
       ab = a.r + b.r,
-      dx = (a.x * b.r + b.x * a.r) / ab - x,
-      dy = (a.y * b.r + b.y * a.r) / ab - y;
+      dx = (a.x * b.r + b.x * a.r) / ab,
+      dy = (a.y * b.r + b.y * a.r) / ab;
   return dx * dx + dy * dy;
 }
 
@@ -21452,7 +21502,7 @@ function Node$1(circle) {
 function packEnclose(circles) {
   if (!(n = circles.length)) return 0;
 
-  var a, b, c, n;
+  var a, b, c, n, aa, ca, i, j, k, sj, sk;
 
   // Place the first circle.
   a = circles[0], a.x = 0, a.y = 0;
@@ -21464,15 +21514,6 @@ function packEnclose(circles) {
 
   // Place the third circle.
   place(b, a, c = circles[2]);
-
-  // Initialize the weighted centroid.
-  var aa = a.r * a.r,
-      ba = b.r * b.r,
-      ca = c.r * c.r,
-      oa = aa + ba + ca,
-      ox = aa * a.x + ba * b.x + ca * c.x,
-      oy = aa * a.y + ba * b.y + ca * c.y,
-      cx, cy, i, j, k, sj, sk;
 
   // Initialize the front-chain using the first three circles a, b and c.
   a = new Node$1(a), b = new Node$1(b), c = new Node$1(c);
@@ -21507,15 +21548,10 @@ function packEnclose(circles) {
     // Success! Insert the new circle c between a and b.
     c.previous = a, c.next = b, a.next = b.previous = b = c;
 
-    // Update the weighted centroid.
-    oa += ca = c._.r * c._.r;
-    ox += ca * c._.x;
-    oy += ca * c._.y;
-
     // Compute the new closest circle pair to the centroid.
-    aa = distance2(a, cx = ox / oa, cy = oy / oa);
+    aa = score(a);
     while ((c = c.next) !== b) {
-      if ((ca = distance2(c, cx, cy)) < aa) {
+      if ((ca = score(c)) < aa) {
         a = c, aa = ca;
       }
     }
@@ -22072,7 +22108,7 @@ function squarifyRatio(ratio, parent, x0, y0, x1, y1) {
   return rows;
 }
 
-var squarify = ((function custom(ratio) {
+var squarify = (function custom(ratio) {
 
   function squarify(parent, x0, y0, x1, y1) {
     squarifyRatio(ratio, parent, x0, y0, x1, y1);
@@ -22083,7 +22119,7 @@ var squarify = ((function custom(ratio) {
   };
 
   return squarify;
-}))(phi);
+})(phi);
 
 var index$3 = function() {
   var tile = squarify,
@@ -22226,7 +22262,7 @@ var sliceDice = function(parent, x0, y0, x1, y1) {
   (parent.depth & 1 ? treemapSlice : treemapDice)(parent, x0, y0, x1, y1);
 };
 
-var resquarify = ((function custom(ratio) {
+var resquarify = (function custom(ratio) {
 
   function resquarify(parent, x0, y0, x1, y1) {
     if ((rows = parent._squarify) && (rows.ratio === ratio)) {
@@ -22257,7 +22293,7 @@ var resquarify = ((function custom(ratio) {
   };
 
   return resquarify;
-}))(phi);
+})(phi);
 
 var area$1 = function(polygon) {
   var i = -1,
@@ -22393,7 +22429,7 @@ var length$2 = function(polygon) {
   return perimeter;
 };
 
-var slice$3 = [].slice;
+var slice$4 = [].slice;
 
 var noabort = {};
 
@@ -22415,7 +22451,7 @@ Queue.prototype = queue.prototype = {
     if (typeof callback !== "function") throw new Error("invalid callback");
     if (this._call) throw new Error("defer after await");
     if (this._error != null) return this;
-    var t = slice$3.call(arguments, 1);
+    var t = slice$4.call(arguments, 1);
     t.push(callback);
     ++this._waiting, this._tasks.push(t);
     poke$1(this);
@@ -22519,7 +22555,7 @@ var defaultSource$1 = function() {
   return Math.random();
 };
 
-var uniform = ((function sourceRandomUniform(source) {
+var uniform = (function sourceRandomUniform(source) {
   function randomUniform(min, max) {
     min = min == null ? 0 : +min;
     max = max == null ? 1 : +max;
@@ -22533,9 +22569,9 @@ var uniform = ((function sourceRandomUniform(source) {
   randomUniform.source = sourceRandomUniform;
 
   return randomUniform;
-}))(defaultSource$1);
+})(defaultSource$1);
 
-var normal = ((function sourceRandomNormal(source) {
+var normal = (function sourceRandomNormal(source) {
   function randomNormal(mu, sigma) {
     var x, r;
     mu = mu == null ? 0 : +mu;
@@ -22560,9 +22596,9 @@ var normal = ((function sourceRandomNormal(source) {
   randomNormal.source = sourceRandomNormal;
 
   return randomNormal;
-}))(defaultSource$1);
+})(defaultSource$1);
 
-var logNormal = ((function sourceRandomLogNormal(source) {
+var logNormal = (function sourceRandomLogNormal(source) {
   function randomLogNormal() {
     var randomNormal = normal.source(source).apply(this, arguments);
     return function() {
@@ -22573,9 +22609,9 @@ var logNormal = ((function sourceRandomLogNormal(source) {
   randomLogNormal.source = sourceRandomLogNormal;
 
   return randomLogNormal;
-}))(defaultSource$1);
+})(defaultSource$1);
 
-var irwinHall = ((function sourceRandomIrwinHall(source) {
+var irwinHall = (function sourceRandomIrwinHall(source) {
   function randomIrwinHall(n) {
     return function() {
       for (var sum = 0, i = 0; i < n; ++i) sum += source();
@@ -22586,9 +22622,9 @@ var irwinHall = ((function sourceRandomIrwinHall(source) {
   randomIrwinHall.source = sourceRandomIrwinHall;
 
   return randomIrwinHall;
-}))(defaultSource$1);
+})(defaultSource$1);
 
-var bates = ((function sourceRandomBates(source) {
+var bates = (function sourceRandomBates(source) {
   function randomBates(n) {
     var randomIrwinHall = irwinHall.source(source)(n);
     return function() {
@@ -22599,9 +22635,9 @@ var bates = ((function sourceRandomBates(source) {
   randomBates.source = sourceRandomBates;
 
   return randomBates;
-}))(defaultSource$1);
+})(defaultSource$1);
 
-var exponential$1 = ((function sourceRandomExponential(source) {
+var exponential$1 = (function sourceRandomExponential(source) {
   function randomExponential(lambda) {
     return function() {
       return -Math.log(1 - source()) / lambda;
@@ -22611,7 +22647,7 @@ var exponential$1 = ((function sourceRandomExponential(source) {
   randomExponential.source = sourceRandomExponential;
 
   return randomExponential;
-}))(defaultSource$1);
+})(defaultSource$1);
 
 var request = function(url, callback) {
   var request,
@@ -22814,7 +22850,7 @@ var tsv$1 = dsv$1("text/tab-separated-values", tsvParse);
 var array$2 = Array.prototype;
 
 var map$3 = array$2.map;
-var slice$4 = array$2.slice;
+var slice$5 = array$2.slice;
 
 var implicit = {name: "implicit"};
 
@@ -22823,7 +22859,7 @@ function ordinal(range) {
       domain = [],
       unknown = implicit;
 
-  range = range == null ? [] : slice$4.call(range);
+  range = range == null ? [] : slice$5.call(range);
 
   function scale(d) {
     var key = d + "", i = index.get(key);
@@ -22843,7 +22879,7 @@ function ordinal(range) {
   };
 
   scale.range = function(_) {
-    return arguments.length ? (range = slice$4.call(_), scale) : range.slice();
+    return arguments.length ? (range = slice$5.call(_), scale) : range.slice();
   };
 
   scale.unknown = function(_) {
@@ -22864,7 +22900,7 @@ function band() {
   var scale = ordinal().unknown(undefined),
       domain = scale.domain,
       ordinalRange = scale.range,
-      range$$1 = [0, 1],
+      range = [0, 1],
       step,
       bandwidth,
       round = false,
@@ -22876,9 +22912,9 @@ function band() {
 
   function rescale() {
     var n = domain().length,
-        reverse = range$$1[1] < range$$1[0],
-        start = range$$1[reverse - 0],
-        stop = range$$1[1 - reverse];
+        reverse = range[1] < range[0],
+        start = range[reverse - 0],
+        stop = range[1 - reverse];
     step = (stop - start) / Math.max(1, n - paddingInner + paddingOuter * 2);
     if (round) step = Math.floor(step);
     start += (stop - start - step * (n - paddingInner)) * align;
@@ -22893,11 +22929,11 @@ function band() {
   };
 
   scale.range = function(_) {
-    return arguments.length ? (range$$1 = [+_[0], +_[1]], rescale()) : range$$1.slice();
+    return arguments.length ? (range = [+_[0], +_[1]], rescale()) : range.slice();
   };
 
   scale.rangeRound = function(_) {
-    return range$$1 = [+_[0], +_[1]], round = true, rescale();
+    return range = [+_[0], +_[1]], round = true, rescale();
   };
 
   scale.bandwidth = function() {
@@ -22931,7 +22967,7 @@ function band() {
   scale.copy = function() {
     return band()
         .domain(domain())
-        .range(range$$1)
+        .range(range)
         .round(round)
         .paddingInner(paddingInner)
         .paddingOuter(paddingOuter)
@@ -22965,7 +23001,7 @@ var constant$9 = function(x) {
   };
 };
 
-var number$1 = function(x) {
+var number$2 = function(x) {
   return +x;
 };
 
@@ -22984,22 +23020,22 @@ function deinterpolateClamp(deinterpolate) {
   };
 }
 
-function reinterpolateClamp(reinterpolate) {
+function reinterpolateClamp(reinterpolate$$1) {
   return function(a, b) {
-    var r = reinterpolate(a = +a, b = +b);
+    var r = reinterpolate$$1(a = +a, b = +b);
     return function(t) { return t <= 0 ? a : t >= 1 ? b : r(t); };
   };
 }
 
-function bimap(domain, range$$1, deinterpolate, reinterpolate) {
-  var d0 = domain[0], d1 = domain[1], r0 = range$$1[0], r1 = range$$1[1];
-  if (d1 < d0) d0 = deinterpolate(d1, d0), r0 = reinterpolate(r1, r0);
-  else d0 = deinterpolate(d0, d1), r0 = reinterpolate(r0, r1);
+function bimap(domain, range, deinterpolate, reinterpolate$$1) {
+  var d0 = domain[0], d1 = domain[1], r0 = range[0], r1 = range[1];
+  if (d1 < d0) d0 = deinterpolate(d1, d0), r0 = reinterpolate$$1(r1, r0);
+  else d0 = deinterpolate(d0, d1), r0 = reinterpolate$$1(r0, r1);
   return function(x) { return r0(d0(x)); };
 }
 
-function polymap(domain, range$$1, deinterpolate, reinterpolate) {
-  var j = Math.min(domain.length, range$$1.length) - 1,
+function polymap(domain, range, deinterpolate, reinterpolate$$1) {
+  var j = Math.min(domain.length, range.length) - 1,
       d = new Array(j),
       r = new Array(j),
       i = -1;
@@ -23007,12 +23043,12 @@ function polymap(domain, range$$1, deinterpolate, reinterpolate) {
   // Reverse descending domains.
   if (domain[j] < domain[0]) {
     domain = domain.slice().reverse();
-    range$$1 = range$$1.slice().reverse();
+    range = range.slice().reverse();
   }
 
   while (++i < j) {
     d[i] = deinterpolate(domain[i], domain[i + 1]);
-    r[i] = reinterpolate(range$$1[i], range$$1[i + 1]);
+    r[i] = reinterpolate$$1(range[i], range[i + 1]);
   }
 
   return function(x) {
@@ -23031,39 +23067,39 @@ function copy(source, target) {
 
 // deinterpolate(a, b)(x) takes a domain value x in [a,b] and returns the corresponding parameter t in [0,1].
 // reinterpolate(a, b)(t) takes a parameter t in [0,1] and returns the corresponding domain value x in [a,b].
-function continuous(deinterpolate, reinterpolate) {
+function continuous(deinterpolate, reinterpolate$$1) {
   var domain = unit,
-      range$$1 = unit,
-      interpolate$$1 = interpolateValue,
+      range = unit,
+      interpolate = interpolateValue,
       clamp = false,
       piecewise,
       output,
       input;
 
   function rescale() {
-    piecewise = Math.min(domain.length, range$$1.length) > 2 ? polymap : bimap;
+    piecewise = Math.min(domain.length, range.length) > 2 ? polymap : bimap;
     output = input = null;
     return scale;
   }
 
   function scale(x) {
-    return (output || (output = piecewise(domain, range$$1, clamp ? deinterpolateClamp(deinterpolate) : deinterpolate, interpolate$$1)))(+x);
+    return (output || (output = piecewise(domain, range, clamp ? deinterpolateClamp(deinterpolate) : deinterpolate, interpolate)))(+x);
   }
 
   scale.invert = function(y) {
-    return (input || (input = piecewise(range$$1, domain, deinterpolateLinear, clamp ? reinterpolateClamp(reinterpolate) : reinterpolate)))(+y);
+    return (input || (input = piecewise(range, domain, deinterpolateLinear, clamp ? reinterpolateClamp(reinterpolate$$1) : reinterpolate$$1)))(+y);
   };
 
   scale.domain = function(_) {
-    return arguments.length ? (domain = map$3.call(_, number$1), rescale()) : domain.slice();
+    return arguments.length ? (domain = map$3.call(_, number$2), rescale()) : domain.slice();
   };
 
   scale.range = function(_) {
-    return arguments.length ? (range$$1 = slice$4.call(_), rescale()) : range$$1.slice();
+    return arguments.length ? (range = slice$5.call(_), rescale()) : range.slice();
   };
 
   scale.rangeRound = function(_) {
-    return range$$1 = slice$4.call(_), interpolate$$1 = interpolateRound, rescale();
+    return range = slice$5.call(_), interpolate = interpolateRound, rescale();
   };
 
   scale.clamp = function(_) {
@@ -23071,7 +23107,7 @@ function continuous(deinterpolate, reinterpolate) {
   };
 
   scale.interpolate = function(_) {
-    return arguments.length ? (interpolate$$1 = _, rescale()) : interpolate$$1;
+    return arguments.length ? (interpolate = _, rescale()) : interpolate;
   };
 
   return rescale();
@@ -23181,7 +23217,7 @@ function identity$6() {
   scale.invert = scale;
 
   scale.domain = scale.range = function(_) {
-    return arguments.length ? (domain = map$3.call(_, number$1), scale) : domain.slice();
+    return arguments.length ? (domain = map$3.call(_, number$2), scale) : domain.slice();
   };
 
   scale.copy = function() {
@@ -23368,24 +23404,24 @@ function sqrt$1() {
   return pow$1().exponent(0.5);
 }
 
-function quantile$$1() {
+function quantile() {
   var domain = [],
-      range$$1 = [],
+      range = [],
       thresholds = [];
 
   function rescale() {
-    var i = 0, n = Math.max(1, range$$1.length);
+    var i = 0, n = Math.max(1, range.length);
     thresholds = new Array(n - 1);
     while (++i < n) thresholds[i - 1] = threshold(domain, i / n);
     return scale;
   }
 
   function scale(x) {
-    if (!isNaN(x = +x)) return range$$1[bisectRight(thresholds, x)];
+    if (!isNaN(x = +x)) return range[bisectRight(thresholds, x)];
   }
 
   scale.invertExtent = function(y) {
-    var i = range$$1.indexOf(y);
+    var i = range.indexOf(y);
     return i < 0 ? [NaN, NaN] : [
       i > 0 ? thresholds[i - 1] : domain[0],
       i < thresholds.length ? thresholds[i] : domain[domain.length - 1]
@@ -23401,7 +23437,7 @@ function quantile$$1() {
   };
 
   scale.range = function(_) {
-    return arguments.length ? (range$$1 = slice$4.call(_), rescale()) : range$$1.slice();
+    return arguments.length ? (range = slice$5.call(_), rescale()) : range.slice();
   };
 
   scale.quantiles = function() {
@@ -23409,9 +23445,9 @@ function quantile$$1() {
   };
 
   scale.copy = function() {
-    return quantile$$1()
+    return quantile()
         .domain(domain)
-        .range(range$$1);
+        .range(range);
   };
 
   return scale;
@@ -23422,10 +23458,10 @@ function quantize$1() {
       x1 = 1,
       n = 1,
       domain = [0.5],
-      range$$1 = [0, 1];
+      range = [0, 1];
 
   function scale(x) {
-    if (x <= x) return range$$1[bisectRight(domain, x, 0, n)];
+    if (x <= x) return range[bisectRight(domain, x, 0, n)];
   }
 
   function rescale() {
@@ -23440,11 +23476,11 @@ function quantize$1() {
   };
 
   scale.range = function(_) {
-    return arguments.length ? (n = (range$$1 = slice$4.call(_)).length - 1, rescale()) : range$$1.slice();
+    return arguments.length ? (n = (range = slice$5.call(_)).length - 1, rescale()) : range.slice();
   };
 
   scale.invertExtent = function(y) {
-    var i = range$$1.indexOf(y);
+    var i = range.indexOf(y);
     return i < 0 ? [NaN, NaN]
         : i < 1 ? [x0, domain[0]]
         : i >= n ? [domain[n - 1], x1]
@@ -23454,7 +23490,7 @@ function quantize$1() {
   scale.copy = function() {
     return quantize$1()
         .domain([x0, x1])
-        .range(range$$1);
+        .range(range);
   };
 
   return linearish(scale);
@@ -23462,30 +23498,30 @@ function quantize$1() {
 
 function threshold$1() {
   var domain = [0.5],
-      range$$1 = [0, 1],
+      range = [0, 1],
       n = 1;
 
   function scale(x) {
-    if (x <= x) return range$$1[bisectRight(domain, x, 0, n)];
+    if (x <= x) return range[bisectRight(domain, x, 0, n)];
   }
 
   scale.domain = function(_) {
-    return arguments.length ? (domain = slice$4.call(_), n = Math.min(domain.length, range$$1.length - 1), scale) : domain.slice();
+    return arguments.length ? (domain = slice$5.call(_), n = Math.min(domain.length, range.length - 1), scale) : domain.slice();
   };
 
   scale.range = function(_) {
-    return arguments.length ? (range$$1 = slice$4.call(_), n = Math.min(domain.length, range$$1.length - 1), scale) : range$$1.slice();
+    return arguments.length ? (range = slice$5.call(_), n = Math.min(domain.length, range.length - 1), scale) : range.slice();
   };
 
   scale.invertExtent = function(y) {
-    var i = range$$1.indexOf(y);
+    var i = range.indexOf(y);
     return [domain[i - 1], domain[i]];
   };
 
   scale.copy = function() {
     return threshold$1()
         .domain(domain)
-        .range(range$$1);
+        .range(range);
   };
 
   return scale;
@@ -23529,7 +23565,13 @@ function newInterval(floori, offseti, count, field) {
     return newInterval(function(date) {
       if (date >= date) while (floori(date), !test(date)) date.setTime(date - 1);
     }, function(date, step) {
-      if (date >= date) while (--step >= 0) while (offseti(date, 1), !test(date)) {} // eslint-disable-line no-empty
+      if (date >= date) {
+        if (step < 0) while (++step <= 0) {
+          while (offseti(date, -1), !test(date)) {} // eslint-disable-line no-empty
+        } else while (--step >= 0) {
+          while (offseti(date, +1), !test(date)) {} // eslint-disable-line no-empty
+        }
+      }
     });
   };
 
@@ -24382,7 +24424,7 @@ function date$1(t) {
   return new Date(t);
 }
 
-function number$2(t) {
+function number$3(t) {
   return t instanceof Date ? +t : +new Date(+t);
 }
 
@@ -24421,39 +24463,39 @@ function calendar(year$$1, month$$1, week, day$$1, hour$$1, minute$$1, second$$1
     [  year$$1,  1,      durationYear  ]
   ];
 
-  function tickFormat(date) {
-    return (second$$1(date) < date ? formatMillisecond
-        : minute$$1(date) < date ? formatSecond
-        : hour$$1(date) < date ? formatMinute
-        : day$$1(date) < date ? formatHour
-        : month$$1(date) < date ? (week(date) < date ? formatDay : formatWeek)
-        : year$$1(date) < date ? formatMonth
-        : formatYear)(date);
+  function tickFormat(date$$1) {
+    return (second$$1(date$$1) < date$$1 ? formatMillisecond
+        : minute$$1(date$$1) < date$$1 ? formatSecond
+        : hour$$1(date$$1) < date$$1 ? formatMinute
+        : day$$1(date$$1) < date$$1 ? formatHour
+        : month$$1(date$$1) < date$$1 ? (week(date$$1) < date$$1 ? formatDay : formatWeek)
+        : year$$1(date$$1) < date$$1 ? formatMonth
+        : formatYear)(date$$1);
   }
 
-  function tickInterval(interval, start, stop, step) {
-    if (interval == null) interval = 10;
+  function tickInterval(interval$$1, start, stop, step) {
+    if (interval$$1 == null) interval$$1 = 10;
 
     // If a desired tick count is specified, pick a reasonable tick interval
     // based on the extent of the domain and a rough estimate of tick size.
     // Otherwise, assume interval is already a time interval and use it.
-    if (typeof interval === "number") {
-      var target = Math.abs(stop - start) / interval,
+    if (typeof interval$$1 === "number") {
+      var target = Math.abs(stop - start) / interval$$1,
           i = bisector(function(i) { return i[2]; }).right(tickIntervals, target);
       if (i === tickIntervals.length) {
-        step = tickStep(start / durationYear, stop / durationYear, interval);
-        interval = year$$1;
+        step = tickStep(start / durationYear, stop / durationYear, interval$$1);
+        interval$$1 = year$$1;
       } else if (i) {
         i = tickIntervals[target / tickIntervals[i - 1][2] < tickIntervals[i][2] / target ? i - 1 : i];
         step = i[1];
-        interval = i[0];
+        interval$$1 = i[0];
       } else {
-        step = tickStep(start, stop, interval);
-        interval = millisecond$$1;
+        step = tickStep(start, stop, interval$$1);
+        interval$$1 = millisecond$$1;
       }
     }
 
-    return step == null ? interval : interval.every(step);
+    return step == null ? interval$$1 : interval$$1.every(step);
   }
 
   scale.invert = function(y) {
@@ -24461,17 +24503,17 @@ function calendar(year$$1, month$$1, week, day$$1, hour$$1, minute$$1, second$$1
   };
 
   scale.domain = function(_) {
-    return arguments.length ? domain(map$3.call(_, number$2)) : domain().map(date$1);
+    return arguments.length ? domain(map$3.call(_, number$3)) : domain().map(date$1);
   };
 
-  scale.ticks = function(interval, step) {
+  scale.ticks = function(interval$$1, step) {
     var d = domain(),
         t0 = d[0],
         t1 = d[d.length - 1],
         r = t1 < t0,
         t;
     if (r) t = t0, t0 = t1, t1 = t;
-    t = tickInterval(interval, t0, t1, step);
+    t = tickInterval(interval$$1, t0, t1, step);
     t = t ? t.range(t0, t1 + 1) : []; // inclusive stop
     return r ? t.reverse() : t;
   };
@@ -24480,10 +24522,10 @@ function calendar(year$$1, month$$1, week, day$$1, hour$$1, minute$$1, second$$1
     return specifier == null ? tickFormat : format(specifier);
   };
 
-  scale.nice = function(interval, step) {
+  scale.nice = function(interval$$1, step) {
     var d = domain();
-    return (interval = tickInterval(interval, d[0], d[d.length - 1], step))
-        ? domain(nice(d, interval))
+    return (interval$$1 = tickInterval(interval$$1, d[0], d[d.length - 1], step))
+        ? domain(nice(d, interval$$1))
         : scale;
   };
 
@@ -24901,8 +24943,8 @@ function y$3(p) {
 }
 
 var line = function() {
-  var x$$1 = x$3,
-      y$$1 = y$3,
+  var x = x$3,
+      y = y$3,
       defined = constant$10(true),
       context = null,
       curve = curveLinear,
@@ -24922,18 +24964,18 @@ var line = function() {
         if (defined0 = !defined0) output.lineStart();
         else output.lineEnd();
       }
-      if (defined0) output.point(+x$$1(d, i, data), +y$$1(d, i, data));
+      if (defined0) output.point(+x(d, i, data), +y(d, i, data));
     }
 
     if (buffer) return output = null, buffer + "" || null;
   }
 
   line.x = function(_) {
-    return arguments.length ? (x$$1 = typeof _ === "function" ? _ : constant$10(+_), line) : x$$1;
+    return arguments.length ? (x = typeof _ === "function" ? _ : constant$10(+_), line) : x;
   };
 
   line.y = function(_) {
-    return arguments.length ? (y$$1 = typeof _ === "function" ? _ : constant$10(+_), line) : y$$1;
+    return arguments.length ? (y = typeof _ === "function" ? _ : constant$10(+_), line) : y;
   };
 
   line.defined = function(_) {
@@ -25173,7 +25215,7 @@ function curveRadial(curve) {
   return radial;
 }
 
-function radialLine(l) {
+function lineRadial(l) {
   var c = l.curve;
 
   l.angle = l.x, delete l.x;
@@ -25186,11 +25228,11 @@ function radialLine(l) {
   return l;
 }
 
-var radialLine$1 = function() {
-  return radialLine(line().curve(curveRadialLinear));
+var lineRadial$1 = function() {
+  return lineRadial(line().curve(curveRadialLinear));
 };
 
-var radialArea = function() {
+var areaRadial = function() {
   var a = area$2().curve(curveRadialLinear),
       c = a.curve,
       x0 = a.lineX0,
@@ -25204,10 +25246,10 @@ var radialArea = function() {
   a.radius = a.y, delete a.y;
   a.innerRadius = a.y0, delete a.y0;
   a.outerRadius = a.y1, delete a.y1;
-  a.lineStartAngle = function() { return radialLine(x0()); }, delete a.lineX0;
-  a.lineEndAngle = function() { return radialLine(x1()); }, delete a.lineX1;
-  a.lineInnerRadius = function() { return radialLine(y0()); }, delete a.lineY0;
-  a.lineOuterRadius = function() { return radialLine(y1()); }, delete a.lineY1;
+  a.lineStartAngle = function() { return lineRadial(x0()); }, delete a.lineX0;
+  a.lineEndAngle = function() { return lineRadial(x1()); }, delete a.lineX1;
+  a.lineInnerRadius = function() { return lineRadial(y0()); }, delete a.lineY0;
+  a.lineOuterRadius = function() { return lineRadial(y1()); }, delete a.lineY1;
 
   a.curve = function(_) {
     return arguments.length ? c(curveRadial(_)) : c()._curve;
@@ -25216,11 +25258,11 @@ var radialArea = function() {
   return a;
 };
 
-var slice$5 = Array.prototype.slice;
-
-var radialPoint = function(x, y) {
+var pointRadial = function(x, y) {
   return [(y = +y) * Math.cos(x -= Math.PI / 2), y * Math.sin(x)];
 };
+
+var slice$6 = Array.prototype.slice;
 
 function linkSource(d) {
   return d.source;
@@ -25233,14 +25275,14 @@ function linkTarget(d) {
 function link$2(curve) {
   var source = linkSource,
       target = linkTarget,
-      x$$1 = x$3,
-      y$$1 = y$3,
+      x = x$3,
+      y = y$3,
       context = null;
 
   function link() {
-    var buffer, argv = slice$5.call(arguments), s = source.apply(this, argv), t = target.apply(this, argv);
+    var buffer, argv = slice$6.call(arguments), s = source.apply(this, argv), t = target.apply(this, argv);
     if (!context) context = buffer = path();
-    curve(context, +x$$1.apply(this, (argv[0] = s, argv)), +y$$1.apply(this, argv), +x$$1.apply(this, (argv[0] = t, argv)), +y$$1.apply(this, argv));
+    curve(context, +x.apply(this, (argv[0] = s, argv)), +y.apply(this, argv), +x.apply(this, (argv[0] = t, argv)), +y.apply(this, argv));
     if (buffer) return context = null, buffer + "" || null;
   }
 
@@ -25253,11 +25295,11 @@ function link$2(curve) {
   };
 
   link.x = function(_) {
-    return arguments.length ? (x$$1 = typeof _ === "function" ? _ : constant$10(+_), link) : x$$1;
+    return arguments.length ? (x = typeof _ === "function" ? _ : constant$10(+_), link) : x;
   };
 
   link.y = function(_) {
-    return arguments.length ? (y$$1 = typeof _ === "function" ? _ : constant$10(+_), link) : y$$1;
+    return arguments.length ? (y = typeof _ === "function" ? _ : constant$10(+_), link) : y;
   };
 
   link.context = function(_) {
@@ -25278,10 +25320,10 @@ function curveVertical(context, x0, y0, x1, y1) {
 }
 
 function curveRadial$1(context, x0, y0, x1, y1) {
-  var p0 = radialPoint(x0, y0),
-      p1 = radialPoint(x0, y0 = (y0 + y1) / 2),
-      p2 = radialPoint(x1, y0),
-      p3 = radialPoint(x1, y1);
+  var p0 = pointRadial(x0, y0),
+      p1 = pointRadial(x0, y0 = (y0 + y1) / 2),
+      p2 = pointRadial(x1, y0),
+      p3 = pointRadial(x1, y1);
   context.moveTo(p0[0], p0[1]);
   context.bezierCurveTo(p1[0], p1[1], p2[0], p2[1], p3[0], p3[1]);
 }
@@ -25634,7 +25676,7 @@ Bundle.prototype = {
   }
 };
 
-var bundle = ((function custom(beta) {
+var bundle = (function custom(beta) {
 
   function bundle(context) {
     return beta === 1 ? new Basis(context) : new Bundle(context, beta);
@@ -25645,7 +25687,7 @@ var bundle = ((function custom(beta) {
   };
 
   return bundle;
-}))(0.85);
+})(0.85);
 
 function point$3(that, x, y) {
   that._context.bezierCurveTo(
@@ -25696,7 +25738,7 @@ Cardinal.prototype = {
   }
 };
 
-var cardinal = ((function custom(tension) {
+var cardinal = (function custom(tension) {
 
   function cardinal(context) {
     return new Cardinal(context, tension);
@@ -25707,7 +25749,7 @@ var cardinal = ((function custom(tension) {
   };
 
   return cardinal;
-}))(0);
+})(0);
 
 function CardinalClosed(context, tension) {
   this._context = context;
@@ -25755,18 +25797,18 @@ CardinalClosed.prototype = {
   }
 };
 
-var cardinalClosed = ((function custom(tension) {
+var cardinalClosed = (function custom(tension) {
 
-  function cardinal(context) {
+  function cardinal$$1(context) {
     return new CardinalClosed(context, tension);
   }
 
-  cardinal.tension = function(tension) {
+  cardinal$$1.tension = function(tension) {
     return custom(+tension);
   };
 
-  return cardinal;
-}))(0);
+  return cardinal$$1;
+})(0);
 
 function CardinalOpen(context, tension) {
   this._context = context;
@@ -25803,18 +25845,18 @@ CardinalOpen.prototype = {
   }
 };
 
-var cardinalOpen = ((function custom(tension) {
+var cardinalOpen = (function custom(tension) {
 
-  function cardinal(context) {
+  function cardinal$$1(context) {
     return new CardinalOpen(context, tension);
   }
 
-  cardinal.tension = function(tension) {
+  cardinal$$1.tension = function(tension) {
     return custom(+tension);
   };
 
-  return cardinal;
-}))(0);
+  return cardinal$$1;
+})(0);
 
 function point$4(that, x, y) {
   var x1 = that._x1,
@@ -25889,7 +25931,7 @@ CatmullRom.prototype = {
   }
 };
 
-var catmullRom = ((function custom(alpha) {
+var catmullRom = (function custom(alpha) {
 
   function catmullRom(context) {
     return alpha ? new CatmullRom(context, alpha) : new Cardinal(context, 0);
@@ -25900,7 +25942,7 @@ var catmullRom = ((function custom(alpha) {
   };
 
   return catmullRom;
-}))(0.5);
+})(0.5);
 
 function CatmullRomClosed(context, alpha) {
   this._context = context;
@@ -25960,18 +26002,18 @@ CatmullRomClosed.prototype = {
   }
 };
 
-var catmullRomClosed = ((function custom(alpha) {
+var catmullRomClosed = (function custom(alpha) {
 
-  function catmullRom(context) {
+  function catmullRom$$1(context) {
     return alpha ? new CatmullRomClosed(context, alpha) : new CardinalClosed(context, 0);
   }
 
-  catmullRom.alpha = function(alpha) {
+  catmullRom$$1.alpha = function(alpha) {
     return custom(+alpha);
   };
 
-  return catmullRom;
-}))(0.5);
+  return catmullRom$$1;
+})(0.5);
 
 function CatmullRomOpen(context, alpha) {
   this._context = context;
@@ -26020,18 +26062,18 @@ CatmullRomOpen.prototype = {
   }
 };
 
-var catmullRomOpen = ((function custom(alpha) {
+var catmullRomOpen = (function custom(alpha) {
 
-  function catmullRom(context) {
+  function catmullRom$$1(context) {
     return alpha ? new CatmullRomOpen(context, alpha) : new CardinalOpen(context, 0);
   }
 
-  catmullRom.alpha = function(alpha) {
+  catmullRom$$1.alpha = function(alpha) {
     return custom(+alpha);
   };
 
-  return catmullRom;
-}))(0.5);
+  return catmullRom$$1;
+})(0.5);
 
 function LinearClosed(context) {
   this._context = context;
@@ -26333,7 +26375,7 @@ var stack = function() {
   }
 
   stack.keys = function(_) {
-    return arguments.length ? (keys = typeof _ === "function" ? _ : constant$10(slice$5.call(_)), stack) : keys;
+    return arguments.length ? (keys = typeof _ === "function" ? _ : constant$10(slice$6.call(_)), stack) : keys;
   };
 
   stack.value = function(_) {
@@ -26341,7 +26383,7 @@ var stack = function() {
   };
 
   stack.order = function(_) {
-    return arguments.length ? (order = _ == null ? none$2 : typeof _ === "function" ? _ : constant$10(slice$5.call(_)), stack) : order;
+    return arguments.length ? (order = _ == null ? none$2 : typeof _ === "function" ? _ : constant$10(slice$6.call(_)), stack) : order;
   };
 
   stack.offset = function(_) {
@@ -27394,13 +27436,13 @@ Diagram.prototype = {
 };
 
 var voronoi = function() {
-  var x$$1 = x$4,
-      y$$1 = y$4,
+  var x = x$4,
+      y = y$4,
       extent = null;
 
   function voronoi(data) {
     return new Diagram(data.map(function(d, i) {
-      var s = [Math.round(x$$1(d, i, data) / epsilon$4) * epsilon$4, Math.round(y$$1(d, i, data) / epsilon$4) * epsilon$4];
+      var s = [Math.round(x(d, i, data) / epsilon$4) * epsilon$4, Math.round(y(d, i, data) / epsilon$4) * epsilon$4];
       s.index = i;
       s.data = d;
       return s;
@@ -27420,11 +27462,11 @@ var voronoi = function() {
   };
 
   voronoi.x = function(_) {
-    return arguments.length ? (x$$1 = typeof _ === "function" ? _ : constant$11(+_), voronoi) : x$$1;
+    return arguments.length ? (x = typeof _ === "function" ? _ : constant$11(+_), voronoi) : x;
   };
 
   voronoi.y = function(_) {
-    return arguments.length ? (y$$1 = typeof _ === "function" ? _ : constant$11(+_), voronoi) : y$$1;
+    return arguments.length ? (y = typeof _ === "function" ? _ : constant$11(+_), voronoi) : y;
   };
 
   voronoi.extent = function(_) {
@@ -27532,9 +27574,18 @@ function defaultTransform() {
   return this.__zoom || identity$8;
 }
 
+function defaultWheelDelta() {
+  return -exports.event.deltaY * (exports.event.deltaMode ? 120 : 1) / 500;
+}
+
+function touchable$1() {
+  return "ontouchstart" in this;
+}
+
 var zoom = function() {
   var filter = defaultFilter$2,
       extent = defaultExtent$1,
+      wheelDelta = defaultWheelDelta,
       k0 = 0,
       k1 = Infinity,
       x0 = -k1,
@@ -27542,7 +27593,7 @@ var zoom = function() {
       y0 = x0,
       y1 = x1,
       duration = 250,
-      interpolate$$1 = interpolateZoom,
+      interpolate = interpolateZoom,
       gestures = [],
       listeners = dispatch("start", "zoom", "end"),
       touchstarting,
@@ -27553,26 +27604,28 @@ var zoom = function() {
 
   function zoom(selection$$1) {
     selection$$1
+        .property("__zoom", defaultTransform)
         .on("wheel.zoom", wheeled)
         .on("mousedown.zoom", mousedowned)
         .on("dblclick.zoom", dblclicked)
+      .filter(touchable$1)
         .on("touchstart.zoom", touchstarted)
         .on("touchmove.zoom", touchmoved)
         .on("touchend.zoom touchcancel.zoom", touchended)
-        .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)")
-        .property("__zoom", defaultTransform);
+        .style("touch-action", "none")
+        .style("-webkit-tap-highlight-color", "rgba(0,0,0,0)");
   }
 
-  zoom.transform = function(collection, transform) {
+  zoom.transform = function(collection, transform$$1) {
     var selection$$1 = collection.selection ? collection.selection() : collection;
     selection$$1.property("__zoom", defaultTransform);
     if (collection !== selection$$1) {
-      schedule(collection, transform);
+      schedule(collection, transform$$1);
     } else {
       selection$$1.interrupt().each(function() {
         gesture(this, arguments)
             .start()
-            .zoom(null, typeof transform === "function" ? transform.apply(this, arguments) : transform)
+            .zoom(null, typeof transform$$1 === "function" ? transform$$1.apply(this, arguments) : transform$$1)
             .end();
       });
     }
@@ -27606,22 +27659,34 @@ var zoom = function() {
     });
   };
 
-  function scale(transform, k) {
+  zoom.translateTo = function(selection$$1, x, y) {
+    zoom.transform(selection$$1, function() {
+      var e = extent.apply(this, arguments),
+          t = this.__zoom,
+          p = centroid(e);
+      return constrain(identity$8.translate(p[0], p[1]).scale(t.k).translate(
+        typeof x === "function" ? -x.apply(this, arguments) : -x,
+        typeof y === "function" ? -y.apply(this, arguments) : -y
+      ), e);
+    });
+  };
+
+  function scale(transform$$1, k) {
     k = Math.max(k0, Math.min(k1, k));
-    return k === transform.k ? transform : new Transform(k, transform.x, transform.y);
+    return k === transform$$1.k ? transform$$1 : new Transform(k, transform$$1.x, transform$$1.y);
   }
 
-  function translate(transform, p0, p1) {
-    var x = p0[0] - p1[0] * transform.k, y = p0[1] - p1[1] * transform.k;
-    return x === transform.x && y === transform.y ? transform : new Transform(transform.k, x, y);
+  function translate(transform$$1, p0, p1) {
+    var x = p0[0] - p1[0] * transform$$1.k, y = p0[1] - p1[1] * transform$$1.k;
+    return x === transform$$1.x && y === transform$$1.y ? transform$$1 : new Transform(transform$$1.k, x, y);
   }
 
-  function constrain(transform, extent) {
-    var dx0 = transform.invertX(extent[0][0]) - x0,
-        dx1 = transform.invertX(extent[1][0]) - x1,
-        dy0 = transform.invertY(extent[0][1]) - y0,
-        dy1 = transform.invertY(extent[1][1]) - y1;
-    return transform.translate(
+  function constrain(transform$$1, extent) {
+    var dx0 = transform$$1.invertX(extent[0][0]) - x0,
+        dx1 = transform$$1.invertX(extent[1][0]) - x1,
+        dy0 = transform$$1.invertY(extent[0][1]) - y0,
+        dy1 = transform$$1.invertY(extent[1][1]) - y1;
+    return transform$$1.translate(
       dx1 > dx0 ? (dx0 + dx1) / 2 : Math.min(0, dx0) || Math.max(0, dx1),
       dy1 > dy0 ? (dy0 + dy1) / 2 : Math.min(0, dy0) || Math.max(0, dy1)
     );
@@ -27631,7 +27696,7 @@ var zoom = function() {
     return [(+extent[0][0] + +extent[1][0]) / 2, (+extent[0][1] + +extent[1][1]) / 2];
   }
 
-  function schedule(transition$$1, transform, center) {
+  function schedule(transition$$1, transform$$1, center) {
     transition$$1
         .on("start.zoom", function() { gesture(this, arguments).start(); })
         .on("interrupt.zoom end.zoom", function() { gesture(this, arguments).end(); })
@@ -27643,8 +27708,8 @@ var zoom = function() {
               p = center || centroid(e),
               w = Math.max(e[1][0] - e[0][0], e[1][1] - e[0][1]),
               a = that.__zoom,
-              b = typeof transform === "function" ? transform.apply(that, args) : transform,
-              i = interpolate$$1(a.invert(p).concat(w / a.k), b.invert(p).concat(w / b.k));
+              b = typeof transform$$1 === "function" ? transform$$1.apply(that, args) : transform$$1,
+              i = interpolate(a.invert(p).concat(w / a.k), b.invert(p).concat(w / b.k));
           return function(t) {
             if (t === 1) t = b; // Avoid rounding error on end.
             else { var l = i(t), k = w / l[2]; t = new Transform(k, p[0] - l[0] * k, p[1] - l[1] * k); }
@@ -27678,11 +27743,11 @@ var zoom = function() {
       }
       return this;
     },
-    zoom: function(key, transform) {
-      if (this.mouse && key !== "mouse") this.mouse[1] = transform.invert(this.mouse[0]);
-      if (this.touch0 && key !== "touch") this.touch0[1] = transform.invert(this.touch0[0]);
-      if (this.touch1 && key !== "touch") this.touch1[1] = transform.invert(this.touch1[0]);
-      this.that.__zoom = transform;
+    zoom: function(key, transform$$1) {
+      if (this.mouse && key !== "mouse") this.mouse[1] = transform$$1.invert(this.mouse[0]);
+      if (this.touch0 && key !== "touch") this.touch0[1] = transform$$1.invert(this.touch0[0]);
+      if (this.touch1 && key !== "touch") this.touch1[1] = transform$$1.invert(this.touch1[0]);
+      this.that.__zoom = transform$$1;
       this.emit("zoom");
       return this;
     },
@@ -27703,7 +27768,7 @@ var zoom = function() {
     if (!filter.apply(this, arguments)) return;
     var g = gesture(this, arguments),
         t = this.__zoom,
-        k = Math.max(k0, Math.min(k1, t.k * Math.pow(2, -exports.event.deltaY * (exports.event.deltaMode ? 120 : 1) / 500))),
+        k = Math.max(k0, Math.min(k1, t.k * Math.pow(2, wheelDelta.apply(this, arguments)))),
         p = mouse(this);
 
     // If the mouse is in the same location as before, reuse it.
@@ -27857,6 +27922,10 @@ var zoom = function() {
     else g.end();
   }
 
+  zoom.wheelDelta = function(_) {
+    return arguments.length ? (wheelDelta = typeof _ === "function" ? _ : constant$12(+_), zoom) : wheelDelta;
+  };
+
   zoom.filter = function(_) {
     return arguments.length ? (filter = typeof _ === "function" ? _ : constant$12(!!_), zoom) : filter;
   };
@@ -27878,7 +27947,7 @@ var zoom = function() {
   };
 
   zoom.interpolate = function(_) {
-    return arguments.length ? (interpolate$$1 = _, zoom) : interpolate$$1;
+    return arguments.length ? (interpolate = _, zoom) : interpolate;
   };
 
   zoom.on = function() {
@@ -27889,7 +27958,7 @@ var zoom = function() {
   zoom.clickDistance = function(_) {
     return arguments.length ? (clickDistance2 = (_ = +_) * _, zoom) : Math.sqrt(clickDistance2);
   };
-    
+
   return zoom;
 };
 
@@ -28120,7 +28189,7 @@ exports.scaleOrdinal = ordinal;
 exports.scaleImplicit = implicit;
 exports.scalePow = pow$1;
 exports.scaleSqrt = sqrt$1;
-exports.scaleQuantile = quantile$$1;
+exports.scaleQuantile = quantile;
 exports.scaleQuantize = quantize$1;
 exports.scaleThreshold = threshold$1;
 exports.scaleTime = time;
@@ -28158,8 +28227,11 @@ exports.arc = arc;
 exports.area = area$2;
 exports.line = line;
 exports.pie = pie;
-exports.radialArea = radialArea;
-exports.radialLine = radialLine$1;
+exports.areaRadial = areaRadial;
+exports.radialArea = areaRadial;
+exports.lineRadial = lineRadial$1;
+exports.radialLine = lineRadial$1;
+exports.pointRadial = pointRadial;
 exports.linkHorizontal = linkHorizontal;
 exports.linkVertical = linkVertical;
 exports.linkRadial = linkRadial;
@@ -28285,58 +28357,57 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 /***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_styl__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__slider_styl__);
 
-__webpack_require__(39);
 
-$(function () {
+$(() => {
+  $('.slider').each((index, _slider) => {
+    const slider = $(_slider).children('.slider__inner').children('svg');
+    const thumbElem = slider.children('circle');
+    const hint = $(_slider).children('.slider-hint');
 
-                $(".slider").each(function (index, _slider) {
+    thumbElem.on('mousedown.slider', () => {
+      const sliderleft = slider.offset().left;
 
-                                var slider = $(_slider).children(".slider__inner").children("svg");
-                                var thumbElem = slider.children("circle");
-                                var hint = $(_slider).children(".slider-hint");
 
-                                thumbElem.on('mousedown.slider', function (e) {
+      $(document).on('mousemove.slider', (e) => {
+        let newLeft = (e.pageX - sliderleft) * 100.0 / slider.outerWidth();
 
-                                                var sliderleft = slider.offset().left;
+        if (newLeft < 5) { newLeft = 5; }
 
-                                                $(document).on('mousemove.slider', function (e) {
+        if (newLeft > 95.1) { newLeft = 95.1; }
 
-                                                                var newLeft = (e.pageX - sliderleft) * 100.0 / slider.outerWidth();
+        thumbElem.attr('cx', `${newLeft}%`);
 
-                                                                if (newLeft < 5) newLeft = 5;
+        hint.css('left', `${newLeft - 6}%`).children('span').text(Math.round(newLeft * 1.099999) - 5);
+      });
 
-                                                                if (newLeft > 95.1) newLeft = 95.1;
+      $(document).on('mouseup.slider', () => {
+        $(document).off('mousemove.slider');
+        $(document).off('mouseup.slider');
+      });
 
-                                                                thumbElem.attr('cx', newLeft + '%');
-
-                                                                hint.css("left", newLeft - 6 + '%').children("span").text(Math.round(newLeft * 1.099999) - 5);
-                                                });
-
-                                                $(document).on('mouseup.slider', function () {
-                                                                $(document).off('mousemove.slider');
-                                                                $(document).off('mouseup.slider');
-                                                });
-
-                                                return false;
-                                });
-                });
+      return false;
+    });
+  });
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(40);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28361,7 +28432,7 @@ if(false) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28375,13 +28446,13 @@ exports.push([module.i, ".slider {\n  position: relative;\n  font-family: Arial,
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(42);
+var content = __webpack_require__(43);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28406,7 +28477,7 @@ if(false) {
 }
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28420,42 +28491,46 @@ exports.push([module.i, ".stage {\n  position: relative;\n  font-size: 1.5em;\n 
 
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CustomForm_styl__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CustomForm_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CustomForm_styl__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Hint_hint__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Drop_down_drop_down__ = __webpack_require__(50);
 
-__webpack_require__(44);
 
-__webpack_require__(46);
 
-__webpack_require__(49);
 
 (function ($) {
+  $('.custom-form__input-search.notFound').each(function () {
+    $(this).children('input')
+      .css('background-color', $(this).children('svg').css('background-color'))
+      .css('color', 'white')
+      .attr('value', "I've not found what i'm looking for ...");
 
-    $(".message-form__input-search.notFound").each(function () {
+    $(this).children('input').focus(function (e) {
+      $(this).css('background-color', '')
+        .css('color', '')
+        .attr('value', '');
 
-        $(this).children("input").css('background-color', $(this).children('svg').css('background-color')).css('color', 'white').attr('value', "I've not found what i'm looking for ...");
-
-        $(this).children('input').focus(function (e) {
-
-            $(this).css("background-color", "").css('color', "").attr('value', '');
-
-            $(this).unbind(e);
-        });
+      $(this).unbind(e);
     });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+  });
+}(jQuery));
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(45);
+var content = __webpack_require__(46);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28469,8 +28544,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./message-form.styl", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./message-form.styl");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./CustomForm.styl", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/autoprefixer-loader/index.js!../../../node_modules/stylus-loader/index.js!./CustomForm.styl");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -28480,7 +28555,7 @@ if(false) {
 }
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28488,134 +28563,121 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".message-form .message-form__form-control {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none;\n  outline: none;\n  border-radius: 0.2em;\n  font-size: 1em;\n  width: 100%;\n  box-sizing: border-box;\n}\n.message-form .message-form__form-control:focus {\n  outline: none;\n}\n.message-form .message-form__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.message-form .message-form__input-text {\n  padding: 0.4em 1em;\n}\n.message-form .message-form__textarea {\n  resize: none;\n  padding: 0.8em 0.9em;\n}\n.message-form .message-form__input-search {\n  position: relative;\n  overflow: hidden;\n  border-radius: 0.2em;\n}\n.message-form .message-form__input-search .message-form__form-control {\n  width: 100%;\n  padding: 0.35em 1em;\n}\n.message-form .message-form__input-search svg {\n  height: 100%;\n  width: 2.3em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-color: #e75735;\n  cursor: pointer;\n}\n.message-form input[type=\"search\"]::-webkit-search-decoration,\n.message-form input[type=\"search\"]::-webkit-search-cancel-button,\n.message-form input[type=\"search\"]::-webkit-search-results-button,\n.message-form input[type=\"search\"]::-webkit-search-results-decoration {\n  display: none;\n}\n", ""]);
+exports.push([module.i, ".custom-form .custom-form__form-control {\n  background-color: #e5e5e5;\n  color: #888;\n  border: none;\n  outline: none;\n  border-radius: 0.2em;\n  font-size: 1em;\n  width: 100%;\n  box-sizing: border-box;\n  font-family: Aral, sans-serif;\n}\n.custom-form .custom-form__form-control:focus {\n  outline: none;\n}\n.custom-form .custom-form__row {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.custom-form .custom-form__input-text {\n  padding: 0.4em 1em;\n}\n.custom-form .custom-form__textarea {\n  resize: none;\n  padding: 0.8em 0.9em;\n}\n.custom-form .custom-form__input-search {\n  position: relative;\n  overflow: hidden;\n  border-radius: 0.2em;\n}\n.custom-form .custom-form__input-search .custom-form__form-control {\n  width: 100%;\n  padding: 0.35em 1em;\n}\n.custom-form .custom-form__input-search svg {\n  height: 100%;\n  width: 2.3em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  background-color: #e75735;\n  cursor: pointer;\n}\n.custom-form input[type=\"search\"]::-webkit-search-decoration,\n.custom-form input[type=\"search\"]::-webkit-search-cancel-button,\n.custom-form input[type=\"search\"]::-webkit-search-results-button,\n.custom-form input[type=\"search\"]::-webkit-search-results-decoration {\n  display: none;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 47 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hint_styl__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hint_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__hint_styl__);
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+class Hint {
+  static Show(element, side, text, color) {
+    const $element = $(element);
+    $element.children().remove('.hint');
 
-__webpack_require__(47);
+    const $hint = $('<div/>').addClass('hint').css('background-color', color);
+    const $hintText = $('<span/>').text(text);
+    const $hintArrow = $('<div/>').addClass('hint__arrow');
 
-$(function () {
 
-    $('.message-form').each(function () {
+    switch (side) {
+      case 'left':
 
-        $(this).submit(function (e) {
+        $hint.addClass('hint_left');
+        $hintArrow.css('border-color', `transparent transparent transparent ${color}`);
+        break;
 
-            $(this).find('.hint-control').each(function () {
+      case 'right':
 
-                Hint.Hide(this);
+        $hint.addClass('hint_right');
+        $hintArrow.css('border-color', `transparent ${color} transparent transparent`);
+        break;
+      default:
 
-                switch ($(this).data('hint')) {
-                    case 'text':
-
-                        if (!/[a-zа-я]{2,}/i.test($(this).children('input').val())) {
-                            Hint.Show(this, 'right', 'Только буквы!', '#e75735');
-
-                            e.preventDefault();
-                        }
-
-                        break;
-
-                    case 'email':
-
-                        if (!/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i.test($(this).children('input').val())) {
-                            Hint.Show(this, 'right', 'Некорректный адрес!', '#e75735');
-                            e.preventDefault();
-                        }
-
-                        break;
-
-                    case 'phone':
-
-                        if (!/[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/i.test($(this).children('input').val())) {
-                            Hint.Show(this, 'right', 'Неправильный номер!', '#e75735');
-                            e.preventDefault();
-                        }
-
-                        break;
-                    case 'thanks':
-
-                        Hint.Show(this, 'right', 'thanks!', '#4eb7a8');
-                        e.preventDefault();
-                        break;
-
-                    case 'error':
-
-                        Hint.Show(this, 'right', 'error!', '#e75735');
-                        e.preventDefault();
-                        break;
-                }
-            });
-        });
-    });
-});
-
-var Hint = (function () {
-    function Hint() {
-        _classCallCheck(this, Hint);
+        $hint.addClass('hint_right');
+        $hintArrow.css('border-color', `transparent ${color} transparent transparent`);
+        break;
     }
 
-    _createClass(Hint, null, [{
-        key: 'Show',
-        value: function Show(element, side, text, color) {
+    $hint.append($hintText).append($hintArrow);
 
-            element = $(element);
-            element.children().remove(".hint");
+    $element.append($hint);
+  }
 
-            var hint = $("<div/>").addClass("hint").css("background-color", color);
-            var hint_text = $("<span/>").text(text);
-            var hint_arrow = $("<div/>").addClass("hint__arrow");
+  static Hide(element) {
+    const $element = $(element);
+    $element.children().remove('.hint');
+  }
+}
 
-            switch (side) {
-                case 'left':
+$(() => {
+  $('.message-form').each(function () {
+    $(this).submit(function (e) {
+      $(this).find('.hint-control').each(function () {
+        Hint.Hide(this);
 
-                    hint.addClass("hint_left");
-                    hint_arrow.css("border-color", "transparent transparent transparent " + color);
-                    break;
+        switch ($(this).data('hint')) {
+          case 'text':
 
-                case 'right':
+            if (!/[a-zа-я]{2,}/i.test($(this).children('input').val())) {
+              Hint.Show(this, 'right', 'Только буквы!', '#e75735');
 
-                    hint.addClass("hint_right");
-                    hint_arrow.css("border-color", "transparent " + color + " transparent transparent");
-                    break;
+              e.preventDefault();
             }
 
-            hint.append(hint_text).append(hint_arrow);
+            break;
 
-            element.append(hint);
+          case 'email':
+
+            if (!/[0-9a-z_]+@[0-9a-z_]+\.[a-z]{2,5}/i.test($(this).children('input').val())) {
+              Hint.Show(this, 'right', 'Некорректный адрес!', '#e75735');
+              e.preventDefault();
+            }
+
+            break;
+
+          case 'phone':
+
+            if (!/[0-9]-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/i.test($(this).children('input').val())) {
+              Hint.Show(this, 'right', 'Неправильный номер!', '#e75735');
+              e.preventDefault();
+            }
+
+            break;
+          case 'thanks':
+
+            Hint.Show(this, 'right', 'thanks!', '#4eb7a8');
+            e.preventDefault();
+            break;
+
+          default:
+
+            Hint.Show(this, 'right', 'error!', '#e75735');
+            e.preventDefault();
+            break;
         }
-    }, {
-        key: 'Hide',
-        value: function Hide(element) {
+      });
+    });
+  });
+});
 
-            element = $(element);
-            element.children().remove(".hint");
-        }
-    }]);
-
-    return Hint;
-})();
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(48);
+var content = __webpack_require__(49);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28640,7 +28702,7 @@ if(false) {
 }
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28654,79 +28716,77 @@ exports.push([module.i, ".hint-form input {\n  position: static;\n}\n.hint-contr
 
 
 /***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 50 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__drop_down_styl__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__drop_down_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__drop_down_styl__);
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+const autoBind = __webpack_require__(3);
 
-__webpack_require__(50);
+class DropDown {
+  constructor(root) {
+    autoBind(this);
 
-(function ($) {
-    var DropDown = (function () {
-        function DropDown(root) {
-            var _this2 = this;
+    this.findDOM(root);
+    this.setHandlers();
+  }
 
-            _classCallCheck(this, DropDown);
+  findDOM(root) {
+    this.$root = $(root);
+    this.$inputSelect = this.root.find('select').first();
 
-            var _this = this;
-            this.root = $(root);
+    this.$selectedOption = this.root
+      .find('.custom-form__dropdown')
+      .first();
+  }
 
-            var select = this.root.find('select').first();
 
-            this.root.find('li').click(function () {
+  setHandlers() {
+    this.$selectedOption.on('click.dropDown', this.expand);
 
-                select_option.contents().filter(function () {
-                    return this.nodeType == 3;
-                }).remove();
+    this.$root.find('li').on('click.dropDownOption', { dropDown: this, $inputSelect: this.$inputSelect, $selectedOption: this.$selectedOption }, this.selectOption);
+  }
+  expand() {
+    this.$root.toggleClass('dropdown_open');
+    return false;
+  }
 
-                select_option.append(document.createTextNode($(this).html()));
+  selectOption(e) {
+    e.data.selectedOption.contents().filter((index, element) => (element.nodeType === 3)).remove();
 
-                select.val($(this).attr('value'));
-                _this.Expand();
-                return false;
-            });
+    e.data.$selectedOption.append(document.createTextNode($(e.currentTarget).html()));
 
-            var select_option = this.root.find(".message-form__dropdown").first().on('click.dropDown', function () {
-                _this2.Expand();return false;
-            });
-        }
+    e.data.$inputSelect.val($(e.currentTarget).attr('value'));
+    e.data.dropDown.expand();
+    return false;
+  }
+}
 
-        _createClass(DropDown, [{
-            key: 'Expand',
-            value: function Expand() {
+$(() => {
+  $('.dropdown').each(function () {
+    $(this).data('dropdown', new DropDown(this));
+  });
 
-                this.root.toggleClass('dropdown_open');
-            }
-        }]);
 
-        return DropDown;
-    })();
+  $(window).click(() => {
+    $('.dropdown').removeClass('dropdown_open');
+  });
+});
 
-    $('.dropdown').each(function () {
 
-        $(this).data("dropdown", new DropDown(this));
-    });
-
-    $(window).click(function () {
-
-        $('.dropdown').removeClass('dropdown_open');
-    });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(51);
+var content = __webpack_require__(52);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28751,7 +28811,7 @@ if(false) {
 }
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28759,46 +28819,44 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".dropdown {\n  position: relative;\n  width: 100%;\n}\n.dropdown select {\n  display: none;\n}\n.dropdown .dropdown__icon {\n  position: absolute;\n  top: 0;\n  right: 0;\n  height: 100%;\n  width: 2.5em;\n  border-bottom-right-radius: 0.2em;\n  border-top-right-radius: 0.2em;\n  background-color: #4eb7a8;\n}\n.dropdown .dropdown__icon svg {\n  height: 100%;\n  width: 100%;\n  transition: all 275ms;\n}\n.dropdown .message-form__dropdown {\n  padding: 0.4em 1em;\n}\n.dropdown .dropdown__ul {\n  position: relative;\n  float: left;\n  width: 100%;\n}\n.dropdown .dropdown__ul ul {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: 999;\n  overflow: hidden;\n  height: 0px;\n  width: 100%;\n  background-color: #e5e5e5;\n  padding: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n  border-radius: 0.2em;\n}\n.dropdown .dropdown__ul ul li {\n  position: relative;\n  float: left;\n  width: 96%;\n  border-top: 0.05em solid #acacac;\n  color: #888;\n  list-style-type: none;\n  padding: 0.4em 1em;\n  margin: 0px;\n  transition: all 0.15s ease-in-out;\n  display: block;\n  cursor: pointer;\n}\n.dropdown .dropdown__ul ul li:hover {\n  background-color: #c3c3c3;\n}\n.dropdown_open ul {\n  height: auto !important;\n}\n.dropdown_open .dropdown__icon svg {\n  -webkit-transform: rotate(180deg) !important;\n          transform: rotate(180deg) !important;\n}\n", ""]);
+exports.push([module.i, ".dropdown {\n  position: relative;\n  width: 100%;\n  cursor: pointer;\n}\n.dropdown select {\n  display: none;\n}\n.dropdown .dropdown__icon {\n  position: absolute;\n  top: 0;\n  right: 0;\n  height: 100%;\n  width: 2.5em;\n  border-bottom-right-radius: 0.2em;\n  border-top-right-radius: 0.2em;\n  background-color: #4eb7a8;\n}\n.dropdown .dropdown__icon svg {\n  height: 100%;\n  width: 100%;\n  transition: all 275ms;\n}\n.dropdown .custom-form__dropdown {\n  padding: 0.4em 1em;\n}\n.dropdown .dropdown__ul {\n  position: relative;\n  float: left;\n  width: 100%;\n}\n.dropdown .dropdown__ul ul {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: 999;\n  overflow: hidden;\n  height: 0px;\n  width: 100%;\n  background-color: #e5e5e5;\n  padding: 0px;\n  margin-bottom: 0px;\n  margin-top: 0px;\n  border-radius: 0.2em;\n}\n.dropdown .dropdown__ul ul li {\n  position: relative;\n  float: left;\n  width: 96%;\n  border-top: 0.05em solid #acacac;\n  color: #888;\n  list-style-type: none;\n  padding: 0.4em 1em;\n  margin: 0px;\n  transition: all 0.15s ease-in-out;\n  display: block;\n}\n.dropdown .dropdown__ul ul li:hover {\n  background-color: #c3c3c3;\n}\n.dropdown_open .dropdown__ul ul {\n  height: auto;\n}\n.dropdown_open .dropdown__icon svg {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toggle_styl__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toggle_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__toggle_styl__);
 
-__webpack_require__(53);
 
-$(function () {
+$(() => {
+  $('.toggle').children('input').click((e) => {
+    e.stopPropagation();
+  });
 
-    $(".toggle").children("input").click(function (e) {
-        e.stopPropagation();
-    });
+  $('.toggle').click(function () {
+    $(this).toggleClass('toggle_off');
+  }).each(function () {
+    $(this).toggleClass('toggle_off');
 
-    $(".toggle").click(function () {
-
-        $(this).toggleClass("toggle_off");
-    }).each(function () {
-
-        $(this).toggleClass("toggle_off");
-
-        if ($(this).attr('checked')) $(this).click();
-    });
+    if ($(this).attr('checked')) { $(this).click(); }
+  });
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(54);
+var content = __webpack_require__(55);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28823,7 +28881,7 @@ if(false) {
 }
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28831,49 +28889,48 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".toggle {\n  position: relative;\n  display: block;\n  width: 3.5em;\n  height: 1.5em;\n  border-radius: 1.5em;\n  cursor: pointer;\n  transition: background 0.5s ease;\n  font-family: Arial, sans-serif;\n}\n.toggle .toggle__circle {\n  background-color: #fff;\n  position: absolute;\n  top: 0.2em;\n  width: 1.1em;\n  height: 1.1em;\n  border-radius: 100%;\n}\n.toggle_on {\n  text-align: left;\n}\n.toggle_on .toggle__circle {\n  left: auto;\n  right: 5%;\n}\n.toggle_on:after {\n  content: \"on\" !important;\n  display: block;\n  position: absolute;\n  left: 0.5em;\n  top: 0.42em;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 0.75em;\n}\n.toggle_off {\n  background-color: #e5e5e5 !important;\n  text-align: right;\n}\n.toggle_off .toggle__circle {\n  left: 5% !important;\n}\n.toggle_off:after {\n  content: \"off\" !important;\n  right: 0.5em !important;\n}\n", ""]);
+exports.push([module.i, ".toggle {\n  position: relative;\n  display: block;\n  width: 3.5em;\n  height: 1.5em;\n  border-radius: 1.5em;\n  cursor: pointer;\n  transition: background 0.5s ease;\n  font-family: Arial, sans-serif;\n}\n.toggle .toggle__circle {\n  background-color: #fff;\n  position: absolute;\n  top: 0.2em;\n  width: 1.1em;\n  height: 1.1em;\n  border-radius: 100%;\n}\n.toggle_on {\n  text-align: left;\n}\n.toggle_on .toggle__circle {\n  left: auto;\n  right: 5%;\n}\n.toggle_on:after {\n  content: \"on\";\n  display: block;\n  position: absolute;\n  left: 0.5em;\n  top: 0.42em;\n  text-transform: uppercase;\n  color: #fff;\n  font-size: 0.75em;\n}\n.toggle_off {\n  background-color: #e5e5e5 !important;\n  text-align: right;\n}\n.toggle_off .toggle__circle {\n  left: 5%;\n}\n.toggle_off:after {\n  content: \"off\";\n  right: 0.5em;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 56 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tick_box_styl__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tick_box_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__tick_box_styl__);
 
-__webpack_require__(56);
 
-$(function () {
 
-    $(".tick-box").children("input").click(function (e) {
-        e.stopPropagation();
-    });
+$(() => {
+  $('.tick-box').children('input').click((e) => {
+    e.stopPropagation();
+  });
 
-    $(".tick-box").click(function () {
+  $('.tick-box').click(function () {
+    $(this).toggleClass('tick-box_off');
+  }).each(function () {
+    $(this).toggleClass('tick-box_off');
 
-        $(this).toggleClass("tick-box_off");
-    }).each(function () {
-
-        $(this).toggleClass("tick-box_off");
-
-        if ($(this).attr('checked')) $(this).click();
-    });
+    if ($(this).attr('checked')) { $(this).click(); }
+  });
 }).each(function () {
-
-    if ($(this).attr('checked')) $(this).click();
+  if ($(this).attr('checked')) { $(this).click(); }
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(58);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28898,7 +28955,7 @@ if(false) {
 }
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28906,28 +28963,29 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".tick-box {\n  cursor: pointer;\n  width: 1.5em;\n}\n.tick-box .tick-box__inner {\n  padding-top: 100%;\n  position: relative;\n  width: 100%;\n}\n.tick-box .tick-box__inner .tick-box-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.tick-box .tick-box__inner .tick-box-svg polyline {\n  stroke: #fff;\n}\n.tick-box.tick-box_off circle {\n  fill: #e5e5e5 !important;\n}\n.tick-box.tick-box_off polyline {\n  stroke: #c0c0c0 !important;\n}\n", ""]);
+exports.push([module.i, ".tick-box {\n  cursor: pointer;\n  width: 1.5em;\n}\n.tick-box .tick-box__inner {\n  padding-top: 100%;\n  position: relative;\n  width: 100%;\n}\n.tick-box .tick-box__inner .tick-box-svg {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.tick-box .tick-box__inner .tick-box-svg polyline {\n  stroke: #fff;\n}\n.tick-box.tick-box_off svg circle {\n  fill: #e5e5e5;\n}\n.tick-box.tick-box_off svg polyline {\n  stroke: #c0c0c0;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 59 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profil_styl__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profil_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__profil_styl__);
 
 
-__webpack_require__(59);
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(60);
+var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -28952,7 +29010,7 @@ if(false) {
 }
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -28966,22 +29024,23 @@ exports.push([module.i, ".profil {\n  display: -webkit-box;\n  display: -ms-flex
 
 
 /***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__news_styl__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__news_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__news_styl__);
 
 
-__webpack_require__(62);
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(63);
+var content = __webpack_require__(64);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -29006,7 +29065,7 @@ if(false) {
 }
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -29020,22 +29079,23 @@ exports.push([module.i, ".news {\n  box-sizing: border-box;\n  background-size: 
 
 
 /***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_styl__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__event_styl__);
 
 
-__webpack_require__(65);
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(66);
+var content = __webpack_require__(67);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -29060,7 +29120,7 @@ if(false) {
 }
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -29074,51 +29134,54 @@ exports.push([module.i, ".event {\n  box-sizing: border-box;\n  background-posit
 
 
 /***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__location_styl__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__location_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__location_styl__);
 
-__webpack_require__(68);
+
 
 (function ($) {
-
-    $('.map').each(function () {
-
-        var map = new google.maps.Map($(this).children('.map__body')[0], {
-            center: { lat: $(this).data('lat'), lng: $(this).data('lng') },
-            zoom: 15,
-            disableDefaultUI: true
-        });
-
-        var markers = [];
-        markers.push(new google.maps.Marker({
-            map: map,
-            icon: $(this).data('marker') ? {
-                url: $(this).data('marker'),
-                size: new google.maps.Size(110, 110),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(55, 110),
-                scaledSize: new google.maps.Size(110, 110),
-                labelOrigin: new google.maps.Point(18, 18)
-            } : "",
-
-            title: "test",
-            position: { lat: $(this).data('lat'), lng: $(this).data('lng') }
-        }));
+  $('.map').each(function () {
+    const map = new google.maps.Map($(this).children('.map__body')[0], {
+      center: { lat: $(this).data('lat'), lng: $(this).data('lng') },
+      zoom: 15,
+      disableDefaultUI: true,
     });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+
+    const markers = [];
+    markers.push(new google.maps.Marker({
+      map,
+      icon: $(this).data('marker') ?
+        {
+          url: $(this).data('marker'),
+          size: new google.maps.Size(110, 110),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(55, 110),
+          scaledSize: new google.maps.Size(110, 110),
+          labelOrigin: new google.maps.Point(18, 18),
+        } : '',
+
+      title: 'test',
+      position: { lat: $(this).data('lat'), lng: $(this).data('lng') },
+    }));
+  });
+}(jQuery));
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(69);
+var content = __webpack_require__(70);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -29143,7 +29206,7 @@ if(false) {
 }
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -29157,11 +29220,14 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
 
 
 /***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/*!
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl__);
+/*eslint-disable*/
+/*!
  * glDatePicker v2.0
  * http://glad.github.com/glDatePicker/
  *
@@ -29172,805 +29238,844 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
  */
 
 
-__webpack_require__(71);
 
 (function ($) {
-	$.fn.glDatePicker = function (options) {
-		var pluginName = 'glDatePicker';
-
-		// Find the plugin attached to the element
-		var instance = this.data(pluginName);
-
-		// If the instance wasn't found, create it...
-		if (!instance) {
-			// Return the element being bound to
-			return this.each(function () {
-				return $(this).data(pluginName, new glDatePicker(this, options));
-			});
-		}
-
-		// ...otherwise if the user passes true to the plugin (on the second call),
-		// then return the instance of the plugin itself
-		return options === true ? instance : this;
-	};
-
-	// Default options
-	$.fn.glDatePicker.defaults = {
-		// Style to use for the calendar.  This name must match the name used in
-		// the stylesheet, using the class naming convention "gldp-cssName".
-		cssName: 'default',
-
-		// The z-index for the calendar control.
-		zIndex: 1000,
-
-		// Thickness of border (in pixels)
-		borderSize: 1,
-
-		// The number of pixels to offset the calendar's position on the page.
-		calendarOffset: { x: 0, y: 1 },
-
-		// Set to true if you want the calendar to be visible at all times.
-		// NOTE: If your target element is hidden, the calendar will be hidden as well.
-		showAlways: true,
-
-		// Hide the calendar when a date is selected (only if showAlways is set to false).
-		hideOnClick: false,
-
-		// Allow selection of months by clicking on the month in the title.
-		allowMonthSelect: false,
-
-		// Allow selection of years by clicking on the year in the title.
-		allowYearSelect: false,
-
-		// The date that will be treated as 'today'.
-		todayDate: new Date(),
-
-		// The date that will appear selected when the calendar renders.
-		// By default it will be set to todayDate.
-		selectedDate: null,
-
-		// Arrows used for the Previous and Next month buttons on the title.
-		// Set these to blank to hide the arrows completely.
-		prevArrow: '◄',
-		nextArrow: '►',
-
-		// A collection of dates that can be selectable by the user.
-		// The dates can be a one-time selection or made repeatable by setting
-		// the repeatYear or repeatMonth flag to true.
-		// By default repeatYear and repeatMonth are false.
-		//
-		// This example creates 4-individual dates that can be selected;
-		// The first date will repeat every year, the second date will repeat every
-		// month and year, the third date will repeat every month and the fourth date
-		// will only be selectable one-time and not repeat:
-		//
-		//    selectableDates: [
-		//        { date: new Date(0, 8, 5), repeatYear: true },
-		//        { date: new Date(0, 0, 14), repeatMonth: true, repeatYear: true },
-		//        { date: new Date(2013, 0, 24), repeatMonth: true },
-		//        { date: new Date(2013, 11, 25) },
-		//    ]
-		selectableDates: null,
-
-		// A collection of date ranges that are selectable by the user.
-		// The ranges can be made to repeat by setting repeatYear to true
-		// (repeatMonth is not supported).
-		//
-		// This example will create 3-sets of selectable date ranges with
-		// specific from and to ranges.  The 4th and 5th ranges don't specify
-		// the "to" date in which case the "to" date will be the maximum days for
-		// the month specified in "from".  The 4th and 5th ranges also repeat every year:
-		//
-		//     selectableDateRange: [
-		//         { from: new Date(2013, 1, 1), to: newDate (2013, 2, 1) },
-		//         { from: new Date(2013, 4, 1), to: newDate (2013, 8, 1) },
-		//         { from: new Date(2013, 7, 10), to: newDate (2013, 9, 10) },
-		//         { from: new Date(0, 8, 10), repeatYear: true }
-		//         { from: new Date(0, 9, 1), repeatYear: true }
-		//     ]
-		selectableDateRange: null,
-
-		// Mark certain dates as special dates.  Similar to selectableDates, this
-		// property supports both repeatYear and repeatMonth flags.
-		// Each special date can be styled using custom style names and can have
-		// data attached to it that will be returned in the onClick callback.
-		// The data field can be any custom (JSON style) object.
-		//
-		// This example creates two (repeatable by year) dates with special data in them.
-		// The first date also assigns a special class (which you will have to define).
-		//    specialDates: [
-		//        {
-		//            date: new Date(0, 8, 5),
-		//            data: { message: 'Happy Birthday!' },
-		//            repeatYear: true,
-		//            cssClass: 'special-bday'
-		//        },
-		//        {
-		//            date: new Date(2013, 0, 8),
-		//            data: { message: 'Meeting every day 8 of the month' },
-		//            repeatMonth: true
-		//        }
-		//    ]
-		specialDates: null,
-
-		// List of months that can be selectable, including when the user clicks
-		// on the title to select from the dropdown.
-		// This example only makes two months visible; September and December:
-		//    selectableMonths: [8, 11]
-		selectableMonths: null,
-
-		// List of selectable years.  If not provided, will default to 5-years
-		// back and forward.
-		// This example only allows selection of dates that have year 2012, 2013, 2015
-		//    selectableYears: [2012, 2013, 2015]
-		selectableYears: null,
-
-		// List of selectable days of the week.  0 is Sunday, 1 is Monday, and so on.
-		// This example allows only Sunday, Tuesday, Thursday:
-		//    selectableDOW: [0, 2, 4]
-		selectableDOW: null,
-
-		// Names of the month that will be shown in the title.
-		// Will default to long-form names:
-		//     January, February, March, April, May, June, July,
-		//     August, September, October, November, December
-		monthNames: null,
-
-		// Names of the days of the Week that will be shown below the title.
-		// Will default to short-form names:
-		//     Sun, Mon, Tue, Wed, Thu, Fri, Sat
-		dowNames: null,
-
-		// The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
-		dowOffset: 1,
-
-		// Callback that will trigger when the user clicks a selectable date.
-		// Parameters that are passed to the callback:
-		//     el : The input element the date picker is bound to
-		//   cell : The cell on the calendar that triggered this event
-		//   date : The date associated with the cell
-		//   data : Special data associated with the cell (if available, otherwise, null)
-		onClick: function onClick(el, cell, date, data) {
-			el.val(date.toLocaleDateString());
-		},
-
-		// Callback that will trigger when the user hovers over a selectable date.
-		// This callback receives the same set of parameters as onClick.
-		onHover: function onHover(el, cell, date, data) {},
-
-		// Callback that will trigger when the calendar needs to show.
-		// You can use this callback to animate the opening of the calendar.
-		onShow: function onShow(calendar) {
-			calendar.show();
-		},
-
-		// Callback that will trigger when the calendar needs to hide.
-		// You can use this callback to animate the hiding of the calendar.
-		onHide: function onHide(calendar) {
-			calendar.hide();
-		},
-
-		// First date of the month.
-		firstDate: null
-	};
-
-	// Our plugin object
-	var glDatePicker = (function () {
-		// Main entry point.  Initialize the plugin
-		function glDatePicker(element, userOptions) {
-			// Grab handle to this
-			var self = this;
-
-			// Save bound element to el
-			self.el = $(element);
-			var el = self.el;
-
-			// Merge user options into default options
-			self.options = $.extend(true, {}, $.fn.glDatePicker.defaults, userOptions);
-			var options = self.options;
-
-			// Find the calendar element if the user provided one
-			self.calendar = $($.find('[gldp-el=' + el.attr('gldp-id') + ' ]'));
-
-			// Default first date to selected
-			options.selectedDate = options.selectedDate || options.todayDate;
-			options.firstDate = new Date(options.firstDate || options.selectedDate)._first();
-
-			if (!(el.attr('gldp-id') || '').length) {
-				el.attr('gldp-id', 'gldp-' + Math.round(Math.random() * 1e10));
-			}
-
-			// Show the plugin on focus
-			el.addClass('gldp-el').bind('click', function (e) {
-				self.show(e);
-			}).bind('focus', function (e) {
-				self.show(e);
-			});
-
-			// If the user is defining the container and it exists, hide it on initial creation.
-			// The update function will handle showing if it's showAlways = true
-			if (self.calendar.length && !options.showAlways) {
-				self.calendar.hide();
-			}
-
-			// Hide the plugin on mouse up outside of the plugin
-			$(document).bind('mouseup', function (e) {
-				var target = e.target;
-				var calendar = self.calendar;
-
-				if (!el.is(target) && !calendar.is(target) && calendar.has(target).length === 0 && calendar.is(':visible')) {
-					self.hide();
-				}
-			});
-
-			// Render calendar
-			self.render();
-			$(window).resize(function () {
-
-				self.render();
-			});
-			self.el.resize(function () {
-				alert('asd');
-				self.render();
-			});
-		};
-
-		// Public methods
-		glDatePicker.prototype = {
-			show: function show() {
-				// Hide others and show this calendar
-				$.each($('.gldp-el').not(this.el), function (i, o) {
-					if (o.length) {
-						o.options.onHide(o.calendar);
-					}
-				});
-
-				// Show this calendar
-				this.options.onShow(this.calendar);
-			},
-
-			hide: function hide() {
-				if (this.options && !this.options.showAlways) {
-					this.options.onHide(this.calendar);
-				}
-			},
-
-			// Render the calendar
-			render: function render(renderCalback) {
-				var self = this;
-				var el = self.el;
-				var options = self.options;
-				var calendar = self.calendar;
-
-				// Build a core class (with border) that every element would have
-				var coreClass = ' core border ';
-				var cssName = 'gldp-' + options.cssName;
-
-				// Get today
-				var todayVal = options.todayDate._val();
-				var todayTime = todayVal.time;
-
-				// Constants
-				var maxRow = 5;
-				var maxCol = 7;
-				var borderSize = options.borderSize + 'px';
-
-				// Helper function to build selectable list
-				var getSelectableList = function getSelectableList(min, max, userList) {
-					// Build a default list using min/max
-					var resultList = [];
-					for (var i = min; i <= max; i++) {
-						resultList.push(i);
-					}
-
-					// If user provided a collection, sanitize list by ensuring it's within range and unique
-					if (userList) {
-						var newList = [];
-						$.each(userList, function (i, v) {
-							if (v >= min && v <= max && newList._indexOf(v) < 0) {
-								newList.push(v);
-							}
-						});
-
-						resultList = newList.length ? newList : resultList;
-					};
-
-					// Sort the values before returning it
-					resultList.sort();
-
-					return resultList;
-				};
-
-				// Selectable (constants)
-				var selectableMonths = getSelectableList(0, 11, options.selectableMonths);
-				var selectableYears = getSelectableList(todayVal.year - 5, todayVal.year + 5, options.selectableYears);
-				var selectableDOW = getSelectableList(0, 6, options.selectableDOW);
-				var dowNames = options.dowNames || ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-				var monthNames = options.monthNames || ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-				// Create cell width based on el size
-				var containerWidth = el.outerWidth();
-				var containerHeight = containerWidth;
-
-				// Create cell size based on container size
-				var getCellSize = function getCellSize(_size, _count) {
-					return _size / _count + options.borderSize / _count * (_count - 1);
-				};
-				var cellWidth = getCellSize(containerWidth, maxCol);
-				var cellHeight = getCellSize(containerHeight, maxRow + 2);
-
-				// If calendar doesn't exist, create it and re-assign it to self
-				if (!calendar.length) {
-					self.calendar = calendar = $('<div/>').attr('gldp-el', el.attr('gldp-id')).data('is', true).css({
-						display: options.showAlways ? undefined : 'none',
-						zIndex: options.zIndex,
-						width: cellWidth * maxCol + 'px'
-					});
-
-					el.append(calendar);
-				} else {
-					if (!eval(calendar.data('is'))) {
-						containerWidth = calendar.outerWidth();
-						containerHeight = calendar.outerHeight();
-
-						cellWidth = getCellSize(containerWidth, maxCol);
-						cellHeight = getCellSize(containerHeight, maxRow + 2);
-					}
-				}
-
-				calendar.css('width', cellWidth * maxCol + 'px');
-				// Hide calendar if the target element isn't visible
-				//if(!el.is(':visible')) { calendar.hide(); }
-
-				// Add core classes and remove calendar's children
-				calendar.removeClass().addClass(cssName).children().remove();
-
-				// Bind to resize event to position calendar
-				var onResize = function onResize() {
-					var elPos = el.offset();
-					calendar.css({
-						top: 0 + 'px',
-						left: 0 + 'px'
-					});
-				};
-
-				// Create variables for cells
-				var cellCSS = {
-					width: cellWidth + 'px',
-					height: cellHeight + 'px',
-					lineHeight: cellHeight + 'px'
-				};
-
-				// Helper function to setDate
-				var setFirstDate = function setFirstDate(_date) {
-					if (_date) {
-						// Get first date
-						options.firstDate = _date;
-
-						// Update the calendar
-						self.render();
-					}
-				};
-
-				var getFirstDate = function getFirstDate(_offset) {
-					// Create start date as the first date of the month
-					var _date = new Date(options.firstDate);
-
-					// Default to no offset
-					_offset = _offset || 0;
-
-					// Find out which months are selectable
-					while (true) {
-						// Adjust date for month offset
-						_date.setMonth(_date.getMonth() + _offset);
-						_date.setDate(Math.min(1, _date._max()));
-
-						// If not an offset, break out of the loop
-						if (_offset == 0) {
-							break;
-						}
-
-						// Get _date's value
-						var dateVal = _date._val();
-
-						// Get local vars
-						var dateMonth = dateVal.month;
-						var dateYear = dateVal.year;
-
-						// Find the month first
-						if (selectableMonths._indexOf(dateMonth) != -1) {
-							// If year is in our collection, break...
-							if (selectableYears._indexOf(dateYear) != -1) {
-								break;
-							} else {
-								// ...otherwise, if it's out of bounds, exit loop
-								if (dateYear < selectableYears[0] || dateYear > selectableYears[selectableYears.length - 1]) {
-									return null;
-								}
-							}
-						}
-					}
-
-					return _date;
-				};
-
-				// Get the previous, next first dates
-				var prevFirstDate = getFirstDate(-1);
-				var nextFirstDate = getFirstDate(1);
-
-				// Get the first date for the current month being rendered
-				var firstDate = options.firstDate = getFirstDate();
-				var firstDateVal = firstDate._val();
-				var firstDateMonth = firstDateVal.month;
-				var firstDateYear = firstDateVal.year;
-
-				// Get the start date in the calendar
-				var startDate = new Date(firstDate);
-
-				// Sanitize days of the week offset
-				var dowOffset = Math.abs(Math.min(6, Math.max(0, options.dowOffset)));
-
-				// Offset weekdays
-				var startOffset = startDate.getDay() - dowOffset;
-				startOffset = startOffset < 1 ? -7 - startOffset : -startOffset;
-				dowNames = dowNames.concat(dowNames).slice(dowOffset, dowOffset + 7);
-
-				// Offset the start date
-				startDate._add(startOffset);
-
-				// Gather flags for prev/next arrows
-				var showPrev = prevFirstDate;
-				var showNext = nextFirstDate;
-
-				// Create the arrows and title
-				var monyearClass = coreClass + 'monyear ';
-
-				var prevCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {})).append($('<a/>').addClass('prev-arrow' + (showPrev ? '' : '-off')).append($('<i/>').addClass('fa fa-angle-left').attr('aria-hidden', 'true'))).mousedown(function () {
-					return false;
-				}).click(function (e) {
-					if (options.prevArrow != '' && showPrev) {
-						e.stopPropagation();
-						setFirstDate(prevFirstDate);
-					}
-				});
-
-				var titleCellCount = maxCol - 2;
-				var titleWidth = cellWidth * titleCellCount;
-				var titleCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {
-					width: titleWidth + 'px'
-
-				}));
-
-				var nextCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {})).append($('<a/>').addClass('next-arrow' + (showNext ? '' : '-off')).append($('<i/>').addClass('fa fa-angle-right').attr('aria-hidden', 'true'))).mousedown(function () {
-					return false;
-				}).click(function (e) {
-					if (options.nextArrow != '' && showNext) {
-						e.stopPropagation();
-						setFirstDate(nextFirstDate);
-					}
-				});
-
-				// Add cells for prev/title/next
-
-				var big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
-				calendar.prev('input').val(options.selectedDate.toISOString().slice(0, 10));
-				calendar.append(big_number).append(prevCell).append(titleCell).append(nextCell).append($('<div/>').addClass('cell-container'));
-
-				// Add all the cells to the calendar
-				for (var row = 0, cellIndex = 0; row < maxRow + 1; row++) {
-					for (var col = 0; col < maxCol; col++, cellIndex++) {
-						var cellDate = new Date(startDate);
-						var cellClass = 'day';
-						var cellZIndex = options.zIndex + cellIndex;
-						var cell = $('<div/>');
-
-						if (!row) {
-							cellClass = 'dow';
-							cell.html(dowNames[col]);
-							cellDate = null;
-							cell.data('data', { date: cellDate, data: specialData }).addClass(coreClass + cellClass).css('width', cellWidth);
-
-							// Add cell to calendar
-							calendar.children('.cell-container').append(cell);
-							continue;
-						} else {
-							// Get the new date for this cell
-							cellDate._add(col + (row - 1) * maxCol);
-
-							// Get value for this date
-							var cellDateVal = cellDate._val();
-							var cellDateTime = cellDateVal.time;
-
-							// Variable to hold special data
-							var specialData = null;
-
-							// Determine if this date is selectable
-							var isSelectable = true;
-
-							// Helper function to get repeat friendly date against current date
-							var getRepeatDate = function getRepeatDate(v, date) {
-								// If repeating, set the date's year and month accordingly
-								if (v.repeatYear === true) {
-									date.setYear(cellDateVal.year);
-								}
-								if (v.repeatMonth === true) {
-									date.setMonth(cellDateVal.month);
-								}
-
-								return date._val();
-							};
-
-							// Assign date for the cell
-							cell.html(cellDateVal.date);
-
-							// If we have selectable date ranges
-							if (options.selectableDateRange) {
-								isSelectable = false;
-								$.each(options.selectableDateRange, function (i, v) {
-									var dateFrom = v.from;
-									var dateTo = v.to || null;
-
-									// If to is not specified, default to max days in the from month
-									dateTo = dateTo || new Date(v.from.getFullYear(), v.from.getMonth(), v.from._max());
-
-									// If repeating year, set the from and two to the current date's year
-									dateFrom = getRepeatDate(v, dateFrom);
-									dateTo = getRepeatDate(v, dateTo);
-
-									// Test to see if this date is selectable
-									if (cellDateTime >= dateFrom.time && cellDateTime <= dateTo.time) {
-										isSelectable = true;
-										return true;
-									}
-								});
-							}
-
-							// Handle date ranges and collections
-							if (options.selectableDates) {
-								if (options.selectableDateRange && !isSelectable || isSelectable && !options.selectableDateRange) {
-									isSelectable = false;
-								}
-								$.each(options.selectableDates, function (i, v) {
-									var vDate = getRepeatDate(v, v.date);
-
-									if (vDate.time == cellDateTime) {
-										return isSelectable = true;
-									}
-								});
-							}
-
-							// If not active or if not within selectableMonths, set to noday otherwise evaluate accordingly
-							if (!isSelectable || selectableYears._indexOf(cellDateVal.year) < 0 || selectableMonths._indexOf(cellDateVal.month) < 0 || selectableDOW._indexOf(cellDateVal.day) < 0) {
-								cellClass = 'noday';
-							} else {
-								// Handle active dates and weekends
-								cellClass = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'][cellDateVal.day];
-
-								// Handle today or selected dates
-								if (firstDateMonth != cellDateVal.month) {
-									cellClass += ' outday';
-								}
-								if (todayTime == cellDateTime) {
-									cellClass = 'today';cellZIndex += 50;
-								}
-								if (options.selectedDate._time() == cellDateTime) {
-									cellClass = 'selected';cellZIndex += 51;
-								}
-
-								// Handle special dates
-								if (options.specialDates) {
-									$.each(options.specialDates, function (i, v) {
-										var vDate = getRepeatDate(v, v.date);
-
-										if (vDate.time == cellDateTime) {
-											cellClass = v.cssClass || 'special';
-											cellZIndex += 52;
-											specialData = v.data;
-										}
-									});
-								}
-
-								cell.mousedown(function () {
-									return false;
-								}).hover(function (e) {
-									e.stopPropagation();
-
-									// Get the data from this cell
-									var hoverData = $(this).data('data');
-
-									// Call callback
-									options.onHover(el, cell, hoverData.date, hoverData.data);
-								}).click(function (e) {
-									e.stopPropagation();
-
-									// Get the data from this cell
-									var clickedData = $(this).data('data');
-
-									// Save date to selected and first
-									options.selectedDate = options.firstDate = clickedData.date;
-
-									// Update calendar (and auto-hide if necessary)
-									self.render(function () {
-										if (!options.showAlways && options.hideOnClick) {
-											self.hide();
-										}
-									});
-									calendar.children('.big_number').text($(this).html());
-									calendar.prev('input').val(clickedData.date.toISOString().slice(0, 10));
-									// Call callback
-									options.onClick(el, $(this), clickedData.date, clickedData.data);
-								});
-							}
-						}
-
-						// Update the css for the cell
-						$.extend(cellCSS, {
-							borderTopWidth: borderSize,
-							borderBottomWidth: borderSize,
-							borderLeftWidth: row > 0 || !row && !col ? borderSize : 0,
-							borderRightWidth: row > 0 || !row && col == 6 ? borderSize : 0,
-							zIndex: cellZIndex
-						});
-
-						// Assign other properties to the cell
-						cell.data('data', { date: cellDate, data: specialData }).addClass(coreClass + cellClass).css(cellCSS);
-
-						// Add cell to calendar
-						calendar.children('.cell-container').append(cell);
-					}
-				}
-
-				calendar.append($('<div/>').addClass('calendar__footer').click(function (e) {
-
-					e.stopPropagation();
-					options.selectedDate = new Date();
-					setFirstDate(new Date());
-				}).text('today'));
-
-				// Helper function for toggling select and text
-				var toggleYearMonthSelect = function toggleYearMonthSelect(showYear) {
-					var show = 'inline-block';
-					var hide = 'none';
-
-					if (options.allowMonthSelect) {
-						monthText.css({ display: !showYear ? hide : show });
-						monthSelect.css({ display: !showYear ? show : hide });
-					}
-
-					if (options.allowYearSelect) {
-						yearText.css({ display: showYear ? hide : show });
-						yearSelect.css({ display: showYear ? show : hide });
-					}
-				};
-
-				// Helper function when select is updated
-				var onYearMonthSelect = function onYearMonthSelect() {
-					options.firstDate = new Date(yearSelect.val(), monthSelect.val(), 1);
-					self.render();
-				};
-
-				// Build month selector
-				var monthSelect = $('<select/>').hide().change(onYearMonthSelect);
-
-				// Build year selector
-				var yearSelect = $('<select/>').hide().change(onYearMonthSelect);
-
-				// Build month label
-				var monthText = $('<span/>').html(monthNames[firstDateMonth]).mousedown(function () {
-					return false;
-				}).click(function (e) {
-					e.stopPropagation();
-					toggleYearMonthSelect(false);
-				});
-
-				// Build year label
-				var yearText = $('<span/>').html(firstDateYear).mousedown(function () {
-					return false;
-				}).click(function (e) {
-					e.stopPropagation();
-					toggleYearMonthSelect(true);
-				});
-
-				// Populate month select
-				$.each(monthNames, function (i, v) {
-					if (options.allowMonthSelect && selectableMonths._indexOf(i) != -1) {
-						var o = $('<option/>').html(v).attr('value', i);
-						if (i == firstDateMonth) {
-							o.attr('selected', 'selected');
-						}
-						monthSelect.append(o);
-					}
-				});
-
-				// Populate year select
-				$.each(selectableYears, function (i, v) {
-					if (options.allowYearSelect) {
-						var o = $('<option/>').html(v).attr('value', v);
-						if (v == firstDateYear) {
-							o.attr('selected', 'selected');
-						}
-						yearSelect.append(o);
-					}
-				});
-
-				var titleYearMonth = $('<div/>').append(monthText).append(monthSelect);
-
-				// Add to title
-				titleCell.children().remove();
-				titleCell.append(titleYearMonth);
-
-				// Run the callback signaling end of the render
-				renderCalback = renderCalback || function () {};
-				renderCalback();
-			}
-		};
-
-		// Return the plugin
-		return glDatePicker;
-	})();
-
-	// One time initialization of useful prototypes
-	(function () {
-		Date.prototype._clear = function () {
-			this.setHours(0);
-			this.setMinutes(0);
-			this.setSeconds(0);
-			this.setMilliseconds(0);
-
-			return this;
-		};
-
-		Date.prototype._time = function () {
-			return this._clear().getTime();
-		};
-
-		Date.prototype._max = function () {
-			var isLeapYear = new Date(this.getYear(), 1, 29).getMonth() == 1 ? 1 : 0;
-			var days = [31, 28 + isLeapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-			return days[this.getMonth()];
-		};
-
-		Date.prototype._add = function (days) {
-			this.setDate(this.getDate() + days);
-		};
-
-		Date.prototype._first = function () {
-			var date = new Date(this);
-			date.setDate(1);
-
-			return date;
-		};
-
-		Date.prototype._val = function () {
-			this._clear();
-
-			return {
-				year: this.getFullYear(),
-				month: this.getMonth(),
-				date: this.getDate(),
-				time: this.getTime(),
-				day: this.getDay()
-			};
-		};
-
-		Array.prototype._indexOf = function (value) {
-			return $.inArray(value, this);
-		};
-
-		$('.calendar').glDatePicker();
-	})();
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+  $.fn.glDatePicker = function (options) {
+    const pluginName = 'glDatePicker';
+
+    // Find the plugin attached to the element
+    const instance = this.data(pluginName);
+
+    // If the instance wasn't found, create it...
+    if (!instance) {
+      // Return the element being bound to
+      return this.each(function () {
+        return $(this).data(pluginName, new glDatePicker(this, options));
+      });
+    }
+
+    // ...otherwise if the user passes true to the plugin (on the second call),
+    // then return the instance of the plugin itself
+    return (options === true) ? instance : this;
+  };
+
+  // Default options
+  $.fn.glDatePicker.defaults =
+ {
+   // Style to use for the calendar.  This name must match the name used in
+   // the stylesheet, using the class naming convention "gldp-cssName".
+   cssName: 'default',
+
+   // The z-index for the calendar control.
+   zIndex: 1000,
+
+   // Thickness of border (in pixels)
+   borderSize: 1,
+
+   // The number of pixels to offset the calendar's position on the page.
+   calendarOffset: { x: 0, y: 1 },
+
+   // Set to true if you want the calendar to be visible at all times.
+   // NOTE: If your target element is hidden, the calendar will be hidden as well.
+   showAlways: true,
+
+   // Hide the calendar when a date is selected (only if showAlways is set to false).
+   hideOnClick: false,
+
+   // Allow selection of months by clicking on the month in the title.
+   allowMonthSelect: false,
+
+   // Allow selection of years by clicking on the year in the title.
+   allowYearSelect: false,
+
+   // The date that will be treated as 'today'.
+   todayDate: new Date(),
+
+   // The date that will appear selected when the calendar renders.
+   // By default it will be set to todayDate.
+   selectedDate: null,
+
+   // Arrows used for the Previous and Next month buttons on the title.
+   // Set these to blank to hide the arrows completely.
+   prevArrow: '\u25c4',
+   nextArrow: '\u25ba',
+
+   // A collection of dates that can be selectable by the user.
+   // The dates can be a one-time selection or made repeatable by setting
+   // the repeatYear or repeatMonth flag to true.
+   // By default repeatYear and repeatMonth are false.
+   //
+   // This example creates 4-individual dates that can be selected;
+   // The first date will repeat every year, the second date will repeat every
+   // month and year, the third date will repeat every month and the fourth date
+   // will only be selectable one-time and not repeat:
+   //
+   //    selectableDates: [
+   //        { date: new Date(0, 8, 5), repeatYear: true },
+   //        { date: new Date(0, 0, 14), repeatMonth: true, repeatYear: true },
+   //        { date: new Date(2013, 0, 24), repeatMonth: true },
+   //        { date: new Date(2013, 11, 25) },
+   //    ]
+   selectableDates: null,
+
+   // A collection of date ranges that are selectable by the user.
+   // The ranges can be made to repeat by setting repeatYear to true
+   // (repeatMonth is not supported).
+   //
+   // This example will create 3-sets of selectable date ranges with
+   // specific from and to ranges.  The 4th and 5th ranges don't specify
+   // the "to" date in which case the "to" date will be the maximum days for
+   // the month specified in "from".  The 4th and 5th ranges also repeat every year:
+   //
+   //     selectableDateRange: [
+   //         { from: new Date(2013, 1, 1), to: newDate (2013, 2, 1) },
+   //         { from: new Date(2013, 4, 1), to: newDate (2013, 8, 1) },
+   //         { from: new Date(2013, 7, 10), to: newDate (2013, 9, 10) },
+   //         { from: new Date(0, 8, 10), repeatYear: true }
+   //         { from: new Date(0, 9, 1), repeatYear: true }
+   //     ]
+   selectableDateRange: null,
+
+   // Mark certain dates as special dates.  Similar to selectableDates, this
+   // property supports both repeatYear and repeatMonth flags.
+   // Each special date can be styled using custom style names and can have
+   // data attached to it that will be returned in the onClick callback.
+   // The data field can be any custom (JSON style) object.
+   //
+   // This example creates two (repeatable by year) dates with special data in them.
+   // The first date also assigns a special class (which you will have to define).
+   //    specialDates: [
+   //        {
+   //            date: new Date(0, 8, 5),
+   //            data: { message: 'Happy Birthday!' },
+   //            repeatYear: true,
+   //            cssClass: 'special-bday'
+   //        },
+   //        {
+   //            date: new Date(2013, 0, 8),
+   //            data: { message: 'Meeting every day 8 of the month' },
+   //            repeatMonth: true
+   //        }
+   //    ]
+   specialDates: null,
+
+   // List of months that can be selectable, including when the user clicks
+   // on the title to select from the dropdown.
+   // This example only makes two months visible; September and December:
+   //    selectableMonths: [8, 11]
+   selectableMonths: null,
+
+   // List of selectable years.  If not provided, will default to 5-years
+   // back and forward.
+   // This example only allows selection of dates that have year 2012, 2013, 2015
+   //    selectableYears: [2012, 2013, 2015]
+   selectableYears: null,
+
+   // List of selectable days of the week.  0 is Sunday, 1 is Monday, and so on.
+   // This example allows only Sunday, Tuesday, Thursday:
+   //    selectableDOW: [0, 2, 4]
+   selectableDOW: null,
+
+   // Names of the month that will be shown in the title.
+   // Will default to long-form names:
+   //     January, February, March, April, May, June, July,
+   //     August, September, October, November, December
+   monthNames: null,
+
+   // Names of the days of the Week that will be shown below the title.
+   // Will default to short-form names:
+   //     Sun, Mon, Tue, Wed, Thu, Fri, Sat
+   dowNames: null,
+
+   // The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
+   dowOffset: 1,
+
+   // Callback that will trigger when the user clicks a selectable date.
+   // Parameters that are passed to the callback:
+   //     el : The input element the date picker is bound to
+   //   cell : The cell on the calendar that triggered this event
+   //   date : The date associated with the cell
+   //   data : Special data associated with the cell (if available, otherwise, null)
+   onClick(el, cell, date, data) {
+     el.val(date.toLocaleDateString());
+   },
+
+   // Callback that will trigger when the user hovers over a selectable date.
+   // This callback receives the same set of parameters as onClick.
+   onHover(el, cell, date, data) {},
+
+   // Callback that will trigger when the calendar needs to show.
+   // You can use this callback to animate the opening of the calendar.
+   onShow(calendar) { calendar.show(); },
+
+   // Callback that will trigger when the calendar needs to hide.
+   // You can use this callback to animate the hiding of the calendar.
+   onHide(calendar) { calendar.hide(); },
+
+   // First date of the month.
+   firstDate: null,
+ };
+
+  // Our plugin object
+  var glDatePicker = (function () {
+    // Main entry point.  Initialize the plugin
+    function glDatePicker(element, userOptions) {
+      // Grab handle to this
+      const self = this;
+
+      // Save bound element to el
+      self.el = $(element);
+      const el = self.el;
+
+      // Merge user options into default options
+      self.options = $.extend(true, {}, $.fn.glDatePicker.defaults, userOptions);
+      const options = self.options;
+
+      // Find the calendar element if the user provided one
+      self.calendar = $($.find(`[gldp-el=${el.attr('gldp-id')} ]`));
+
+      // Default first date to selected
+      options.selectedDate = options.selectedDate || options.todayDate;
+      options.firstDate = (new Date((options.firstDate || options.selectedDate)))._first();
+
+      if (!(el.attr('gldp-id') || '').length) {
+        el.attr('gldp-id', `gldp-${Math.round(Math.random() * 1e10)}`);
+      }
+
+      // Show the plugin on focus
+      el
+        .addClass('gldp-el')
+        .bind('click', (e) => { self.show(e); })
+        .bind('focus', (e) => { self.show(e); });
+
+      // If the user is defining the container and it exists, hide it on initial creation.
+      // The update function will handle showing if it's showAlways = true
+      if (self.calendar.length && !options.showAlways) {
+        self.calendar.hide();
+      }
+
+      // Hide the plugin on mouse up outside of the plugin
+      $(document).bind('mouseup', (e) => {
+        const target = e.target;
+        const calendar = self.calendar;
+
+        if (!el.is(target) && !calendar.is(target) && calendar.has(target).length === 0 && calendar.is(':visible')) {
+          self.hide();
+        }
+      });
+
+      // Render calendar
+      self.render();
+      $(window).resize(() => {
+        self.render();
+      });
+      self.el.resize(() => {
+        alert('asd');
+        self.render();
+      });
+    }
+
+    // Public methods
+    glDatePicker.prototype =
+  {
+    show() {
+      // Hide others and show this calendar
+      $.each($('.gldp-el').not(this.el), (i, o) => {
+        if (o.length) { o.options.onHide(o.calendar); }
+      });
+
+      // Show this calendar
+      this.options.onShow(this.calendar);
+    },
+
+    hide() {
+      if (this.options && !this.options.showAlways) {
+        this.options.onHide(this.calendar);
+      }
+    },
+
+    // Render the calendar
+    render(renderCalback) {
+      const self = this;
+      const el = self.el;
+      const options = self.options;
+      let calendar = self.calendar;
+
+      // Build a core class (with border) that every element would have
+      const coreClass = ' core border ';
+      const cssName = `gldp-${options.cssName}`;
+
+      // Get today
+      const todayVal = options.todayDate._val();
+      const todayTime = todayVal.time;
+
+      // Constants
+      const maxRow = 5;
+      const maxCol = 7;
+      const borderSize = `${options.borderSize}px`;
+
+      // Helper function to build selectable list
+      const getSelectableList = function (min, max, userList) {
+        // Build a default list using min/max
+        let resultList = [];
+        for (let i = min; i <= max; i++) { resultList.push(i); }
+
+        // If user provided a collection, sanitize list by ensuring it's within range and unique
+        if (userList) {
+          const newList = [];
+          $.each(userList, (i, v) => {
+            if (v >= min && v <= max && newList._indexOf(v) < 0) {
+              newList.push(v);
+            }
+          });
+
+          resultList = newList.length ? newList : resultList;
+        }
+
+        // Sort the values before returning it
+        resultList.sort();
+
+        return resultList;
+      };
+
+      // Selectable (constants)
+      const selectableMonths = getSelectableList(0, 11, options.selectableMonths);
+      const selectableYears = getSelectableList(todayVal.year - 5, todayVal.year + 5, options.selectableYears);
+      const selectableDOW = getSelectableList(0, 6, options.selectableDOW);
+      let dowNames = options.dowNames || ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      const monthNames = options.monthNames || ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      // Create cell width based on el size
+      let containerWidth = el.outerWidth();
+      let containerHeight = containerWidth;
+
+      // Create cell size based on container size
+      const getCellSize = function (_size, _count) {
+        return (_size / _count) + ((options.borderSize / _count) * (_count - 1));
+      };
+      let cellWidth = getCellSize(containerWidth, maxCol);
+      let cellHeight = getCellSize(containerHeight, maxRow + 2);
+
+      // If calendar doesn't exist, create it and re-assign it to self
+      if (!calendar.length) {
+        self.calendar = calendar = $('<div/>')
+          .attr('gldp-el', el.attr('gldp-id'))
+          .data('is', true)
+          .css(
+            {
+              display: (options.showAlways ? undefined : 'none'),
+              zIndex: options.zIndex,
+              width: `${cellWidth * maxCol}px`,
+            });
+
+        el.append(calendar);
+      } else if (!eval(calendar.data('is'))) {
+        containerWidth = calendar.outerWidth();
+        containerHeight = calendar.outerHeight();
+
+        cellWidth = getCellSize(containerWidth, maxCol);
+        cellHeight = getCellSize(containerHeight, maxRow + 2);
+      }
+
+      calendar.css('width', `${cellWidth * maxCol}px`);
+      // Hide calendar if the target element isn't visible
+      // if(!el.is(':visible')) { calendar.hide(); }
+
+      // Add core classes and remove calendar's children
+      calendar
+        .removeClass()
+        .addClass(cssName)
+        .children().remove();
+
+      // Bind to resize event to position calendar
+      const onResize = function () {
+        const elPos = el.offset();
+        calendar.css(
+          {
+            top: `${0}px`,
+            left: `${0}px`,
+          });
+      };
+
+
+      // Create variables for cells
+      const cellCSS =
+    {
+      width: `${cellWidth}px`,
+      height: `${cellHeight}px`,
+      lineHeight: `${cellHeight}px`,
+    };
+
+      // Helper function to setDate
+      const setFirstDate = function (_date) {
+        if (_date) {
+          // Get first date
+          options.firstDate = _date;
+
+          // Update the calendar
+          self.render();
+        }
+      };
+
+      const getFirstDate = function (_offset) {
+        // Create start date as the first date of the month
+        const _date = new Date(options.firstDate);
+
+        // Default to no offset
+        _offset = _offset || 0;
+
+        // Find out which months are selectable
+        while (true) {
+          // Adjust date for month offset
+          _date.setMonth(_date.getMonth() + _offset);
+          _date.setDate(Math.min(1, _date._max()));
+
+          // If not an offset, break out of the loop
+          if (_offset == 0) { break; }
+
+          // Get _date's value
+          const dateVal = _date._val();
+
+          // Get local vars
+          const dateMonth = dateVal.month;
+          const dateYear = dateVal.year;
+
+          // Find the month first
+          if (selectableMonths._indexOf(dateMonth) != -1) {
+            // If year is in our collection, break...
+            if (selectableYears._indexOf(dateYear) != -1) {
+              break;
+            } else {
+              // ...otherwise, if it's out of bounds, exit loop
+              if (dateYear < selectableYears[0] || dateYear > selectableYears[selectableYears.length - 1]) {
+                return null;
+              }
+            }
+          }
+        }
+
+        return _date;
+      };
+
+      // Get the previous, next first dates
+      const prevFirstDate = getFirstDate(-1);
+      const nextFirstDate = getFirstDate(1);
+
+      // Get the first date for the current month being rendered
+      const firstDate = (options.firstDate = getFirstDate());
+      const firstDateVal = firstDate._val();
+      const firstDateMonth = firstDateVal.month;
+      const firstDateYear = firstDateVal.year;
+
+      // Get the start date in the calendar
+      const startDate = new Date(firstDate);
+
+      // Sanitize days of the week offset
+      const dowOffset = Math.abs(Math.min(6, Math.max(0, options.dowOffset)));
+
+      // Offset weekdays
+      let startOffset = startDate.getDay() - dowOffset;
+      startOffset = startOffset < 1 ? -7 - startOffset : -startOffset;
+      dowNames = (dowNames.concat(dowNames))
+        .slice(dowOffset, dowOffset + 7);
+
+      // Offset the start date
+      startDate._add(startOffset);
+
+      // Gather flags for prev/next arrows
+      const showPrev = (prevFirstDate);
+      const showNext = (nextFirstDate);
+
+      // Create the arrows and title
+      const monyearClass = `${coreClass}monyear `;
+
+      const prevCell = $('<div/>')
+        .addClass(monyearClass)
+        .css(
+          $.extend({}, cellCSS,
+            {
+
+            }),
+        )
+        .append(
+          $('<a/>')
+            .addClass(`prev-arrow${showPrev ? '' : '-off'}`)
+            .append($('<i/>').addClass('fa fa-angle-left').attr('aria-hidden', 'true')),
+        )
+        .mousedown(() => false)
+        .click((e) => {
+          if (options.prevArrow != '' && showPrev) {
+            e.stopPropagation();
+            setFirstDate(prevFirstDate);
+          }
+        });
+
+      const titleCellCount = maxCol - 2;
+      const titleWidth = (cellWidth * titleCellCount);
+      const titleCell = $('<div/>')
+        .addClass(monyearClass)
+        .css(
+          $.extend({}, cellCSS,
+            {
+              width: `${titleWidth}px`,
+
+            }),
+        );
+
+      const nextCell = $('<div/>')
+        .addClass(monyearClass)
+        .css(
+          $.extend({}, cellCSS,
+            {
+
+            }),
+        )
+        .append(
+          $('<a/>')
+            .addClass(`next-arrow${showNext ? '' : '-off'}`)
+            .append($('<i/>').addClass('fa fa-angle-right').attr('aria-hidden', 'true')),
+        )
+        .mousedown(() => false)
+        .click((e) => {
+          if (options.nextArrow != '' && showNext) {
+            e.stopPropagation();
+            setFirstDate(nextFirstDate);
+          }
+        });
+
+      // Add cells for prev/title/next
+
+      const big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
+      calendar.prev('input').val(options.selectedDate.toISOString().slice(0, 10));
+      calendar
+        .append(big_number)
+        .append(prevCell)
+        .append(titleCell)
+        .append(nextCell)
+        .append($('<div/>').addClass('cell-container'));
+
+      // Add all the cells to the calendar
+      for (let row = 0, cellIndex = 0; row < maxRow + 1; row++) {
+        for (let col = 0; col < maxCol; col++, cellIndex++) {
+          let cellDate = new Date(startDate);
+          var cellClass = 'day';
+          var cellZIndex = options.zIndex + (cellIndex);
+          var cell = $('<div/>');
+
+          if (!row) {
+            cellClass = 'dow';
+            cell.html(dowNames[col]);
+            cellDate = null;
+            cell
+              .data('data', { date: cellDate, data: specialData })
+              .addClass(coreClass + cellClass)
+              .css('width', cellWidth);
+
+            // Add cell to calendar
+						      calendar.children('.cell-container').append(cell);
+            continue;
+          } else {
+            // Get the new date for this cell
+            cellDate._add(col + ((row - 1) * maxCol));
+
+            // Get value for this date
+            var cellDateVal = cellDate._val();
+            var cellDateTime = cellDateVal.time;
+
+            // Variable to hold special data
+            var specialData = null;
+
+            // Determine if this date is selectable
+            var isSelectable = true;
+
+            // Helper function to get repeat friendly date against current date
+            var getRepeatDate = function (v, date) {
+              // If repeating, set the date's year and month accordingly
+              if (v.repeatYear === true) { date.setYear(cellDateVal.year); }
+              if (v.repeatMonth === true) { date.setMonth(cellDateVal.month); }
+
+              return date._val();
+            };
+
+            // Assign date for the cell
+            cell.html(cellDateVal.date);
+
+            // If we have selectable date ranges
+            if (options.selectableDateRange) {
+              isSelectable = false;
+              $.each(options.selectableDateRange, (i, v) => {
+                let dateFrom = v.from;
+                let dateTo = (v.to || null);
+
+                // If to is not specified, default to max days in the from month
+                dateTo = dateTo || new Date(v.from.getFullYear(), v.from.getMonth(), v.from._max());
+
+                // If repeating year, set the from and two to the current date's year
+                dateFrom = getRepeatDate(v, dateFrom);
+                dateTo = getRepeatDate(v, dateTo);
+
+                // Test to see if this date is selectable
+                if (cellDateTime >= dateFrom.time && cellDateTime <= dateTo.time) {
+                  isSelectable = true;
+                  return true;
+                }
+              });
+            }
+
+            // Handle date ranges and collections
+            if (options.selectableDates) {
+              if ((options.selectableDateRange && !isSelectable) || (isSelectable && !options.selectableDateRange)) {
+                isSelectable = false;
+              }
+              $.each(options.selectableDates, (i, v) => {
+                const vDate = getRepeatDate(v, v.date);
+
+                if (vDate.time == cellDateTime) {
+                  return (isSelectable = true);
+                }
+              });
+            }
+
+            // If not active or if not within selectableMonths, set to noday otherwise evaluate accordingly
+            if (!isSelectable ||
+        selectableYears._indexOf(cellDateVal.year) < 0 ||
+        selectableMonths._indexOf(cellDateVal.month) < 0 ||
+        selectableDOW._indexOf(cellDateVal.day) < 0) {
+              cellClass = 'noday';
+            } else {
+              // Handle active dates and weekends
+              cellClass = (['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'])[cellDateVal.day];
+
+              // Handle today or selected dates
+              if (firstDateMonth != cellDateVal.month) { cellClass += ' outday'; }
+              if (todayTime == cellDateTime) { cellClass = 'today'; cellZIndex += 50; }
+              if (options.selectedDate._time() == cellDateTime) { cellClass = 'selected'; cellZIndex += 51; }
+
+              // Handle special dates
+              if (options.specialDates) {
+                $.each(options.specialDates, (i, v) => {
+                  const vDate = getRepeatDate(v, v.date);
+
+                  if (vDate.time == cellDateTime) {
+                    cellClass = (v.cssClass || 'special');
+                    cellZIndex += 52;
+                    specialData = v.data;
+                  }
+                });
+              }
+
+              cell
+                .mousedown(() => false)
+                .hover(function (e) {
+                  e.stopPropagation();
+
+                  // Get the data from this cell
+                  const hoverData = $(this).data('data');
+
+                  // Call callback
+                  options.onHover(el, cell, hoverData.date, hoverData.data);
+                })
+                .click(function (e) {
+                  e.stopPropagation();
+
+                  // Get the data from this cell
+                  const clickedData = $(this).data('data');
+
+                  // Save date to selected and first
+                  options.selectedDate = options.firstDate = clickedData.date;
+
+                  // Update calendar (and auto-hide if necessary)
+                  self.render(() => {
+                    if (!options.showAlways && options.hideOnClick) {
+                      self.hide();
+                    }
+                  });
+                  calendar.children('.big_number').text($(this).html());
+                  calendar.prev('input').val(clickedData.date.toISOString().slice(0, 10));
+                  // Call callback
+                  options.onClick(el, $(this), clickedData.date, clickedData.data);
+                });
+            }
+          }
+
+          // Update the css for the cell
+          $.extend(cellCSS,
+            {
+              borderTopWidth: borderSize,
+              borderBottomWidth: borderSize,
+              borderLeftWidth: (row > 0 || (!row && !col)) ? borderSize : 0,
+              borderRightWidth: (row > 0 || (!row && col == 6)) ? borderSize : 0,
+              zIndex: cellZIndex,
+            });
+
+          // Assign other properties to the cell
+          cell
+            .data('data', { date: cellDate, data: specialData })
+            .addClass(coreClass + cellClass)
+            .css(cellCSS);
+
+          // Add cell to calendar
+          calendar.children('.cell-container').append(cell);
+        }
+      }
+
+
+				 calendar.append($('<div/>').addClass('calendar__footer').click((e) => {
+        e.stopPropagation();
+        options.selectedDate = new Date();
+        setFirstDate(new Date());
+      }).text('today'));
+
+      // Helper function for toggling select and text
+      const toggleYearMonthSelect = function (showYear) {
+        const show = 'inline-block';
+        const hide = 'none';
+
+        if (options.allowMonthSelect) {
+          monthText.css({ display: !showYear ? hide : show });
+          monthSelect.css({ display: !showYear ? show : hide });
+        }
+
+        if (options.allowYearSelect) {
+          yearText.css({ display: showYear ? hide : show });
+          yearSelect.css({ display: showYear ? show : hide });
+        }
+      };
+
+      // Helper function when select is updated
+      const onYearMonthSelect = function () {
+        options.firstDate = new Date(yearSelect.val(), monthSelect.val(), 1);
+        self.render();
+      };
+
+      // Build month selector
+      var monthSelect = $('<select/>')
+        .hide()
+        .change(onYearMonthSelect);
+
+      // Build year selector
+      var yearSelect = $('<select/>')
+        .hide()
+        .change(onYearMonthSelect);
+
+      // Build month label
+      var monthText = $('<span/>')
+        .html(monthNames[firstDateMonth])
+        .mousedown(() => false)
+        .click((e) => {
+          e.stopPropagation();
+          toggleYearMonthSelect(false);
+        });
+
+      // Build year label
+      var yearText = $('<span/>')
+        .html(firstDateYear)
+        .mousedown(() => false)
+        .click((e) => {
+          e.stopPropagation();
+          toggleYearMonthSelect(true);
+        });
+
+      // Populate month select
+      $.each(monthNames, (i, v) => {
+        if (options.allowMonthSelect && selectableMonths._indexOf(i) != -1) {
+          const o = $('<option/>').html(v).attr('value', i);
+          if (i == firstDateMonth) { o.attr('selected', 'selected'); }
+          monthSelect.append(o);
+        }
+      });
+
+      // Populate year select
+      $.each(selectableYears, (i, v) => {
+        if (options.allowYearSelect) {
+          const o = $('<option/>').html(v).attr('value', v);
+          if (v == firstDateYear) { o.attr('selected', 'selected'); }
+          yearSelect.append(o);
+        }
+      });
+
+      const titleYearMonth = $('<div/>')
+        .append(monthText)
+        .append(monthSelect);
+
+      // Add to title
+      titleCell.children().remove();
+      titleCell.append(titleYearMonth);
+
+      // Run the callback signaling end of the render
+      renderCalback = renderCalback || (function () {});
+      renderCalback();
+    },
+  };
+
+    // Return the plugin
+    return glDatePicker;
+  }());
+
+  // One time initialization of useful prototypes
+  (function () {
+    Date.prototype._clear = function () {
+      this.setHours(0);
+      this.setMinutes(0);
+      this.setSeconds(0);
+      this.setMilliseconds(0);
+
+      return this;
+    };
+
+    Date.prototype._time = function () {
+      return this._clear().getTime();
+    };
+
+    Date.prototype._max = function () {
+      const isLeapYear = (new Date(this.getYear(), 1, 29).getMonth() == 1) ? 1 : 0;
+      const days = [31, 28 + isLeapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+      return days[this.getMonth()];
+    };
+
+    Date.prototype._add = function (days) {
+      this.setDate(this.getDate() + days);
+    };
+
+    Date.prototype._first = function () {
+      const date = new Date(this);
+      date.setDate(1);
+
+      return date;
+    };
+
+    Date.prototype._val = function () {
+      this._clear();
+
+      return {
+        year: this.getFullYear(),
+        month: this.getMonth(),
+        date: this.getDate(),
+        time: this.getTime(),
+        day: this.getDay(),
+      };
+    };
+
+    Array.prototype._indexOf = function (value) {
+      return $.inArray(value, this);
+    };
+
+
+    $('.calendar').glDatePicker();
+  }());
+}(jQuery));
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(72);
+var content = __webpack_require__(73);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -29995,7 +30100,7 @@ if(false) {
 }
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -30003,46 +30108,47 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(73) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(74) + ");\n}\n@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(75) + ");\n}\n.big_number {\n  width: 100%;\n  text-align: center;\n  background-color: #e75735;\n  font-family: LatoLight;\n  font-size: 10em;\n  color: #fff;\n  padding-bottom: 0.125em;\n}\n.calendar__footer {\n  font-family: LatoBlack;\n  font-size: 1.7em;\n  color: #868686;\n  text-transform: uppercase;\n  padding: 1.3em;\n  background-color: #e5e5e5;\n  cursor: pointer;\n}\n.gldp-default {\n  position: absolute;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n/* Core style for every cell */\n.gldp-default .core {\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  position: relative;\n  float: left;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  cursor: pointer;\n  color: #868686;\n  background: #f2f2f2;\n  font-family: SourceSansProRegular;\n}\n.cell-container:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n.gldp-default .core:nth-child(7n+1) {\n  border-left: none !important;\n}\n.gldp-default .core:nth-child(7n) {\n  border-right: none !important;\n}\n/* Cell border */\n.gldp-default .border {\n  border-style: solid;\n  border-width: 0;\n  border-color: #fff;\n}\n/* Month/Year text and select */\n.gldp-default .monyear {\n  font-family: LatoLight;\n  font-size: 3em;\n  background-color: #d54c2c;\n  color: #fff;\n}\n/* Month/Year text */\n.gldp-default .monyear i {\n  margin-top: 0.27em;\n}\n/* Prev/Next arrows */\n.gldp-default .prev-arrow,\n.gldp-default .next-arrow {\n  color: #fff;\n}\n.gldp-default .prev-arrow:active,\n.gldp-default .next-arrow:active {\n  color: #9d9d9d;\n}\n.gldp-default .prev-arrow-off,\n.gldp-default .next-arrow-off {\n  color: #222;\n  opacity: 0.15;\n}\n/* Days of the week */\n.gldp-default .dow {\n  color: #fff;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  background: #e75735;\n  padding: 1.1em 0;\n}\n/* Weekdays */\n.gldp-default .mon,\n.gldp-default .tue,\n.gldp-default .wed,\n.gldp-default .thu,\n.gldp-default .fri,\n.gldp-default .sat,\n.gldp-default .sun {\n  font-size: 2.1em;\n}\n/* Selectable days that are outside of current month being shown */\n.gldp-default .outday {\n  color: #fff !important;\n}\n/* Currently selected day */\n.gldp-default .selected {\n  color: #fff;\n  background: #d54c2c;\n  font-size: 2.1em;\n}\n/* Today */\n.gldp-default .today {\n  color: #fff;\n  background: #88bfe8;\n  font-size: 2.1em;\n}\n.gldp_dark-blue .big_number,\n.gldp_dark-blue .dow,\n.gldp_dark-blue .selected {\n  background-color: #00416a;\n}\n.gldp_dark-blue .monyear {\n  background-color: #003455;\n}\n.gldp_purple .big_number,\n.gldp_purple .dow,\n.gldp_purple .selected {\n  background-color: #8b00ff;\n}\n.gldp_purple .monyear {\n  background-color: #6f00cc;\n}\n.gldp_red .big_number,\n.gldp_red .dow,\n.gldp_red .selected {\n  background-color: #e75735;\n}\n.gldp_red .monyear {\n  background-color: #cb3a18;\n}\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: LatoBlack;\n  src: url(" + __webpack_require__(74) + ");\n}\n@font-face {\n  font-family: LatoLight;\n  src: url(" + __webpack_require__(75) + ");\n}\n@font-face {\n  font-family: SourceSansProRegular;\n  src: url(" + __webpack_require__(76) + ");\n}\n.big_number {\n  width: 100%;\n  text-align: center;\n  background-color: #e75735;\n  font-family: LatoLight;\n  font-size: 10em;\n  color: #fff;\n  padding-bottom: 0.125em;\n}\n.calendar__footer {\n  font-family: LatoBlack;\n  font-size: 1.7em;\n  color: #868686;\n  text-transform: uppercase;\n  padding: 1.3em;\n  background-color: #e5e5e5;\n  cursor: pointer;\n}\n.gldp-default {\n  position: absolute;\n  border-radius: 0.5em;\n  overflow: hidden;\n}\n/* Core style for every cell */\n.gldp-default .core {\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  position: relative;\n  float: left;\n  padding: 0;\n  margin: 0;\n  text-align: center;\n  cursor: pointer;\n  color: #868686;\n  background: #f2f2f2;\n  font-family: SourceSansProRegular;\n}\n.cell-container:after {\n  content: '';\n  display: block;\n  clear: both;\n}\n.gldp-default .core:nth-child(7n+1) {\n  border-left: none !important;\n}\n.gldp-default .core:nth-child(7n) {\n  border-right: none !important;\n}\n/* Cell border */\n.gldp-default .border {\n  border-style: solid;\n  border-width: 0;\n  border-color: #fff;\n}\n/* Month/Year text and select */\n.gldp-default .monyear {\n  font-family: LatoLight;\n  font-size: 3em;\n  background-color: #d54c2c;\n  color: #fff;\n}\n/* Month/Year text */\n.gldp-default .monyear i {\n  margin-top: 0.27em;\n}\n/* Prev/Next arrows */\n.gldp-default .prev-arrow,\n.gldp-default .next-arrow {\n  color: #fff;\n}\n.gldp-default .prev-arrow:active,\n.gldp-default .next-arrow:active {\n  color: #9d9d9d;\n}\n.gldp-default .prev-arrow-off,\n.gldp-default .next-arrow-off {\n  color: #222;\n  opacity: 0.15;\n}\n/* Days of the week */\n.gldp-default .dow {\n  color: #fff;\n  font-family: LatoBlack;\n  text-transform: uppercase;\n  background: #e75735;\n  padding: 1.1em 0;\n}\n/* Weekdays */\n.gldp-default .mon,\n.gldp-default .tue,\n.gldp-default .wed,\n.gldp-default .thu,\n.gldp-default .fri,\n.gldp-default .sat,\n.gldp-default .sun {\n  font-size: 2.1em;\n}\n/* Selectable days that are outside of current month being shown */\n.gldp-default .outday {\n  color: #fff !important;\n}\n/* Currently selected day */\n.gldp-default .selected {\n  color: #fff;\n  background: #d54c2c;\n  font-size: 2.1em;\n}\n/* Today */\n.gldp-default .today {\n  color: #fff;\n  background: #88bfe8;\n  font-size: 2.1em;\n}\n.gldp_dark-blue .big_number,\n.gldp_dark-blue .dow,\n.gldp_dark-blue .selected {\n  background-color: #00416a;\n}\n.gldp_dark-blue .monyear {\n  background-color: #003455;\n}\n.gldp_purple .big_number,\n.gldp_purple .dow,\n.gldp_purple .selected {\n  background-color: #8b00ff;\n}\n.gldp_purple .monyear {\n  background-color: #6f00cc;\n}\n.gldp_red .big_number,\n.gldp_red .dow,\n.gldp_red .selected {\n  background-color: #e75735;\n}\n.gldp_red .monyear {\n  background-color: #cb3a18;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Lato-Black.ttf";
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/Lato-Light.ttf";
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/SourceSansProRegular.ttf";
 
 /***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messaging_styl__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messaging_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__messaging_styl__);
 
 
-__webpack_require__(77);
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(78);
+var content = __webpack_require__(79);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -30067,7 +30173,7 @@ if(false) {
 }
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -30081,110 +30187,123 @@ exports.push([module.i, ".messaging {\n  background-color: #f2f2f2;\n  border-ra
 
 
 /***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__video_styl__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__video_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__video_styl__);
 
-__webpack_require__(80);
 
-$(function () {
+const autoBind = __webpack_require__(3);
 
-    $('.player').each(function () {
+class VideoPlayer {
+  constructor(root) {
+    autoBind(this);
+    this.findControls(root);
+  }
 
-        var player = this.children[0];
-        var btnPlayPause = $(this).find('.player__controls-play').first();
-        var progressBar = $(this).find('.player__controls-progress').first();
-        var expand = $(this).find('.player__controls-fullscreen').first();
 
-        expand.click(function () {
+  findControls(root) {
+    const $root = $(root);
+    this.player = $root.children('video')[0];
+    this.$btnPlayPause = $root.find('.player__controls-play').first();
+    this.$progressBar = $root.find('.player__controls-progress').first();
+    this.$expand = $root.find('.player__controls-fullscreen').first();
+  }
 
-            toggleFullScreen();
-        });
+  setHandlers() {
+    this.$expand.on('click.expand', this.toggleFullScreen);
+    this.$btnPlayPause.on('click.pause', this.togglePlayPause);
+    this.$progressBar.on('click.progressBar', this.seek);
 
-        player.addEventListener('timeupdate', updateProgressBar, false);
+    this.player.addEventListener('play', this.play, false);
+    this.player.addEventListener('timeupdate', this.updateProgressBar, false);
+    this.player.addEventListener('pause', this.pause, false);
+    this.player.addEventListener('ended', this.pause);
+  }
 
-        btnPlayPause.click(function () {
 
-            if (player.paused || player.ended) {
+  updateProgressBar() {
+    this.$progressBar.val(Math.floor(this.player.currentTime / this.player.duration * 100));
+  }
 
-                player.play();
-            } else {
+  togglePlayPause() {
+    if (this.$player.paused || this.$player.ended) {
+      this.$player.play();
+    } else {
+      this.$player.pause();
+    }
+  }
 
-                player.pause();
-            }
-        });
+  play() {
+    this.$btnPlayPause.children('.svg-play').css('display', 'none');
+    this.$btnPlayPause.children('.svg-pause').css('display', 'block');
+  }
 
-        player.addEventListener('play', function () {
+  pause() {
+    this.$btnPlayPause.children('.svg-play').css('display', '');
+    this.$btnPlayPause.children('.svg-pause').css('display', '');
+  }
 
-            btnPlayPause.children('.svg-play').css('display', 'none');
-            btnPlayPause.children('.svg-pause').css('display', 'block');
+  onEndVideo() {
+    this.pause();
+  }
 
-            return false;
-        });
+  seek(e) {
+    const percent = e.offsetX / this.offsetWidth;
+    this.player.currentTime = percent * this.player.duration;
+    $(e.currentTarget).val(Math.floor(percent * 100));
+  }
 
-        player.addEventListener('pause', function () {
+  toggleFullScreen() {
+    if (this.player.requestFullscreen) {
+      if (document.fullScreenElement) {
+        document.cancelFullScreen();
+      } else {
+        this.player.requestFullscreen();
+      }
+    } else if (this.player.msRequestFullscreen) {
+      if (document.msFullscreenElement) {
+        document.msExitFullscreen();
+      } else {
+        this.player.msRequestFullscreen();
+      }
+    } else if (this.player.mozRequestFullScreen) {
+      if (document.mozFullScreenElement) {
+        document.mozCancelFullScreen();
+      } else {
+        this.player.mozRequestFullScreen();
+      }
+    } else if (this.player.webkitRequestFullscreen) {
+      if (document.webkitFullscreenElement) {
+        document.webkitCancelFullScreen();
+      } else {
+        this.player.webkitRequestFullscreen();
+      }
+    } else {
+      throw new Error('Fullscreen API is not supported');
+    }
+  }
+}
 
-            btnPlayPause.children('.svg-play').css('display', '');
-            btnPlayPause.children('.svg-pause').css('display', '');
-
-            return false;
-        });
-
-        player.addEventListener('ended', function () {
-            this.pause();return false;
-        });
-
-        progressBar[0].addEventListener("click", seek);
-
-        function seek(e) {
-            var percent = e.offsetX / this.offsetWidth;
-            player.currentTime = percent * player.duration;
-            e.target.value = Math.floor(percent * 100);
-        }
-
-        function updateProgressBar() {
-
-            var percentage = Math.floor(player.currentTime / player.duration * 100);
-
-            progressBar[0].value = percentage;
-        }
-
-        function toggleFullScreen() {
-
-            if (player.requestFullscreen) if (document.fullScreenElement) {
-                document.cancelFullScreen();
-            } else {
-                player.requestFullscreen();
-            } else if (player.msRequestFullscreen) if (document.msFullscreenElement) {
-                document.msExitFullscreen();
-            } else {
-                player.msRequestFullscreen();
-            } else if (player.mozRequestFullScreen) if (document.mozFullScreenElement) {
-                document.mozCancelFullScreen();
-            } else {
-                player.mozRequestFullScreen();
-            } else if (player.webkitRequestFullscreen) if (document.webkitFullscreenElement) {
-                document.webkitCancelFullScreen();
-            } else {
-                player.webkitRequestFullscreen();
-            } else {
-                alert("Fullscreen API is not supported");
-            }
-        }
-    });
+$(() => {
+  $('.player').each(() => {
+    $(this).data('videoPlayer', new VideoPlayer(this));
+  });
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(81);
+var content = __webpack_require__(82);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -30209,7 +30328,7 @@ if(false) {
 }
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -30217,7 +30336,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, ".player {\n  border-radius: 0.5em;\n  overflow: hidden;\n  position: relative;\n}\n.player video {\n  width: 100%;\n  background: #000;\n}\n.player video[poster] {\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.player .player__controls {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background-color: rgba(0,0,0,0.6);\n  padding-top: 8%;\n}\n.player .player__controls .player__controls-inner {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  left: 0;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.player .player__controls .player__controls-inner .player__controls-play {\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-play svg {\n  height: 30%;\n  width: 30%;\n  margin: 35%;\n}\n.player .player__controls .player__controls-inner .player__controls-play .svg-pause {\n  display: none;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen {\n  background-color: #e75735;\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen svg {\n  height: 50%;\n  width: 50%;\n  margin: 25%;\n}\n.player .player__controls .player__controls-inner .player__controls-progress {\n  color: #e75735;\n  margin-left: -5%;\n  width: 80%;\n  height: 0.5em;\n  border: none;\n  overflow: hidden;\n  border-radius: 0.9em;\n  vertical-align: middle;\n}\n.player .player__controls .player__controls-inner .player__controls-progress::-moz-progress-bar {\n  background-color: #e75735;\n}\n.player .player__controls .player__controls-inner .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e75735;\n}\n.player .player__controls .player__controls-inner .player__controls-progress[value]::-webkit-progress-bar {\n  background-color: #e5e5e5;\n}\n.player.player_red .player__controls-fullscreen {\n  background-color: #e23402 !important;\n}\n.player.player_red .player__controls-progress {\n  color: #e23402 !important;\n}\n.player.player_red .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e23402 !important;\n}\n.player.player_red .player__controls-progress::-moz-progress-bar {\n  background-color: #e23402 !important;\n}\n.player.player_blue .player__controls-fullscreen {\n  background-color: #4eb7a8 !important;\n}\n.player.player_blue .player__controls-progress {\n  color: #4eb7a8 !important;\n}\n.player.player_blue .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #4eb7a8 !important;\n}\n.player.player_blue .player__controls-progress::-moz-progress-bar {\n  background-color: #4eb7a8 !important;\n}\n", ""]);
+exports.push([module.i, ".player {\n  border-radius: 0.5em;\n  overflow: hidden;\n  position: relative;\n}\n.player video {\n  width: 100%;\n  background: #000;\n}\n.player video[poster] {\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.player .player__controls {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background-color: rgba(0,0,0,0.6);\n  padding-top: 8%;\n}\n.player .player__controls .player__controls-inner {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  left: 0;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.player .player__controls .player__controls-inner .player__controls-play {\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-play svg {\n  height: 30%;\n  width: 30%;\n  margin: 35%;\n}\n.player .player__controls .player__controls-inner .player__controls-play .svg-pause {\n  display: none;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen {\n  height: 100%;\n  width: 8%;\n}\n.player .player__controls .player__controls-inner .player__controls-fullscreen svg {\n  height: 50%;\n  width: 50%;\n  margin: 25%;\n}\n.player .player__controls .player__controls-inner .player__controls-progress {\n  margin-left: -5%;\n  width: 80%;\n  height: 0.5em;\n  border: none;\n  overflow: hidden;\n  border-radius: 0.9em;\n  vertical-align: middle;\n}\n.player .player__controls .player__controls-inner .player__controls-progress[value]::-webkit-progress-bar {\n  background-color: #e5e5e5;\n}\n.player.player_default .player__controls-fullscreen {\n  background-color: #e75735;\n}\n.player.player_default .player__controls-progress {\n  color: #e75735;\n}\n.player.player_default .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e75735;\n}\n.player.player_default .player__controls-progress::-moz-progress-bar {\n  background-color: #e75735;\n}\n.player.player_red .player__controls-fullscreen {\n  background-color: #e23402;\n}\n.player.player_red .player__controls-progress {\n  color: #e23402;\n}\n.player.player_red .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #e23402;\n}\n.player.player_red .player__controls-progress::-moz-progress-bar {\n  background-color: #e23402;\n}\n.player.player_blue .player__controls-fullscreen {\n  background-color: #4eb7a8;\n}\n.player.player_blue .player__controls-progress {\n  color: #4eb7a8;\n}\n.player.player_blue .player__controls-progress[value]::-webkit-progress-value {\n  background-color: #4eb7a8;\n}\n.player.player_blue .player__controls-progress::-moz-progress-bar {\n  background-color: #4eb7a8;\n}\n", ""]);
 
 // exports
 

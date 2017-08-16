@@ -1,84 +1,65 @@
-import "./pie-chart.styl";
+import './pie-chart.styl';
 
 
-( function ($) {
-
-  class CanvasRenderer { 
-      
-      
-    constructor(element, percent, linewidth, barcolor) {
-          
-        this.element = element;
-        this.percent = percent;
-        this.linewidth = linewidth;
-        this.barcolor = barcolor;
-        this.trackcolor = '#eee';
-   
-        this.canvas = document.createElement('canvas');
-
-        element.appendChild(this.canvas);
-
-        this.ctx = this.canvas.getContext('2d');
-     
-        }
-      
-        draw() {
-            
-        var width = $(this.element).outerWidth();
-        
-        this.canvas.width = this.canvas.height = width;
-          
-        this.ctx.translate(width / 2.0, width / 2.0);
-            
-        this.ctx.rotate( -0.5 * Math.PI);
-            
-        this.radius = (width -  this.linewidth * width / 100.0 ) / 2.0;
-        
-        if(this.percent != 0)
-            {
-                this.drawCircle(1, this.trackcolor);
-                this.drawCircle(this.percent / 100.0, this.barcolor);
-            }
-        }
-
-        drawCircle( percent, color ) {
+class CanvasRenderer {
+  constructor(element, percent, linewidth, barcolor) {
+    this.$element = $(element);
+    this.percent = percent;
+    this.linewidth = linewidth;
+    this.barcolor = barcolor;
+    this.trackcolor = '#eee';
+    this.$value = this.$element.children('.pie-chart__inner')
+      .children('.pie-chart__value')
+      .children('span');
 
 
-          this.ctx.beginPath();
-          this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
+    this.canvas = document.createElement('canvas');
 
-          this.ctx.strokeStyle = color;
-          this.ctx.lineWidth = this.linewidth * $(this.element).outerWidth() / 100.0;
+    this.$element.append(this.canvas);
 
-          this.ctx.stroke();
-        }
-   
-  
+    this.ctx = this.canvas.getContext('2d');
 
-     
-  };
+    this.draw();
 
-
-    $('.pie-chart').each(function () {
-        
-        let renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
-
-    
-        let value = $(this).data('percent');
-          
-       $(this).children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',$(this).outerWidth()/2.4 ).html(value);
-          
-        renderer.draw();
-            
-        let _this = $(this);
-        $(window).resize(function(){
-            
-            _this.children(".pie-chart__inner").children(".pie-chart__value").children("span").css('font-size',_this.outerWidth()/2.4 )
-            renderer.draw();
-            
-        });
-      
+    $(window).resize(() => {
+      this.draw();
     });
-  
+  }
 
-})(jQuery)
+  drawCircle(percent, color) {
+    this.ctx.beginPath();
+    this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
+
+    this.ctx.strokeStyle = color;
+    this.ctx.lineWidth = this.linewidth * this.$element.outerWidth() / 100.0;
+
+    this.ctx.stroke();
+  }
+
+  draw() {
+    const width = this.$element.outerWidth();
+
+    this.canvas.width = width;
+    this.canvas.height = width;
+
+    this.ctx.translate(width / 2.0, width / 2.0);
+
+    this.ctx.rotate(-0.5 * Math.PI);
+
+    this.radius = (width - this.linewidth * width / 100.0) / 2.0;
+
+    if (this.percent !== 0) {
+      this.drawCircle(1, this.trackcolor);
+      this.drawCircle(this.percent / 100.0, this.barcolor);
+    }
+
+    this.$value.css('font-size', this.$element.outerWidth() / 2.4)
+      .html(this.percent);
+  }
+}
+
+
+$('.pie-chart').each((index, element) => {
+  $(element).data('pieChart', new CanvasRenderer(element, $(element).data('percent'), $(element).data('linewidth'), $(element).data('barcolor')));
+});
+

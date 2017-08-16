@@ -1,110 +1,100 @@
-import './video.styl'
-
-$( function(){
-    
-    
-    $('.player').each(function(){
-        
-        
-        var player = this.children[0];
-	    var btnPlayPause = $(this).find('.player__controls-play').first();
-	    var progressBar  = $(this).find('.player__controls-progress').first();
-        var expand = $(this).find('.player__controls-fullscreen').first();
-        
-     
-    expand.click(function(){
-            
-            toggleFullScreen();
-        });
-        
-     player.addEventListener('timeupdate', updateProgressBar, false);
- 
-     btnPlayPause.click( function() {
-             
-       
-            if (player.paused || player.ended) {
+import './video.styl';
 
 
-                player.play();
-            }
-            else {
-
-                player.pause();
-            }
-  }); 
-   
-	player.addEventListener('play', function() {
-		
-        btnPlayPause.children('.svg-play').css('display', 'none');
-        btnPlayPause.children('.svg-pause').css('display', 'block');
-        
-        return false;
-	});
-  
-	player.addEventListener('pause', function() {
-	 
-        btnPlayPause.children('.svg-play').css('display', '');
-        btnPlayPause.children('.svg-pause').css('display', '');
-		
-        return false;
-	});
-	
-	
-  
-	player.addEventListener('ended', function() { this.pause(); return false});	
-  
-  progressBar[0].addEventListener("click", seek);
-
-  function seek(e) {
-      var percent = e.offsetX / this.offsetWidth;
-      player.currentTime = percent * player.duration;
-      e.target.value = Math.floor(percent * 100); 
-  
+class VideoPlayer {
+  constructor(root) {
+    autoBind(this);
+    this.findControls(root);
+    this.setHandlers();
   }
 
 
-  function updateProgressBar() {
-  	
-  	var percentage = Math.floor( player.currentTime /  player.duration * 100 );
-  	
-  	progressBar[0].value = percentage;
-  
+  findControls(root) {
+    const $root = $(root);
+    this.player = $root.children('video')[0];
+    this.$btnPlayPause = $root.find('.player__controls-play').first();
+    this.$progressBar = $root.find('.player__controls-progress').first();
+    this.$expand = $root.find('.player__controls-fullscreen').first();
   }
-  
-  function toggleFullScreen () {
-  
 
-    if (player.requestFullscreen)
-        if (document.fullScreenElement) {
-            document.cancelFullScreen();
-        } else {
-            player.requestFullscreen();
-        }
-        else if (player.msRequestFullscreen)
-        if (document.msFullscreenElement) {
-            document.msExitFullscreen();
-        } else {
-            player.msRequestFullscreen();
-        }
-        else if (player.mozRequestFullScreen)
-        if (document.mozFullScreenElement) {
-            document.mozCancelFullScreen();
-        } else {
-            player.mozRequestFullScreen();
-        }
-        else if (player.webkitRequestFullscreen)
-        if (document.webkitFullscreenElement) {
-            document.webkitCancelFullScreen();
-        } else {
-            player.webkitRequestFullscreen();
-        }
-    else {
-        alert("Fullscreen API is not supported");
-        
+  setHandlers() {
+    this.$expand.on('click.expand', this.toggleFullScreen);
+    this.$btnPlayPause.on('click.pause', this.togglePlayPause);
+    this.$progressBar.on('click.progressBar', this.seek);
+
+    this.player.addEventListener('play', this.play, false);
+    this.player.addEventListener('timeupdate', this.updateProgressBar, false);
+    this.player.addEventListener('pause', this.pause, false);
+    this.player.addEventListener('ended', this.pause);
+  }
+
+
+  updateProgressBar() {
+    this.$progressBar.val(Math.floor(this.player.currentTime / this.player.duration * 100));
+  }
+
+  togglePlayPause() {
+    if (this.player.paused || this.player.ended) {
+      this.player.play();
+    } else {
+      this.player.pause();
     }
   }
-    
-      }); 
-})
 
+  play() {
+    this.$btnPlayPause.children('.svg-play').css('display', 'none');
+    this.$btnPlayPause.children('.svg-pause').css('display', 'block');
+  }
+
+  pause() {
+    this.$btnPlayPause.children('.svg-play').css('display', '');
+    this.$btnPlayPause.children('.svg-pause').css('display', '');
+  }
+
+  onEndVideo() {
+    this.pause();
+  }
+
+  seek(e) {
+    const percent = e.offsetX / e.currentTarget.offsetWidth;
+    this.player.currentTime = percent * this.player.duration;
+    $(e.currentTarget).val(Math.floor(percent * 100));
+  }
+
+  toggleFullScreen() {
+    if (this.player.requestFullscreen) {
+      if (document.fullScreenElement) {
+        document.cancelFullScreen();
+      } else {
+        this.player.requestFullscreen();
+      }
+    } else if (this.player.msRequestFullscreen) {
+      if (document.msFullscreenElement) {
+        document.msExitFullscreen();
+      } else {
+        this.player.msRequestFullscreen();
+      }
+    } else if (this.player.mozRequestFullScreen) {
+      if (document.mozFullScreenElement) {
+        document.mozCancelFullScreen();
+      } else {
+        this.player.mozRequestFullScreen();
+      }
+    } else if (this.player.webkitRequestFullscreen) {
+      if (document.webkitFullscreenElement) {
+        document.webkitCancelFullScreen();
+      } else {
+        this.player.webkitRequestFullscreen();
+      }
+    } else {
+      throw new Error('Fullscreen API is not supported');
+    }
+  }
+}
+
+$(() => {
+  $('.player').each((index, element) => {
+    $(element).data('videoPlayer', new VideoPlayer(element));
+  });
+});
 

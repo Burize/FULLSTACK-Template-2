@@ -1,0 +1,21 @@
+"extends": "airbnb-base"
+"globals": {
+        "$": false,
+        "jQuery": false,
+        "window": false,
+        "document": false,
+        "google": false,
+        "autoBind": false
+}
+"rules": {
+    "linebreak-style": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-expressions": ['error', {
+      "allowShortCircuit": true,
+      "allowTernary": true,
+      "allowTaggedTemplates": true,
+    }],
+    "class-methods-use-this": 0,
+    "no-mixed-operators": 0,
+    "import/no-unresolved": 0
+}
