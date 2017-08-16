@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/public/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 4);
@@ -10785,49 +10785,44 @@ module.exports = self => {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_styl__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_styl__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Elements_Button_button__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Elements_Arrow_button_Arrow_button__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Elements_pie_chart_pie_chart__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Elements_donut_chart_donut_chart__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Elements_slider_slider__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Elements_stage_stage_styl__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Elements_CustomForm_CustomForm__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Elements_toggle_toggle__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Elements_tick_box_tick_box__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Elements_Profil_profil__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Elements_news_news__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Elements_event_event__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Elements_location_location__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Elements_calendar_calendar__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Elements_messaging_messaging__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Elements_video_video__ = __webpack_require__(80);
 
 
+__webpack_require__(5);
 
+__webpack_require__(28);
 
+__webpack_require__(31);
 
+__webpack_require__(34);
 
+__webpack_require__(37);
 
+__webpack_require__(39);
 
+__webpack_require__(42);
 
+__webpack_require__(44);
 
+__webpack_require__(53);
 
+__webpack_require__(56);
 
+__webpack_require__(59);
 
+__webpack_require__(62);
 
+__webpack_require__(65);
 
+__webpack_require__(68);
 
+__webpack_require__(71);
 
+__webpack_require__(77);
 
-
+__webpack_require__(80);
 
 /***/ }),
 /* 5 */
@@ -11099,42 +11094,33 @@ module.exports = function (css) {
 
 /***/ }),
 /* 28 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_styl__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__button_styl__);
+/* WEBPACK VAR INJECTION */(function($) {
 
+__webpack_require__(29);
 
-
-$(() => {
+$(function () {
   $('.ripple-button').on('click', function (event) {
-    const $div = $('<div/>');
-    const btnOffset = $(this).offset();
-    const xPos = event.pageX - btnOffset.left;
-    const yPos = event.pageY - btnOffset.top;
+    var btnOffset = $(this).offset();
+    var xPos = event.pageX - btnOffset.left;
+    var yPos = event.pageY - btnOffset.top;
 
+    var $div = $('<div/>').addClass('ripple').css({
+      top: yPos - $(this).height() / 2,
+      left: xPos - $(this).height() / 2,
+      background: $(this).data('ripple-color')
+    });
 
-    $div.addClass('ripple');
-    const $ripple = $('.ripple');
+    $(this).append($div);
 
-    $ripple.css('height', $(this).height());
-    $ripple.css('width', $(this).height());
-    $div
-      .css({
-        top: yPos - ($ripple.height() / 2),
-        left: xPos - ($ripple.width() / 2),
-        background: $(this).data('ripple-color'),
-      })
-      .appendTo($(this));
-
-    window.setTimeout(() => {
+    window.setTimeout(function () {
       $div.remove();
     }, 1500);
   });
 });
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 29 */
@@ -11183,14 +11169,12 @@ exports.push([module.i, ".ripple-button {\n  background-color: #e75735;\n  color
 
 /***/ }),
 /* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrow_button_styl__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__arrow_button_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__arrow_button_styl__);
 
 
-
+__webpack_require__(32);
 
 /***/ }),
 /* 32 */
@@ -11239,86 +11223,84 @@ exports.push([module.i, ".arrow-button {\n  cursor: pointer;\n}\n.arrow-button .
 
 /***/ }),
 /* 34 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_chart_styl__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pie_chart_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__pie_chart_styl__);
+/* WEBPACK VAR INJECTION */(function($) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-(function ($) {
-  class CanvasRenderer {
-    constructor(element, percent, linewidth, barcolor) {
-      this.element = element;
-      this.percent = percent;
-      this.linewidth = linewidth;
-      this.barcolor = barcolor;
-      this.trackcolor = '#eee';
+__webpack_require__(35);
 
-      this.canvas = document.createElement('canvas');
+var CanvasRenderer = (function () {
+    function CanvasRenderer(element, percent, linewidth, barcolor) {
+        var _this = this;
 
-      element.appendChild(this.canvas);
+        _classCallCheck(this, CanvasRenderer);
 
-      this.ctx = this.canvas.getContext('2d');
+        this.$element = $(element);
+        this.percent = percent;
+        this.linewidth = linewidth;
+        this.barcolor = barcolor;
+        this.trackcolor = '#eee';
+        this.$value = this.$element.children('.pie-chart__inner').children('.pie-chart__value').children('span');
+
+        this.canvas = document.createElement('canvas');
+
+        this.$element.append(this.canvas);
+
+        this.ctx = this.canvas.getContext('2d');
+
+        this.draw();
+
+        $(window).resize(function () {
+            _this.draw();
+        });
     }
 
-    draw() {
-      const width = $(this.element).outerWidth();
+    _createClass(CanvasRenderer, [{
+        key: 'drawCircle',
+        value: function drawCircle(percent, color) {
+            this.ctx.beginPath();
+            this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
 
-      this.canvas.width = width;
-      this.canvas.height = width;
+            this.ctx.strokeStyle = color;
+            this.ctx.lineWidth = this.linewidth * this.$element.outerWidth() / 100.0;
 
-      this.ctx.translate(width / 2.0, width / 2.0);
+            this.ctx.stroke();
+        }
+    }, {
+        key: 'draw',
+        value: function draw() {
+            var width = this.$element.outerWidth();
 
-      this.ctx.rotate(-0.5 * Math.PI);
+            this.canvas.width = width;
+            this.canvas.height = width;
 
-      this.radius = (width - this.linewidth * width / 100.0) / 2.0;
+            this.ctx.translate(width / 2.0, width / 2.0);
 
-      if (this.percent !== 0) {
-        this.drawCircle(1, this.trackcolor);
-        this.drawCircle(this.percent / 100.0, this.barcolor);
-      }
-    }
+            this.ctx.rotate(-0.5 * Math.PI);
 
-    drawCircle(percent, color) {
-      this.ctx.beginPath();
-      this.ctx.arc(0, 0, this.radius, 0, Math.PI * 2.0 * percent);
+            this.radius = (width - this.linewidth * width / 100.0) / 2.0;
 
-      this.ctx.strokeStyle = color;
-      this.ctx.lineWidth = this.linewidth * $(this.element).outerWidth() / 100.0;
+            if (this.percent !== 0) {
+                this.drawCircle(1, this.trackcolor);
+                this.drawCircle(this.percent / 100.0, this.barcolor);
+            }
 
-      this.ctx.stroke();
-    }
-  }
+            this.$value.css('font-size', this.$element.outerWidth() / 2.4).html(this.percent);
+        }
+    }]);
 
+    return CanvasRenderer;
+})();
 
-  $('.pie-chart').each(function () {
-    const renderer = new CanvasRenderer(this, $(this).data('percent'), $(this).data('linewidth'), $(this).data('barcolor'));
-
-
-    const value = $(this).data('percent');
-
-    $(this).children('.pie-chart__inner')
-      .children('.pie-chart__value')
-      .children('span')
-      .css('font-size', $(this).outerWidth() / 2.4)
-      .html(value);
-
-    renderer.draw();
-
-    const _this = $(this);
-    $(window).resize(() => {
-      _this.children('.pie-chart__inner')
-        .children('.pie-chart__value')
-        .children('span')
-        .css('font-size', _this.outerWidth() / 2.4);
-      renderer.draw();
-    });
-  });
-}(jQuery));
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+$('.pie-chart').each(function (index, element) {
+    $(element).data('pieChart', new CanvasRenderer(element, $(element).data('percent'), $(element).data('linewidth'), $(element).data('barcolor')));
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 35 */
@@ -11369,75 +11351,75 @@ exports.push([module.i, ".pie-chart {\n  position: relative;\n  -webkit-user-sel
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(jQuery) {const d3 = __webpack_require__(38);
+"use strict";
+/* WEBPACK VAR INJECTION */(function(jQuery) {
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var d3 = __webpack_require__(38);
 
 (function ($) {
-  class DonutPie {
-    constructor(self, width, linewidth, pies) {
-      this.self = self;
-      this.width = $(this.self).outerWidth();
+  var DonutPie = (function () {
+    function DonutPie(root, width, linewidth, pies) {
+      var _this = this;
+
+      _classCallCheck(this, DonutPie);
+
+      this.$root = $(root);
+      this.width = this.$root.outerWidth();
       this.linewidth = linewidth;
       this.data = pies;
 
-      this.svg = d3.select(this.self)
-        .append('svg')
-        .append('g');
-
-      this.svg.append('g')
-        .attr('class', 'slices');
-
-      this.pie = d3.pie()
-        .sort(null)
-        .value(d => d.value);
-
-
-      this.slice = this.svg.select('.slices').selectAll('path.slice')
-        .data(this.pie(this.data));
+      this.createDOM();
 
       this.Display();
+
+      $(window).resize(function () {
+        _this.Display();
+      });
     }
 
-    Display() {
-      const radius = $(this.self).outerWidth() / 2;
+    _createClass(DonutPie, [{
+      key: 'createDOM',
+      value: function createDOM() {
+        this.svg = d3.select(this.$root[0]).append('svg').append('g');
 
-      $(this.self).children('svg')
-        .attr('width', radius * 2)
-        .attr('height', radius * 2)
-        .find('.slices')
-        .first()
-        .html('');
+        this.svg.append('g').attr('class', 'slices');
 
+        this.pie = d3.pie().sort(null).value(function (d) {
+          return d.value;
+        });
 
-      this.arc = d3.arc()
-        .outerRadius(radius * (1 - this.linewidth))
-        .innerRadius(radius);
+        this.slice = this.svg.select('.slices').selectAll('path.slice').data(this.pie(this.data));
+      }
+    }, {
+      key: 'Display',
+      value: function Display() {
+        var radius = this.$root.outerWidth() / 2;
 
+        this.$root.children('svg').attr('width', radius * 2).attr('height', radius * 2).find('.slices').first().html('');
 
-      this.svg.attr('transform', `translate(${radius},${radius})`);
+        this.arc = d3.arc().outerRadius(radius * (1 - this.linewidth)).innerRadius(radius);
 
+        this.svg.attr('transform', 'translate(' + radius + ',' + radius + ')');
 
-      this.slice.enter()
-        .insert('path')
-        .style('fill', d => d.data.color)
-        .attr('class', 'slice')
-        .attr('d', this.arc);
+        this.slice.enter().insert('path').style('fill', function (d) {
+          return d.data.color;
+        }).attr('class', 'slice').attr('d', this.arc);
 
-      this.slice.exit()
-        .remove();
-    }
-  }
+        this.slice.exit().remove();
+      }
+    }]);
 
+    return DonutPie;
+  })();
 
-  $('.donut-chart').each(function () {
-    const $donutpie = new DonutPie(this, $(this).outerWidth(), $(this).data('linewidth'), $(this).data('pies'));
-
-
-    $(window).resize(() => {
-      $donutpie.Display();
-    });
+  $('.donut-chart').each(function (index, element) {
+    $(element).data('donutPie', new DonutPie(element, $(element).outerWidth(), $(element).data('linewidth'), $(element).data('pies')));
   });
-}(jQuery));
-
+})(jQuery);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
@@ -28358,47 +28340,84 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ }),
 /* 39 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_styl__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__slider_styl__);
+/* WEBPACK VAR INJECTION */(function($, autoBind) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-$(() => {
-  $('.slider').each((index, _slider) => {
-    const slider = $(_slider).children('.slider__inner').children('svg');
-    const thumbElem = slider.children('circle');
-    const hint = $(_slider).children('.slider-hint');
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-    thumbElem.on('mousedown.slider', () => {
-      const sliderleft = slider.offset().left;
+__webpack_require__(40);
 
+var Slider = (function () {
+  function Slider(root) {
+    _classCallCheck(this, Slider);
 
-      $(document).on('mousemove.slider', (e) => {
-        let newLeft = (e.pageX - sliderleft) * 100.0 / slider.outerWidth();
+    this.$root = $(root);
 
-        if (newLeft < 5) { newLeft = 5; }
+    autoBind(this);
 
-        if (newLeft > 95.1) { newLeft = 95.1; }
+    this.findDOM(this.$root);
 
-        thumbElem.attr('cx', `${newLeft}%`);
+    this.setHandlers();
+  }
 
-        hint.css('left', `${newLeft - 6}%`).children('span').text(Math.round(newLeft * 1.099999) - 5);
-      });
+  _createClass(Slider, [{
+    key: 'findDOM',
+    value: function findDOM(root) {
+      this.slider = root.children('.slider__inner').children('svg');
+      this.thumbler = this.slider.children('circle');
+      this.hint = root.children('.slider-hint');
+    }
+  }, {
+    key: 'setHandlers',
+    value: function setHandlers() {
+      this.thumbler.on('mousedown.slider', this.tumblerPreMove);
+    }
+  }, {
+    key: 'tumblerPreMove',
+    value: function tumblerPreMove() {
+      $(document).on('mousemove.slider', this.thumblerMove);
 
-      $(document).on('mouseup.slider', () => {
+      $(document).on('mouseup.slider', function () {
         $(document).off('mousemove.slider');
         $(document).off('mouseup.slider');
       });
 
       return false;
-    });
+    }
+  }, {
+    key: 'thumblerMove',
+    value: function thumblerMove(e) {
+      var sliderleft = this.slider.offset().left;
+
+      var newLeft = (e.pageX - sliderleft) * 100.0 / this.slider.outerWidth();
+
+      if (newLeft < 5) {
+        newLeft = 5;
+      }
+
+      if (newLeft > 95.1) {
+        newLeft = 95.1;
+      }
+
+      this.thumbler.attr('cx', newLeft + '%');
+
+      this.hint.css('left', newLeft - 6 + '%').children('span').text(Math.round(newLeft * 1.099999) - 5);
+    }
+  }]);
+
+  return Slider;
+})();
+
+$(function () {
+  $('.slider').each(function (index, element) {
+    $(element).data('slider', new Slider(element));
   });
 });
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)))
 
 /***/ }),
 /* 40 */
@@ -28492,36 +28511,29 @@ exports.push([module.i, ".stage {\n  position: relative;\n  font-size: 1.5em;\n 
 
 /***/ }),
 /* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CustomForm_styl__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CustomForm_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CustomForm_styl__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Hint_hint__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Drop_down_drop_down__ = __webpack_require__(50);
+/* WEBPACK VAR INJECTION */(function(jQuery) {
 
+__webpack_require__(45);
 
+__webpack_require__(47);
 
+__webpack_require__(50);
 
 (function ($) {
   $('.custom-form__input-search.notFound').each(function () {
-    $(this).children('input')
-      .css('background-color', $(this).children('svg').css('background-color'))
-      .css('color', 'white')
-      .attr('value', "I've not found what i'm looking for ...");
+    $(this).children('input').css('background-color', $(this).children('svg').css('background-color')).css('color', 'white').attr('value', "I've not found what i'm looking for ...");
 
     $(this).children('input').focus(function (e) {
-      $(this).css('background-color', '')
-        .css('color', '')
-        .attr('value', '');
+      $(this).css('background-color', '').css('color', '').attr('value', '');
 
       $(this).unbind(e);
     });
   });
-}(jQuery));
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 45 */
@@ -28570,54 +28582,67 @@ exports.push([module.i, ".custom-form .custom-form__form-control {\n  background
 
 /***/ }),
 /* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hint_styl__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__hint_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__hint_styl__);
+/* WEBPACK VAR INJECTION */(function($) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-class Hint {
-  static Show(element, side, text, color) {
-    const $element = $(element);
-    $element.children().remove('.hint');
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-    const $hint = $('<div/>').addClass('hint').css('background-color', color);
-    const $hintText = $('<span/>').text(text);
-    const $hintArrow = $('<div/>').addClass('hint__arrow');
+__webpack_require__(48);
 
+var Hint = (function () {
+  function Hint() {
+    _classCallCheck(this, Hint);
+  }
 
-    switch (side) {
-      case 'left':
+  _createClass(Hint, null, [{
+    key: 'Show',
+    value: function Show(element, side, text, color) {
+      var $element = $(element);
+      $element.children().remove('.hint');
 
-        $hint.addClass('hint_left');
-        $hintArrow.css('border-color', `transparent transparent transparent ${color}`);
-        break;
+      var $hint = $('<div/>').addClass('hint').css('background-color', color);
+      var $hintText = $('<span/>').text(text);
+      var $hintArrow = $('<div/>').addClass('hint__arrow');
 
-      case 'right':
+      switch (side) {
+        case 'left':
 
-        $hint.addClass('hint_right');
-        $hintArrow.css('border-color', `transparent ${color} transparent transparent`);
-        break;
-      default:
+          $hint.addClass('hint_left');
+          $hintArrow.css('border-color', 'transparent transparent transparent ' + color);
+          break;
 
-        $hint.addClass('hint_right');
-        $hintArrow.css('border-color', `transparent ${color} transparent transparent`);
-        break;
+        case 'right':
+
+          $hint.addClass('hint_right');
+          $hintArrow.css('border-color', 'transparent ' + color + ' transparent transparent');
+          break;
+        default:
+
+          $hint.addClass('hint_right');
+          $hintArrow.css('border-color', 'transparent ' + color + ' transparent transparent');
+          break;
+      }
+
+      $hint.append($hintText).append($hintArrow);
+
+      $element.append($hint);
     }
+  }, {
+    key: 'Hide',
+    value: function Hide(element) {
+      var $element = $(element);
+      $element.children().remove('.hint');
+    }
+  }]);
 
-    $hint.append($hintText).append($hintArrow);
+  return Hint;
+})();
 
-    $element.append($hint);
-  }
-
-  static Hide(element) {
-    const $element = $(element);
-    $element.children().remove('.hint');
-  }
-}
-
-$(() => {
+$(function () {
   $('.message-form').each(function () {
     $(this).submit(function (e) {
       $(this).find('.hint-control').each(function () {
@@ -28667,8 +28692,7 @@ $(() => {
     });
   });
 });
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 48 */
@@ -28717,67 +28741,76 @@ exports.push([module.i, ".hint-form input {\n  position: static;\n}\n.hint-contr
 
 /***/ }),
 /* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__drop_down_styl__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__drop_down_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__drop_down_styl__);
+/* WEBPACK VAR INJECTION */(function(autoBind, $) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-const autoBind = __webpack_require__(3);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-class DropDown {
-  constructor(root) {
+__webpack_require__(51);
+
+var DropDown = (function () {
+  function DropDown(root) {
+    _classCallCheck(this, DropDown);
+
     autoBind(this);
 
     this.findDOM(root);
     this.setHandlers();
   }
 
-  findDOM(root) {
-    this.$root = $(root);
-    this.$inputSelect = this.root.find('select').first();
+  _createClass(DropDown, [{
+    key: 'findDOM',
+    value: function findDOM(root) {
+      this.$root = $(root);
+      this.$inputSelect = this.$root.find('select').first();
 
-    this.$selectedOption = this.root
-      .find('.custom-form__dropdown')
-      .first();
-  }
+      this.$selectedOption = this.$root.find('.custom-form__dropdown').first();
+    }
+  }, {
+    key: 'setHandlers',
+    value: function setHandlers() {
+      this.$selectedOption.on('click.dropDown', this.expand);
 
+      this.$root.find('li').on('click.dropDownOption', { dropDown: this, $inputSelect: this.$inputSelect, $selectedOption: this.$selectedOption }, this.selectOption);
+    }
+  }, {
+    key: 'expand',
+    value: function expand() {
+      this.$root.toggleClass('dropdown_open');
+      return false;
+    }
+  }, {
+    key: 'selectOption',
+    value: function selectOption(e) {
+      e.data.$selectedOption.contents().filter(function (index, element) {
+        return element.nodeType === 3;
+      }).remove();
 
-  setHandlers() {
-    this.$selectedOption.on('click.dropDown', this.expand);
+      e.data.$selectedOption.append(document.createTextNode($(e.currentTarget).html()));
 
-    this.$root.find('li').on('click.dropDownOption', { dropDown: this, $inputSelect: this.$inputSelect, $selectedOption: this.$selectedOption }, this.selectOption);
-  }
-  expand() {
-    this.$root.toggleClass('dropdown_open');
-    return false;
-  }
+      e.data.$inputSelect.val($(e.currentTarget).attr('value'));
+      e.data.dropDown.expand();
+      return false;
+    }
+  }]);
 
-  selectOption(e) {
-    e.data.selectedOption.contents().filter((index, element) => (element.nodeType === 3)).remove();
+  return DropDown;
+})();
 
-    e.data.$selectedOption.append(document.createTextNode($(e.currentTarget).html()));
-
-    e.data.$inputSelect.val($(e.currentTarget).attr('value'));
-    e.data.dropDown.expand();
-    return false;
-  }
-}
-
-$(() => {
+$(function () {
   $('.dropdown').each(function () {
     $(this).data('dropdown', new DropDown(this));
   });
 
-
-  $(window).click(() => {
+  $(window).click(function () {
     $('.dropdown').removeClass('dropdown_open');
   });
 });
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(2)))
 
 /***/ }),
 /* 51 */
@@ -28826,28 +28859,57 @@ exports.push([module.i, ".dropdown {\n  position: relative;\n  width: 100%;\n  c
 
 /***/ }),
 /* 53 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toggle_styl__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toggle_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__toggle_styl__);
+/* WEBPACK VAR INJECTION */(function($) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-$(() => {
-  $('.toggle').children('input').click((e) => {
-    e.stopPropagation();
-  });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  $('.toggle').click(function () {
-    $(this).toggleClass('toggle_off');
-  }).each(function () {
-    $(this).toggleClass('toggle_off');
+__webpack_require__(54);
 
-    if ($(this).attr('checked')) { $(this).click(); }
+var Toggle = (function () {
+  function Toggle(root) {
+    _classCallCheck(this, Toggle);
+
+    this.$root = $(root);
+
+    this.$root.toggleClass('toggle_off');
+
+    this.setHandlers();
+
+    if (this.$root.attr('checked')) {
+      this.$root.click();
+    }
+  }
+
+  _createClass(Toggle, [{
+    key: 'setHandlers',
+    value: function setHandlers() {
+      this.$root.on('click.toggle', this.toggle);
+
+      this.$root.children('input').click(function (e) {
+        e.stopPropagation();
+      });
+    }
+  }, {
+    key: 'toggle',
+    value: function toggle(e) {
+      $(e.currentTarget).toggleClass('toggle_off');
+    }
+  }]);
+
+  return Toggle;
+})();
+
+$(function () {
+  $('.toggle').each(function (index, element) {
+    $(element).data('toggle', new Toggle(element));
   });
 });
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 54 */
@@ -28896,32 +28958,57 @@ exports.push([module.i, ".toggle {\n  position: relative;\n  display: block;\n  
 
 /***/ }),
 /* 56 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tick_box_styl__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tick_box_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__tick_box_styl__);
+/* WEBPACK VAR INJECTION */(function($) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-$(() => {
-  $('.tick-box').children('input').click((e) => {
-    e.stopPropagation();
+__webpack_require__(57);
+
+var TickBox = (function () {
+  function TickBox(root) {
+    _classCallCheck(this, TickBox);
+
+    this.$root = $(root);
+
+    this.$root.toggleClass('tick-box_off');
+
+    this.setHandlers();
+
+    if (this.$root.attr('checked')) {
+      this.$root.click();
+    }
+  }
+
+  _createClass(TickBox, [{
+    key: 'setHandlers',
+    value: function setHandlers() {
+      this.$root.on('click.tickBox', this.toggle);
+
+      this.$root.children('input').click(function (e) {
+        e.stopPropagation();
+      });
+    }
+  }, {
+    key: 'toggle',
+    value: function toggle(e) {
+      $(e.currentTarget).toggleClass('tick-box_off');
+    }
+  }]);
+
+  return TickBox;
+})();
+
+$(function () {
+  $('.tick-box').each(function (index, element) {
+    $(element).data('tickBox', new TickBox(element));
   });
-
-  $('.tick-box').click(function () {
-    $(this).toggleClass('tick-box_off');
-  }).each(function () {
-    $(this).toggleClass('tick-box_off');
-
-    if ($(this).attr('checked')) { $(this).click(); }
-  });
-}).each(function () {
-  if ($(this).attr('checked')) { $(this).click(); }
 });
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 57 */
@@ -28970,13 +29057,12 @@ exports.push([module.i, ".tick-box {\n  cursor: pointer;\n  width: 1.5em;\n}\n.t
 
 /***/ }),
 /* 59 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profil_styl__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__profil_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__profil_styl__);
 
 
+__webpack_require__(60);
 
 /***/ }),
 /* 60 */
@@ -29025,13 +29111,12 @@ exports.push([module.i, ".profil {\n  display: -webkit-box;\n  display: -ms-flex
 
 /***/ }),
 /* 62 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__news_styl__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__news_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__news_styl__);
 
 
+__webpack_require__(63);
 
 /***/ }),
 /* 63 */
@@ -29080,13 +29165,12 @@ exports.push([module.i, ".news {\n  box-sizing: border-box;\n  background-size: 
 
 /***/ }),
 /* 65 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_styl__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__event_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__event_styl__);
 
 
+__webpack_require__(66);
 
 /***/ }),
 /* 66 */
@@ -29135,44 +29219,39 @@ exports.push([module.i, ".event {\n  box-sizing: border-box;\n  background-posit
 
 /***/ }),
 /* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__location_styl__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__location_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__location_styl__);
+/* WEBPACK VAR INJECTION */(function(jQuery) {
 
-
+__webpack_require__(69);
 
 (function ($) {
   $('.map').each(function () {
-    const map = new google.maps.Map($(this).children('.map__body')[0], {
+    var map = new google.maps.Map($(this).children('.map__body')[0], {
       center: { lat: $(this).data('lat'), lng: $(this).data('lng') },
       zoom: 15,
-      disableDefaultUI: true,
+      disableDefaultUI: true
     });
 
-
-    const markers = [];
+    var markers = [];
     markers.push(new google.maps.Marker({
-      map,
-      icon: $(this).data('marker') ?
-        {
-          url: $(this).data('marker'),
-          size: new google.maps.Size(110, 110),
-          origin: new google.maps.Point(0, 0),
-          anchor: new google.maps.Point(55, 110),
-          scaledSize: new google.maps.Size(110, 110),
-          labelOrigin: new google.maps.Point(18, 18),
-        } : '',
+      map: map,
+      icon: $(this).data('marker') ? {
+        url: $(this).data('marker'),
+        size: new google.maps.Size(110, 110),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(55, 110),
+        scaledSize: new google.maps.Size(110, 110),
+        labelOrigin: new google.maps.Point(18, 18)
+      } : '',
 
       title: 'test',
-      position: { lat: $(this).data('lat'), lng: $(this).data('lng') },
+      position: { lat: $(this).data('lat'), lng: $(this).data('lng') }
     }));
   });
-}(jQuery));
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 69 */
@@ -29221,12 +29300,10 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
 
 /***/ }),
 /* 71 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__glDatePicker_default_styl__);
-/*eslint-disable*/
+/* WEBPACK VAR INJECTION */(function(jQuery) {/*eslint-disable*/
 /*!
  * glDatePicker v2.0
  * http://glad.github.com/glDatePicker/
@@ -29239,12 +29316,14 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
 
 
 
+__webpack_require__(72);
+
 (function ($) {
   $.fn.glDatePicker = function (options) {
-    const pluginName = 'glDatePicker';
+    var pluginName = 'glDatePicker';
 
     // Find the plugin attached to the element
-    const instance = this.data(pluginName);
+    var instance = this.data(pluginName);
 
     // If the instance wasn't found, create it...
     if (!instance) {
@@ -29256,197 +29335,201 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
 
     // ...otherwise if the user passes true to the plugin (on the second call),
     // then return the instance of the plugin itself
-    return (options === true) ? instance : this;
+    return options === true ? instance : this;
   };
 
   // Default options
-  $.fn.glDatePicker.defaults =
- {
-   // Style to use for the calendar.  This name must match the name used in
-   // the stylesheet, using the class naming convention "gldp-cssName".
-   cssName: 'default',
+  $.fn.glDatePicker.defaults = {
+    // Style to use for the calendar.  This name must match the name used in
+    // the stylesheet, using the class naming convention "gldp-cssName".
+    cssName: 'default',
 
-   // The z-index for the calendar control.
-   zIndex: 1000,
+    // The z-index for the calendar control.
+    zIndex: 1000,
 
-   // Thickness of border (in pixels)
-   borderSize: 1,
+    // Thickness of border (in pixels)
+    borderSize: 1,
 
-   // The number of pixels to offset the calendar's position on the page.
-   calendarOffset: { x: 0, y: 1 },
+    // The number of pixels to offset the calendar's position on the page.
+    calendarOffset: { x: 0, y: 1 },
 
-   // Set to true if you want the calendar to be visible at all times.
-   // NOTE: If your target element is hidden, the calendar will be hidden as well.
-   showAlways: true,
+    // Set to true if you want the calendar to be visible at all times.
+    // NOTE: If your target element is hidden, the calendar will be hidden as well.
+    showAlways: true,
 
-   // Hide the calendar when a date is selected (only if showAlways is set to false).
-   hideOnClick: false,
+    // Hide the calendar when a date is selected (only if showAlways is set to false).
+    hideOnClick: false,
 
-   // Allow selection of months by clicking on the month in the title.
-   allowMonthSelect: false,
+    // Allow selection of months by clicking on the month in the title.
+    allowMonthSelect: false,
 
-   // Allow selection of years by clicking on the year in the title.
-   allowYearSelect: false,
+    // Allow selection of years by clicking on the year in the title.
+    allowYearSelect: false,
 
-   // The date that will be treated as 'today'.
-   todayDate: new Date(),
+    // The date that will be treated as 'today'.
+    todayDate: new Date(),
 
-   // The date that will appear selected when the calendar renders.
-   // By default it will be set to todayDate.
-   selectedDate: null,
+    // The date that will appear selected when the calendar renders.
+    // By default it will be set to todayDate.
+    selectedDate: null,
 
-   // Arrows used for the Previous and Next month buttons on the title.
-   // Set these to blank to hide the arrows completely.
-   prevArrow: '\u25c4',
-   nextArrow: '\u25ba',
+    // Arrows used for the Previous and Next month buttons on the title.
+    // Set these to blank to hide the arrows completely.
+    prevArrow: '◄',
+    nextArrow: '►',
 
-   // A collection of dates that can be selectable by the user.
-   // The dates can be a one-time selection or made repeatable by setting
-   // the repeatYear or repeatMonth flag to true.
-   // By default repeatYear and repeatMonth are false.
-   //
-   // This example creates 4-individual dates that can be selected;
-   // The first date will repeat every year, the second date will repeat every
-   // month and year, the third date will repeat every month and the fourth date
-   // will only be selectable one-time and not repeat:
-   //
-   //    selectableDates: [
-   //        { date: new Date(0, 8, 5), repeatYear: true },
-   //        { date: new Date(0, 0, 14), repeatMonth: true, repeatYear: true },
-   //        { date: new Date(2013, 0, 24), repeatMonth: true },
-   //        { date: new Date(2013, 11, 25) },
-   //    ]
-   selectableDates: null,
+    // A collection of dates that can be selectable by the user.
+    // The dates can be a one-time selection or made repeatable by setting
+    // the repeatYear or repeatMonth flag to true.
+    // By default repeatYear and repeatMonth are false.
+    //
+    // This example creates 4-individual dates that can be selected;
+    // The first date will repeat every year, the second date will repeat every
+    // month and year, the third date will repeat every month and the fourth date
+    // will only be selectable one-time and not repeat:
+    //
+    //    selectableDates: [
+    //        { date: new Date(0, 8, 5), repeatYear: true },
+    //        { date: new Date(0, 0, 14), repeatMonth: true, repeatYear: true },
+    //        { date: new Date(2013, 0, 24), repeatMonth: true },
+    //        { date: new Date(2013, 11, 25) },
+    //    ]
+    selectableDates: null,
 
-   // A collection of date ranges that are selectable by the user.
-   // The ranges can be made to repeat by setting repeatYear to true
-   // (repeatMonth is not supported).
-   //
-   // This example will create 3-sets of selectable date ranges with
-   // specific from and to ranges.  The 4th and 5th ranges don't specify
-   // the "to" date in which case the "to" date will be the maximum days for
-   // the month specified in "from".  The 4th and 5th ranges also repeat every year:
-   //
-   //     selectableDateRange: [
-   //         { from: new Date(2013, 1, 1), to: newDate (2013, 2, 1) },
-   //         { from: new Date(2013, 4, 1), to: newDate (2013, 8, 1) },
-   //         { from: new Date(2013, 7, 10), to: newDate (2013, 9, 10) },
-   //         { from: new Date(0, 8, 10), repeatYear: true }
-   //         { from: new Date(0, 9, 1), repeatYear: true }
-   //     ]
-   selectableDateRange: null,
+    // A collection of date ranges that are selectable by the user.
+    // The ranges can be made to repeat by setting repeatYear to true
+    // (repeatMonth is not supported).
+    //
+    // This example will create 3-sets of selectable date ranges with
+    // specific from and to ranges.  The 4th and 5th ranges don't specify
+    // the "to" date in which case the "to" date will be the maximum days for
+    // the month specified in "from".  The 4th and 5th ranges also repeat every year:
+    //
+    //     selectableDateRange: [
+    //         { from: new Date(2013, 1, 1), to: newDate (2013, 2, 1) },
+    //         { from: new Date(2013, 4, 1), to: newDate (2013, 8, 1) },
+    //         { from: new Date(2013, 7, 10), to: newDate (2013, 9, 10) },
+    //         { from: new Date(0, 8, 10), repeatYear: true }
+    //         { from: new Date(0, 9, 1), repeatYear: true }
+    //     ]
+    selectableDateRange: null,
 
-   // Mark certain dates as special dates.  Similar to selectableDates, this
-   // property supports both repeatYear and repeatMonth flags.
-   // Each special date can be styled using custom style names and can have
-   // data attached to it that will be returned in the onClick callback.
-   // The data field can be any custom (JSON style) object.
-   //
-   // This example creates two (repeatable by year) dates with special data in them.
-   // The first date also assigns a special class (which you will have to define).
-   //    specialDates: [
-   //        {
-   //            date: new Date(0, 8, 5),
-   //            data: { message: 'Happy Birthday!' },
-   //            repeatYear: true,
-   //            cssClass: 'special-bday'
-   //        },
-   //        {
-   //            date: new Date(2013, 0, 8),
-   //            data: { message: 'Meeting every day 8 of the month' },
-   //            repeatMonth: true
-   //        }
-   //    ]
-   specialDates: null,
+    // Mark certain dates as special dates.  Similar to selectableDates, this
+    // property supports both repeatYear and repeatMonth flags.
+    // Each special date can be styled using custom style names and can have
+    // data attached to it that will be returned in the onClick callback.
+    // The data field can be any custom (JSON style) object.
+    //
+    // This example creates two (repeatable by year) dates with special data in them.
+    // The first date also assigns a special class (which you will have to define).
+    //    specialDates: [
+    //        {
+    //            date: new Date(0, 8, 5),
+    //            data: { message: 'Happy Birthday!' },
+    //            repeatYear: true,
+    //            cssClass: 'special-bday'
+    //        },
+    //        {
+    //            date: new Date(2013, 0, 8),
+    //            data: { message: 'Meeting every day 8 of the month' },
+    //            repeatMonth: true
+    //        }
+    //    ]
+    specialDates: null,
 
-   // List of months that can be selectable, including when the user clicks
-   // on the title to select from the dropdown.
-   // This example only makes two months visible; September and December:
-   //    selectableMonths: [8, 11]
-   selectableMonths: null,
+    // List of months that can be selectable, including when the user clicks
+    // on the title to select from the dropdown.
+    // This example only makes two months visible; September and December:
+    //    selectableMonths: [8, 11]
+    selectableMonths: null,
 
-   // List of selectable years.  If not provided, will default to 5-years
-   // back and forward.
-   // This example only allows selection of dates that have year 2012, 2013, 2015
-   //    selectableYears: [2012, 2013, 2015]
-   selectableYears: null,
+    // List of selectable years.  If not provided, will default to 5-years
+    // back and forward.
+    // This example only allows selection of dates that have year 2012, 2013, 2015
+    //    selectableYears: [2012, 2013, 2015]
+    selectableYears: null,
 
-   // List of selectable days of the week.  0 is Sunday, 1 is Monday, and so on.
-   // This example allows only Sunday, Tuesday, Thursday:
-   //    selectableDOW: [0, 2, 4]
-   selectableDOW: null,
+    // List of selectable days of the week.  0 is Sunday, 1 is Monday, and so on.
+    // This example allows only Sunday, Tuesday, Thursday:
+    //    selectableDOW: [0, 2, 4]
+    selectableDOW: null,
 
-   // Names of the month that will be shown in the title.
-   // Will default to long-form names:
-   //     January, February, March, April, May, June, July,
-   //     August, September, October, November, December
-   monthNames: null,
+    // Names of the month that will be shown in the title.
+    // Will default to long-form names:
+    //     January, February, March, April, May, June, July,
+    //     August, September, October, November, December
+    monthNames: null,
 
-   // Names of the days of the Week that will be shown below the title.
-   // Will default to short-form names:
-   //     Sun, Mon, Tue, Wed, Thu, Fri, Sat
-   dowNames: null,
+    // Names of the days of the Week that will be shown below the title.
+    // Will default to short-form names:
+    //     Sun, Mon, Tue, Wed, Thu, Fri, Sat
+    dowNames: null,
 
-   // The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
-   dowOffset: 1,
+    // The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
+    dowOffset: 1,
 
-   // Callback that will trigger when the user clicks a selectable date.
-   // Parameters that are passed to the callback:
-   //     el : The input element the date picker is bound to
-   //   cell : The cell on the calendar that triggered this event
-   //   date : The date associated with the cell
-   //   data : Special data associated with the cell (if available, otherwise, null)
-   onClick(el, cell, date, data) {
-     el.val(date.toLocaleDateString());
-   },
+    // Callback that will trigger when the user clicks a selectable date.
+    // Parameters that are passed to the callback:
+    //     el : The input element the date picker is bound to
+    //   cell : The cell on the calendar that triggered this event
+    //   date : The date associated with the cell
+    //   data : Special data associated with the cell (if available, otherwise, null)
+    onClick: function onClick(el, cell, date, data) {
+      el.val(date.toLocaleDateString());
+    },
 
-   // Callback that will trigger when the user hovers over a selectable date.
-   // This callback receives the same set of parameters as onClick.
-   onHover(el, cell, date, data) {},
+    // Callback that will trigger when the user hovers over a selectable date.
+    // This callback receives the same set of parameters as onClick.
+    onHover: function onHover(el, cell, date, data) {},
 
-   // Callback that will trigger when the calendar needs to show.
-   // You can use this callback to animate the opening of the calendar.
-   onShow(calendar) { calendar.show(); },
+    // Callback that will trigger when the calendar needs to show.
+    // You can use this callback to animate the opening of the calendar.
+    onShow: function onShow(calendar) {
+      calendar.show();
+    },
 
-   // Callback that will trigger when the calendar needs to hide.
-   // You can use this callback to animate the hiding of the calendar.
-   onHide(calendar) { calendar.hide(); },
+    // Callback that will trigger when the calendar needs to hide.
+    // You can use this callback to animate the hiding of the calendar.
+    onHide: function onHide(calendar) {
+      calendar.hide();
+    },
 
-   // First date of the month.
-   firstDate: null,
- };
+    // First date of the month.
+    firstDate: null
+  };
 
   // Our plugin object
   var glDatePicker = (function () {
     // Main entry point.  Initialize the plugin
     function glDatePicker(element, userOptions) {
       // Grab handle to this
-      const self = this;
+      var self = this;
 
       // Save bound element to el
       self.el = $(element);
-      const el = self.el;
+      var el = self.el;
 
       // Merge user options into default options
       self.options = $.extend(true, {}, $.fn.glDatePicker.defaults, userOptions);
-      const options = self.options;
+      var options = self.options;
 
       // Find the calendar element if the user provided one
-      self.calendar = $($.find(`[gldp-el=${el.attr('gldp-id')} ]`));
+      self.calendar = $($.find('[gldp-el=' + el.attr('gldp-id') + ' ]'));
 
       // Default first date to selected
       options.selectedDate = options.selectedDate || options.todayDate;
-      options.firstDate = (new Date((options.firstDate || options.selectedDate)))._first();
+      options.firstDate = new Date(options.firstDate || options.selectedDate)._first();
 
       if (!(el.attr('gldp-id') || '').length) {
-        el.attr('gldp-id', `gldp-${Math.round(Math.random() * 1e10)}`);
+        el.attr('gldp-id', 'gldp-' + Math.round(Math.random() * 1e10));
       }
 
       // Show the plugin on focus
-      el
-        .addClass('gldp-el')
-        .bind('click', (e) => { self.show(e); })
-        .bind('focus', (e) => { self.show(e); });
+      el.addClass('gldp-el').bind('click', function (e) {
+        self.show(e);
+      }).bind('focus', function (e) {
+        self.show(e);
+      });
 
       // If the user is defining the container and it exists, hide it on initial creation.
       // The update function will handle showing if it's showAlways = true
@@ -29455,9 +29538,9 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
       }
 
       // Hide the plugin on mouse up outside of the plugin
-      $(document).bind('mouseup', (e) => {
-        const target = e.target;
-        const calendar = self.calendar;
+      $(document).bind('mouseup', function (e) {
+        var target = e.target;
+        var calendar = self.calendar;
 
         if (!el.is(target) && !calendar.is(target) && calendar.has(target).length === 0 && calendar.is(':visible')) {
           self.hide();
@@ -29466,426 +29549,391 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
 
       // Render calendar
       self.render();
-      $(window).resize(() => {
+      $(window).resize(function () {
         self.render();
       });
-      self.el.resize(() => {
+      self.el.resize(function () {
         alert('asd');
         self.render();
       });
     }
 
     // Public methods
-    glDatePicker.prototype =
-  {
-    show() {
-      // Hide others and show this calendar
-      $.each($('.gldp-el').not(this.el), (i, o) => {
-        if (o.length) { o.options.onHide(o.calendar); }
-      });
+    glDatePicker.prototype = {
+      show: function show() {
+        // Hide others and show this calendar
+        $.each($('.gldp-el').not(this.el), function (i, o) {
+          if (o.length) {
+            o.options.onHide(o.calendar);
+          }
+        });
 
-      // Show this calendar
-      this.options.onShow(this.calendar);
-    },
+        // Show this calendar
+        this.options.onShow(this.calendar);
+      },
 
-    hide() {
-      if (this.options && !this.options.showAlways) {
-        this.options.onHide(this.calendar);
-      }
-    },
+      hide: function hide() {
+        if (this.options && !this.options.showAlways) {
+          this.options.onHide(this.calendar);
+        }
+      },
 
-    // Render the calendar
-    render(renderCalback) {
-      const self = this;
-      const el = self.el;
-      const options = self.options;
-      let calendar = self.calendar;
+      // Render the calendar
+      render: function render(renderCalback) {
+        var self = this;
+        var el = self.el;
+        var options = self.options;
+        var calendar = self.calendar;
 
-      // Build a core class (with border) that every element would have
-      const coreClass = ' core border ';
-      const cssName = `gldp-${options.cssName}`;
+        // Build a core class (with border) that every element would have
+        var coreClass = ' core border ';
+        var cssName = 'gldp-' + options.cssName;
 
-      // Get today
-      const todayVal = options.todayDate._val();
-      const todayTime = todayVal.time;
+        // Get today
+        var todayVal = options.todayDate._val();
+        var todayTime = todayVal.time;
 
-      // Constants
-      const maxRow = 5;
-      const maxCol = 7;
-      const borderSize = `${options.borderSize}px`;
+        // Constants
+        var maxRow = 5;
+        var maxCol = 7;
+        var borderSize = options.borderSize + 'px';
 
-      // Helper function to build selectable list
-      const getSelectableList = function (min, max, userList) {
-        // Build a default list using min/max
-        let resultList = [];
-        for (let i = min; i <= max; i++) { resultList.push(i); }
+        // Helper function to build selectable list
+        var getSelectableList = function getSelectableList(min, max, userList) {
+          // Build a default list using min/max
+          var resultList = [];
+          for (var i = min; i <= max; i++) {
+            resultList.push(i);
+          }
 
-        // If user provided a collection, sanitize list by ensuring it's within range and unique
-        if (userList) {
-          const newList = [];
-          $.each(userList, (i, v) => {
-            if (v >= min && v <= max && newList._indexOf(v) < 0) {
-              newList.push(v);
-            }
+          // If user provided a collection, sanitize list by ensuring it's within range and unique
+          if (userList) {
+            (function () {
+              var newList = [];
+              $.each(userList, function (i, v) {
+                if (v >= min && v <= max && newList._indexOf(v) < 0) {
+                  newList.push(v);
+                }
+              });
+
+              resultList = newList.length ? newList : resultList;
+            })();
+          }
+
+          // Sort the values before returning it
+          resultList.sort();
+
+          return resultList;
+        };
+
+        // Selectable (constants)
+        var selectableMonths = getSelectableList(0, 11, options.selectableMonths);
+        var selectableYears = getSelectableList(todayVal.year - 5, todayVal.year + 5, options.selectableYears);
+        var selectableDOW = getSelectableList(0, 6, options.selectableDOW);
+        var dowNames = options.dowNames || ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        var monthNames = options.monthNames || ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        // Create cell width based on el size
+        var containerWidth = el.outerWidth();
+        var containerHeight = containerWidth;
+
+        // Create cell size based on container size
+        var getCellSize = function getCellSize(_size, _count) {
+          return _size / _count + options.borderSize / _count * (_count - 1);
+        };
+        var cellWidth = getCellSize(containerWidth, maxCol);
+        var cellHeight = getCellSize(containerHeight, maxRow + 2);
+
+        // If calendar doesn't exist, create it and re-assign it to self
+        if (!calendar.length) {
+          self.calendar = calendar = $('<div/>').attr('gldp-el', el.attr('gldp-id')).data('is', true).css({
+            display: options.showAlways ? undefined : 'none',
+            zIndex: options.zIndex,
+            width: cellWidth * maxCol + 'px'
           });
 
-          resultList = newList.length ? newList : resultList;
+          el.append(calendar);
+        } else if (!eval(calendar.data('is'))) {
+          containerWidth = calendar.outerWidth();
+          containerHeight = calendar.outerHeight();
+
+          cellWidth = getCellSize(containerWidth, maxCol);
+          cellHeight = getCellSize(containerHeight, maxRow + 2);
         }
 
-        // Sort the values before returning it
-        resultList.sort();
+        calendar.css('width', cellWidth * maxCol + 'px');
+        // Hide calendar if the target element isn't visible
+        // if(!el.is(':visible')) { calendar.hide(); }
 
-        return resultList;
-      };
+        // Add core classes and remove calendar's children
+        calendar.removeClass().addClass(cssName).children().remove();
 
-      // Selectable (constants)
-      const selectableMonths = getSelectableList(0, 11, options.selectableMonths);
-      const selectableYears = getSelectableList(todayVal.year - 5, todayVal.year + 5, options.selectableYears);
-      const selectableDOW = getSelectableList(0, 6, options.selectableDOW);
-      let dowNames = options.dowNames || ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-      const monthNames = options.monthNames || ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-      // Create cell width based on el size
-      let containerWidth = el.outerWidth();
-      let containerHeight = containerWidth;
-
-      // Create cell size based on container size
-      const getCellSize = function (_size, _count) {
-        return (_size / _count) + ((options.borderSize / _count) * (_count - 1));
-      };
-      let cellWidth = getCellSize(containerWidth, maxCol);
-      let cellHeight = getCellSize(containerHeight, maxRow + 2);
-
-      // If calendar doesn't exist, create it and re-assign it to self
-      if (!calendar.length) {
-        self.calendar = calendar = $('<div/>')
-          .attr('gldp-el', el.attr('gldp-id'))
-          .data('is', true)
-          .css(
-            {
-              display: (options.showAlways ? undefined : 'none'),
-              zIndex: options.zIndex,
-              width: `${cellWidth * maxCol}px`,
-            });
-
-        el.append(calendar);
-      } else if (!eval(calendar.data('is'))) {
-        containerWidth = calendar.outerWidth();
-        containerHeight = calendar.outerHeight();
-
-        cellWidth = getCellSize(containerWidth, maxCol);
-        cellHeight = getCellSize(containerHeight, maxRow + 2);
-      }
-
-      calendar.css('width', `${cellWidth * maxCol}px`);
-      // Hide calendar if the target element isn't visible
-      // if(!el.is(':visible')) { calendar.hide(); }
-
-      // Add core classes and remove calendar's children
-      calendar
-        .removeClass()
-        .addClass(cssName)
-        .children().remove();
-
-      // Bind to resize event to position calendar
-      const onResize = function () {
-        const elPos = el.offset();
-        calendar.css(
-          {
-            top: `${0}px`,
-            left: `${0}px`,
+        // Bind to resize event to position calendar
+        var onResize = function onResize() {
+          var elPos = el.offset();
+          calendar.css({
+            top: 0 + 'px',
+            left: 0 + 'px'
           });
-      };
+        };
 
+        // Create variables for cells
+        var cellCSS = {
+          width: cellWidth + 'px',
+          height: cellHeight + 'px',
+          lineHeight: cellHeight + 'px'
+        };
 
-      // Create variables for cells
-      const cellCSS =
-    {
-      width: `${cellWidth}px`,
-      height: `${cellHeight}px`,
-      lineHeight: `${cellHeight}px`,
-    };
+        // Helper function to setDate
+        var setFirstDate = function setFirstDate(_date) {
+          if (_date) {
+            // Get first date
+            options.firstDate = _date;
 
-      // Helper function to setDate
-      const setFirstDate = function (_date) {
-        if (_date) {
-          // Get first date
-          options.firstDate = _date;
+            // Update the calendar
+            self.render();
+          }
+        };
 
-          // Update the calendar
-          self.render();
-        }
-      };
+        var getFirstDate = function getFirstDate(_offset) {
+          // Create start date as the first date of the month
+          var _date = new Date(options.firstDate);
 
-      const getFirstDate = function (_offset) {
-        // Create start date as the first date of the month
-        const _date = new Date(options.firstDate);
+          // Default to no offset
+          _offset = _offset || 0;
 
-        // Default to no offset
-        _offset = _offset || 0;
+          // Find out which months are selectable
+          while (true) {
+            // Adjust date for month offset
+            _date.setMonth(_date.getMonth() + _offset);
+            _date.setDate(Math.min(1, _date._max()));
 
-        // Find out which months are selectable
-        while (true) {
-          // Adjust date for month offset
-          _date.setMonth(_date.getMonth() + _offset);
-          _date.setDate(Math.min(1, _date._max()));
-
-          // If not an offset, break out of the loop
-          if (_offset == 0) { break; }
-
-          // Get _date's value
-          const dateVal = _date._val();
-
-          // Get local vars
-          const dateMonth = dateVal.month;
-          const dateYear = dateVal.year;
-
-          // Find the month first
-          if (selectableMonths._indexOf(dateMonth) != -1) {
-            // If year is in our collection, break...
-            if (selectableYears._indexOf(dateYear) != -1) {
+            // If not an offset, break out of the loop
+            if (_offset == 0) {
               break;
-            } else {
-              // ...otherwise, if it's out of bounds, exit loop
-              if (dateYear < selectableYears[0] || dateYear > selectableYears[selectableYears.length - 1]) {
-                return null;
+            }
+
+            // Get _date's value
+            var dateVal = _date._val();
+
+            // Get local vars
+            var dateMonth = dateVal.month;
+            var dateYear = dateVal.year;
+
+            // Find the month first
+            if (selectableMonths._indexOf(dateMonth) != -1) {
+              // If year is in our collection, break...
+              if (selectableYears._indexOf(dateYear) != -1) {
+                break;
+              } else {
+                // ...otherwise, if it's out of bounds, exit loop
+                if (dateYear < selectableYears[0] || dateYear > selectableYears[selectableYears.length - 1]) {
+                  return null;
+                }
               }
             }
           }
-        }
 
-        return _date;
-      };
+          return _date;
+        };
 
-      // Get the previous, next first dates
-      const prevFirstDate = getFirstDate(-1);
-      const nextFirstDate = getFirstDate(1);
+        // Get the previous, next first dates
+        var prevFirstDate = getFirstDate(-1);
+        var nextFirstDate = getFirstDate(1);
 
-      // Get the first date for the current month being rendered
-      const firstDate = (options.firstDate = getFirstDate());
-      const firstDateVal = firstDate._val();
-      const firstDateMonth = firstDateVal.month;
-      const firstDateYear = firstDateVal.year;
+        // Get the first date for the current month being rendered
+        var firstDate = options.firstDate = getFirstDate();
+        var firstDateVal = firstDate._val();
+        var firstDateMonth = firstDateVal.month;
+        var firstDateYear = firstDateVal.year;
 
-      // Get the start date in the calendar
-      const startDate = new Date(firstDate);
+        // Get the start date in the calendar
+        var startDate = new Date(firstDate);
 
-      // Sanitize days of the week offset
-      const dowOffset = Math.abs(Math.min(6, Math.max(0, options.dowOffset)));
+        // Sanitize days of the week offset
+        var dowOffset = Math.abs(Math.min(6, Math.max(0, options.dowOffset)));
 
-      // Offset weekdays
-      let startOffset = startDate.getDay() - dowOffset;
-      startOffset = startOffset < 1 ? -7 - startOffset : -startOffset;
-      dowNames = (dowNames.concat(dowNames))
-        .slice(dowOffset, dowOffset + 7);
+        // Offset weekdays
+        var startOffset = startDate.getDay() - dowOffset;
+        startOffset = startOffset < 1 ? -7 - startOffset : -startOffset;
+        dowNames = dowNames.concat(dowNames).slice(dowOffset, dowOffset + 7);
 
-      // Offset the start date
-      startDate._add(startOffset);
+        // Offset the start date
+        startDate._add(startOffset);
 
-      // Gather flags for prev/next arrows
-      const showPrev = (prevFirstDate);
-      const showNext = (nextFirstDate);
+        // Gather flags for prev/next arrows
+        var showPrev = prevFirstDate;
+        var showNext = nextFirstDate;
 
-      // Create the arrows and title
-      const monyearClass = `${coreClass}monyear `;
+        // Create the arrows and title
+        var monyearClass = coreClass + 'monyear ';
 
-      const prevCell = $('<div/>')
-        .addClass(monyearClass)
-        .css(
-          $.extend({}, cellCSS,
-            {
-
-            }),
-        )
-        .append(
-          $('<a/>')
-            .addClass(`prev-arrow${showPrev ? '' : '-off'}`)
-            .append($('<i/>').addClass('fa fa-angle-left').attr('aria-hidden', 'true')),
-        )
-        .mousedown(() => false)
-        .click((e) => {
+        var prevCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {})).append($('<a/>').addClass('prev-arrow' + (showPrev ? '' : '-off')).append($('<i/>').addClass('fa fa-angle-left').attr('aria-hidden', 'true'))).mousedown(function () {
+          return false;
+        }).click(function (e) {
           if (options.prevArrow != '' && showPrev) {
             e.stopPropagation();
             setFirstDate(prevFirstDate);
           }
         });
 
-      const titleCellCount = maxCol - 2;
-      const titleWidth = (cellWidth * titleCellCount);
-      const titleCell = $('<div/>')
-        .addClass(monyearClass)
-        .css(
-          $.extend({}, cellCSS,
-            {
-              width: `${titleWidth}px`,
+        var titleCellCount = maxCol - 2;
+        var titleWidth = cellWidth * titleCellCount;
+        var titleCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {
+          width: titleWidth + 'px'
 
-            }),
-        );
+        }));
 
-      const nextCell = $('<div/>')
-        .addClass(monyearClass)
-        .css(
-          $.extend({}, cellCSS,
-            {
-
-            }),
-        )
-        .append(
-          $('<a/>')
-            .addClass(`next-arrow${showNext ? '' : '-off'}`)
-            .append($('<i/>').addClass('fa fa-angle-right').attr('aria-hidden', 'true')),
-        )
-        .mousedown(() => false)
-        .click((e) => {
+        var nextCell = $('<div/>').addClass(monyearClass).css($.extend({}, cellCSS, {})).append($('<a/>').addClass('next-arrow' + (showNext ? '' : '-off')).append($('<i/>').addClass('fa fa-angle-right').attr('aria-hidden', 'true'))).mousedown(function () {
+          return false;
+        }).click(function (e) {
           if (options.nextArrow != '' && showNext) {
             e.stopPropagation();
             setFirstDate(nextFirstDate);
           }
         });
 
-      // Add cells for prev/title/next
+        // Add cells for prev/title/next
 
-      const big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
-      calendar.prev('input').val(options.selectedDate.toISOString().slice(0, 10));
-      calendar
-        .append(big_number)
-        .append(prevCell)
-        .append(titleCell)
-        .append(nextCell)
-        .append($('<div/>').addClass('cell-container'));
+        var big_number = $('<div/>').addClass('big_number').text(options.selectedDate.getDate());
+        calendar.prev('input').val(options.selectedDate.toISOString().slice(0, 10));
+        calendar.append(big_number).append(prevCell).append(titleCell).append(nextCell).append($('<div/>').addClass('cell-container'));
 
-      // Add all the cells to the calendar
-      for (let row = 0, cellIndex = 0; row < maxRow + 1; row++) {
-        for (let col = 0; col < maxCol; col++, cellIndex++) {
-          let cellDate = new Date(startDate);
-          var cellClass = 'day';
-          var cellZIndex = options.zIndex + (cellIndex);
-          var cell = $('<div/>');
+        // Add all the cells to the calendar
+        for (var row = 0, cellIndex = 0; row < maxRow + 1; row++) {
+          for (var col = 0; col < maxCol; col++, cellIndex++) {
+            var cellDate = new Date(startDate);
+            var cellClass = 'day';
+            var cellZIndex = options.zIndex + cellIndex;
+            var cell = $('<div/>');
 
-          if (!row) {
-            cellClass = 'dow';
-            cell.html(dowNames[col]);
-            cellDate = null;
-            cell
-              .data('data', { date: cellDate, data: specialData })
-              .addClass(coreClass + cellClass)
-              .css('width', cellWidth);
+            if (!row) {
+              cellClass = 'dow';
+              cell.html(dowNames[col]);
+              cellDate = null;
+              cell.data('data', { date: cellDate, data: specialData }).addClass(coreClass + cellClass).css('width', cellWidth);
 
-            // Add cell to calendar
-						      calendar.children('.cell-container').append(cell);
-            continue;
-          } else {
-            // Get the new date for this cell
-            cellDate._add(col + ((row - 1) * maxCol));
-
-            // Get value for this date
-            var cellDateVal = cellDate._val();
-            var cellDateTime = cellDateVal.time;
-
-            // Variable to hold special data
-            var specialData = null;
-
-            // Determine if this date is selectable
-            var isSelectable = true;
-
-            // Helper function to get repeat friendly date against current date
-            var getRepeatDate = function (v, date) {
-              // If repeating, set the date's year and month accordingly
-              if (v.repeatYear === true) { date.setYear(cellDateVal.year); }
-              if (v.repeatMonth === true) { date.setMonth(cellDateVal.month); }
-
-              return date._val();
-            };
-
-            // Assign date for the cell
-            cell.html(cellDateVal.date);
-
-            // If we have selectable date ranges
-            if (options.selectableDateRange) {
-              isSelectable = false;
-              $.each(options.selectableDateRange, (i, v) => {
-                let dateFrom = v.from;
-                let dateTo = (v.to || null);
-
-                // If to is not specified, default to max days in the from month
-                dateTo = dateTo || new Date(v.from.getFullYear(), v.from.getMonth(), v.from._max());
-
-                // If repeating year, set the from and two to the current date's year
-                dateFrom = getRepeatDate(v, dateFrom);
-                dateTo = getRepeatDate(v, dateTo);
-
-                // Test to see if this date is selectable
-                if (cellDateTime >= dateFrom.time && cellDateTime <= dateTo.time) {
-                  isSelectable = true;
-                  return true;
-                }
-              });
-            }
-
-            // Handle date ranges and collections
-            if (options.selectableDates) {
-              if ((options.selectableDateRange && !isSelectable) || (isSelectable && !options.selectableDateRange)) {
-                isSelectable = false;
-              }
-              $.each(options.selectableDates, (i, v) => {
-                const vDate = getRepeatDate(v, v.date);
-
-                if (vDate.time == cellDateTime) {
-                  return (isSelectable = true);
-                }
-              });
-            }
-
-            // If not active or if not within selectableMonths, set to noday otherwise evaluate accordingly
-            if (!isSelectable ||
-        selectableYears._indexOf(cellDateVal.year) < 0 ||
-        selectableMonths._indexOf(cellDateVal.month) < 0 ||
-        selectableDOW._indexOf(cellDateVal.day) < 0) {
-              cellClass = 'noday';
+              // Add cell to calendar
+              calendar.children('.cell-container').append(cell);
+              continue;
             } else {
-              // Handle active dates and weekends
-              cellClass = (['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'])[cellDateVal.day];
+              // Get the new date for this cell
+              cellDate._add(col + (row - 1) * maxCol);
 
-              // Handle today or selected dates
-              if (firstDateMonth != cellDateVal.month) { cellClass += ' outday'; }
-              if (todayTime == cellDateTime) { cellClass = 'today'; cellZIndex += 50; }
-              if (options.selectedDate._time() == cellDateTime) { cellClass = 'selected'; cellZIndex += 51; }
+              // Get value for this date
+              var cellDateVal = cellDate._val();
+              var cellDateTime = cellDateVal.time;
 
-              // Handle special dates
-              if (options.specialDates) {
-                $.each(options.specialDates, (i, v) => {
-                  const vDate = getRepeatDate(v, v.date);
+              // Variable to hold special data
+              var specialData = null;
 
-                  if (vDate.time == cellDateTime) {
-                    cellClass = (v.cssClass || 'special');
-                    cellZIndex += 52;
-                    specialData = v.data;
+              // Determine if this date is selectable
+              var isSelectable = true;
+
+              // Helper function to get repeat friendly date against current date
+              var getRepeatDate = function getRepeatDate(v, date) {
+                // If repeating, set the date's year and month accordingly
+                if (v.repeatYear === true) {
+                  date.setYear(cellDateVal.year);
+                }
+                if (v.repeatMonth === true) {
+                  date.setMonth(cellDateVal.month);
+                }
+
+                return date._val();
+              };
+
+              // Assign date for the cell
+              cell.html(cellDateVal.date);
+
+              // If we have selectable date ranges
+              if (options.selectableDateRange) {
+                isSelectable = false;
+                $.each(options.selectableDateRange, function (i, v) {
+                  var dateFrom = v.from;
+                  var dateTo = v.to || null;
+
+                  // If to is not specified, default to max days in the from month
+                  dateTo = dateTo || new Date(v.from.getFullYear(), v.from.getMonth(), v.from._max());
+
+                  // If repeating year, set the from and two to the current date's year
+                  dateFrom = getRepeatDate(v, dateFrom);
+                  dateTo = getRepeatDate(v, dateTo);
+
+                  // Test to see if this date is selectable
+                  if (cellDateTime >= dateFrom.time && cellDateTime <= dateTo.time) {
+                    isSelectable = true;
+                    return true;
                   }
                 });
               }
 
-              cell
-                .mousedown(() => false)
-                .hover(function (e) {
+              // Handle date ranges and collections
+              if (options.selectableDates) {
+                if (options.selectableDateRange && !isSelectable || isSelectable && !options.selectableDateRange) {
+                  isSelectable = false;
+                }
+                $.each(options.selectableDates, function (i, v) {
+                  var vDate = getRepeatDate(v, v.date);
+
+                  if (vDate.time == cellDateTime) {
+                    return isSelectable = true;
+                  }
+                });
+              }
+
+              // If not active or if not within selectableMonths, set to noday otherwise evaluate accordingly
+              if (!isSelectable || selectableYears._indexOf(cellDateVal.year) < 0 || selectableMonths._indexOf(cellDateVal.month) < 0 || selectableDOW._indexOf(cellDateVal.day) < 0) {
+                cellClass = 'noday';
+              } else {
+                // Handle active dates and weekends
+                cellClass = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'][cellDateVal.day];
+
+                // Handle today or selected dates
+                if (firstDateMonth != cellDateVal.month) {
+                  cellClass += ' outday';
+                }
+                if (todayTime == cellDateTime) {
+                  cellClass = 'today';cellZIndex += 50;
+                }
+                if (options.selectedDate._time() == cellDateTime) {
+                  cellClass = 'selected';cellZIndex += 51;
+                }
+
+                // Handle special dates
+                if (options.specialDates) {
+                  $.each(options.specialDates, function (i, v) {
+                    var vDate = getRepeatDate(v, v.date);
+
+                    if (vDate.time == cellDateTime) {
+                      cellClass = v.cssClass || 'special';
+                      cellZIndex += 52;
+                      specialData = v.data;
+                    }
+                  });
+                }
+
+                cell.mousedown(function () {
+                  return false;
+                }).hover(function (e) {
                   e.stopPropagation();
 
                   // Get the data from this cell
-                  const hoverData = $(this).data('data');
+                  var hoverData = $(this).data('data');
 
                   // Call callback
                   options.onHover(el, cell, hoverData.date, hoverData.data);
-                })
-                .click(function (e) {
+                }).click(function (e) {
                   e.stopPropagation();
 
                   // Get the data from this cell
-                  const clickedData = $(this).data('data');
+                  var clickedData = $(this).data('data');
 
                   // Save date to selected and first
                   options.selectedDate = options.firstDate = clickedData.date;
 
                   // Update calendar (and auto-hide if necessary)
-                  self.render(() => {
+                  self.render(function () {
                     if (!options.showAlways && options.hideOnClick) {
                       self.hide();
                     }
@@ -29895,122 +29943,113 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
                   // Call callback
                   options.onClick(el, $(this), clickedData.date, clickedData.data);
                 });
+              }
             }
-          }
 
-          // Update the css for the cell
-          $.extend(cellCSS,
-            {
+            // Update the css for the cell
+            $.extend(cellCSS, {
               borderTopWidth: borderSize,
               borderBottomWidth: borderSize,
-              borderLeftWidth: (row > 0 || (!row && !col)) ? borderSize : 0,
-              borderRightWidth: (row > 0 || (!row && col == 6)) ? borderSize : 0,
-              zIndex: cellZIndex,
+              borderLeftWidth: row > 0 || !row && !col ? borderSize : 0,
+              borderRightWidth: row > 0 || !row && col == 6 ? borderSize : 0,
+              zIndex: cellZIndex
             });
 
-          // Assign other properties to the cell
-          cell
-            .data('data', { date: cellDate, data: specialData })
-            .addClass(coreClass + cellClass)
-            .css(cellCSS);
+            // Assign other properties to the cell
+            cell.data('data', { date: cellDate, data: specialData }).addClass(coreClass + cellClass).css(cellCSS);
 
-          // Add cell to calendar
-          calendar.children('.cell-container').append(cell);
-        }
-      }
-
-
-				 calendar.append($('<div/>').addClass('calendar__footer').click((e) => {
-        e.stopPropagation();
-        options.selectedDate = new Date();
-        setFirstDate(new Date());
-      }).text('today'));
-
-      // Helper function for toggling select and text
-      const toggleYearMonthSelect = function (showYear) {
-        const show = 'inline-block';
-        const hide = 'none';
-
-        if (options.allowMonthSelect) {
-          monthText.css({ display: !showYear ? hide : show });
-          monthSelect.css({ display: !showYear ? show : hide });
+            // Add cell to calendar
+            calendar.children('.cell-container').append(cell);
+          }
         }
 
-        if (options.allowYearSelect) {
-          yearText.css({ display: showYear ? hide : show });
-          yearSelect.css({ display: showYear ? show : hide });
-        }
-      };
+        calendar.append($('<div/>').addClass('calendar__footer').click(function (e) {
+          e.stopPropagation();
+          options.selectedDate = new Date();
+          setFirstDate(new Date());
+        }).text('today'));
 
-      // Helper function when select is updated
-      const onYearMonthSelect = function () {
-        options.firstDate = new Date(yearSelect.val(), monthSelect.val(), 1);
-        self.render();
-      };
+        // Helper function for toggling select and text
+        var toggleYearMonthSelect = function toggleYearMonthSelect(showYear) {
+          var show = 'inline-block';
+          var hide = 'none';
 
-      // Build month selector
-      var monthSelect = $('<select/>')
-        .hide()
-        .change(onYearMonthSelect);
+          if (options.allowMonthSelect) {
+            monthText.css({ display: !showYear ? hide : show });
+            monthSelect.css({ display: !showYear ? show : hide });
+          }
 
-      // Build year selector
-      var yearSelect = $('<select/>')
-        .hide()
-        .change(onYearMonthSelect);
+          if (options.allowYearSelect) {
+            yearText.css({ display: showYear ? hide : show });
+            yearSelect.css({ display: showYear ? show : hide });
+          }
+        };
 
-      // Build month label
-      var monthText = $('<span/>')
-        .html(monthNames[firstDateMonth])
-        .mousedown(() => false)
-        .click((e) => {
+        // Helper function when select is updated
+        var onYearMonthSelect = function onYearMonthSelect() {
+          options.firstDate = new Date(yearSelect.val(), monthSelect.val(), 1);
+          self.render();
+        };
+
+        // Build month selector
+        var monthSelect = $('<select/>').hide().change(onYearMonthSelect);
+
+        // Build year selector
+        var yearSelect = $('<select/>').hide().change(onYearMonthSelect);
+
+        // Build month label
+        var monthText = $('<span/>').html(monthNames[firstDateMonth]).mousedown(function () {
+          return false;
+        }).click(function (e) {
           e.stopPropagation();
           toggleYearMonthSelect(false);
         });
 
-      // Build year label
-      var yearText = $('<span/>')
-        .html(firstDateYear)
-        .mousedown(() => false)
-        .click((e) => {
+        // Build year label
+        var yearText = $('<span/>').html(firstDateYear).mousedown(function () {
+          return false;
+        }).click(function (e) {
           e.stopPropagation();
           toggleYearMonthSelect(true);
         });
 
-      // Populate month select
-      $.each(monthNames, (i, v) => {
-        if (options.allowMonthSelect && selectableMonths._indexOf(i) != -1) {
-          const o = $('<option/>').html(v).attr('value', i);
-          if (i == firstDateMonth) { o.attr('selected', 'selected'); }
-          monthSelect.append(o);
-        }
-      });
+        // Populate month select
+        $.each(monthNames, function (i, v) {
+          if (options.allowMonthSelect && selectableMonths._indexOf(i) != -1) {
+            var o = $('<option/>').html(v).attr('value', i);
+            if (i == firstDateMonth) {
+              o.attr('selected', 'selected');
+            }
+            monthSelect.append(o);
+          }
+        });
 
-      // Populate year select
-      $.each(selectableYears, (i, v) => {
-        if (options.allowYearSelect) {
-          const o = $('<option/>').html(v).attr('value', v);
-          if (v == firstDateYear) { o.attr('selected', 'selected'); }
-          yearSelect.append(o);
-        }
-      });
+        // Populate year select
+        $.each(selectableYears, function (i, v) {
+          if (options.allowYearSelect) {
+            var o = $('<option/>').html(v).attr('value', v);
+            if (v == firstDateYear) {
+              o.attr('selected', 'selected');
+            }
+            yearSelect.append(o);
+          }
+        });
 
-      const titleYearMonth = $('<div/>')
-        .append(monthText)
-        .append(monthSelect);
+        var titleYearMonth = $('<div/>').append(monthText).append(monthSelect);
 
-      // Add to title
-      titleCell.children().remove();
-      titleCell.append(titleYearMonth);
+        // Add to title
+        titleCell.children().remove();
+        titleCell.append(titleYearMonth);
 
-      // Run the callback signaling end of the render
-      renderCalback = renderCalback || (function () {});
-      renderCalback();
-    },
-  };
+        // Run the callback signaling end of the render
+        renderCalback = renderCalback || function () {};
+        renderCalback();
+      }
+    };
 
     // Return the plugin
     return glDatePicker;
-  }());
+  })();
 
   // One time initialization of useful prototypes
   (function () {
@@ -30028,8 +30067,8 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
     };
 
     Date.prototype._max = function () {
-      const isLeapYear = (new Date(this.getYear(), 1, 29).getMonth() == 1) ? 1 : 0;
-      const days = [31, 28 + isLeapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      var isLeapYear = new Date(this.getYear(), 1, 29).getMonth() == 1 ? 1 : 0;
+      var days = [31, 28 + isLeapYear, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
       return days[this.getMonth()];
     };
@@ -30039,7 +30078,7 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
     };
 
     Date.prototype._first = function () {
-      const date = new Date(this);
+      var date = new Date(this);
       date.setDate(1);
 
       return date;
@@ -30053,7 +30092,7 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
         month: this.getMonth(),
         date: this.getDate(),
         time: this.getTime(),
-        day: this.getDay(),
+        day: this.getDay()
       };
     };
 
@@ -30061,12 +30100,10 @@ exports.push([module.i, ".map {\n  font-family: Arial, sans-serif;\n  position: 
       return $.inArray(value, this);
     };
 
-
     $('.calendar').glDatePicker();
-  }());
-}(jQuery));
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+  })();
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
 /* 72 */
@@ -30133,13 +30170,12 @@ module.exports = __webpack_require__.p + "fonts/SourceSansProRegular.ttf";
 
 /***/ }),
 /* 77 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messaging_styl__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__messaging_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__messaging_styl__);
 
 
+__webpack_require__(78);
 
 /***/ }),
 /* 78 */
@@ -30188,113 +30224,127 @@ exports.push([module.i, ".messaging {\n  background-color: #f2f2f2;\n  border-ra
 
 /***/ }),
 /* 80 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__video_styl__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__video_styl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__video_styl__);
+/* WEBPACK VAR INJECTION */(function(autoBind, $) {
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-const autoBind = __webpack_require__(3);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-class VideoPlayer {
-  constructor(root) {
+__webpack_require__(81);
+
+var VideoPlayer = (function () {
+  function VideoPlayer(root) {
+    _classCallCheck(this, VideoPlayer);
+
     autoBind(this);
     this.findControls(root);
+    this.setHandlers();
   }
 
-
-  findControls(root) {
-    const $root = $(root);
-    this.player = $root.children('video')[0];
-    this.$btnPlayPause = $root.find('.player__controls-play').first();
-    this.$progressBar = $root.find('.player__controls-progress').first();
-    this.$expand = $root.find('.player__controls-fullscreen').first();
-  }
-
-  setHandlers() {
-    this.$expand.on('click.expand', this.toggleFullScreen);
-    this.$btnPlayPause.on('click.pause', this.togglePlayPause);
-    this.$progressBar.on('click.progressBar', this.seek);
-
-    this.player.addEventListener('play', this.play, false);
-    this.player.addEventListener('timeupdate', this.updateProgressBar, false);
-    this.player.addEventListener('pause', this.pause, false);
-    this.player.addEventListener('ended', this.pause);
-  }
-
-
-  updateProgressBar() {
-    this.$progressBar.val(Math.floor(this.player.currentTime / this.player.duration * 100));
-  }
-
-  togglePlayPause() {
-    if (this.$player.paused || this.$player.ended) {
-      this.$player.play();
-    } else {
-      this.$player.pause();
+  _createClass(VideoPlayer, [{
+    key: 'findControls',
+    value: function findControls(root) {
+      var $root = $(root);
+      this.player = $root.children('video')[0];
+      this.$btnPlayPause = $root.find('.player__controls-play').first();
+      this.$progressBar = $root.find('.player__controls-progress').first();
+      this.$expand = $root.find('.player__controls-fullscreen').first();
     }
-  }
+  }, {
+    key: 'setHandlers',
+    value: function setHandlers() {
+      this.$expand.on('click.expand', this.toggleFullScreen);
+      this.$btnPlayPause.on('click.pause', this.togglePlayPause);
+      this.$progressBar.on('click.progressBar', this.seek);
 
-  play() {
-    this.$btnPlayPause.children('.svg-play').css('display', 'none');
-    this.$btnPlayPause.children('.svg-pause').css('display', 'block');
-  }
-
-  pause() {
-    this.$btnPlayPause.children('.svg-play').css('display', '');
-    this.$btnPlayPause.children('.svg-pause').css('display', '');
-  }
-
-  onEndVideo() {
-    this.pause();
-  }
-
-  seek(e) {
-    const percent = e.offsetX / this.offsetWidth;
-    this.player.currentTime = percent * this.player.duration;
-    $(e.currentTarget).val(Math.floor(percent * 100));
-  }
-
-  toggleFullScreen() {
-    if (this.player.requestFullscreen) {
-      if (document.fullScreenElement) {
-        document.cancelFullScreen();
-      } else {
-        this.player.requestFullscreen();
-      }
-    } else if (this.player.msRequestFullscreen) {
-      if (document.msFullscreenElement) {
-        document.msExitFullscreen();
-      } else {
-        this.player.msRequestFullscreen();
-      }
-    } else if (this.player.mozRequestFullScreen) {
-      if (document.mozFullScreenElement) {
-        document.mozCancelFullScreen();
-      } else {
-        this.player.mozRequestFullScreen();
-      }
-    } else if (this.player.webkitRequestFullscreen) {
-      if (document.webkitFullscreenElement) {
-        document.webkitCancelFullScreen();
-      } else {
-        this.player.webkitRequestFullscreen();
-      }
-    } else {
-      throw new Error('Fullscreen API is not supported');
+      this.player.addEventListener('play', this.play, false);
+      this.player.addEventListener('timeupdate', this.updateProgressBar, false);
+      this.player.addEventListener('pause', this.pause, false);
+      this.player.addEventListener('ended', this.pause);
     }
-  }
-}
+  }, {
+    key: 'updateProgressBar',
+    value: function updateProgressBar() {
+      this.$progressBar.val(Math.floor(this.player.currentTime / this.player.duration * 100));
+    }
+  }, {
+    key: 'togglePlayPause',
+    value: function togglePlayPause() {
+      if (this.player.paused || this.player.ended) {
+        this.player.play();
+      } else {
+        this.player.pause();
+      }
+    }
+  }, {
+    key: 'play',
+    value: function play() {
+      this.$btnPlayPause.children('.svg-play').css('display', 'none');
+      this.$btnPlayPause.children('.svg-pause').css('display', 'block');
+    }
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this.$btnPlayPause.children('.svg-play').css('display', '');
+      this.$btnPlayPause.children('.svg-pause').css('display', '');
+    }
+  }, {
+    key: 'onEndVideo',
+    value: function onEndVideo() {
+      this.pause();
+    }
+  }, {
+    key: 'seek',
+    value: function seek(e) {
+      var percent = e.offsetX / e.currentTarget.offsetWidth;
+      this.player.currentTime = percent * this.player.duration;
+      $(e.currentTarget).val(Math.floor(percent * 100));
+    }
+  }, {
+    key: 'toggleFullScreen',
+    value: function toggleFullScreen() {
+      if (this.player.requestFullscreen) {
+        if (document.fullScreenElement) {
+          document.cancelFullScreen();
+        } else {
+          this.player.requestFullscreen();
+        }
+      } else if (this.player.msRequestFullscreen) {
+        if (document.msFullscreenElement) {
+          document.msExitFullscreen();
+        } else {
+          this.player.msRequestFullscreen();
+        }
+      } else if (this.player.mozRequestFullScreen) {
+        if (document.mozFullScreenElement) {
+          document.mozCancelFullScreen();
+        } else {
+          this.player.mozRequestFullScreen();
+        }
+      } else if (this.player.webkitRequestFullscreen) {
+        if (document.webkitFullscreenElement) {
+          document.webkitCancelFullScreen();
+        } else {
+          this.player.webkitRequestFullscreen();
+        }
+      } else {
+        throw new Error('Fullscreen API is not supported');
+      }
+    }
+  }]);
 
-$(() => {
-  $('.player').each(() => {
-    $(this).data('videoPlayer', new VideoPlayer(this));
+  return VideoPlayer;
+})();
+
+$(function () {
+  $('.player').each(function (index, element) {
+    $(element).data('videoPlayer', new VideoPlayer(element));
   });
 });
-
-
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(2)))
 
 /***/ }),
 /* 81 */
