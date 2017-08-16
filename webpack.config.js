@@ -11,11 +11,10 @@ module.exports = {
     entry: paths.source + 'index.js',
     output: {
         path: paths.build,
-        publicPath: '/public/',
         filename: "[name].js"
     },
     devServer: {
-        publicPath: "/public/"
+        publicPath: "/public"
     },
   
     plugins:[
